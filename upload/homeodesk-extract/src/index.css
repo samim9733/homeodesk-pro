@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-headline: "Manrope", sans-serif;
+  
+  --color-primary: #005f6f;
+  --color-primary-container: #25798a;
+  --color-on-primary-container: #def7ff;
+  --color-primary-fixed: #a9edff;
+  
+  --color-secondary: #486368;
+  --color-secondary-container: #c8e5ea;
+  
+  --color-tertiary: #006519;
+  --color-tertiary-container: #1f802b;
+  --color-tertiary-fixed: #98f994;
+  
+  --color-background: #f7fafa;
+  --color-surface: #f7fafa;
+  --color-surface-container: #ebeeee;
+  --color-surface-container-low: #f1f4f4;
+  --color-surface-container-high: #e6e9e9;
+  --color-surface-container-highest: #e0e3e3;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #181c1d;
+  --color-on-surface-variant: #3e494a;
+  --color-outline: #6e797a;
+  --color-outline-variant: #bdc9ca;
+  
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  --shadow-apothecary: 0 10px 40px -10px rgba(0, 95, 111, 0.08);
+  --shadow-apothecary-hover: 0 20px 60px -12px rgba(0, 95, 111, 0.15);
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+  
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    .fixed.inset-0.z-\[100\], .fixed.inset-0.z-\[100\] * {
+      visibility: visible;
+    }
+    .fixed.inset-0.z-\[100\] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      background: white !important;
+      padding: 0 !important;
+    }
+    .rounded-3xl, .rounded-2xl, .rounded-xl {
+      border-radius: 0 !important;
+    }
+    .shadow-2xl, .shadow-lg, .shadow-sm {
+      box-shadow: none !important;
+    }
+    .bg-slate-50, .bg-slate-950\/90 {
+      background: white !important;
+    }
+    .custom-scrollbar {
+      overflow: visible !important;
+    }
+    .print\:hidden {
+      display: none !important;
+    }
+    textarea, input {
+      border: none !important;
+      background: transparent !important;
+      padding: 0 !important;
+    }
+    section {
+      page-break-inside: avoid;
+    }
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

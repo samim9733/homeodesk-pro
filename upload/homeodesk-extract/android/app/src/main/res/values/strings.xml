@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HomeoDesk Pro</string>
+    <string name="title_activity_main">HomeoDesk Pro</string>
+    <string name="package_name">com.homeodesk.pro</string>
+    <string name="custom_url_scheme">com.homeodesk.pro</string>
+</resources>

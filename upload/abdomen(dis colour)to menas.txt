@@ -1,0 +1,4062 @@
+ABDOMEN
+  PAIN, cramping, griping
+    turning the body: (subrubric)
+
+  PAIN, cramping, griping, hypochondria
+    turning the body:
+
+  PAIN, cramping, griping, sides
+    turning the body:
+
+  PAIN, cramping, griping, umbilicus
+    turning the body:
+
+  PAIN, cramping, griping, hypogastrium
+    extending to back:
+    extending to groin:
+    extending to sides:
+    extending to stomach:
+    extending to thighs:
+    extending to umbilicus:
+    extending to vagina:
+
+  PAIN, cramping, griping, inguinal region
+    extending to knee:
+    extending to axilla:
+    extending to back:
+    extending to calf:
+    extending to crest of ilium:
+    extending down leg:
+    extending to genitals:
+    extending to hip:
+    extending to hypogastrium:
+    extending to knee:
+    extending to nipple:
+    extending to pelvis:
+    extending to pubis:
+    extending to shoulder blade:
+    extending to spermatic cord:
+    extending to testicles:
+    extending to thigh:
+    extending to glands:
+    ring, coughing on:
+    extending into testes:
+
+  PAIN, cramping, griping, liver
+    extending back to:
+    extending downward:
+    extending to epigastrium:
+    extending right to left:
+
+  PAIN, cramping, griping, sides
+    extending to small of back:
+    extending downward:
+    extending to groin:
+    extending outward:
+    extending to sacrum:
+    extending to spermatic cords:
+
+  PAIN, cramping, griping, spleen
+    extending to abdomen:
+
+  PAIN, cramping, griping, umbilicus, region of
+    extending to anus:
+    extending to back:
+    extending to bladder:
+    extending to chest:
+    extending downward:
+    extending to ilium:
+    extending to inguinal region:
+    extending to lumbar region:
+    extending to mammary region:
+    extending to pudendum:
+    extending to rectum:
+    extending to spine:
+    extending to sternum:
+    extending to stomach pit:
+    extending to throat:
+    extending to uterus:
+    extending to vagina:
+
+  PAIN, cutting
+    extending to anus:
+    extending backwards and upwards:
+    extending to chest:
+    extending to groin:
+    extending from right to left:
+    extending from left to right:
+    extending to thigh:
+
+  PAIN, cutting, hypochondria
+    extending to back:
+    extending downward:
+    extending to umbilicus:
+
+  PAIN, cutting, hypogastrium
+    extending to back:
+    extending to groin:
+    extending to sides:
+    extending to stomach:
+    extending to thighs:
+    extending to umbilicus:
+    extending to vagina:
+
+  PAIN, cutting, iliac region
+    extending into testicle:
+    extending to rectum:
+    extending to fossa, right to left:
+    ilium, anterior superior spinous process:
+
+  PAIN, cutting, inguinal region
+    extending to left:
+    extending to back:
+    extending to testes:
+    through urethra to glans penis:
+
+  PAIN, cutting, liver
+
+  PAIN, cutting, sides
+    extending to right:
+    extending to left:
+
+  PAIN, cutting, spleen
+
+  PAIN, cutting, umbilicus
+    extending to back:
+    extending to stomach:
+
+  PAIN, cutting, umbilicus, region of
+    extending downward:
+    extending to rectum:
+    extending into thighs:
+    extending to uterus:
+
+  PAIN, dragging
+    extending toward anus:
+    extending to thighs:
+
+  PAIN, dragging, hypochondrium, right
+    extending to back:
+    extending to abdomen:
+    extending outward:
+    extending to scapula:
+    extending to spleen:
+    extending upwards:
+
+  PAIN, dragging, hypogastrium
+    extending to back:
+    extending to umbilicus:
+
+  PAIN, dragging, inguinal region
+    extending forward:
+    extending outward:
+    extending to testicles:
+
+  PAIN, drawing
+    extending to hip:
+    extending downward:
+    extending to small of back:
+    extending to legs:
+    extending to spine:
+    extending to thighs:
+    extending upward:
+
+  PAIN, drawing, hypogastrium
+    extending around pelvis:
+    extending to pubis:
+    extending to testicles:
+    extending to thighs:
+
+  PAIN, drawing, inguinal region
+    extending to vagina:
+
+  PAIN, drawing, sides
+    extending to navel:
+
+  PAIN, drawing, umbilicus
+    extending to vagina:
+
+  PAIN, gnawing
+    bend forward, obliging to:
+
+  PAIN, lancinating
+    extending to ilium:
+    extending to right side:
+
+  PAIN, pressing
+    extending toward anus:
+    extending to genitals:
+    extending to pit of stomach:
+    extending to rectum:
+    extending to throat:
+    extending to umbilicus:
+
+  PAIN, pressing, hypochondria
+    extending to abdomen:
+    extending outward:
+    extending to scapula:
+    extending to spleen:
+    extending upwards:
+
+  PAIN, pressing, hypogastrium
+    extending to back:
+    extending to umbilicus:
+    extending to vagina:
+
+  PAIN, pressing, inguinal region
+    extending to genitals:
+
+  PAIN, pressing, sides
+    extending to navel:
+
+  PAIN, sore
+    extending into stomach:
+    extending to shoulder:
+
+  PAIN, sore, hypogastrium
+    extending to back:
+    extending to groin:
+    extending to sides:
+    extending to stomach:
+    extending to thighs:
+    extending to umbilicus:
+    extending to vagina:
+
+  PAIN, stitching
+    extending across:
+    extending to anus:
+    extending to back:
+    extending to bladder:
+    extending into body, on every step:
+    extending to chest:
+    extending to clavicle:
+    extending downward:
+    extending to hypochondriac region:
+    extending to lower limbs:
+    extending to pelvis:
+    extending to penis:
+    extending to perineum:
+    extending to rectum:
+    extending from right to left:
+    extending toward:
+    extending to shoulders:
+    extending to spermatic cord:
+    extending to testicle:
+    extending transversely:
+    extending upward:
+    extending to vagina:
+
+  PAIN, stitching, hip, region of
+    extending to small of back when coughing:
+
+  PAIN, stitching, hypochondria
+    extending to abdomen:
+    extending to back:
+    extending to chest:
+    extending downward:
+    extending forward:
+    extending front:
+    extending outward:
+    extending to sacrum:
+    extending to shoulder:
+    extending to stomach:
+
+  PAIN, stitching, hypogastrium
+    extending to epigastrium:
+    extending to groin:
+    extending to hypochondrium:
+    extending to ilium:
+    extending to vagina:
+
+  PAIN, stitching, iliac region
+    extending down leg:
+
+  PAIN, stitching, ilium, crest of
+    extending to gluteal muscles:
+
+  PAIN, stitching, inguinal region
+    extending to abdomen:
+    extending to axilla:
+    extending to back, small of:
+    extending downward:
+    extending to hip:
+    extending to left mamma:
+    extending outward through ilium:
+    extending to testicle:
+    extending to thighs:
+    extending to vagina:
+
+  PAIN, stitching, liver
+    extending from right to left:
+    extending to back:
+    extending to right shoulder:
+    extending upward:
+
+  PAIN, stitching, sides
+    extending to small of back:
+    extending downward:
+    extending to groin:
+    extending outward:
+    extending to sacrum:
+    extending to spermatic cords:
+
+  PAIN, stitching, spleen
+    extending to abdomen:
+
+  PAIN, stitching, umbilicus
+    extending to back:
+    extending to bladder:
+    extending to mammary region:
+    extending to pudendum:
+    extending above:
+    extending below:
+
+  PAIN, stitching, umbilicus, region of
+    extending to uterus:
+    extending to sides:
+
+  PAIN, tearing
+    extending downward:
+    extending to genitals:
+    extending to loins:
+    extending to right mamma:
+
+  PAIN, tearing, hypochondria
+    extending to hip:
+
+  PAIN, tearing, hypogastrium
+    extending to right nipple:
+    extending to thighs:
+
+  PAIN, tearing, inguinal region
+    extending to right nipple:
+
+  PAIN, tearing, sides
+    extending to bladder:
+
+  PAIN, tearing, umbilicus, region of
+    extending downward:
+    extending to rectum:
+    extending into thighs:
+    extending to uterus:
+
+  PAIN, twinging
+    extending to chest:
+
+  PAIN, twisting
+    extending downward:
+
+  PERSPIRATION
+    spreading from umbilicus:
+
+  PROTRUSION
+    umbilicus:
+
+  PULSATION
+    hypochondria:
+    hypogastrium:
+    inguinal region:
+    sides:
+    spleen:
+    umbilicus:
+
+  RELAXED feeling
+    lying on back amel.:
+    stool, after:
+    walking, while:
+
+  RESTLESSNESS, uneasiness
+    hypochondria:
+
+  RETRACTION
+    umbilicus:
+
+  RUMBLING
+    hypogastrium:
+    ileo-cæcal region:
+
+  SENSITIVE skin
+
+  SHAKING
+
+  SHOCKS
+    hypogastrium:
+
+  SHRIVELED or wilted appearance
+
+  SPASMS muscles
+
+  SPLEEN, complaints of
+
+  SPONGE, sensation of
+
+  SPOTS
+
+  SPRING, sensation as if a
+
+  STONE in, sensation of
+    umbilicus:
+
+  STOPPED sensation
+
+  SUNKEN
+
+  SUPPURATION inguinal glands
+
+  SWASHING
+
+  SWELLING
+    mesenteric glands:
+    inguinal region:
+    glands:
+    liver:
+    spleen:
+    umbilicus:
+
+  TABES mesenterica
+
+  TENSION
+    hypochondria:
+    hypogastrium:
+    iliac region:
+    inguinal region:
+    sides:
+    spleen:
+    umbilicus:
+
+  TINGLING
+
+  TREMBLING
+    hypogastrium:
+    inguinal region:
+
+  TUBERCULOSIS
+
+  TURNING sensation
+
+  TWITCHING and jerking
+    hypochondria:
+    hypogastrium:
+    inguinal region:
+    sides:
+
+  TYMPANITIC
+
+  ULCERS
+    inguinal region:
+    umbilicus:
+
+  UNEASINESS
+
+  VEINS distended
+    inguinal region:
+
+  WATER, as if full of
+
+  WEAKNESS, sense of
+    inguinal region:
+
+RECTUM
+  ABSCESS
+    perineum:
+
+  APHTHOUS condition of anus
+
+  BALL in rectum, sensation of
+
+  BLACK
+
+  BOILS in anus
+
+  CANCER
+
+  CATARRH of the rectum
+
+  CHILLINESS in rectum before stool
+
+  CHOLERA
+    infantum:
+    morbus:
+
+  COLDNESS in anus
+
+  CONDYLOMATA
+    extremely sensitive:
+    flat:
+    sore:
+
+  CONSTIPATION
+    alternating with diarrhoea:
+    aged people, in:
+    coffee, after:
+    difficult stool:
+    natural stool:
+    soft stool:
+    stool recedes:
+    urinating, can pass stool only when:
+    drugs, after abuse of:
+    dryness of rectum, from:
+    fruitless urging, with:
+    hard stool, from:
+    home, when away from:
+    ineffectual straining:
+    insufficient, incomplete, unsatisfactory stools:
+    lean far back to pass a stool, must:
+    menses, before:
+    during:
+    after:
+    instead of:
+    suppressed, during:
+    old people:
+    painful:
+    periodical:
+    portal stasis, from:
+    pregnancy, during:
+    seashore, at:
+    sedentary habits, from:
+    standing, passes stool easier when:
+    stool remains long in rectum with no urging:
+    with general amel.:
+    with awful anxiety:
+    traveling, while:
+    unable to pass stool in presence of nurse:
+    vexation, after:
+    wine, after:
+
+  CONSTRICTION, contraction, closure
+    alternating with itching:
+    breakfast, after:
+    coition, during:
+    flatus, passing:
+    lying amel.:
+    menses, during:
+    mental exertion, after:
+    motion amel.:
+    painful:
+    prolapsed anus:
+    sitting, while:
+    rising from:
+    spasmodic:
+    standing agg.:
+    stool, before:
+    during:
+    after:
+    preventing:
+    urging to, during:
+    urinating, on:
+    at close of:
+    walking, on:
+    extending into rectum:
+    upward:
+    to testes:
+    to vagina:
+
+  CORD extending from anus to navel
+
+  CRAMP
+    perineum:
+
+  CRAWLING in
+
+  DIARRHEA
+    daytime only:
+    and night:
+    morning:
+    afternoon, until:
+    bed, driving out of:
+    rising, after:
+    and moving about:
+    waking with urging:
+    forenoon:
+    noon:
+    afternoon:
+    regularly:
+    evening:
+    night:
+    lying agg.:
+    midnight, before:
+    after:
+    acids, after:
+    acute diseases, after:
+    aged people:
+    prematurely, with syphilitic mercurial dyscrasia:
+    women:
+    air, in cold:
+    currents of:
+    open, in:
+    alcoholic drinks, after:
+    aloe, after abuse of:
+    alone, when:
+    alternate days, on:
+    alternating with constipation:
+    catarrh of chest, with:
+    headache:
+    rheumatism:
+    ameliorates all symptoms:
+    anger, after:
+    anticipation, after:
+    anxiety, after:
+    apyrexia, during:
+    autumn, in:
+    bad news, from:
+    bathing, after:
+    cold, after:
+    battle, on going into:
+    beer, after:
+    bilious:
+    boils begin to heal, as soon as:
+    breakfast, after:
+    burns, after:
+    cabbage, after:
+    castor oil, after:
+    catarrh or coryza, after:
+    cathartics, after:
+    chagrin, after:
+    chamomile, after abuse of:
+    change of diet, least:
+    weather, from:
+    chest, after pains in:
+    children, in:
+    chill, during:
+    after:
+    chocolate, after:
+    cholera epidemic, during:
+    after an attack of:
+    cider, after:
+    climaxis, during:
+    coffee, after:
+    smell of, after:
+    cold applications amel.:
+    becoming, after:
+    drinks, after:
+    in summer:
+    food:
+    nights:
+    place amel.:
+    taking cold, after:
+    summer, in:
+    weather, from:
+    coryza, following:
+    cucumbers, after:
+    damp weather:
+    cold weather:
+    darkness agg.:
+    debauch, after a:
+    dentition, during:
+    diet, after trivial errors in:
+    dinner, after:
+    domestic cares, from:
+    draft, after:
+    drinking water, from:
+    immediately after:
+    drugging, after:
+    drunkards, in old:
+    dry weather:
+    eating, while:
+    after:
+    effluvia, noxious, from:
+    eggs, after:
+    emaciated people, in:
+    eructations amel.:
+    eruptions, suppressed, after:
+    exanthemata, during:
+    after suppression of:
+    excitement:
+    as before theatre:
+    exciting news, from:
+    exertion, bodily, after:
+    fat, flabby people:
+    fever, hectic, during:
+    intermittent, during:
+    pernicious:
+    puerperal:
+    typhoid:
+    fish, after:
+    food, acid, amel.:
+    artificial, after:
+    change of, after:
+    cold agg.:
+    farinaceous, after:
+    fat, after:
+    rancid, after:
+    rich, after:
+    solid, after:
+    fright, after:
+    fruit, after:
+    sour, after:
+    with milk, after:
+    stewed, after:
+    unripe fruit, after:
+    game, high, after:
+    ginger, after:
+    glistening objects, looking at:
+    gouty subjects:
+    grief, after:
+    ground, standing on damp, after:
+    hair cutting, after:
+    heat, dry, amel.:
+    external, amel.:
+    moist external, amel.:
+    sun:
+    hot weather:
+    hydrocephalus acutus, during:
+    ice cream, after:
+    imagination, from exalted:
+    indignation, from:
+    indiscretion in eating, after the slightest:
+    injuries, after:
+    jaundice, during:
+    joy, sudden, from:
+    lemonade, after:
+    light, bright, from:
+    loss of fluids, after:
+    lying agg.:
+    abdomen, on the, amel.:
+    back, on the, agg.:
+    side, on the, agg.:
+    magnesia, after:
+    measles, during:
+    after:
+    meat, from:
+    smoked, from:
+    melons, from:
+    menses, before:
+    during:
+    after:
+    mental exertion, after:
+    mercury, after abuse of:
+    milk, after:
+    boiled, after:
+    hot, amel.:
+    sour, after:
+    motion agg.:
+    noise, from:
+    sudden, from:
+    nursing, after:
+    women:
+    onions, after:
+    opium, after:
+    overheated, after being:
+    oysters, after:
+    painless:
+    night:
+    only after eating in daytime:
+    pastry, after:
+    pears, after:
+    periodical, on alternate days:
+    same hour, at:
+    hour later each day:
+    every fourth day:
+    three weeks:
+    summer:
+    perspiration suppressed:
+    pork, after:
+    potatoes, after:
+    sweet, after:
+    pregnancy, during:
+    quinine, after abuse of:
+    rhubarb, after:
+    riding, from:
+    in a train:
+    rising up agg.:
+    from bed amel.:
+    rubbing amel.:
+    salmon, after eating:
+    sauer kraut, after:
+    school girls, in:
+    sea bathing, from:
+    seashore, while at:
+    septic conditions, from:
+    shell-fish, from:
+    shining objects agg.:
+    sitting agg.:
+    erect agg.:
+    sleep, during:
+    after:
+    small-pox, during:
+    smoking agg.:
+    soup, from:
+    spices, from:
+    Spring, in:
+    standing agg.:
+    strain, after a:
+    sugar, after:
+    maple sugar:
+    Summer:
+    supper, after:
+    teething:
+    thinking of it:
+    thunder-storm, before:
+    during:
+    tobacco, from:
+    urinating agg.:
+    vaccination, after:
+    veal, after:
+    vegetables, after:
+    vexation, from:
+    vinegar, after:
+    walking agg.:
+    warm application amel.:
+    drinks agg.:
+    food agg.:
+    room agg.:
+    warmth agg.:
+    of bed amel.:
+    washing the head, after:
+    water, hearing running, agg.:
+    weakness, without:
+    weaning, after:
+    wet, after getting:
+    after getting feet:
+    wind, after exposure to cold:
+    east:
+    wine, from:
+    winter:
+    wrapping up warmly amel.:
+    sensation as before a:
+
+  DIFFICULT stool
+
+  DISTENSION
+
+  DRAGGING, heaviness, weight
+    morning:
+    stool, after:
+    afternoon:
+    dinner, after:
+    sleep, after:
+    evening, during loose stool:
+    menses, before:
+    during:
+    standing, while:
+    stool, before:
+    during:
+    after:
+    perineum:
+
+  DRAW in, desire to, anus
+
+  DRYNESS
+    sensation of:
+
+  DYSENTERY
+
+  ERUPTION about anus
+    perineum:
+    boil:
+    herpes:
+
+  EXCORIATION
+    riding on horseback:
+    in a wagon:
+    stools, from the:
+    nates, between:
+    walking, from:
+    perineum, of:
+
+  FISSURE
+
+  FISTULA
+
+  FLATUS
+    daytime:
+    morning:
+    stool, during:
+    waking, on:
+    forenoon:
+    stool, before:
+    noon:
+    afternoon:
+    evening:
+    stool, during:
+    night:
+    menses, before:
+    stool, during:
+    acids, after:
+    without, Chin.:
+    cold:
+    diarrhoea, during:
+    difficult:
+    dinner, after:
+    eating, after:
+    hot:
+    inspiration, during:
+    involuntary:
+    loud:
+    stool, during:
+    spluttering:
+    after:
+    sugar, after:
+    menses, during:
+    moist:
+    odorless:
+    offensive:
+    ammoniacal odor:
+    cheese-like:
+    spoiled eggs:
+    stool, before:
+    during:
+    after:
+    urging for stool, but only flatus is passed:
+    sugar, after:
+
+  FOREIGN body, sensation of
+
+  FORMICATION in anus
+    evening:
+    in bed:
+    night:
+    sitting, while:
+    stool, before:
+    after:
+    perineum:
+
+  FULNESS
+    alternating with sensation of emptiness:
+    stool, after:
+    walking, after:
+    perineum:
+
+  GRUMBLING
+
+  GURGLING in rectum
+
+  HÆMORRHAGE from anus
+    morning:
+    stool, after:
+    afternoon:
+    evening, stool, during:
+    night:
+    black:
+    liquid:
+    exertion, after:
+    flatus, during emission of:
+    menses, before:
+    during:
+    scanty, during:
+    suppressed:
+    periodic:
+    rubbing, on:
+    stool, during:
+    after:
+    from hard:
+    walking, while:
+
+  HÆMORRHOIDS
+    morning agg.:
+    bed, in, agg.:
+    waking him:
+    night agg.:
+    alternating with palpitation:
+    beer agg.:
+    bleeding:
+    as soon as the rheumatism is better:
+    blind:
+    bluish:
+    chronic:
+    cold amel.:
+    congested:
+    drunkards, in:
+    external:
+    flatus, protrude when passing:
+    hard:
+    inflamed:
+    internal:
+    large:
+    menses, before:
+    during, agg.:
+    after, agg.:
+    suppressed, during:
+    mental excitement agg.:
+    mental exertion:
+    mercury, after abuse of:
+    milk agg.:
+    motion agg.:
+    offensive:
+    parturition agg.:
+    pendulous:
+    pregnancy, during:
+    purgations, after:
+    rheumatism abates, after:
+    riding amel.:
+    standing agg.:
+    stool, preventing:
+    protrude during:
+    strangulated:
+    suppressed:
+    suppurating:
+    thinking of them agg.:
+    touch agg.:
+    ulcerating:
+    urination, protrude during:
+    after, agg.:
+    walking agg.:
+    warmth, external, amel.:
+    warm weather agg.:
+    wiping after stool agg.:
+
+  HEAT
+    morning:
+    rising, on:
+    noon:
+    afternoon:
+    stool, during:
+    after:
+    urination, after:
+    perineum:
+
+  HEAVINESS
+
+  INACTIVITY of rectum
+
+  INEFFECTUAL urging
+
+  INFLAMMATION
+
+  INSENSIBILITY
+
+  INVOLUNTARY stool
+    night:
+    bed, in:
+    stool hard:
+    bending over, on:
+    coughing or sneezing, on:
+    eating, while:
+    after:
+    flatus, on passing:
+    formed stool:
+    fright, after:
+    hard stools:
+    labor, after:
+    laughing, on:
+    lumps of:
+    motion, on:
+    paralysis, from:
+    sleep, during:
+    sneezing, on:
+    standing, on:
+    stooping, on:
+    urination, during:
+    and stool:
+    and stool when not straining; voluntary defæcation impossible:
+    vomiting, during:
+    walking, on:
+
+  ITCHING
+    daytime:
+    morning:
+    bed, in:
+    forenoon:
+    evening:
+    bed, in:
+    night:
+    midnight, before:
+    alternating with ear:
+    ascarides, from:
+    burning:
+    coition, after:
+    cold bathing amel.:
+    dinner, after:
+    discharge of moisture, after:
+    menses, during:
+    pain, ending in:
+    riding, while:
+    rubbing agg.:
+    scratching agg.:
+    sitting, while:
+    sleep, on going to:
+    after:
+    stool, before:
+    during:
+    after:
+    stooping, on:
+    voluptuous:
+    walking, while:
+    in open air:
+    warm bed, in:
+    extending into urethra during stool:
+    around anus:
+    warmth of bed:
+    perineum:
+    forenoon:
+    night:
+    scratching agg.:
+    after, pain:
+    stool, during:
+    touched, when:
+    walking, while:
+
+  LUMP, sensation of
+    perineum:
+
+  MOISTURE
+    evening:
+    night:
+    acrid:
+    bloody:
+    flatus, from:
+    glutinous:
+    herring brine, smelling like:
+    menses, during:
+    musty odor:
+    stool, before:
+    after:
+    perineum:
+
+  NUMBNESS of anus
+
+  OPEN anus
+    sensation of:
+    stool, after:
+
+  PAIN
+    morning:
+    stool, during:
+    after:
+    forenoon:
+    afternoon:
+    evening:
+    lying, while:
+    night:
+    midnight:
+    coition, after:
+    continuous:
+    convulsive:
+    cough, from:
+    eating, after:
+    flatus, on passing:
+    kneeling amel.:
+    lying agg.:
+    on abdomen amel.:
+    back:
+    menses, before:
+    during:
+    mental exertion, after:
+    motion agg.:
+    periodical, every day:
+    pressing upon umbilicus:
+    sitting, while:
+    sleep, during:
+    standing agg.:
+    stool, before:
+    during:
+    after:
+    straining at, after:
+    urination, during:
+    walking, while:
+    warm bathing agg.:
+    extending to abdomen:
+    genitals:
+    umbilicus:
+    urethra, through:
+    perineum:
+    urging to urinate:
+    burning:
+    daytime, walking, while:
+    morning:
+    bed, in:
+    noon:
+    afternoon:
+    sleeping, after:
+    evening:
+    night:
+    midnight, before:
+    stool, after:
+    cold application amel.:
+    constant:
+    diarrhoea, during:
+    after:
+    dysentery, in:
+    exercise, after:
+    fissure, in:
+    flatus, during:
+    after:
+    heat agg.:
+    menses, during:
+    after:
+    moving, after:
+    paroxysmal:
+    pregnancy, during:
+    prolapsed, in the:
+    rhagades:
+    rubbing, after:
+    sitting, while:
+    standing, while:
+    stool, before:
+    during:
+    after:
+    after a hard:
+    tickling:
+    urination, after:
+    vexation agg.:
+    walking, while:
+    washing with cold water amel.:
+    perineum:
+    coition, after:
+    clawing, squeezing, as from a claw in anus:
+    stool, during:
+    cutting:
+    morning:
+    bed, in:
+    rising, after:
+    forenoon, walking, while:
+    afternoon:
+    evening:
+    night:
+    diarrhoea, during:
+    dysentery, in:
+    standing agg.:
+    stool, before:
+    during:
+    after:
+    walking, while:
+    extending up rectum:
+    perineum:
+    morning:
+    evening:
+    drawing:
+    coition, after:
+    downwards:
+    sitting, while:
+    walking, while:
+    extending into abdomen:
+    through genitals:
+    before stool:
+    to umbilicus:
+    upwards:
+    urethra, through:
+    perineum:
+    gnawing:
+    griping:
+    afternoon:
+    evening:
+    driving, while:
+    sitting:
+    stool, when not at:
+    extending to abdomen:
+    lancinating:
+    pinching:
+    perineum:
+    pressing (pressure):
+    morning:
+    forenoon:
+    noon:
+    afternoon:
+    sleep, during:
+    evening:
+    bed, in:
+    night:
+    diarrhoea would come on, as if:
+    downward, outward, etc.:
+    fæces were lodged in rectum, as if:
+    flatus, during:
+    lying, while:
+    menses, before:
+    during:
+    mental exertion:
+    motion agg.:
+    sitting, while:
+    standing, while:
+    stool, before:
+    during:
+    after:
+    not for:
+    walking:
+    perineum:
+    rasping:
+    scraping:
+    shooting:
+    smarting:
+    soreness:
+    morning:
+    evening:
+    night:
+    lying on back:
+    menses, during:
+    moving, after:
+    sitting, while:
+    stool, during:
+    hard, during:
+    after:
+    diarrhoeic, after:
+    walking, while:
+    perineum:
+    sticking:
+    stool, during:
+    after:
+    stinging:
+    menses, during:
+    stool, during:
+    after:
+    walking, while:
+    stitching:
+    morning:
+    waking, after:
+    forenoon:
+    afternoon:
+    evening:
+    bed, in:
+    night:
+    midnight:
+    alternating with burning in prepuce:
+    with itching in glans penis:
+    coition, after:
+    coughing, on:
+    dinner, after:
+    eating, before:
+    after:
+    erect, when body is:
+    flatus, on passing:
+    itching:
+    lying, while:
+    menses, during:
+    mental exertion, after:
+    pregnancy, during:
+    sitting, while:
+    sneezing, when:
+    standing, while:
+    stool, before:
+    during:
+    hard, during:
+    after:
+    difficult stool, after:
+    urination, during:
+    walking, while:
+    after:
+    in open air amel.:
+    extending to abdomen:
+    back:
+    bladder:
+    downwards and outwards:
+    genitals, to, while walking:
+    ilium and glans penis:
+    inguinal region, left:
+    loins:
+    outward:
+    penis:
+    pudendum, during menses:
+    after stool:
+    root of penis:
+    upward:
+    stool, after:
+    urethra:
+    perineum:
+    evening:
+    extending to anus:
+    uterus:
+    tearing:
+    morning:
+    evening:
+    after hard stool:
+    bed, in:
+    bending forward amel.:
+    coughing on:
+    dinner, after:
+    lying on back amel.:
+    moving, on:
+    stool, during:
+    after:
+    twitching:
+    urinating, while:
+    extending into abdomen:
+    during stool:
+    upward:
+    perineum:
+    tenesmus:
+    morning:
+    rising, after:
+    evening:
+    night:
+    bladder, and:
+    coffee, after:
+    constipation, during:
+    diarrhoea, before:
+    during:
+    after:
+    dinner, after:
+    dysentery, during:
+    eating:
+    flatus, on attempting to suppress:
+    hard stool, with:
+    menses, before:
+    during:
+    milk, after:
+    sitting, while:
+    stool, before:
+    during:
+    after:
+    urination, during:
+    after:
+    walking, while:
+    warmth amel.:
+    extending to bladder:
+    perineum:
+    urethra:
+    twinging:
+    exercise, after:
+    flatus amel.:
+    stool, during:
+    after:
+    writhing in anus:
+
+  PARALYSIS
+    sensation of:
+
+  PERSPIRATION about the anus and perinæum
+    morning:
+    night:
+
+  PLUG was pressing out, sensation as if
+
+  POLYPI
+
+  PRICKLING
+    stool, during:
+    after:
+
+  PROLAPSUS
+    morning:
+    forenoon:
+    evening:
+    night:
+    children:
+    convulsive:
+    diarrhæa, during:
+    flatus, when passing:
+    hæmorrhage of rectum, after:
+    menses, during:
+    mental excitement, from:
+    painful:
+    parturition, after:
+    sitting agg.:
+    smoking agg.:
+    sneezing, after:
+    stool, before:
+    during:
+    after:
+    stooping, on:
+    straining, without:
+    urinating, when:
+    vomiting, when:
+    sensation of:
+
+  PULSATION
+    evening:
+    sitting, amel. in bed:
+    menses, during:
+    sitting, while:
+    stool, during:
+    after:
+    perineum:
+
+  RECEDES, stool
+
+  REDNESS of anus
+
+  RELAXED anus
+    sensation of, after stool:
+
+  RETRACTION
+    stool, after:
+
+  SENSITIVE
+
+  SHOCK, electric-like
+    stool, before:
+
+  SLIP back, stools
+
+  SLOW action of rectum
+
+  SPASMS in
+    coition, during:
+    with urging to urinate:
+
+  STRAINING
+
+  STRICTURE
+
+  SWELLING of anus
+    menses, during:
+    sensation of:
+    raphe of perineum:
+
+  TENESMUS
+
+  TENSION
+    convulsive:
+    stool, after:
+    perineum:
+
+  TICKLING
+
+  TINGLING
+    evening:
+    stool, during:
+
+  TREMBLING in anus
+
+  TUBERCLE on perineum
+
+  TWITCHING
+    afternoon:
+    bed, in:
+
+  ULCERATION
+
+  UNNOTICED stool
+    hard stool:
+    thin, watery, passes while urinating:
+
+  URGING, desire
+    evening in sleep:
+    night:
+    menses, before:
+    waking, on:
+    absent in company:
+    anxious:
+    breakfast, during:
+    after:
+    clothing, on tightening:
+    coffee, after:
+    coition, after:
+    colic, during:
+    constant:
+    dinner, during:
+    after:
+    eating, after:
+    effort, great desire passes away with:
+    eructation, on each:
+    exciting news, after:
+    flatus, when passing:
+    passing amel.:
+    frequent:
+    hang down, letting feet:
+    labor pain, with every:
+    lying, while:
+    menses, before:
+    during:
+    motion, on:
+    rising, on:
+    sitting, on:
+    smoking, while:
+    standing, while:
+    startled, when:
+    stool, before:
+    during:
+    after:
+    not for stool, but:
+    rising from:
+    after, amel.:
+    sudden:
+    morning:
+    evening:
+    night:
+    supper, after:
+    thinking about it, on:
+    tormenting, but not for stool:
+    urination, during:
+    after:
+    vertigo, during:
+    walking, while:
+
+  WARTS
+
+  WEAKNESS, weak feeling
+    stool, before:
+    after:
+    urination, during:
+
+  WEIGHT, and a feeling as if a plug were wedged between the pubis and coccyx
+    perineum:
+
+  WORM, sensation of
+    complaints:
+    ascarides:
+    lumbricoides:
+    tæniæ:
+
+STOOL
+  ACRID, corrosive, excoriating
+
+  ALBUMINOUS
+    coagulated:
+
+  ASH-COLORED
+
+  BALLS, like
+
+  BILIOUS
+
+  BLACK
+    fecal:
+
+  BLOODY
+    streaks, in:
+
+  BLUISH
+
+  BROWN
+    fecal:
+
+  CHALKY
+
+  CHANGEABLE
+
+  CHOPPED
+    beets:
+    eggs:
+    spinach:
+
+  CLAY-COLORED
+
+  CLAY-LIKE
+
+  COFFEE grounds, like
+
+  COLD
+
+  COLORLESS
+
+  CONSTANT discharge
+
+  COPIOUS
+    night:
+    which does not exhaust:
+
+  CREAM-COLORED
+
+  CRUMBLING
+
+  CURDLED
+    milk, like, forcibly expelled:
+
+  DARK
+    fecal:
+
+  DIFFICULT
+
+  DOG'S, like a
+
+  DRY
+    sand, like:
+
+  FALLING out
+
+  FATTY, greasy
+    oily-looking fecal:
+
+  FERMENTED
+
+  FILAMENTS like hair in fæces
+
+  FLAKY
+
+  FLAT
+
+  FLOCCULI
+
+  FORCIBLE, sudden, gushing
+
+  FREQUENT
+
+  FROG spawn
+
+  FROTHY
+
+  GELATINOUS
+
+  GRAY
+    whitish, in part:
+
+  GREASY
+
+  GREEN
+    blackish:
+    brownish:
+    fecal:
+    hard:
+    mucus:
+    olive green:
+    scum on a frog-pond, like:
+
+  GUSHING
+
+  HARD
+    alternating hard and soft:
+    burnt, as if:
+    first, then fluid:
+    then pasty:
+    menses, during:
+    tough and greasy:
+
+  HOT
+
+  INSUFFICIENT
+
+  JELLY-LIKE
+
+  KNOTTY, nodular, lumpy
+    green:
+    liquid, and:
+    mucus, covered with:
+    united by threads of mucus:
+
+  LARGE
+
+  LIENTERIC
+    morning:
+    night:
+    food of the previous day:
+    hard:
+
+  LIGHT-COLORED
+
+  LIQUID
+
+  LONG, narrow
+
+  LUMPS like chalk
+
+  LUMPY and liquid
+
+  MEAL-LIKE sediment, with:
+
+  MEMBRANOUS
+
+  MUCOUS, slimy
+    black:
+    bloody:
+    boiled starch:
+    brown:
+    cheesy:
+    chopped eggs and spinach:
+    colorless:
+    covered with mucus:
+    cream-colored:
+    dark:
+    like frothy molasses:
+    fetid:
+    granular:
+    green:
+    jelly-like:
+    frog-spawn, like:
+    liquid:
+    lumpy mucus:
+    red:
+    shaggy masses:
+    shreddy:
+    tenacious:
+    transparent:
+    watery:
+    white:
+    masses:
+    like little pieces of popped corn:
+    milk white:
+    yellow:
+
+  MUSHY
+    brown:
+    yellow:
+    white:
+
+  NARROW
+
+  ODOR
+    acid:
+    brassy:
+    brown paper, burning, like:
+    burnt meat:
+    cadaveric:
+    carrion-like:
+    cheese, rotten, like:
+    coppery:
+    eggs, like rotten:
+    musky:
+    musty:
+    offensive:
+    putrid:
+    sour:
+    urine, like:
+    odorless:
+
+  PASTY, papescent
+
+  PURULENT
+
+  REDDISH
+
+  SCANTY
+
+  SCRAPINGS of intestines, like
+    of meat, like:
+
+  SHEEP dung, like
+
+  SHOOTING out
+    all at once in a somewhat prolonged effort:
+    in a torrent:
+
+  SLATE-COLORED
+
+  SMALL
+
+  SOFT
+
+  SPUTTERING
+
+  STRINGY
+
+  SUDDEN
+
+  TARRY-LOOKING
+
+  TENACIOUS
+
+  THIN, liquid
+    black:
+    brown:
+    dark:
+    fecal:
+    followed by hard:
+    formed then thin:
+    green:
+    liver-colored:
+    lumpy and liquid:
+    pouring out:
+    red:
+    yellow:
+
+  TOUGH
+
+  TRANSPARENT
+
+  UNDIGESTED
+
+  WATERY
+    morning:
+    afternoon:
+    night:
+    black:
+    bloody:
+    meat washings, like:
+    brown:
+    clay-colored:
+    clear:
+    dirty:
+    flakes, with:
+    frothy:
+    gelatinous on standing:
+    green:
+    scum, with:
+    prune juice, like:
+    rice water, like:
+    white:
+    yellow:
+
+  WHITE
+    fecal:
+    alternating with black:
+    grains or particles:
+    gray, streaked with blood:
+    grayish white:
+    greenish white:
+    hard:
+    jelly-like:
+    masses like tallow:
+    milk-like, chyle-like:
+    shreddy particles:
+
+  YELLOW
+    bright:
+    brownish:
+    fecal:
+    painless immediately after eating:
+    granular:
+    green on standing, turning:
+    greenish:
+    hard:
+    orange:
+    like pulp of:
+    saffron, like:
+    salmon:
+    whitish:
+
+URINARY ORGANS
+  BLADDER
+    APPREHENSION in region of:
+    BALL in, sensation of:
+    forced from behind neck of, sensation of:
+    BAND:
+    CALCULI:
+    after operation for:
+    CARTILAGINOUS induration:
+    CATARRH, muco-pus:
+    gonorrhoea, from suppressed:
+    hæmorrhoidal subjects, in:
+    old people, in:
+    COLD sensation in:
+    alternating with heat:
+    CONSTRICTION:
+    afternoon:
+    urination, before:
+    during:
+    after:
+    neck:
+    morning:
+    urination, during:
+    after:
+    CONTRACTION, sensation of:
+    CRAMP in:
+    night:
+    causing him to bend double:
+    urination, during:
+    after:
+    CRAWLING, urination, after:
+    DROPS came out of, sensation as if, rest agg.:
+    EMPTINESS, sensation of:
+    FALLS to side lain on, sensation as if:
+    FULNESS, sensation of:
+    urination, after:
+    without desire to urinate:
+    FUNGOID growths:
+    GANGRENE:
+    GAS passes from:
+    HEAT in:
+    HEAVINESS:
+    HÆMORRHAGE:
+    HÆMORRHOIDS of:
+    bleeding:
+    INACTIVITY of:
+    INFLAMMATION:
+    cold, from taking:
+    injuries, after:
+    pus-like discharge after lithotomy, with:
+    scarlatina, after:
+    suppression of menses or hæmorrhoidal flow, after:
+    violent pain and almost clear blood, with:
+    neck:
+    INSENSIBILITY:
+    ITCHING in region of bladder with urging to urinate, agg. night:
+    neck, evening:
+    JAR, sensitive to:
+    MOTION in:
+    NUMBNESS:
+    OBSTRUCTION, sensation of, neck, urinating, while:
+    PAIN:
+    morning:
+    evening:
+    urination, after:
+    night:
+    coition, after:
+    cold, from taking:
+    coughing, when:
+    desire be postponed, if:
+    distension, as from:
+    drinking agg.:
+    jarring:
+    lithotomy, after:
+    lying on abdomen amel.:
+    menses, during:
+    moving, on:
+    up and down at every step after urination:
+    paroxysmal:
+    pulsating:
+    retarding urination:
+    riding in a carriage:
+    sitting, while:
+    soon attended to, if the desire be not:
+    standing agg.:
+    turning over in bed, as if bladder would fall to side lain on:
+    urging to urinate, during:
+    urinating, before:
+    beginning:
+    when urine starts he is amel.:
+    during:
+    after a few drops pass:
+    after:
+    walking, on:
+    extending to kidney:
+    spermatic cords:
+    thighs:
+    uterus:
+    neck:
+    attempting to urinate, on:
+    beginning to urinate, on:
+    close of urination:
+    urging to urinate, on:
+    urination, before:
+    after:
+    when last drops are voided:
+    walking, while:
+    aching:
+    coition, after:
+    lying, while:
+    menses, during:
+    urination, before:
+    during:
+    after:
+    neck:
+    urination, after:
+    boring, region of:
+    burning:
+    morning:
+    evening:
+    night:
+    lying, while:
+    menses, during:
+    standing agg.:
+    urination, before:
+    during:
+    after:
+    walking in open air amel.:
+    neck:
+    urination, during:
+    after:
+    urinating, when not:
+    extending through urethra:
+    clawing:
+    constricting:
+    neck:
+    beginning to urinate, on:
+    urination, after:
+    cutting:
+    standing:
+    urination, before:
+    during:
+    after:
+    close of, at the:
+    walking agg.:
+    open air, in, amel., rest agg.:
+    neck:
+    morning in bed:
+    urination, before:
+    beginning to urinate, on:
+    during:
+    close of, at the:
+    walking in open air, while:
+    extending through urethra:
+    dragging:
+    morning:
+    night, lying down, while:
+    hold urine, on attempting to:
+    lying, horse-back riding amel.:
+    siesta, after:
+    suppression of urine, with:
+    urination, during:
+    after:
+    drawing:
+    riding in a carriage, while:
+    sitting, while:
+    upward:
+    urination, during:
+    neck:
+    lancinating:
+    pinching:
+    lying, while, with stitching:
+    pressing, pressure in:
+    morning:
+    evening:
+    night:
+    coughing, when:
+    ineffectual desire for stool, with:
+    lying, while:
+    motion agg.:
+    retention, with:
+    riding horseback amel.:
+    sitting cross-legged (compelled) amel.:
+    stool, before:
+    urination, before:
+    during:
+    after:
+    deep in left side:
+    walking, while:
+    neck:
+    hold the urine, on attempting to:
+    sitting agg.:
+    stitches, with, walking agg., sitting amel.:
+    urination, before:
+    during:
+    after:
+    walking in open air, while:
+    shooting:
+    smarting:
+    standing agg.:
+    walking, while:
+    extending to meatus:
+    sore, tender:
+    motion agg.:
+    urination, during, agg.:
+    after amel.:
+    neck:
+    urination, after:
+    spasmodic:
+    morning:
+    night:
+    extending to chest:
+    neck:
+    closure at:
+    extending to thighs after micturition:
+    stabbing, region of:
+    stitching, stinging:
+    alternating between bladder and rectum:
+    cough, during:
+    dinner, after:
+    lying, while:
+    respiration, during:
+    sitting amel.:
+    stool, during:
+    urging to urinate, when:
+    ineffectual urging:
+    urination, before:
+    beginning to urinate, on:
+    during:
+    after:
+    walking, while:
+    extending from kidney to bladder:
+    to kidneys:
+    to urethra:
+    neck:
+    morning:
+    afternoon:
+    evening:
+    anus, and:
+    coughing, when:
+    desire be delayed, if:
+    ineffectual effort to urinate, after:
+    lying on face amel.:
+    sitting amel.:
+    urination, before:
+    during:
+    after:
+    urinating, when not:
+    extending to end of penis:
+    tearing:
+    neck:
+    pressing during urination, when:
+    urination, during:
+    twisting, neck:
+    twinging:
+    twitching:
+    PARALYSIS:
+    daytime:
+    forcible retention seems to paralyze the bladder:
+    hysterical subjects, in:
+    old people, in:
+    over-distension, after:
+    parturition, after, no desire:
+    PARALYTIC weakness:
+    sphincter:
+    sensation of, evening, so that he fears he will wet the bed:
+    neck:
+    POLYPI:
+    PULSATION:
+    urination, before:
+    RETENTION of urine:
+    evening:
+    night:
+    air, from exposure to cold:
+    beer, after:
+    children, in:
+    every time child catches cold:
+    chill, in:
+    cholera, in:
+    chronic:
+    clots in the bladder, from:
+    in the vagina, from:
+    cold, from catching:
+    standing on cold pavement:
+    colic:
+    confinement, after:
+    dribbling, with:
+    dysentery:
+    enlarged prostate, from:
+    exertion, after:
+    fright, after:
+    hysteria, in:
+    locomotor ataxia:
+    menses, during:
+    new born infants, in:
+    after passion of the nurse:
+    old men:
+    over-distension, after:
+    painful:
+    urging, with, while lying on the back:
+    sensation as if urine retained by contraction of sphincter:
+    sitting bent backwards amel.:
+    unable to pass urine in presence of company:
+    urine passed by drops:
+    wet, after getting feet:
+    RHEUMATIC affections:
+    SENSATION absent:
+    SHOCKS, electric, extending to right thigh:
+    SPASM:
+    urination, before:
+    during:
+    after:
+    neck:
+    night:
+    sexual excesses, after:
+    spasmodic stricture:
+    SPASMODIC action of:
+    STONE in, sensation:
+    SUPPURATION:
+    SWOLLEN:
+    region of neck:
+    TENESMUS:
+    morning:
+    forenoon:
+    evening, walking in open air:
+    night:
+    icy cold feet, with:
+    menses, during:
+    sitting, while:
+    stool, during:
+    after:
+    urging to stool, with:
+    urination, after:
+    vomiting, purging and micturition:
+    TENSION:
+    THICKENING of walls of:
+    TUMORS:
+    TWISTING sensation:
+    TWITCHING, neck, during urination:
+    ULCERATION:
+    calculi, caused by:
+    symptoms of:
+    URGING to urinate (morbid desire):
+    daytime:
+    morning:
+    rising, on:
+    waking, on:
+    forenoon:
+    afternoon:
+    evening:
+    lying, while:
+    night:
+    day, and:
+    coition, after:
+    waking, on:
+    midnight:
+    abdomen, on touching:
+    absent:
+    distended bladder, with:
+    urine flows freely:
+    anxious:
+    urinate, on beginning to:
+    apyrexia:
+    chill, during:
+    coffee, after:
+    constant:
+    daytime:
+    evening, while lying:
+    night:
+    erections, with:
+    every other:
+    bladder, distended, with passing only a few drops:
+    cold, from becoming:
+    pain in liver, chest and kidneys, with:
+    prolapsus of uterus, during:
+    running water, at sight of:
+    sitting, while:
+    dragging down in pelvis, with:
+    drinking, after:
+    erections, with:
+    fever, during:
+    frequent:
+    afternoon:
+    evening:
+    night and day:
+    cold, from taking:
+    cutting pain from umbilical to ovarian region:
+    desire increases as the quantity of urine diminishes:
+    flatus, when passing:
+    with, upward and downward:
+    infant screams before the urine passes:
+    loss of tone of sphincter, from:
+    menses, before:
+    during:
+    after:
+    suppressed, with:
+    motion, the slightest, agg.:
+    prolapsus, with:
+    urinate immediately, if he does not, a feeling as if urine passed involuntarily, which is not so:
+    without passing any; then while sitting involuntary flow:
+    ineffectual:
+    night:
+    but as soon as he ceases to strain stool and urine pass involuntarily:
+    children:
+    chill, during:
+    cramps in rectum, with:
+    diarrhoea, with:
+    fever, during:
+    headache, with:
+    menses, during, agg.:
+    perspiration, during:
+    standing, while, then while sitting urine flows involuntarily:
+    stool, with urging to:
+    irresistible:
+    lifting, after:
+    lying:
+    on back:
+    married women, newly:
+    menses, before:
+    during:
+    after:
+    mental exertion:
+    motion, from:
+    old women:
+    only a few drops pass until the next stool, when it flows freely:
+    painful:
+    child cries:
+    child jumps up and down with pain, if cannot be gratified:
+    children grasp the genitals and cry out:
+    disappears when menstrual flow starts:
+    urging to stool, with:
+    perspiration, during:
+    pregnancy, during:
+    pressure in rectum, with:
+    riding horseback amel.:
+    shuddering, with:
+    sitting, while:
+    standing:
+    stool, after:
+    sudden, hasten to urinate, must:
+    menses, during:
+    running water, on seeing:
+    sticking forward in urethra, with:
+    urine seems to pass into glands, and then return and cause pain in urethra:
+    thinking of it, when:
+    thirst, with:
+    urination, after:
+    violent:
+    night:
+    menses, during:
+    sudden:
+    morning:
+    waking, on:
+    night:
+    child wakes but cannot get out of bed soon enough:
+    attended to, if the desire be not, feels as if urine had escaped, which is not so:
+    busily occupied, when, she has to run and pass a few drops of urine:
+    hasten to urinate, must, or urine will escape:
+    urination, after:
+    walking, while:
+    water, hearing, running or putting hands in:
+    pouring out liquid:
+
+  URINATION
+    dribbling (by drops):
+    morning:
+    afternoon, rising from seat, on:
+    evening:
+    lying, while:
+    night:
+    drops flow from urethra, coloring shirt red:
+    beginning to urinate, on:
+    then free with stool:
+    enlarged prostate, with:
+    involuntary:
+    day and night:
+    boys, in:
+    delayed, if:
+    labor, after:
+    menses, during:
+    not a drop flows on making the greatest effort, but, bladder distended, no pain:
+    stool, after:
+    labor, after:
+    perpendicularly, urine drops out:
+    retention, with:
+    rising from a seat, when:
+    sitting, while:
+    when standing urine passes freely:
+    stitching in glans penis, with:
+    stool, after:
+    urination, after:
+    pressure in rectum, with:
+    walking, while:
+    dysuria:
+    morning:
+    old men, in:
+    afternoon, walking amel.:
+    night:
+    midnight, after:
+    aching in back, with:
+    alternating with enuresis:
+    apyrexia, during:
+    chill, during:
+    dysmenorrhoea, during:
+    fever, during:
+    married women, newly:
+    menses, suppressed and drawing pains in abdomen, with:
+    pain in the sphincter vesica, with hyperæsthesia of the skin down the course of the left sciatic nerve, pain in the left popliteus and heel, with coldness creeping over the whole course of the nerve, especially in the heel:
+    painful, child cries before urine starts:
+    close of urination:
+    coldness, numbness and twitching down left leg, with:
+    dances around the room in agony, so that he:
+    dinner and supper, after:
+    effort to urinate agg.:
+    spasm of the bladder, from:
+    spasmodic closure of the sphincter while finishing:
+    thinking of it agg.:
+    urination, after, agg.:
+    perspiration, during:
+    sleep, after:
+    tenesmus of rectum, with, evening:
+    and spasm of urethra:
+    urging to stool, with:
+    feeble stream (slow):
+    morning on waking:
+    night:
+    difficulty of breathing and heart symptoms, with:
+    pain in the bladder, with violent:
+    retention, from long:
+    rising, after:
+    sleep, after:
+    slow after stool, only dribbling:
+    forcible stream:
+    forked stream:
+    frequent:
+    daytime:
+    and night:
+    morning:
+    rising, after:
+    forenoon:
+    afternoon:
+    evening:
+    night:
+    cries before urine passes:
+    pregnancy, during:
+    seldom during day:
+    busily occupied, when, must run and pass a little urine:
+    chill, during:
+    coffee, after:
+    dinner, after:
+    emission of water-colored urine in small quantity:
+    every other day:
+    exertion, after:
+    exposure to cold and wet:
+    fever, during:
+    drinking, after:
+    headache, with:
+    menses, before:
+    during:
+    old people:
+    pain in face, with:
+    perspiration, during:
+    hasty:
+    incomplete:
+    bladder full, urging to urinate but scanty urine:
+    obliged to urinate five or six times before the bladder is empty:
+    interrupted (intermittent):
+    evening:
+    coition, after:
+    painful erections, with:
+    spurts, in swelled prostate, with each spurt cutting pain:
+    stream, after which the urine flows out drop by drop:
+    urine flows better when standing:
+    so thick, with cheesy masses like curdled milk:
+    violent contraction in region of bladder, by:
+    involuntary:
+    daytime:
+    and night:
+    sleep, during:
+    walking, while:
+    morning:
+    toward:
+    forenoon:
+    night (incontinence in bed):
+    morning, toward:
+    midnight to morning:
+    after,
+    difficult to waken the child:
+    dreaming of urinating, while:
+    first sleep:
+    spasmodic enuresis:
+    tangible cause except habit, when there is no:
+    weakly children, in:
+    blowing the nose, when:
+    boys, in:
+    chill, before:
+    during:
+    cold, becoming:
+    convulsions, during:
+    cough, during:
+    delayed, if:
+    desire is resisted, if:
+    effort, during, no urine flows:
+    excitement, from:
+    exertion, during:
+    flatus, expelling, when:
+    labor, after:
+    laughing:
+    lying, while:
+    mania, during:
+    menses, during:
+    motion, during:
+    noise, sudden:
+    old people, in:
+    men with enlarged prostate:
+    pregnancy, during:
+    putting hands in cold water:
+    retain, great pain on attempting to:
+    riding, while:
+    rising from a seat, when:
+    running, while:
+    sitting, while:
+    retention while standing:
+    she must swing her foot constantly or the urine will escape:
+    sneezing, when:
+    standing, while:
+    stool, straining at, while:
+    after:
+    dysenteric, each:
+    fully conscious, while, supposing it to be flatus:
+    thirst and fear, with:
+    typhoid fever:
+    urination, after:
+    walking, while:
+    yet on attempting to, when standing still, nothing passed:
+    water running from a hydrant, on seeing:
+    weakly children, in:
+    paroxysmal:
+    residuary:
+    retarded, must wait for urine to start:
+    sec., alone, can only pass urine when:
+    great straining, after, a few drops of urine pass, which are followed by a full stream, without pain; after this sometimes dribbling urine:
+    knees, on the, and pressing head against floor, can pass urine only when:
+    listening to music, can pass urine only when:
+    water running, can pass urine only when:
+    whistling, can pass urine only when:
+    long while, and then only a little urine passes:
+    especially if others are near him:
+    pain, by, in the fundus of bladder:
+    press, must, a long time before he can begin:
+    morning:
+    continue to, must, if he stops to breathe the urine ceases to flow until he strain again:
+    must, to pass the last part:
+    frequent pressing to urinate, with, with small discharges:
+    so hard, must, to start the urine that anus protrudes:
+    long pressing, after, urine passes guttatim:
+    long time, must, which is painful:
+    painful and frequent urination, with disposition to sit and strain a long time, after which few drops pass:
+    pressure, the more, the less it flows:
+    stand and press a long time, must, before urine will start:
+    sitting, can only pass urine while:
+    bent backward, can only pass urine while:
+    forward:
+    spasm of sphincter, on account of:
+    standing, can only pass urine while:
+    with feet wide apart and body inclined forward, can only pass urine while:
+    flows better, while:
+    flows involuntarily while sitting:
+    urine will not flow, while, but passes involuntarily while walking:
+    stool, while pressing at, can pass urine only:
+    urging to urinate, with, but can pass no urine until an enormous clot of black blood has passed from the vagina:
+    urination, before, a cutting with ineffectual straining, that stops the flow:
+    seldom:
+    daytime:
+    slow:
+    small stream:
+    spurting stream:
+    coughing, when:
+    urination, after:
+    thin stream:
+    unconscious, urethra insensible:
+    mania, in:
+    urine and stool:
+    unsatisfactory:
+    feeling as if urine remained in urethra:
+
+  WEAKNESS
+    evening:
+    old people:
+    parturition, after:
+    sphincter:
+
+  WORM in, sensation of
+
+KIDNEYS
+  ABSCESS
+
+  ADDILON'S disease
+
+  BUBBLING sensation in region of
+
+  CALCULI
+
+  CATARRH
+
+  COLD sensation
+    region of:
+
+  FLUTTERING sensation, region of
+
+  FORMICATION
+    region of:
+
+  HEAT
+    extending to bladder:
+    region of:
+    sitting, while:
+
+  HEAVINESS
+    morning:
+    waking, on:
+    sitting agg.:
+    region of:
+    afternoon:
+    evening:
+    night:
+    motion agg.:
+
+  INFLAMMATION
+    acute parenchymatous:
+    bloody, ink-like, albuminous urine, with:
+    cardiac and hepatic affections, with:
+    suppurative:
+    toxæmic:
+    ureters:
+
+  LAMENESS, region of
+    left, with cramp, extending into thighs:
+    waking, on:
+
+  NUMBNESS, region of
+
+  PAIN
+    morning:
+    waking, on:
+    afternoon:
+    evening:
+    night:
+    undressing, while:
+    alternating with vertigo:
+    aprexia, during:
+    bending body, on:
+    blowing nose:
+    breathing deeply, when:
+    chill, during:
+    coughing:
+    dancing, while:
+    desire be delayed, if:
+    jar, from:
+    laughing, when:
+    lifting, when:
+    lying, while:
+    on abdomen amel.:
+    on back:
+    menses, at beginning of:
+    during:
+    motion agg.:
+    paroxysmal:
+    pulsating:
+    radiating:
+    riding:
+    sitting, while:
+    sneezing agg.:
+    spasmodic:
+    standing amel.:
+    stooping, when:
+    after long:
+    straightening out legs agg.:
+    swelling of right knee, with:
+    urging to urinate, during:
+    urination, before:
+    during:
+    after amel.:
+    walking, while:
+    extending over abdomen:
+    abdomen:
+    bladder:
+    epigastrium:
+    hip:
+    right ilium:
+    thigh:
+    testes:
+    region of:
+    bands of clothing, from:
+    digging, when:
+    lie only on the back, can:
+    stretching, after:
+    extending to calves:
+    chest:
+    downward:
+    from genitals, anus and thighs:
+    groin:
+    prostate gland:
+    thighs:
+    ureters:
+    right side:
+    left side:
+    radiating from renal region:
+    extending to penis and testes:
+    right thigh:
+    thighs and feet:
+    urethra, into:
+    and seminal cords:
+    aching:
+    evening:
+    night:
+    riding, while:
+    urination, during:
+    region of:
+    afternoon:
+    evening:
+    urination, before:
+    waking, on:
+    burning:
+    left:
+    lying, while:
+    oppressed breathing and faintness, with:
+    urination, before:
+    during:
+    extending through left ilium to pubis, in women:
+    along ureters:
+    to bladder:
+    region of:
+    ureters:
+    constricting, extending to bladder:
+    down ureters to penis, pressure on glans amel., at times pain goes upward:
+    contracting:
+    down ureters to penis:
+    cramping:
+    cutting:
+    paroxysmal, and burning in both:
+    urination, before:
+    region of:
+    heat amel., cold agg.:
+    lancinations, friction and pressure amel.:
+    ureters:
+    alternating with pain in glans:
+    urination, after:
+    digging:
+    region of, pressure agg.:
+    dragging, ureters, like labor pain with urging to urinate:
+    drawing:
+    right,
+    left:
+    stooping, when:
+    tensive, riding, while:
+    extending right to hip:
+    region of:
+    evening, sitting, while:
+    extending into inguinal region:
+    right hip:
+    ureters:
+    right:
+    left:
+    gnawing:
+    region of:
+    lancinating:
+    piercing in both ureters, with urging to urinate:
+    pressing:
+    morning:
+    night:
+    motion amel.:
+    sitting, while:
+    urination, before:
+    region of:
+    pulsating:
+    shooting:
+    sore, bruised:
+    right:
+    left:
+    afternoon:
+    exerting the muscles, while:
+    jar:
+    sitting, while:
+    region of:
+    extending to thighs:
+    stabbing, region of:
+    stitching, stinging, sticking:
+    morning:
+    afternoon:
+    evening:
+    bed, in:
+    night:
+    cold, becoming:
+    eating, after:
+    inspiration, on deep:
+    lying on face amel.:
+    motion:
+    of arms, on:
+    pulsating:
+    sitting, while:
+    sneezing:
+    standing, while:
+    warm bed amel.:
+    extending to bladder:
+    knee:
+    urethra:
+    down ureters:
+    uterus:
+    tearing:
+    morning, rising, after:
+    agonizing as from passing calculus, in back and hips:
+    pulsating:
+    radiating:
+    standing amel.:
+    stooping, on:
+    wet weather:
+    extending to thighs, with stiffness:
+    downwards:
+    ureters, extending downwards, touch, motion and inspiration agg.:
+    ulcerative:
+
+  PULSATION
+    extending into abdomen:
+
+  RESTLESS sensation
+
+  SUPPRESSION of urine
+    cholera, in:
+    concussion of spinal column, from:
+    convulsions, with:
+    fever, with:
+    menses, during:
+    perspiration, with:
+    stupor, with:
+    suppressed gonorrhoea, from:
+    violent:
+
+  SUPPURATION
+
+  SWELLING
+
+  TWITCHING, region of
+
+  WEARINESS, region of
+
+PROSTATE GLAND
+  BALL, sensation of sitting on a
+
+  EMISSION prostatic fluid
+    dribbling:
+    easily discharged, so that even an emission of flatus causes:
+    emotion, with every:
+    erections, during:
+    without:
+    flatus, while passing:
+    fondling women, while:
+    lascivious thoughts, during:
+    sitting, while:
+    stool, with:
+    difficult, with:
+    soft, with:
+    after:
+    talking to a young lady, while:
+    thinking of it:
+    urination, before:
+    during:
+    after:
+    walking, while:
+
+  ENLARGEMENT
+    senile:
+    sensation of:
+
+  FESTERING sensation
+
+  FULNESS
+
+  GURGLING sensation
+
+  HARDNESS
+    without enlargement:
+
+  HEAT
+
+  HEAVINESS
+    lascivious thoughts, during:
+
+  INDURATION
+
+  INFLAMMATION
+    suppressed gonorrhoea, from:
+
+  IRRITATION in
+
+  JERKING in region of
+
+  ONANISM, complaints after
+
+  PAIN
+    cancer, in:
+    coition, after:
+    erection, during:
+    gonorrhoea, during:
+    jarring agg.:
+    riding agg.:
+    sitting, while:
+    stool, urging to:
+    after:
+    urination, during:
+    at close of:
+    urinate, urging to:
+    walking agg.:
+    amel.:
+    and, deep in pelvis, morning and forenoon after coition:
+    sitting and walking, while:
+    biting:
+    burning:
+    constrictive:
+    dragging:
+    drawing:
+    sitting or walking:
+    pressing:
+    coition, during:
+    erection, at beginning of:
+    nose, on blowing:
+    urination, during:
+    after:
+    walking, while:
+    pulsating:
+    region of:
+    straining to urinate, while:
+    shooting:
+    soreness:
+    sticking:
+    stitching:
+    afternoon:
+    urination, during:
+    walking agg.:
+    QUIVERING, nervous:
+
+  SUPPURATION
+
+  SWELLING
+
+  TENSION
+
+  TWITCHING
+
+  UNEASINESS
+
+URETHRA
+  AGGLUTINATION of meatus
+    morning:
+
+  AIR passes from the female urethra during urination
+
+  BALL rolling through, sensation of
+
+  BUBBLING while sitting
+
+  CHORDEE
+    burning in urethra, with:
+    extreme sensitiveness of urethra:
+
+  CLOGGED by pieces of coagulated mucus
+
+  COLDNESS
+    painful shoots, during:
+
+  CONSTRICTION
+    convulsive:
+    smarting:
+    urination, during:
+    after:
+    extending to bladder:
+    backward, while reflecting:
+
+  CONTRACTION
+    morning:
+    erection, during:
+    internally:
+    stool and urination, before:
+    suppressed gonorrhoea:
+    urination, during:
+    after:
+    extending backward on urination:
+    meatus:
+
+  CRACKS in meatus
+
+  CRAMP
+
+  CRAWLING
+    sticking:
+    urinating, when not:
+    urination, during:
+    after:
+    fossa navicularis:
+    meatus:
+
+  DISCHARGE
+    acrid:
+    albuminous:
+    bloody:
+    chronic diarrhoea, in:
+    urethra painful to touch:
+    cheesy:
+    clear:
+    colorless:
+    copious:
+    cream-like:
+    fetid:
+    flocculent, urination, after:
+    gleety:
+    morning:
+    night:
+    impotency, with:
+    painless:
+    protracted:
+    gluey:
+    gonorrhoeal:
+    night:
+    only:
+    chronic:
+    increase after having decreased:
+    syphilitics, in:
+    gray:
+    greenish:
+    night:
+    chronic:
+    thick:
+    yellow:
+    thick, with priapism:
+    jelly-like:
+    milk:
+    pasty:
+    sticky:
+    urination, before:
+    stool, after:
+    urination, after:
+    mucous:
+    evening, chill, after a:
+    urination, after:
+    bloody:
+    gelatinous, urination, after:
+    glutinous:
+    milky white:
+    relaxation of genitals, during:
+    viscid, purulent, urination, after:
+    profuse:
+    purulent:
+    drop of pus before urinating:
+    semen, like:
+    slimy:
+    spotting linen:
+    stringy:
+    thick:
+    thin:
+    gleety, with formication over body:
+    transparent:
+    viscid:
+    watery:
+    meatus glued up in morning with a watery drop:
+    moving about, on:
+    nitrate of silver, after injections of:
+    painless:
+    white:
+    morning, prostatic discharge evening:
+    chronic:
+    anæmic subjects, in:
+    impotence, with:
+    and fetid urine:
+    nitrate of silver, after injection of:
+    urination, after:
+    yellow:
+    morning, drop:
+    evening:
+    night:
+    chronic:
+    spots on linen:
+    yellowish-white:
+    painless:
+
+  DROPPING from, sensation of
+    urination, after:
+    burning drops run along, after:
+
+  DROP remains
+
+  DRYNESS, sensation of
+
+  EXCRESCENCES
+
+  FUNGOID growth
+
+  GNAWING, when not urinating
+
+  GONORRHEA suppressed
+
+  HARDNESS
+    meatus, of:
+
+  HARD node
+
+  HEAT
+    emission of semen, during:
+    voluptuous:
+
+  HÆMORRHAGE
+    burning, with:
+    coition, during:
+    constipation, with:
+    cut, from a, hæmorrhagic diathesis:
+    erection, during:
+    first part of urine, with:
+    menses suppressed:
+    painful:
+    painless:
+    pains in kidneys and bladder, with:
+    stomach, and vomiting:
+    paralysis of legs, with:
+    pure blood:
+    clotted:
+    urinating, when not:
+    stool, during:
+    suppressed gonorrhoea, after:
+    urination, after:
+    vicarious:
+
+  INDURATION, chronic
+
+  INFLAMMATION
+    burning, shooting pain and increased gonorrhoea, with:
+    meatus:
+
+  IRRITATION
+    meatus:
+
+  ITCHING
+    morning:
+    afternoon:
+    evening:
+    desire to urinate, with:
+    erections, during:
+    gleet, with:
+    gonorrhoea, with:
+    following:
+    preceding discharge of pus:
+    urination, before:
+    during:
+    after:
+    voluptuous:
+    anterior part:
+    urinating, when not:
+    fossa navicularis:
+    shooting, and, evening:
+    urination, after:
+    voluptuous:
+    meatus:
+    evening:
+    coition, after:
+    touched, when:
+    urging to urinate, as if:
+    constant:
+    urging, during:
+    after:
+    voluptuous:
+    walking:
+
+  JERKING
+    standing, while:
+    urination, after:
+    voluptuous formation in fossa navicularis:
+
+  KNOTTY sensation
+
+  MOISTURE, meatus
+    glutinous:
+    yellow stain, causing a:
+
+  MUCUS, clogged up with coagulated
+
+  NARROWNESS, sensation of
+
+  NODE, hard
+
+  NUMBNESS
+    uneasy feeling:
+
+  PAIN
+    daytime:
+    evening:
+    emissions, from:
+    morning on waking:
+    erections, during:
+    after:
+    paroxysmal:
+    standing, while:
+    stool, before:
+    urging to urinate, on:
+    urinating, when not:
+    urination, during:
+    urging to stool, with:
+    after:
+    at close of:
+    waking, on:
+    wet, after getting:
+    anterior part when not urinating:
+    urination, during:
+    after:
+    fossa navicularis, urination, before:
+    meatus:
+    extending backward:
+    aching:
+    urination, after:
+    meatus, urinating, when not:
+    urination, during:
+    after:
+    acute, urination, during:
+    agonizing, from clots of blood passing:
+    biting:
+    morning:
+    evening, burning:
+    itching, and, before urination:
+    urinating, when not:
+    urination, during:
+    after:
+    as if a drop were forcing its way out:
+    extending backward:
+    anterior part:
+    rest agg., walking amel.:
+    fossa navicularis:
+    meatus, morning:
+    waking, on:
+    evening:
+    urination, during:
+    after:
+    sticking:
+    posterior part:
+    burning:
+    morning, erections after:
+    urination, during:
+    waking, on, after an emission:
+    evening:
+    night:
+    at all times:
+    coition, during:
+    after:
+    urination, during:
+    discharged, when semen is:
+    discharge of thin liquid after urination, from:
+    discharge of semen in coitus, in stricture, during:
+    drops of urine passing, as if:
+    emission, during:
+    after:
+    erections, during:
+    ceases during coition:
+    exercise, during:
+    menses, before:
+    during:
+    rising, after;
+    shooting, and increased gonorrhoea:
+    sitting, while:
+    stool, during:
+    after:
+    stream is interrupted, when:
+    touching, on:
+    urging to urinate:
+    when effort is made to pass urine:
+    urinating, when not:
+    urination, before:
+    beginning to urinate, when:
+    during:
+    after:
+    close, at:
+    constriction, and, extending to bladder:
+    last drops cause violent burning:
+    anterior part:
+    emission, after an:
+    urinating, when not:
+    urination, during:
+    after:
+    fossa navicularis:
+    burning drops:
+    urination, before:
+    during:
+    glandular portion, urination, during:
+    and for long time after:
+    meatus:
+    night:
+    coition, after:
+    most violent:
+    quiet, when:
+    sitting, while:
+    urination, before:
+    during:
+    after:
+    walking, while:
+    extending backward:
+    posterior part:
+    emissions, after:
+    urination, during:
+    contracting:
+    cutting:
+    morning:
+    forenoon:
+    evening, lying down, after:
+    midnight:
+    biting, and, growing worse towards end of urination, even to last drop:
+    emission, during:
+    flatus, while passing:
+    ineffectual urging, with:
+    menses, before, when urinating:
+    motion, on:
+    paroxysmal:
+    pressing glans penis amel.:
+    stool, before:
+    during:
+    after:
+    urinating, when not:
+    urination, before:
+    beginning to urinate, on:
+    during:
+    pressure in rectum, with:
+    stool, and:
+    after:
+    close of urination, at:
+    walking, while:
+    extending backward:
+    to anus when passing last drops:
+    from within outward:
+    anterior part:
+    urination, during:
+    after:
+    and lancinating:
+    fossa navicularis, urination, after:
+    meatus:
+    sitting, while:
+    urination, during:
+    after:
+    at the close:
+    darting:
+    dragging:
+    extending into bladder after urination:
+    as far as the tip, in evening, during urination:
+    drawing:
+    morning, urinating, after:
+    waking, on:
+    evening, urination, after:
+    walking, while:
+    in open air, on:
+    extending to anus:
+    from anus through urethra:
+    perinæum into urethra:
+    anterior part:
+    evening, urination, after:
+    urinating, when not:
+    fossa navicularis:
+    meatus:
+    lacerating:
+    pinching:
+    urinating, when not:
+    urination, before:
+    meatus:
+    pressing:
+    evening, urination, during:
+    urination, after:
+    between the acts of:
+    voluptuous, extending to anus:
+    meatus:
+    when not urinating:
+    pricking, urination, before:
+    meatus:
+    pulsating, urinating, when not:
+    rasping, urination, during:
+    scalding:
+    shooting:
+    smarting:
+    erection, during:
+    urinating, when not:
+    urination, during:
+    after:
+    fossa navicularis:
+    meatus:
+    coition, after:
+    sticking, urinating, when:
+    stinging:
+    stitching:
+    morning:
+    forenoon:
+    afternoon:
+    evening:
+    night, erections, during:
+    burning:
+    urination, during:
+    coition, after:
+    cutting:
+    ineffectual desire to urinate, with:
+    twitching, when not urinating:
+    drawing, when not urinating:
+    dull:
+    shooting, on quiet emission of flatus:
+    urinating, when not:
+    erections:
+    fine:
+    meatus:
+    flatus, when passing:
+    itching, with, when not urinating:
+    motion, on:
+    rigors, with:
+    sitting:
+    passing flatus, while:
+    splinter-like:
+    standing, on:
+    stinging, coition, during:
+    gonorrhoea, with:
+    stool, during:
+    sudden, sitting agg.:
+    synchronous with pulse:
+    tickling:
+    twinging like lightning, from before backward:
+    arging, with:
+    urinating, when not:
+    urination, before:
+    urging, when:
+    during:
+    after:
+    close of:
+    walking, while:
+    open air, in:
+    extending towards abdomen, evening:
+    anus:
+    morning, urinating, after:
+    backward:
+    bladder:
+    forward:
+    urinating, when not, urinating amel.:
+    urination, after:
+    glans:
+    hypogastrium:
+    meatus:
+    from root of penis after urination:
+    anterior part:
+    urinating, when not:
+    urination, after:
+    fossa navicularis:
+    urination, on:
+    meatus:
+    evening:
+    night:
+    copious urine, with:
+    urinating, when mang., thuj. not:
+    urination, after:
+    tearing:
+    morning, after urination:
+    afternoon, when seated:
+    erection, during:
+    goes through the body, when urinating, that:
+    shooting, and, ascending through hypogastrium, when walking in open air:
+    urinating, when not:
+    urination, during:
+    after:
+    from root of penis to glans:
+    walking in open air:
+    zig-zags:
+    toward hypogastrium, when walking in open air:
+    extending forward:
+    anterior part:
+    urinating, when:
+    when not:
+    meatus:
+    twinging:
+    standing:
+    extending from behind forward:
+    meatus:
+    during a bath:
+    ulcerative, ulceration, as from subcutaneous:
+    urination, during:
+    between acts of:
+
+  POUTING meatus
+
+  PULSATION
+    fossa navicularis, stitching and beating:
+
+  REDNESS, meatus
+    spots:
+
+  SENSATION absent, when urinating
+    cold drop of urine passing, as if:
+    constricted, as if:
+    drops passed, as if a few:
+    narrow, as if too:
+    stone in, as of a:
+    urine were cold, as if:
+    remained in, after urinating, as if some:
+    fossa navicularis, in, after urination, as if:
+
+  SPASM
+    with fissure of rectum:
+
+  STRICTURE
+    spasmodic:
+    morning:
+    sensation of:
+
+  SWELLING
+    sensation of:
+    anterior part:
+    orifice:
+    region of neck of bladder:
+
+  TENSION
+    erections, during:
+
+  TICKLING
+
+  TINGLING
+    sitting:
+    urination, during:
+    frænum, culminating at:
+    meatus:
+
+  TUMOR
+
+  TWITCHING
+    ejaculation of semen, as if:
+    urinating, when not:
+    anterior part:
+
+  ULCERATION
+    chancres:
+    meatus:
+    sticking, with:
+    urine retained, with sensation as if:
+
+  URINE still flowing, sensation of
+    stops at fossa navicularis:
+
+  VESICLES meatus
+    forming ulcers:
+
+  VOLUPTUOUS sensation
+    urination, during:
+    after:
+
+GENITALIA - FEMALE
+  ABORTION
+    exertion, from:
+    exposure to cold damp weather and places:
+    fright, from:
+    inertia of uterus:
+    injuries, after:
+    month, second:
+    third:
+    fifth to seventh:
+    last months:
+    early months:
+    suppressed grief:
+    tendency to:
+    thunderstorm:
+
+  ABSCESS
+    ovaries:
+
+  APHTHÆ
+    vagina:
+
+  ASCARIDES
+
+  ATONY of uterus
+
+  ATROPHY, ovaries
+
+  AURA extending from uterus to stomach
+    throat:
+
+  BALL, ovary feels like a heavy, right
+
+  BLOTCHES
+
+  CANCER of ovaries
+    uterus:
+    scirrhus:
+    vagina:
+
+  CAULIFLOWER
+
+  CHEESY deposits
+
+  CLUTCHING and relaxing sensation of uterus
+
+  COITION
+    aversion to:
+    menses, after:
+    enjoyment absent:
+    orgasm delayed:
+    easy:
+    painful:
+    wanting:
+    painful:
+
+  COLDNESS
+    menses, during:
+    ovaries, sensation of, left:
+    uterus:
+    vagina:
+
+  CONDYLOMATA
+    itching:
+    uterus:
+    vagina:
+    bleed easily:
+
+  CONGESTION
+    ovaries:
+    continence, from:
+    menses, before:
+    suppressed:
+    motion agg.:
+    uterus:
+    hemorrhage, after:
+    menses, before:
+    during:
+
+  CONSCIOUS of the uterus
+
+  CONSTRICTION
+    ovaries:
+    uterus:
+    like a band:
+    vagina:
+    touch, from:
+
+  CONTRACTIONS
+    os, spasmodic, during labor:
+    uterus:
+    hour-glass:
+    menses, before:
+    during:
+    vagina:
+    rising from sitting:
+
+  CRACKS
+
+  CRAWLING
+
+  CYSTS
+    ovaries:
+    vagina:
+
+  DESIRE diminished
+    morning:
+    sexual excitement, with:
+    increased:
+    morning in bed:
+    afternoon:
+    night:
+    insatiable:
+    lying-in-women:
+    menses, before:
+    during:
+    after:
+    metrorrhagia, during:
+    old women:
+    scratching distant parts, from:
+    violent:
+    involuntary orgasms, with:
+    masturbation, driving her to:
+    scratching the arm, from:
+    virgins, in:
+    widows, in:
+
+  DIPHTHERITIC exudations
+
+  DISPLACEMENT of uterus
+
+  DISTENDED, as if filled with wind, uterus
+
+  DROPSY
+    ovaries:
+    uterus:
+    daytime:
+
+  DRYNESS
+    vagina:
+    menses, during:
+    after:
+
+  ENLARGED ovaries
+    right:
+    left:
+    every cold agg.:
+    sensation as if:
+    right:
+    left:
+    menses, before:
+    uterus:
+
+  EPILEPTIC aura
+
+  ERUPTIONS
+    night:
+    erysipelatous:
+    hard black pustules:
+    herpetic:
+    from every cold:
+    itching:
+    warm, when:
+    menses, before:
+    during:
+    moist:
+    nodosities:
+    painful:
+    pimples:
+    menses, before:
+    during:
+    painful:
+    pustules:
+    black:
+    rash:
+    scabby:
+    vesicles:
+
+  EXCORIATION
+    aged women:
+    leucorrhoea, from:
+    menses, during:
+    perineum:
+    vagina:
+
+  EXCRESCENCES
+    uterus (cervix):
+    bleeding:
+    cauliflower:
+    wart-shaped:
+    watery:
+
+  FISTULA, vagina
+
+  FLATUS from vagina
+    menses, during:
+
+  FORMICATION
+
+  FULNESS, uterus
+    standing agg.:
+    walking agg.:
+    vagina:
+    sensation of during menses:
+
+  GANGRENE
+    uterus:
+    vagina:
+
+  GRANULATION, vagina:
+
+  HAIR falling out
+
+  HARDNESS
+    ovaries:
+    right:
+    left:
+
+  HEAT
+    flushes:
+    menses, during:
+    ovaries:
+    uterus:
+    flushes from uterus to head:
+    menses, during:
+    vagina:
+    menses, before:
+    during:
+
+  HEAVINESS
+    menses, during:
+    ovaries:
+    right:
+    left:
+    uterus:
+    menses, during:
+    standing:
+    walking, while:
+
+  HÆMORRHAGE
+
+  INDURATION
+    injuries, from:
+    ovaries:
+    right:
+    left:
+    uterus:
+    cervix:
+    after use of pessary:
+    os:
+    vagina:
+
+  INFLAMMATION
+    erysipelatous:
+    menses, during:
+    ovaries:
+    right:
+    left:
+    feet wet, from:
+    hemorrhage, after:
+    menstrual flow suddenly checked:
+    sexual excesses, from:
+    suppressed gonorrhoea, after:
+    uterus:
+    anger, after:
+    emotional excitement, from:
+    hemorrhage, after:
+    indignation, from:
+    joy, excessive:
+    labor, after:
+    sexual excesses, after:
+    vagina:
+
+  INSENSIBILITY vagina
+
+  IRRITATION
+    clitoris:
+    ovaries:
+    uterus:
+    vagina:
+
+  ITCHING
+    morning:
+    afternoon:
+    evening:
+    night:
+    in bed:
+    burning:
+    cold, from becoming:
+    cold weather:
+    intolerable:
+    leucorrhoea, from:
+    lying amel.:
+    menses, before:
+    during:
+    after:
+    pregnancy, during:
+    scratching agg.:
+    sitting agg.:
+    urine, contact of, agg.:
+    urination, during:
+    voluptuous:
+    walking agg.:
+    vagina:
+    evening:
+    coition, after:
+    menses, before:
+    during:
+    after:
+    pregnancy, during:
+    voluptuous:
+
+  LEUCORRHEA
+    daytime only:
+    morning:
+    afternoon:
+    evening:
+    night:
+    acrid, excoriating:
+    eats holes in linen:
+    albuminous:
+    black:
+    bland:
+    bloody:
+    menses, after:
+    bluish:
+    brown:
+    stains linen:
+    burning:
+    coition, after:
+    constant:
+    copious:
+    menses, like the:
+    cream-like:
+    afternoon:
+    dark:
+    excoriating:
+    exercising, while:
+    flesh-colored:
+    girls, little:
+    gonorrhoeal:
+    gray:
+    greenish:
+    stains linen:
+    water:
+    gushing:
+    jelly-like:
+    lumpy:
+    lying, while:
+    masturbation, from:
+    menses, before:
+    during:
+    after:
+    two weeks:
+    between:
+    instead of:
+    like the:
+    smelling like:
+    milky:
+    menses, during:
+    offensive:
+    evening:
+    ammonia, like:
+    blackish water:
+    cheese, like old:
+    fish-brine, like:
+    green corn, like:
+    menses, like:
+    after:
+    pungent:
+    putrid:
+    sour:
+    sweetish:
+    pregnancy:
+    purulent:
+    ropy, stringy, tenacious:
+    starch, boiled, like:
+    thick:
+    as paste, white:
+    thin, watery:
+    transparent:
+    walking agg.:
+    white:
+    stains linen yellow:
+    yellow:
+    stains linen:
+
+  LOCHIA
+    acrid:
+    bloody:
+    after growing light, it again becomes:
+    child nurses, when:
+    motion, after least:
+    brown:
+    copious:
+    dark:
+    gushing:
+    hot:
+    ichorous:
+    intermittent:
+    lumpy:
+    milky:
+    offensive, fetid:
+    cadaveric:
+    protracted:
+    red:
+    returning:
+    scanty:
+    suppressed:
+    anger, from:
+    cold, from:
+    excitement, by:
+    fright:
+    grief:
+    vexation, after:
+    thin:
+    white:
+
+  LYING agg. uterine symptoms
+
+  MASTURBATION, disposition
+
+  MENOPAUSE
+
+  MENSES
+    daytime only:
+    morning:
+    and evening only:
+    less during day:
+    only:
+    forenoon only:
+    afternoon:
+    ceases in:
+    while walking only:
+    evening only:
+    while lying:
+    night, ceases during:
+    only:
+    more at:
+    sleep, only during:
+    absent, amenorrhoea:
+    molimen only:
+    acrid, excoriating:
+    amelioration of all complaints during:
+    anger brings on the flow:
+    appear, as if would:
+    before the proper age:
+    black:
+    pitch-like:
+    bloody mucus:
+    bright-red:
+    mingled with dark clots:
+    brown:
+    changeable in appearance:
+    clotted:
+    dark:
+    copious:
+    daytime:
+    morning:
+    afternoon, while walking:
+    night:
+    aged women:
+    cold air agg.:
+    dancing, from:
+    excitement, after:
+    exertion agg.:
+    faintness, with:
+    intemperate women:
+    lean women, in:
+    lying agg.:
+    mania, with:
+    menopause, during:
+    motion, from:
+    nymphomania, with:
+    phthisical:
+    rheumatic constitutions:
+    riding, from:
+    cold air:
+    scrawny women:
+    shocks, from:
+    short duration, and:
+    sitting agg.:
+    standing agg.:
+    tall women:
+    thunder storm, from:
+    vexation, after:
+    walking agg.:
+    withered women, in:
+    dark:
+    watery, then:
+    delayed in girls, first menses:
+    early, too:
+    exertion brings on the flow:
+    fluid blood containing clots:
+    frequent, too early, too soon:
+    green:
+    grief brings on:
+    hot:
+    intermittent:
+    irregular:
+    lactation, during:
+    nursing the child, while:
+    late:
+    first menses:
+    profuse:
+    lying, cease while:
+    membranous:
+    mental excitement agg.:
+    moving about:
+    new moon:
+    offensive:
+    acrid:
+    ammonia, like:
+    fish, like spoiled:
+    lochia, like:
+    pungent:
+    putrid:
+    semen, like:
+    sour:
+    strong:
+    painful, dysmenorrhoea:
+    feet wet, from getting:
+    pain, flow only in the absence of:
+    flow only after the:
+    pale:
+    pitch-like:
+    pregnancy, during:
+    profuse:
+    protracted:
+    weakness, with:
+    scanty:
