@@ -1,0 +1,703 @@
+     1→#!/usr/bin/env python3
+     2→"""
+     3→Parse Kent's Repertory scanned text and extract remedy data for each rubric.
+     4→
+     5→Input:  Scanned text file of Kent's Repertory (1908)
+     6→Output: JSON mapping rubric text -> list of remedy abbreviations
+     7→"""
+     8→
+     9→import re
+    10→import json
+    11→import unicodedata
+    12→import sys
+    13→from pathlib import Path
+    14→from collections import defaultdict, OrderedDict
+    15→
+    16→# === Configuration ===
+    17→INPUT_FILE = Path("/home/z/my-project/upload/Repertory_of_the_Homoeopathic_Materia_Me-compressed_extracted.txt")
+    18→OUTPUT_FILE = Path("/home/z/my-project/upload/parsed_remedies.json")
+    19→EXISTING_RUBRICS_FILE = Path("/home/z/my-project/homeodesk-pro/src/kentRepertoryData.ts")
+    20→
+    21→# Chapter names in order
+    22→CHAPTER_NAMES = [
+    23→    "MIND", "VERTIGO", "HEAD", "EYE", "VISION", "EAR", "HEARING", "NOSE",
+    24→    "FACE", "MOUTH", "TASTE", "TEETH", "THROAT", "EXTERNAL THROAT",
+    25→    "STOMACH", "HYPOCHONDRIUM", "UMBILICUS", "ABDOMEN", "RECTUM", "STOOL",
+    26→    "URINE", "KIDNEY", "URETHRA", "MALE GENITALIA", "FEMALE GENITALIA",
+    27→    "LARYNX", "RESPIRATION", "COUGH", "EXPECTORATION", "CHEST", "HEART",
+    28→    "BACK", "EXTREMITIES", "SLEEP", "CHILLS", "FEVER", "PERSPIRATION",
+    29→    "SKIN", "GENERALITIES"
+    30→]
+    31→
+    32→# Normalized versions for matching (uppercase, no trailing period)
+    33→CHAPTER_PATTERNS = []
+    34→for ch in CHAPTER_NAMES:
+    35→    # e.g. "MIND." or "MIND"
+    36→    base = ch.upper().replace(" ", "")
+    37→    CHAPTER_PATTERNS.append((ch, base))
+    38→
+    39→
+    40→def load_lines(filepath):
+    41→    """Load file lines, stripping trailing whitespace."""
+    42→    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+    43→        return [line.rstrip() for line in f]
+    44→
+    45→
+    46→def extract_remedy_abbreviations(lines, start=130, end=672):
+    47→    """Extract remedy abbreviations from the lookup table section."""
+    48→    abbreviations = set()
+    49→    for i in range(start, min(end, len(lines))):
+    50→        line = lines[i].strip()
+    51→        if not line:
+    52→            continue
+    53→        # Format: "Acon . , Aconitum napellus." or "Acon.,Aconitum napellus."
+    54→        # The abbreviation is the part before the first comma (or before the first period-space)
+    55→        m = re.match(r'^([A-Za-zÆæŒœ][\wÆæŒœ\-]*\s*\.)\s*[,.]', line)
+    56→        if m:
+    57→            abbreviations.add(m.group(1).strip())
+    58→        else:
+    59→            # Try matching "Abbr.,Full Name." (no space after comma)
+    60→            m = re.match(r'^([A-Za-zÆæŒœ][\wÆæŒœ\-]*\s*\.)\s*,', line)
+    61→            if m:
+    62→                abbreviations.add(m.group(1).strip())
+    63→    return abbreviations
+    64→
+    65→
+    66→def build_remedy_pattern(abbreviations):
+    67→    """Build a regex pattern to match remedy abbreviations in text."""
+    68→    # Sort by length descending to match longer abbreviations first
+    69→    sorted_abbrs = sorted(abbreviations, key=len, reverse=True)
+    70→    # Escape special regex chars in each abbreviation
+    71→    escaped = [re.escape(a) for a in sorted_abbrs]
+    72→    # Build pattern: matches any known abbreviation
+    73→    pattern = '|'.join(escaped)
+    74→    return re.compile(r'(?<!\w)(' + pattern + r')(?!\w)')
+    75→
+    76→
+    77→def normalize_text(text):
+    78→    """Normalize OCR text: fix spacing issues, special chars."""
+    79→    # Replace æ ligature with 'ae' and Æ with 'Ae'
+    80→    text = text.replace('æ', 'ae').replace('Æ', 'Ae')
+    81→    text = text.replace('œ', 'oe').replace('Œ', 'Oe')
+    82→    # Remove zero-width chars and special dashes
+    83→    text = text.replace('\u200b', '').replace('\u00ad', '')
+    84→    text = text.replace('·', '').replace('•', '')
+    85→    # Normalize unicode dashes to regular dash
+    86→    text = text.replace('\u2013', '-').replace('\u2014', '-')
+    87→    # Normalize quotes
+    88→    text = text.replace('"', '"').replace('"', '"')
+    89→    text = text.replace(''', "'").replace(''', "'")
+    90→    return text
+    91→
+    92→
+    93→def is_page_marker(line):
+    94→    """Check if line is a page marker."""
+    95→    return bool(re.match(r'^---\s*PAGE\s+\d+\s*---$', line.strip()))
+    96→
+    97→
+    98→def is_standalone_number(line):
+    99→    """Check if line is just a page number."""
+   100→    stripped = line.strip()
+   101→    return bool(re.match(r'^\d{1,4}$', stripped))
+   102→
+   103→
+   104→def is_chapter_header(line, seen_chapters):
+   105→    """Check if line is a chapter page header (not the first occurrence)."""
+   106→    stripped = line.strip().rstrip('.')
+   107→    upper = stripped.upper().replace(' ', '').replace(',', '').replace('AND', '')
+   108→    
+   109→    for ch_name, ch_pattern in CHAPTER_PATTERNS:
+   110→        if ch_pattern == upper or ch_pattern == upper.rstrip('.'):
+   111→            if ch_name in seen_chapters:
+   112→                return ch_name
+   113→    return None
+   114→
+   115→
+   116→def detect_new_chapter(line, seen_chapters):
+   117→    """Detect if this line starts a new chapter (first occurrence)."""
+   118→    stripped = line.strip().rstrip('.')
+   119→    upper = stripped.upper().replace(' ', '').replace(',', '').replace('AND', '')
+   120→    
+   121→    for ch_name, ch_pattern in CHAPTER_PATTERNS:
+   122→        if ch_pattern == upper or ch_pattern == upper.rstrip('.'):
+   123→            if ch_name not in seen_chapters:
+   124→                return ch_name
+   125→    return None
+   126→
+   127→
+   128→def is_main_rubric(line):
+   129→    """
+   130→    Detect if a line is a main rubric heading.
+   131→    Main rubrics are typically ALL CAPS (or mostly) and end with : or .
+   132→    """
+   133→    stripped = line.strip()
+   134→    if not stripped:
+   135→        return False
+   136→    
+   137→    # Must end with : or . (or : followed by remedies)
+   138→    # Remove any trailing remedy-like content
+   139→    # Check if line is mostly uppercase
+   140→    
+   141→    # Get the text before any colon (the heading part)
+   142→    colon_pos = stripped.find(':')
+   143→    if colon_pos > 0:
+   144→        heading = stripped[:colon_pos].strip()
+   145→    elif stripped.endswith('.'):
+   146→        heading = stripped
+   147→    else:
+   148→        return False
+   149→    
+   150→    if not heading:
+   151→        return False
+   152→    
+   153→    # Count uppercase vs lowercase letters (excluding spaces, parens, periods, commas)
+   154→    alpha_chars = [c for c in heading if c.isalpha()]
+   155→    if not alpha_chars:
+   156→        return False
+   157→    
+   158→    upper_count = sum(1 for c in alpha_chars if c.isupper())
+   159→    lower_count = sum(1 for c in alpha_chars if c.islower())
+   160→    
+   161→    # Allow some lowercase in parenthetical references like (See Forsaken.)
+   162→    # or (compare " Forgetful")
+   163→    # Main rubric: at least 70% uppercase, OR first char is uppercase and mostly uppercase
+   164→    if len(alpha_chars) == 0:
+   165→        return False
+   166→    
+   167→    ratio = upper_count / len(alpha_chars)
+   168→    
+   169→    # Very short headings: must start with uppercase
+   170→    if len(alpha_chars) <= 3:
+   171→        return alpha_chars[0].isupper()
+   172→    
+   173→    # If it starts with uppercase and ratio >= 0.6, it's a main rubric
+   174→    return alpha_chars[0].isupper() and ratio >= 0.6
+   175→
+   176→
+   177→def is_sub_rubric(line, current_main_rubric):
+   178→    """
+   179→    Detect if a line is a sub-rubric (lowercase start, followed by colon).
+   180→    """
+   181→    stripped = line.strip()
+   182→    if not stripped:
+   183→        return False
+   184→    
+   185→    # Must have a colon
+   186→    if ':' not in stripped:
+   187→        return False
+   188→    
+   189→    # Must start with a lowercase letter
+   190→    if stripped and stripped[0].islower():
+   191→        return True
+   192→    
+   193→    # Also check for lines that start with lowercase after some leading spaces
+   194→    # that got stripped - actually we already stripped
+   195→    return False
+   196→
+   197→
+   198→def extract_remedies_from_text(text, remedy_pattern):
+   199→    """Extract remedy abbreviations from a line of text."""
+   200→    matches = remedy_pattern.findall(text)
+   201→    # Normalize each remedy abbreviation
+   202→    result = []
+   203→    for m in matches:
+   204→        # Clean up: remove extra spaces, normalize
+   205→        cleaned = m.strip().replace(' ', '')
+   206→        # Normalize case: lowercase except first letter
+   207→        if cleaned:
+   208→            # Remove trailing period, normalize, then add it back
+   209→            has_period = cleaned.endswith('.')
+   210→            base = cleaned.rstrip('.').strip()
+   211→            # Normalize: first letter caps, rest lowercase
+   212→            if base:
+   213→                normalized = base[0].lower() + base[1:] if len(base) > 1 else base.lower()
+   214→                result.append(normalized + '.')
+   215→    return result
+   216→
+   217→
+   218→def normalize_rubric_text(text):
+   219→    """
+   220→    Normalize rubric text for matching:
+   221→    - Fix missing spaces after commas
+   222→    - Fix missing spaces after periods
+   223→    - Fix missing spaces around parens
+   224→    - Fix merged words at boundaries
+   225→    """
+   226→    # Normalize special chars first
+   227→    text = normalize_text(text)
+   228→    
+   229→    # Add space after comma if not present
+   230→    text = re.sub(r',(?=[A-Za-z])', ', ', text)
+   231→    # Add space after period if followed by uppercase (but not within abbreviations)
+   232→    text = re.sub(r'\.(?=[A-Z][a-z])', '. ', text)
+   233→    # Add space before open paren if not present
+   234→    text = re.sub(r'(?<=[a-zA-Z])\(', ' (', text)
+   235→    # Add space after close paren if not present
+   236→    text = re.sub(r'\)(?=[a-zA-Z])', ') ', text)
+   237→    # Add space after close paren if followed by colon
+   238→    text = re.sub(r'\)(?=:)', ') ', text)
+   239→    # Fix "(SeeX" -> "(See X" and "(compare" stays
+   240→    text = re.sub(r'\(See\s*([A-Z])', r'(See \1', text)
+   241→    text = re.sub(r'\(Compare\s*', '(compare ', text, flags=re.IGNORECASE)
+   242→    # Fix missing spaces before capital letters that start new words
+   243→    # Be careful not to break abbreviations like "Acon."
+   244→    # Only add space before capitals that are clearly new words
+   245→    text = re.sub(r'([a-z])([A-Z][a-z])', r'\1 \2', text)
+   246→    
+   247→    # Clean up multiple spaces
+   248→    text = re.sub(r'\s+', ' ', text).strip()
+   249→    
+   250→    return text
+   251→
+   252→
+   253→def normalize_for_matching(text):
+   254→    """Aggressive normalization for fuzzy matching."""
+   255→    text = normalize_text(text)
+   256→    # Remove all punctuation except spaces
+   257→    text = re.sub(r'[,.\-():;"]', ' ', text)
+   258→    # Collapse spaces
+   259→    text = re.sub(r'\s+', ' ', text).strip()
+   260→    return text.upper()
+   261→
+   262→
+   263→def parse_existing_rubrics(filepath):
+   264→    """Parse existing rubric texts from kentRepertoryData.ts."""
+   265→    rubrics = {}  # normalized_text -> original_text
+   266→    try:
+   267→        with open(filepath, "r", encoding="utf-8") as f:
+   268→            content = f.read()
+   269→        
+   270→        # Extract all text: '...' patterns
+   271→        matches = re.finditer(r"text:\s*'((?:[^'\\]|\\.)*)'", content)
+   272→        for m in matches:
+   273→            raw_text = m.group(1)
+   274→            # Unescape
+   275→            raw_text = raw_text.replace('\\"', '"').replace("\\'", "'")
+   276→            normalized = normalize_for_matching(raw_text)
+   277→            if normalized and normalized not in rubrics:
+   278→                rubrics[normalized] = raw_text
+   279→    except Exception as e:
+   280→        print(f"Warning: Could not parse existing rubrics file: {e}", file=sys.stderr)
+   281→    
+   282→    return rubrics
+   283→
+   284→
+   285→def find_best_rubric_match(rubric_text, existing_rubrics):
+   286→    """Find the best matching existing rubric text."""
+   287→    norm = normalize_for_matching(rubric_text)
+   288→    
+   289→    # Exact match
+   290→    if norm in existing_rubrics:
+   291→        return existing_rubrics[norm]
+   292→    
+   293→    # Fuzzy match: check if one contains the other
+   294→    best_match = None
+   295→    best_score = 0
+   296→    
+   297→    for existing_norm, existing_text in existing_rubrics.items():
+   298→        if norm == existing_norm:
+   299→            return existing_text
+   300→        
+   301→        # Check containment
+   302→        if norm in existing_norm or existing_norm in norm:
+   303→            score = min(len(norm), len(existing_norm)) / max(len(norm), len(existing_norm))
+   304→            if score > best_score:
+   305→                best_score = score
+   306→                best_match = existing_text
+   307→    
+   308→    if best_score >= 0.5:
+   309→        return best_match
+   310→    
+   311→    return None
+   312→
+   313→
+   314→def fix_merged_columns(line):
+   315→    """
+   316→    Try to detect and split lines where two columns were merged.
+   317→    These often have patterns like:
+   318→    - "text1:text2" where both are rubric-like
+   319→    - A pipe character separating them
+   320→    """
+   321→    # Check for pipe separator
+   322→    if '|' in line:
+   323→        parts = line.split('|', 1)
+   324→        return parts[0].strip(), parts[1].strip()
+   325→    
+   326→    return None
+   327→
+   328→
+   329→def parse_repertory(lines):
+   330→    """Main parsing function."""
+   331→    
+   332→    # Step 1: Extract remedy abbreviations
+   333→    print("Extracting remedy abbreviations...", file=sys.stderr)
+   334→    abbreviations = extract_remedy_abbreviations(lines)
+   335→    print(f"  Found {len(abbreviations)} remedy abbreviations", file=sys.stderr)
+   336→    remedy_pattern = build_remedy_pattern(abbreviations)
+   337→    
+   338→    # Step 2: Parse existing rubrics for matching
+   339→    print("Parsing existing rubric data...", file=sys.stderr)
+   340→    existing_rubrics = parse_existing_rubrics(EXISTING_RUBRICS_FILE)
+   341→    print(f"  Found {len(existing_rubrics)} existing rubric texts", file=sys.stderr)
+   342→    
+   343→    # Step 3: Find chapter start positions
+   344→    print("Identifying chapter boundaries...", file=sys.stderr)
+   345→    seen_chapters = OrderedDict()
+   346→    chapter_first_lines = {}
+   347→    for i, line in enumerate(lines):
+   348→        ch = detect_new_chapter(line, seen_chapters)
+   349→        if ch:
+   350→            seen_chapters[ch] = i
+   351→            chapter_first_lines[ch] = i
+   352→    
+   353→    print(f"  Found {len(seen_chapters)} chapter starts: {list(seen_chapters.keys())}", file=sys.stderr)
+   354→    
+   355→    # Step 4: Parse rubrics
+   356→    print("Parsing rubrics and remedies...", file=sys.stderr)
+   357→    
+   358→    results = OrderedDict()  # rubric_text -> [remedies]
+   359→    current_chapter = None
+   360→    current_main_rubric = None  # The text of the current main rubric
+   361→    current_main_rubric_normalized = None
+   362→    current_sub_rubric = None
+   363→    pending_remedy_line = None  # For multi-line remedy lists
+   364→    chapter_stats = defaultdict(lambda: {"rubrics": 0, "remedies": 0})
+   365→    
+   366→    # Data starts after line 738 (after the table of contents ends)
+   367→    data_start = 738
+   368→    # Also end at the last chapter's content
+   369→    data_end = len(lines)
+   370→    
+   371→    # Track which lines belong to which chapter for debugging
+   372→    skipped_chapter_headers = 0
+   373→    rubrics_with_remedies = 0
+   374→    total_remedy_entries = 0
+   375→    
+   376→    # Multi-line accumulator for rubric headings that span lines
+   377→    pending_heading = None
+   378→    
+   379→    for i in range(data_start, data_end):
+   380→        line = lines[i]
+   381→        stripped = line.strip()
+   382→        
+   383→        # Skip empty lines
+   384→        if not stripped:
+   385→            pending_remedy_line = None
+   386→            continue
+   387→        
+   388→        # Skip page markers
+   389→        if is_page_marker(stripped):
+   390→            pending_remedy_line = None
+   391→            continue
+   392→        
+   393→        # Skip standalone numbers (page numbers at bottom of pages)
+   394→        if is_standalone_number(stripped):
+   395→            pending_remedy_line = None
+   396→            continue
+   397→        
+   398→        # Check for new chapter (first occurrence)
+   399→        new_ch = detect_new_chapter(stripped, seen_chapters)
+   400→        if new_ch:
+   401→            current_chapter = new_ch
+   402→            current_main_rubric = None
+   403→            current_main_rubric_normalized = None
+   404→            current_sub_rubric = None
+   405→            pending_remedy_line = None
+   406→            pending_heading = None
+   407→            continue
+   408→        
+   409→        # Check for repeated chapter header (page header)
+   410→        ch_header = is_chapter_header(stripped, seen_chapters)
+   411→        if ch_header:
+   412→            skipped_chapter_headers += 1
+   413→            pending_remedy_line = None
+   414→            continue
+   415→        
+   416→        # Skip lines that are just roman numerals or very short non-rubric lines
+   417→        if re.match(r'^[IVXLCDM]+$', stripped):
+   418→            pending_remedy_line = None
+   419→            continue
+   420→        
+   421→        # Skip the "REMEDIES AND THEIR ABBREVIATIONS." header
+   422→        if 'REMEDIES AND THEIR ABBREVIATIONS' in stripped.upper():
+   423→            continue
+   424→        if 'CONTENTS' in stripped.upper() and len(stripped) < 20:
+   425→            continue
+   426→        
+   427→        # === Check for merged columns ===
+   428→        merged = fix_merged_columns(stripped)
+   429→        if merged:
+   430→            # Process the first part, save the second for next iteration
+   431→            left, right = merged
+   432→            # We'll handle this by processing left now and re-queueing right
+   433→            # For simplicity, just process the left part
+   434→            stripped = left
+   435→            # Note: right part will be lost - this is a known limitation
+   436→            # In practice, the right column data will appear in its own section
+   437→        
+   438→        # === Check if this is a main rubric heading ===
+   439→        if is_main_rubric(stripped):
+   440→            # Normalize the heading text
+   441→            # Remove trailing colon/period for the heading
+   442→            heading = stripped
+   443→            if ':' in heading:
+   444→                heading = heading[:heading.rfind(':')].strip()
+   445→            if heading.endswith('.'):
+   446→                # Check if the period is part of an abbreviation or the end of the heading
+   447→                # Main rubrics ending with "." are usually cross-references or sub-headings
+   448→                # Keep the period
+   449→                pass
+   450→            
+   451→            heading_normalized = normalize_rubric_text(heading)
+   452→            
+   453→            # If there are remedies after the colon on this line, extract them
+   454→            remedies = []
+   455→            colon_pos = stripped.find(':')
+   456→            if colon_pos >= 0:
+   457→                after_colon = stripped[colon_pos+1:].strip()
+   458→                if after_colon:
+   459→                    remedies = extract_remedies_from_text(after_colon, remedy_pattern)
+   460→            
+   461→            # Handle pending heading (multi-line heading)
+   462→            if pending_heading:
+   463→                heading_normalized = normalize_rubric_text(pending_heading + ' ' + heading)
+   464→                pending_heading = None
+   465→            
+   466→            current_main_rubric = heading_normalized
+   467→            current_main_rubric_normalized = normalize_for_matching(heading_normalized)
+   468→            current_sub_rubric = None
+   469→            
+   470→            if remedies:
+   471→                # Find best match in existing rubrics
+   472→                matched = find_best_rubric_match(heading_normalized, existing_rubrics)
+   473→                key = matched if matched else heading_normalized
+   474→                if key not in results:
+   475→                    results[key] = []
+   476→                results[key].extend(remedies)
+   477→                rubrics_with_remedies += 1
+   478→                total_remedy_entries += len(remedies)
+   479→                if current_chapter:
+   480→                    chapter_stats[current_chapter]["rubrics"] += 1
+   481→                    chapter_stats[current_chapter]["remedies"] += len(remedies)
+   482→            else:
+   483→                # No remedies on this line - they'll come on subsequent lines
+   484→                pending_remedy_line = heading_normalized
+   485→                # But also store as a rubric entry even without remedies
+   486→                # (cross-references like "ABANDONED.(SeeForsaken.)")
+   487→            
+   488→            continue
+   489→        
+   490→        # === Check if this is a sub-rubric ===
+   491→        if is_sub_rubric(stripped, current_main_rubric):
+   492→            sub_text = stripped[:stripped.find(':')].strip()
+   493→            sub_normalized = normalize_rubric_text(sub_text)
+   494→            
+   495→            # Build full rubric key: "Main Rubric - sub rubric"
+   496→            if current_main_rubric:
+   497→                full_rubric = f"{current_main_rubric} - {sub_normalized}"
+   498→            else:
+   499→                full_rubric = sub_normalized
+   500→            
+   501→            # Extract remedies after the colon
+   502→            colon_pos = stripped.find(':')
+   503→            after_colon = stripped[colon_pos+1:].strip()
+   504→            remedies = extract_remedies_from_text(after_colon, remedy_pattern)
+   505→            
+   506→            if remedies or True:  # Always record, even without remedies
+   507→                matched = find_best_rubric_match(full_rubric, existing_rubrics)
+   508→                key = matched if matched else full_rubric
+   509→                if key not in results:
+   510→                    results[key] = []
+   511→                if remedies:
+   512→                    results[key].extend(remedies)
+   513→                    rubrics_with_remedies += 1
+   514→                    total_remedy_entries += len(remedies)
+   515→                    if current_chapter:
+   516→                        chapter_stats[current_chapter]["rubrics"] += 1
+   517→                        chapter_stats[current_chapter]["remedies"] += len(remedies)
+   518→            
+   519→            current_sub_rubric = sub_normalized
+   520→            pending_remedy_line = None
+   521→            continue
+   522→        
+   523→        # === Check if this is a remedy continuation line ===
+   524→        # A remedy line consists mainly of remedy abbreviations separated by commas
+   525→        remedies = extract_remedies_from_text(stripped, remedy_pattern)
+   526→        
+   527→        if remedies and len(remedies) >= 1:
+   528→            # This could be:
+   529→            # 1. Continuation of the main rubric's remedy list
+   530→            # 2. Continuation of a sub-rubric's remedy list
+   531→            
+   532→            # Determine which rubric to attach to
+   533→            if current_sub_rubric and current_main_rubric:
+   534→                full_rubric = f"{current_main_rubric} - {current_sub_rubric}"
+   535→                target = full_rubric
+   536→            elif current_main_rubric:
+   537→                target = current_main_rubric
+   538→            elif pending_remedy_line:
+   539→                target = pending_remedy_line
+   540→            else:
+   541→                continue
+   542→            
+   543→            matched = find_best_rubric_match(target, existing_rubrics)
+   544→            key = matched if matched else target
+   545→            if key not in results:
+   546→                results[key] = []
+   547→            results[key].extend(remedies)
+   548→            # Don't increment rubric count for continuation lines
+   549→            total_remedy_entries += len(remedies)
+   550→            if current_chapter:
+   551→                chapter_stats[current_chapter]["remedies"] += len(remedies)
+   552→            continue
+   553→        
+   554→        # === Check for lines that are sub-headings within a rubric ===
+   555→        # These are like "ANGER, ailments." - uppercase, ending with period, no colon
+   556→        # They act as intermediate headings
+   557→        if current_main_rubric and is_intermediate_heading(stripped, current_main_rubric):
+   558→            heading = stripped.rstrip('.')
+   559→            heading_normalized = normalize_rubric_text(heading)
+   560→            
+   561→            # This becomes the new "main rubric" context for sub-rubrics
+   562→            current_main_rubric = heading_normalized
+   563→            current_main_rubric_normalized = normalize_for_matching(heading_normalized)
+   564→            current_sub_rubric = None
+   565→            pending_remedy_line = None
+   566→            continue
+   567→        
+   568→        # === Check for lines that look like a continuation of a heading ===
+   569→        # e.g., line 830-831: "AMOROUS(SeeLewdnessandLascivious,also\nGenitalia.)"
+   570→        if current_main_rubric is None and stripped and stripped[0].isupper():
+   571→            # This might be a continuation of a previous heading
+   572→            # Or a new heading that our is_main_rubric missed
+   573→            # Check if it has a colon
+   574→            if ':' not in stripped and not stripped.endswith('.'):
+   575→                # Likely continuation - skip or merge with previous
+   576→                continue
+   577→    
+   578→    # === Post-processing ===
+   579→    print("\nPost-processing results...", file=sys.stderr)
+   580→    
+   581→    # Deduplicate remedies in each rubric while preserving order
+   582→    final_results = OrderedDict()
+   583→    total_unique_remedies = set()
+   584→    
+   585→    for rubric, remedies in results.items():
+   586→        seen = set()
+   587→        deduped = []
+   588→        for r in remedies:
+   589→            r_lower = r.lower().replace(' ', '')
+   590→            if r_lower not in seen:
+   591→                seen.add(r_lower)
+   592→                deduped.append(r)
+   593→        final_results[rubric] = deduped
+   594→        total_unique_remedies.update(deduped)
+   595→    
+   596→    # Print statistics
+   597→    print(f"\n{'='*60}", file=sys.stderr)
+   598→    print(f"PARSING RESULTS", file=sys.stderr)
+   599→    print(f"{'='*60}", file=sys.stderr)
+   600→    print(f"Total rubrics with remedies: {rubrics_with_remedies}", file=sys.stderr)
+   601→    print(f"Total rubric entries (including subs): {len(final_results)}", file=sys.stderr)
+   602→    print(f"Total unique remedy abbreviations: {len(total_unique_remedies)}", file=sys.stderr)
+   603→    print(f"Skipped chapter page headers: {skipped_chapter_headers}", file=sys.stderr)
+   604→    print(f"Total remedy entries: {total_remedy_entries}", file=sys.stderr)
+   605→    
+   606→    print(f"\nChapter statistics:", file=sys.stderr)
+   607→    for ch, stats in chapter_stats.items():
+   608→        print(f"  {ch}: {stats['rubrics']} rubrics, {stats['remedies']} remedy entries", file=sys.stderr)
+   609→    
+   610→    # Check for missing chapters
+   611→    found_chapters = set(chapter_stats.keys())
+   612→    all_expected = set(CHAPTER_NAMES)
+   613→    missing = all_expected - found_chapters
+   614→    if missing:
+   615→        print(f"\nChapters not found in text: {missing}", file=sys.stderr)
+   616→    else:
+   617→        print(f"\nAll expected chapters found!", file=sys.stderr)
+   618→    
+   619→    return final_results, total_unique_remedies, chapter_stats
+   620→
+   621→
+   622→def is_intermediate_heading(line, current_main_rubric):
+   623→    """
+   624→    Check if a line is an intermediate heading within a rubric section.
+   625→    These are like "ANGER, ailments." - ALL CAPS, ending with period, no colon.
+   626→    """
+   627→    stripped = line.strip()
+   628→    if not stripped:
+   629→        return False
+   630→    
+   631→    # Must end with period (not colon)
+   632→    if not stripped.endswith('.'):
+   633→        return False
+   634→    
+   635→    # Must not be a remedy line (check if it looks like it contains remedies)
+   636→    # If it has commas followed by short words ending in '.', it's probably remedies
+   637→    # Check if it looks like "Word, Word." (heading) vs "abbr., abbr." (remedies)
+   638→    
+   639→    # Remove the trailing period
+   640→    content = stripped[:-1].strip()
+   641→    
+   642→    # If it has colons, it's not an intermediate heading
+   643→    if ':' in content:
+   644→        return False
+   645→    
+   646→    # Count uppercase letters
+   647→    alpha_chars = [c for c in content if c.isalpha()]
+   648→    if not alpha_chars:
+   649→        return False
+   650→    
+   651→    upper_count = sum(1 for c in alpha_chars if c.isupper())
+   652→    ratio = upper_count / len(alpha_chars)
+   653→    
+   654→    # Must be mostly uppercase
+   655→    if ratio < 0.6:
+   656→        return False
+   657→    
+   658→    # Must not look like a remedy list
+   659→    # Remedy lists have many commas and short tokens
+   660→    tokens = [t.strip() for t in content.split(',') if t.strip()]
+   661→    if len(tokens) > 3:
+   662→        # If most tokens are very short (<= 6 chars), it's probably a remedy list
+   663→        short_tokens = sum(1 for t in tokens if len(t) <= 6)
+   664→        if short_tokens / len(tokens) > 0.7:
+   665→            return False
+   666→    
+   667→    # Should have at least 3 alphabetic characters
+   668→    if len(alpha_chars) < 3:
+   669→        return False
+   670→    
+   671→    return True
+   672→
+   673→
+   674→def main():
+   675→    print(f"Loading input file: {INPUT_FILE}", file=sys.stderr)
+   676→    lines = load_lines(INPUT_FILE)
+   677→    print(f"  Loaded {len(lines)} lines", file=sys.stderr)
+   678→    
+   679→    results, unique_remedies, chapter_stats = parse_repertory(lines)
+   680→    
+   681→    # Write output
+   682→    print(f"\nWriting output to: {OUTPUT_FILE}", file=sys.stderr)
+   683→    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+   684→        json.dump(results, f, indent=2, ensure_ascii=False)
+   685→    
+   686→    # Sample output
+   687→    print(f"\n{'='*60}", file=sys.stderr)
+   688→    print(f"SAMPLE OF 5 RUBRICS WITH REMEDIES:", file=sys.stderr)
+   689→    print(f"{'='*60}", file=sys.stderr)
+   690→    count = 0
+   691→    for rubric, remedies in results.items():
+   692→        if remedies:
+   693→            print(f"\n  Rubric: {rubric}", file=sys.stderr)
+   694→            print(f"  Remedies ({len(remedies)}): {', '.join(remedies[:15])}{'...' if len(remedies) > 15 else ''}", file=sys.stderr)
+   695→            count += 1
+   696→            if count >= 5:
+   697→                break
+   698→    
+   699→    print(f"\nDone! Output written to {OUTPUT_FILE}", file=sys.stderr)
+   700→
+   701→
+   702→if __name__ == "__main__":
+   703→    main()
