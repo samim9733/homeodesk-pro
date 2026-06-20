@@ -1,0 +1,690 @@
+     1→import { Sidebar, ActiveSelectionCard, AttributeItem } from './AppComponents';
+     2→import { PrescriptionCanvas, PatientDetailsCanvas } from './PatientModals';
+     3→import { QRScannerModal, AnalysisResultModal, ImageEditorModal } from './Modals';
+     4→import { Dashboard, PatientsTab, RepertoryTab } from './MainTabs';
+     5→import { RemindersTab, AnalysisTab } from './AnalysisRemindersTabs';
+     6→import { MateriaMedicaTab, ComparisonSection } from './MateriaMedicaTab';
+     7→import { PhysiologyAnatomyTab } from './PhysiologyAnatomyTab';
+     8→import React, { useState, useEffect, useMemo } from 'react';
+     9→import { LayoutDashboard, Users, User, UserPlus, Filter, Stethoscope, Leaf, Bell, Calendar, Menu, X, ChevronRight, ChevronLeft, ChevronDown, ArrowLeft, Microscope, Plus, Trash2, Eye, Save, Search, History, BookOpen, Book, FileText, Eraser, GraduationCap, FlaskConical, Bookmark, BookmarkCheck, Printer, ClipboardList, QrCode, AlertCircle, Loader2, Sparkles, Edit, Upload, RotateCcw, Pencil, Type, Square, Settings, Database, Brain, Clock, Thermometer, Activity, Move, Zap, Droplets, ArrowRightLeft, RefreshCw, Utensils, ListFilter, ArrowUpDown, MoreHorizontal, Star, HelpCircle, TrendingUp, TrendingDown, Smile, ArrowRight, CheckCircle, Bone, ShoppingCart, Flame, Wind, CloudRain, Heart, Sun, Scroll, Quote } from 'lucide-react';
+    10→import { motion, AnimatePresence } from 'motion/react';
+    11→import ReactMarkdown from 'react-markdown';
+    12→import { GoogleGenAI, Type as GenAIType } from "@google/genai";
+    13→import { DEMO_PATIENTS, DEMO_REMINDERS } from './demoData';
+    14→import { PharmacyTab, SettingsTab } from './PharmacyComponents';
+    15→import { OrganonTab, PracticeMedicineTab, KnowledgeTab, PathologyTab } from './LibraryTabs';
+    16→import { SurgeryTab } from './SurgeryTab';
+    17→import { Patient, AnalysisItem, Reminder, Rubric, RubricData, Remedy as RepertoryRemedy, ChiefSymptom, PhysicalGeneral, PharmacyRemedy, Supplier, Invoice, PharmacyStats } from './types';
+    18→import { CHAPTER_INDEX, REPERTORY_DATA, CATEGORIES, GENERAL_SUB_CATEGORIES, CHAPTER_CATEGORIES } from './constants';
+    19→import { ORGANON_DATA, Aphorism, PREFACES_DATA, Preface } from './organonData';
+    20→import { PATHOLOGY_DATA, PRACTICE_MEDICINE_DATA, KNOWLEDGE_DATA, PHYSIOLOGY_ANATOMY_DATA, KnowledgeTopic, DiseaseCategory, CLASSIC_BOOKS, KNOWLEDGE_CATEGORIES, RECENT_ARTICLES } from './medicalData';
+    21→import { MATERIA_MEDICA_DATA, Remedy as MateriaRemedy } from './materiaMedicaData';
+    22→import { PATHOLOGY_SYSTEMS, PATHOLOGY_CONDITIONS, PathologyCondition, PathologySystem } from './pathologyData';
+    23→
+    24→// --- Components ---
+    25→
+    26→export default function App() {
+    27→  const [activeTab, setActiveTab] = useState('dashboard');
+    28→  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    29→  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    30→  const [patients, setPatients] = useState<Patient[]>(DEMO_PATIENTS);
+    31→  const [reminders, setReminders] = useState<Reminder[]>(DEMO_REMINDERS);
+    32→  const [analysis, setAnalysis] = useState<AnalysisItem[]>([]);
+    33→  const [totalAnalysisRun, setTotalAnalysisRun] = useState(0);
+    34→  const [isLoading, setIsLoading] = useState(true);
+    35→  const [repertorizationResults, setRepertorizationResults] = useState<any[] | null>(null);
+    36→  const [selectedPatientForRx, setSelectedPatientForRx] = useState<Patient | null>(null);
+    37→  const [quickRemedyForRx, setQuickRemedyForRx] = useState<string | undefined>(undefined);
+    38→  const [selectedPatientForPD, setSelectedPatientForPD] = useState<Patient | null>(null);
+    39→  const [preSelectedPatientId, setPreSelectedPatientId] = useState<string | null>(null);
+    40→  const [isQRScannerOpen, setIsQRScannerOpen] = useState(false);
+    41→  const [isAnalyzing, setIsAnalyzing] = useState(false);
+    42→  const [analysisResult, setAnalysisResult] = useState<string | null>(null);
+    43→  const [isAIEditorOpen, setIsAIEditorOpen] = useState(false);
+    44→  const [editingSystemId, setEditingSystemId] = useState<string | null>(null);
+    45→  const [anatomySystems, setAnatomySystems] = useState(PHYSIOLOGY_ANATOMY_DATA);
+    46→  const [materiaComparison, setMateriaComparison] = useState<string[]>([]);
+    47→
+    48→  useEffect(() => {
+    49→    const timer = setTimeout(() => setIsLoading(false), 1200);
+    50→    return () => clearTimeout(timer);
+    51→  }, []);
+    52→
+    53→  const addPatient = (p: Omit<Patient, 'id' | 'date'>) => {
+    54→    const newPatient: Patient = {
+    55→      ...p,
+    56→      id: `PT-${Math.floor(100000 + Math.random() * 900000)}`,
+    57→      date: new Date().toLocaleDateString(),
+    58→      status: p.status || 'Active',
+    59→      lastVisit: new Date().toLocaleDateString()
+    60→    };
+    61→    setPatients(prev => [...prev, newPatient]);
+    62→    setPreSelectedPatientId(newPatient.id);
+    63→    setActiveTab('analysis');
+    64→  };
+    65→
+    66→  const removePatient = (id: string) => {
+    67→    setPatients(patients.filter(p => p.id !== id));
+    68→    setReminders(reminders.filter(r => r.patientId !== id));
+    69→  };
+    70→
+    71→  const handleQRScan = async (data: string) => {
+    72→    setIsQRScannerOpen(false);
+    73→    setIsAnalyzing(true);
+    74→    
+    75→    try {
+    76→      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    77→      const response = await ai.models.generateContent({
+    78→        model: "gemini-3-flash-preview",
+    79→        contents: `Analyze the following data from a QR code scan. If it's a medical report or clinical data, identify any "faults" (abnormalities, issues, or concerns). If it's not medical data, summarize it and state that it's not a medical report. Provide the analysis in a clear, structured format using Markdown.
+    80→
+    81→Data: ${data}`,
+    82→      });
+    83→      
+    84→      setAnalysisResult(response.text || "No analysis generated.");
+    85→    } catch (error) {
+    86→      console.error("Analysis failed:", error);
+    87→      setAnalysisResult("Failed to analyze the QR code data. Please try again.");
+    88→    } finally {
+    89→      setIsAnalyzing(false);
+    90→    }
+    91→  };
+    92→
+    93→  const addToAnalysis = (item: AnalysisItem) => {
+    94→    if (analysis.some(a => a.text === item.text)) return;
+    95→    setAnalysis([...analysis, item]);
+    96→  };
+    97→
+    98→  const removeFromAnalysis = (idx: number) => {
+    99→    setAnalysis(analysis.filter((_, i) => i !== idx));
+   100→  };
+   101→
+   102→  const runRepertorization = (results: any[]) => {
+   103→    setTotalAnalysisRun(prev => prev + 1);
+   104→    setRepertorizationResults(results);
+   105→  };
+   106→
+   107→  const getPageTitle = () => {
+   108→    switch(activeTab) {
+   109→      case 'dashboard': return 'Dashboard';
+   110→      case 'patients': return 'Patient Database';
+   111→      case 'reminders': return 'Reminders';
+   112→      case 'repertory': return "Kent's Repertory";
+   113→      case 'analysis': return 'Case Analysis';
+   114→      case 'organon': return 'Organon of Medicine';
+   115→      case 'practice': return 'Practice of Medicine';
+   116→      case 'knowledge': return 'Knowledge Menu';
+   117→      case 'pathology': return 'Pathology Menu';
+   118→      case 'materia': return 'Materia Medica';
+   119→      case 'physiology': return 'Physiology & Anatomy';
+   120→      case 'settings': return 'Settings & Preferences';
+   121→      case 'pharmacy': return 'Pharmacy Management';
+   122→      default: return 'HomeoDesk Pro';
+   123→    }
+   124→  };
+   125→
+   126→  if (isLoading) {
+   127→    return (
+   128→      <div className="fixed inset-0 bg-[#0f172a] flex flex-col items-center justify-center z-[9999]">
+   129→        <motion.div 
+   130→          animate={{ scale: [1, 1.1, 1] }}
+   131→          transition={{ repeat: Infinity, duration: 1.5 }}
+   132→          className="text-emerald-400 mb-4"
+   133→        >
+   134→          <Leaf size={64} />
+   135→        </motion.div>
+   136→        <h1 className="text-white text-3xl font-bold tracking-widest uppercase">
+   137→          HomeoDesk <span className="text-emerald-500">Pro</span>
+   138→        </h1>
+   139→        <p className="text-slate-400 mt-2 text-sm tracking-widest">ADVANCED CLINICAL SUITE</p>
+   140→      </div>
+   141→    );
+   142→  }
+   143→
+   144→  return (
+   145→    <div className="flex h-screen text-slate-800 bg-slate-50 overflow-hidden">
+   146→      <Sidebar 
+   147→        activeTab={activeTab} 
+   148→        setActiveTab={(tab) => {
+   149→          if (tab === 'materia') setMateriaComparison([]);
+   150→          setActiveTab(tab);
+   151→        }} 
+   152→        isOpen={isSidebarOpen} 
+   153→        toggleMenu={() => setIsSidebarOpen(!isSidebarOpen)} 
+   154→        isCollapsed={isSidebarCollapsed}
+   155→        toggleCollapse={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+   156→      />
+   157→      
+   158→      <main className={`flex-1 flex flex-col min-w-0 overflow-hidden print:overflow-visible print:h-auto transition-all duration-300 ${isSidebarCollapsed ? 'lg:ml-[80px]' : 'lg:ml-[260px]'} ml-0`}>
+   159→        <header className="h-20 bg-white border-b border-slate-100 flex items-center px-4 lg:px-8 gap-8 justify-between shadow-sm z-10 print:hidden">
+   160→          <div className="flex items-center gap-4 flex-1">
+   161→            <button 
+   162→              onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
+   163→              className="p-2 text-slate-600 hover:bg-slate-50 rounded-lg transition lg:hidden"
+   164→            >
+   165→              <Menu size={24} />
+   166→            </button>
+   167→            <div className="relative flex-1 max-w-md hidden md:block">
+   168→              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+   169→              <input 
+   170→                type="text" 
+   171→                placeholder="Search symptoms, remedies, or patients..." 
+   172→                className="w-full pl-12 pr-4 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+   173→              />
+   174→            </div>
+   175→          </div>
+   176→          <div className="flex items-center gap-6">
+   177→            <div className="hidden xl:flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-2xl text-[10px] font-black text-slate-500 uppercase tracking-widest border border-slate-100">
+   178→              <Calendar size={14} className="text-primary" />
+   179→              <span>{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</span>
+   180→            </div>
+   181→            <div className="flex items-center gap-2">
+   182→              <button 
+   183→                onClick={() => setIsQRScannerOpen(true)}
+   184→                className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-primary/5 hover:text-primary transition flex items-center justify-center border border-slate-100 shadow-sm"
+   185→                title="Scan QR Code"
+   186→              >
+   187→                <QrCode size={20} />
+   188→              </button>
+   189→              <button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-amber-50 hover:text-amber-600 transition flex items-center justify-center border border-slate-100 shadow-sm relative">
+   190→                <Bell size={20} />
+   191→                <span className="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white" />
+   192→              </button>
+   193→              <button 
+   194→                onClick={() => setActiveTab('settings')}
+   195→                className={`w-10 h-10 rounded-xl transition flex items-center justify-center border border-slate-100 shadow-sm ${activeTab === 'settings' ? 'bg-primary/5 text-primary' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`}
+   196→              >
+   197→                <Settings size={20} />
+   198→              </button>
+   199→            </div>
+   200→            <div className="h-8 w-px bg-slate-100 hidden sm:block" />
+   201→            <div className="flex items-center gap-3 pl-2">
+   202→              <div className="text-right hidden sm:block">
+   203→                <p className="text-xs font-black text-slate-900 tracking-tight">Dr. Rahim Ahmed</p>
+   204→                <p className="text-[9px] font-bold text-primary uppercase tracking-widest">Available</p>
+   205→              </div>
+   206→              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-slate-200">
+   207→                RA
+   208→              </div>
+   209→            </div>
+   210→          </div>
+   211→        </header>
+   212→
+   213→        <section className="flex-1 p-4 lg:p-8 overflow-y-auto print:hidden">
+   214→          <AnimatePresence mode="wait">
+   215→            {isQRScannerOpen && (
+   216→              <QRScannerModal 
+   217→                onClose={() => setIsQRScannerOpen(false)} 
+   218→                onScan={handleQRScan} 
+   219→              />
+   220→            )}
+   221→            {isAnalyzing && (
+   222→              <div className="fixed inset-0 bg-black/40 z-[90] flex items-center justify-center backdrop-blur-sm">
+   223→                <div className="bg-white p-8 rounded-3xl shadow-2xl flex flex-col items-center gap-4">
+   224→                  <Loader2 className="animate-spin text-emerald-500" size={48} />
+   225→                  <p className="font-bold text-slate-800">Analyzing QR Data...</p>
+   226→                  <p className="text-sm text-slate-500">Please wait while Gemini processes the information.</p>
+   227→                </div>
+   228→              </div>
+   229→            )}
+   230→            {analysisResult && (
+   231→              <AnalysisResultModal 
+   232→                result={analysisResult} 
+   233→                onClose={() => setAnalysisResult(null)} 
+   234→              />
+   235→            )}
+   236→            {isAIEditorOpen && editingSystemId && (
+   237→              <ImageEditorModal 
+   238→                imageUrl={anatomySystems.find(s => s.id === editingSystemId)?.image || ''}
+   239→                onClose={() => {
+   240→                  setIsAIEditorOpen(false);
+   241→                  setEditingSystemId(null);
+   242→                }}
+   243→                onUpdate={(newUrl) => {
+   244→                  setAnatomySystems(prev => prev.map(s => 
+   245→                    s.id === editingSystemId ? { ...s, image: newUrl } : s
+   246→                  ));
+   247→                }}
+   248→              />
+   249→            )}
+   250→            {activeTab === 'dashboard' && (
+   251→              <motion.div
+   252→                key="dashboard"
+   253→                initial={{ opacity: 0, y: 20 }}
+   254→                animate={{ opacity: 1, y: 0 }}
+   255→                exit={{ opacity: 0, y: -20 }}
+   256→                transition={{ duration: 0.2 }}
+   257→              >
+   258→                <Dashboard 
+   259→                  patients={patients} 
+   260→                  analysisCount={totalAnalysisRun} 
+   261→                  reminders={reminders}
+   262→                  setActiveTab={setActiveTab}
+   263→                  onOpenPD={setSelectedPatientForPD}
+   264→                />
+   265→              </motion.div>
+   266→            )}
+   267→            {activeTab === 'patients' && (
+   268→              <motion.div
+   269→                key="patients"
+   270→                initial={{ opacity: 0, y: 20 }}
+   271→                animate={{ opacity: 1, y: 0 }}
+   272→                exit={{ opacity: 0, y: -20 }}
+   273→                transition={{ duration: 0.2 }}
+   274→              >
+   275→                <PatientsTab 
+   276→                  patients={patients} 
+   277→                  addPatient={addPatient} 
+   278→                  removePatient={removePatient}
+   279→                  setSelectedPatientForRx={setSelectedPatientForRx}
+   280→                  onOpenPD={setSelectedPatientForPD}
+   281→                  onSetReminder={(p) => {
+   282→                    setPreSelectedPatientId(p.id);
+   283→                    setActiveTab('reminders');
+   284→                  }}
+   285→                />
+   286→              </motion.div>
+   287→            )}
+   288→            {activeTab === 'reminders' && (
+   289→              <motion.div
+   290→                key="reminders"
+   291→                initial={{ opacity: 0, y: 20 }}
+   292→                animate={{ opacity: 1, y: 0 }}
+   293→                exit={{ opacity: 0, y: -20 }}
+   294→                transition={{ duration: 0.2 }}
+   295→              >
+   296→                <RemindersTab 
+   297→                  reminders={reminders} 
+   298→                  setReminders={setReminders} 
+   299→                  patients={patients} 
+   300→                  preSelectedPatientId={preSelectedPatientId}
+   301→                  setPreSelectedPatientId={setPreSelectedPatientId}
+   302→                />
+   303→              </motion.div>
+   304→            )}
+   305→            {activeTab === 'repertory' && (
+   306→              <motion.div
+   307→                key="repertory"
+   308→                initial={{ opacity: 0, y: 20 }}
+   309→                animate={{ opacity: 1, y: 0 }}
+   310→                exit={{ opacity: 0, y: -20 }}
+   311→                transition={{ duration: 0.2 }}
+   312→              >
+   313→                <RepertoryTab 
+   314→                  analysis={analysis} 
+   315→                  addToAnalysis={addToAnalysis} 
+   316→                  removeFromAnalysis={removeFromAnalysis}
+   317→                  clearAnalysis={() => setAnalysis([])}
+   318→                  runRepertorization={runRepertorization}
+   319→                  onTransferToRx={(patient) => {
+   320→                    setSelectedPatientForRx(patient);
+   321→                  }}
+   322→                  setActiveTab={setActiveTab}
+   323→                  patients={patients}
+   324→                />
+   325→              </motion.div>
+   326→            )}
+   327→            {activeTab === 'analysis' && (
+   328→              <motion.div
+   329→                key="analysis"
+   330→                initial={{ opacity: 0, y: 20 }}
+   331→                animate={{ opacity: 1, y: 0 }}
+   332→                exit={{ opacity: 0, y: -20 }}
+   333→                transition={{ duration: 0.2 }}
+   334→              >
+   335→                <AnalysisTab 
+   336→                  patients={patients} 
+   337→                  analysis={analysis} 
+   338→                  preSelectedPatientId={preSelectedPatientId}
+   339→                  onClearAnalysis={() => setAnalysis([])}
+   340→                  onRemoveRubric={removeFromAnalysis}
+   341→                  onTransferToRx={(patient) => {
+   342→                    setSelectedPatientForRx(patient);
+   343→                  }}
+   344→                  onCompare={(remedyA, remedyB) => {
+   345→                    setMateriaComparison([remedyA, remedyB]);
+   346→                    setActiveTab('materia');
+   347→                  }}
+   348→                  onUpdatePatient={(updatedPatient) => {
+   349→                    setPatients(patients.map(p => p.id === updatedPatient.id ? updatedPatient : p));
+   350→                  }}
+   351→                  onAddPatient={addPatient}
+   352→                  setActiveTab={setActiveTab}
+   353→                />
+   354→              </motion.div>
+   355→            )}
+   356→            {activeTab === 'organon' && (
+   357→              <motion.div
+   358→                key="organon"
+   359→                initial={{ opacity: 0, y: 20 }}
+   360→                animate={{ opacity: 1, y: 0 }}
+   361→                exit={{ opacity: 0, y: -20 }}
+   362→                transition={{ duration: 0.2 }}
+   363→              >
+   364→                <OrganonTab />
+   365→              </motion.div>
+   366→            )}
+   367→            {activeTab === 'practice' && (
+   368→              <motion.div
+   369→                key="practice"
+   370→                initial={{ opacity: 0, y: 20 }}
+   371→                animate={{ opacity: 1, y: 0 }}
+   372→                exit={{ opacity: 0, y: -20 }}
+   373→                transition={{ duration: 0.2 }}
+   374→              >
+   375→                <PracticeMedicineTab />
+   376→              </motion.div>
+   377→            )}
+   378→            {activeTab === 'knowledge' && (
+   379→              <motion.div
+   380→                key="knowledge"
+   381→                initial={{ opacity: 0, y: 20 }}
+   382→                animate={{ opacity: 1, y: 0 }}
+   383→                exit={{ opacity: 0, y: -20 }}
+   384→                transition={{ duration: 0.2 }}
+   385→              >
+   386→                <KnowledgeTab />
+   387→              </motion.div>
+   388→            )}
+   389→            {activeTab === 'pathology' && (
+   390→              <motion.div
+   391→                key="pathology"
+   392→                initial={{ opacity: 0, y: 20 }}
+   393→                animate={{ opacity: 1, y: 0 }}
+   394→                exit={{ opacity: 0, y: -20 }}
+   395→                transition={{ duration: 0.2 }}
+   396→              >
+   397→                <PathologyTab />
+   398→              </motion.div>
+   399→            )}
+   400→            {activeTab === 'materia' && (
+   401→              <motion.div
+   402→                key="materia"
+   403→                initial={{ opacity: 0, y: 20 }}
+   404→                animate={{ opacity: 1, y: 0 }}
+   405→                exit={{ opacity: 0, y: -20 }}
+   406→                transition={{ duration: 0.2 }}
+   407→              >
+   408→                <MateriaMedicaTab 
+   409→                  initialComparison={materiaComparison} 
+   410→                  onQuickPrescribe={(remedyName) => {
+   411→                    setQuickRemedyForRx(remedyName);
+   412→                    setSelectedPatientForRx({
+   413→                      id: `QUICK-${Math.floor(1000 + Math.random() * 9000)}`,
+   414→                      name: 'Walk-in Patient',
+   415→                      age: 0,
+   416→                      gender: 'Unspecified',
+   417→                      phone: '',
+   418→                      date: new Date().toLocaleDateString(),
+   419→                      chiefSymptoms: [],
+   420→                      physicalGenerals: []
+   421→                    });
+   422→                  }}
+   423→                />
+   424→              </motion.div>
+   425→            )}
+   426→            {activeTab === 'physiology' && (
+   427→              <motion.div
+   428→                key="physiology"
+   429→                initial={{ opacity: 0, y: 20 }}
+   430→                animate={{ opacity: 1, y: 0 }}
+   431→                exit={{ opacity: 0, y: -20 }}
+   432→                transition={{ duration: 0.2 }}
+   433→              >
+   434→                <PhysiologyAnatomyTab 
+   435→                  anatomySystems={anatomySystems}
+   436→                  setAnatomySystems={setAnatomySystems}
+   437→                  onEditImage={(id) => {
+   438→                    setEditingSystemId(id);
+   439→                    setIsAIEditorOpen(true);
+   440→                  }}
+   441→                />
+   442→              </motion.div>
+   443→            )}
+   444→            {activeTab === 'surgery' && (
+   445→              <motion.div
+   446→                key="surgery"
+   447→                initial={{ opacity: 0, y: 20 }}
+   448→                animate={{ opacity: 1, y: 0 }}
+   449→                exit={{ opacity: 0, y: -20 }}
+   450→                transition={{ duration: 0.2 }}
+   451→              >
+   452→                <SurgeryTab />
+   453→              </motion.div>
+   454→            )}
+   455→            {activeTab === 'settings' && (
+   456→              <motion.div
+   457→                key="settings"
+   458→                initial={{ opacity: 0, y: 20 }}
+   459→                animate={{ opacity: 1, y: 0 }}
+   460→                exit={{ opacity: 0, y: -20 }}
+   461→                transition={{ duration: 0.2 }}
+   462→              >
+   463→                <SettingsTab />
+   464→              </motion.div>
+   465→            )}
+   466→            {activeTab === 'pharmacy' && (
+   467→              <motion.div
+   468→                key="pharmacy"
+   469→                initial={{ opacity: 0, y: 20 }}
+   470→                animate={{ opacity: 1, y: 0 }}
+   471→                exit={{ opacity: 0, y: -20 }}
+   472→                transition={{ duration: 0.2 }}
+   473→              >
+   474→                <PharmacyTab />
+   475→              </motion.div>
+   476→            )}
+   477→          </AnimatePresence>
+   478→        </section>
+   479→
+   480→        {/* Repertorization Results Modal */}
+   481→        <AnimatePresence>
+   482→          {repertorizationResults && (
+   483→            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm print:hidden">
+   484→              <motion.div 
+   485→                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+   486→                animate={{ opacity: 1, scale: 1, y: 0 }}
+   487→                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+   488→                className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]"
+   489→              >
+   490→                <div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+   491→                  <div>
+   492→                    <h3 className="text-xl font-black uppercase tracking-widest">Repertorization Results</h3>
+   493→                    <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Top remedies covering your selected rubrics</p>
+   494→                  </div>
+   495→                  <motion.button 
+   496→                    whileHover={{ scale: 1.1, rotate: 90 }}
+   497→                    whileTap={{ scale: 0.9 }}
+   498→                    onClick={() => setRepertorizationResults(null)}
+   499→                    className="p-2 hover:bg-slate-800 rounded-full transition-all"
+   500→                  >
+   501→                    <X size={24} />
+   502→                  </motion.button>
+   503→                </div>
+   504→                
+   505→                <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
+   506→                  <div className="grid grid-cols-1 gap-3">
+   507→                    {repertorizationResults.map((res, i) => (
+   508→                      <motion.div 
+   509→                        initial={{ opacity: 0, x: -20 }}
+   510→                        animate={{ opacity: 1, x: 0 }}
+   511→                        transition={{ delay: i * 0.1 }}
+   512→                        key={res.name} 
+   513→                        className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-slate-900 transition-all group"
+   514→                      >
+   515→                        <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
+   516→                          {i + 1}
+   517→                        </div>
+   518→                        <div className="flex-1 min-w-0">
+   519→                          <div className="flex justify-between items-center">
+   520→                            <h4 className="font-black text-slate-900 text-lg uppercase tracking-tight truncate">{res.name}</h4>
+   521→                            <div className="text-right">
+   522→                              <span className="text-slate-900 font-black text-xl">{res.score}</span>
+   523→                              <span className="text-slate-400 text-[10px] font-bold uppercase ml-1">pts</span>
+   524→                            </div>
+   525→                          </div>
+   526→                          <div className="flex items-center gap-4 mt-2">
+   527→                            <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+   528→                              <motion.div 
+   529→                                initial={{ width: 0 }}
+   530→                                animate={{ width: `${(res.score / repertorizationResults[0].score) * 100}%` }}
+   531→                                transition={{ duration: 1, ease: "easeOut" }}
+   532→                                className="h-full bg-slate-900 rounded-full" 
+   533→                              />
+   534→                            </div>
+   535→                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest whitespace-nowrap">
+   536→                              Covers {res.count} / {analysis.length} rubrics
+   537→                            </span>
+   538→                          </div>
+   539→                        </div>
+   540→                      </motion.div>
+   541→                    ))}
+   542→                  </div>
+   543→                  
+   544→                  {repertorizationResults.length === 0 && (
+   545→                    <div className="text-center py-10 text-slate-400">
+   546→                      <p className="text-xs font-bold uppercase tracking-widest">No matching remedies found</p>
+   547→                    </div>
+   548→                  )}
+   549→                </div>
+   550→                
+   551→                <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50 flex flex-col sm:flex-row justify-between items-center gap-4">
+   552→                  <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+   553→                    <motion.button 
+   554→                      whileHover={{ scale: 1.02, backgroundColor: '#000' }}
+   555→                      whileTap={{ scale: 0.98 }}
+   556→                      onClick={() => window.print()}
+   557→                      className="w-full sm:w-auto px-6 py-3 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-slate-200 transition-all flex items-center justify-center gap-2"
+   558→                    >
+   559→                      <Printer size={16} /> Print Analysis
+   560→                    </motion.button>
+   561→                    <motion.button 
+   562→                      whileHover={{ scale: 1.02, backgroundColor: '#10b981' }}
+   563→                      whileTap={{ scale: 0.98 }}
+   564→                      onClick={() => {
+   565→                        if (patients.length > 0) {
+   566→                          setSelectedPatientForRx(patients[0]);
+   567→                          setRepertorizationResults(null);
+   568→                        } else {
+   569→                          alert("Please add a patient first to create a prescription.");
+   570→                          setActiveTab('patients');
+   571→                        }
+   572→                      }}
+   573→                      className="w-full sm:w-auto px-6 py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-2"
+   574→                    >
+   575→                      <FileText size={16} /> Transfer to Rx
+   576→                    </motion.button>
+   577→                  </div>
+   578→                  <motion.button 
+   579→                    whileHover={{ backgroundColor: '#f1f5f9' }}
+   580→                    whileTap={{ scale: 0.98 }}
+   581→                    onClick={() => setRepertorizationResults(null)}
+   582→                    className="w-full sm:w-auto px-6 py-3 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all"
+   583→                  >
+   584→                    Close Results
+   585→                  </motion.button>
+   586→                </div>
+   587→              </motion.div>
+   588→            </div>
+   589→          )}
+   590→        </AnimatePresence>
+   591→
+   592→        {/* Print-only Analysis View */}
+   593→        <div className="hidden print:block p-10 bg-white min-h-screen text-slate-900">
+   594→          <div className="text-center mb-10 pb-6 border-b-2 border-slate-900">
+   595→            <h1 className="text-4xl font-black text-slate-900 mb-2 uppercase tracking-tighter">HomeoDesk Pro Analysis Report</h1>
+   596→            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">Kent's Repertory Clinical Analysis</p>
+   597→            <p className="text-[10px] text-slate-400 mt-2 font-mono">Generated on: {new Date().toLocaleString()}</p>
+   598→          </div>
+   599→
+   600→          <div className="mb-10">
+   601→            <h2 className="text-xl font-black text-slate-900 mb-4 border-l-4 border-slate-900 pl-3 uppercase tracking-tight">Selected Rubrics</h2>
+   602→            <div className="grid grid-cols-1 gap-2">
+   603→              {analysis.map((item, idx) => (
+   604→                <div key={idx} className="flex items-start gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200">
+   605→                  <span className="font-black text-slate-900">{idx + 1}.</span>
+   606→                  <div>
+   607→                    <p className="font-black text-slate-900 uppercase tracking-tight">{item.text}</p>
+   608→                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">{item.chapter}</p>
+   609→                  </div>
+   610→                </div>
+   611→              ))}
+   612→            </div>
+   613→          </div>
+   614→
+   615→          <div>
+   616→            <h2 className="text-xl font-black text-slate-900 mb-4 border-l-4 border-slate-900 pl-3 uppercase tracking-tight">Repertorization Results</h2>
+   617→            <table className="w-full border-collapse border border-slate-900">
+   618→              <thead>
+   619→                <tr className="bg-slate-900 text-white">
+   620→                  <th className="border border-slate-900 p-3 text-left text-[10px] uppercase tracking-widest">Rank</th>
+   621→                  <th className="border border-slate-900 p-3 text-left text-[10px] uppercase tracking-widest">Remedy Name</th>
+   622→                  <th className="border border-slate-900 p-3 text-center text-[10px] uppercase tracking-widest">Score (pts)</th>
+   623→                  <th className="border border-slate-900 p-3 text-center text-[10px] uppercase tracking-widest">Rubrics Covered</th>
+   624→                </tr>
+   625→              </thead>
+   626→              <tbody>
+   627→                {repertorizationResults?.map((res, i) => (
+   628→                  <tr key={res.name}>
+   629→                    <td className="border border-slate-200 p-3 font-black text-xs">{i + 1}</td>
+   630→                    <td className="border border-slate-200 p-3 font-black text-slate-900 text-xs uppercase tracking-tight">{res.name}</td>
+   631→                    <td className="border border-slate-200 p-3 text-center font-black text-xs">{res.score}</td>
+   632→                    <td className="border border-slate-200 p-3 text-center text-xs font-bold">{res.count} / {analysis.length}</td>
+   633→                  </tr>
+   634→                ))}
+   635→              </tbody>
+   636→            </table>
+   637→          </div>
+   638→
+   639→          <div className="mt-20 flex justify-between items-end">
+   640→            <div className="text-xs text-slate-400">
+   641→              <p>HomeoDesk Pro - Advanced Homeopathic Software</p>
+   642→              <p>Clinical Decision Support System</p>
+   643→            </div>
+   644→            <div className="text-center">
+   645→              <div className="w-48 border-b border-slate-400 mb-2" />
+   646→              <p className="text-sm font-bold text-slate-700">Doctor's Signature</p>
+   647→            </div>
+   648→          </div>
+   649→        </div>
+   650→        <AnimatePresence>
+   651→          {selectedPatientForRx && (
+   652→            <PrescriptionCanvas 
+   653→              patient={selectedPatientForRx} 
+   654→              onClose={() => {
+   655→                setSelectedPatientForRx(null);
+   656→                setQuickRemedyForRx(undefined);
+   657→              }} 
+   658→              initialAnalysis={analysis}
+   659→              initialResults={repertorizationResults || undefined}
+   660→              quickRemedy={quickRemedyForRx}
+   661→            />
+   662→          )}
+   663→          {selectedPatientForPD && (
+   664→            <PatientDetailsCanvas 
+   665→              patient={selectedPatientForPD}
+   666→              onClose={() => setSelectedPatientForPD(null)}
+   667→              onNext={() => {
+   668→                const currentIndex = patients.findIndex(p => p.id === selectedPatientForPD.id);
+   669→                if (currentIndex < patients.length - 1) {
+   670→                  setSelectedPatientForPD(patients[currentIndex + 1]);
+   671→                }
+   672→              }}
+   673→              onPrevious={() => {
+   674→                const currentIndex = patients.findIndex(p => p.id === selectedPatientForPD.id);
+   675→                if (currentIndex > 0) {
+   676→                  setSelectedPatientForPD(patients[currentIndex - 1]);
+   677→                }
+   678→              }}
+   679→              onSave={(updatedPatient) => {
+   680→                setPatients(patients.map(p => p.id === updatedPatient.id ? updatedPatient : p));
+   681→                setSelectedPatientForPD(updatedPatient);
+   682→              }}
+   683→            />
+   684→          )}
+   685→        </AnimatePresence>
+   686→      </main>
+   687→    </div>
+   688→  );
+   689→}
+   690→
