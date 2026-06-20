@@ -1,0 +1,2002 @@
+     1→1. chp-MIND
+     2→   1.1. ABANDONED (See Forsaken.)
+     3→   1.2. ABRUPT
+     4→   1.3. ABSENT-MINDED (compare "Forgetful")
+     5→       1.3.1. morning
+     6→       1.3.2. 11 a.m. to 4 p.m.
+     7→       1.3.3. noon
+     8→       1.3.4. periodical attacks of, short lasting
+     9→       1.3.5. reading, while
+    10→       1.3.6. starts when spoken to
+    11→       1.3.7. writing, while
+    12→   1.4. ABSORBED, buried in thought
+    13→       1.4.1. daytime
+    14→       1.4.2. morning
+    15→       1.4.3. afternoon
+    16→       1.4.4. evening
+    17→       1.4.5. alternating with frivolty
+    18→       1.4.6. as to what would become of him
+    19→       1.4.7. eating, after
+    20→       1.4.8. menses, during
+    21→   1.5. ABSTRACTION of mind
+    22→       1.5.1. morning
+    23→   1.6. ABUSIVE
+    24→       1.6.1. forenoon
+    25→       1.6.2. evening
+    26→       1.6.3. angry, without being
+    27→       1.6.4. pains, with the
+    28→       1.6.5. scolds until the lips are blue and eyes stare and she falls down fainting
+    29→   1.7. ACTIVITY, desires (See Industrious.)
+    30→       1.7.1. fruitless
+    31→   1.8. ACUTENESS (See Memory.)
+    32→   1.9. ADMONITION agg.
+    33→   1.10. AFFECTATION
+    34→   1.11. AFFECTIONATE
+    35→   1.12. AGITATION (See Excitement.)
+    36→   1.13. AIR castles (See Theorizing.)
+    37→   1.14. AMBITION, loss of
+    38→       1.14.1. afternoon and evening
+    39→       1.14.2. damp weather
+    40→   1.15. AMOROUS (See Lewdness and Lascivious, also Genitalia.)
+    41→   1.16. AMUSEMENT, averse to
+    42→       1.16.1. desire for
+    43→   1.17. ANGER, irascibility (See Irritability and Quarrelsome)
+    44→       1.17.1. morning
+    45→       1.17.2. waking, on
+    46→       1.17.3. forenoon
+    47→       1.17.4. 11 a.m.
+    48→       1.17.5. evening
+    49→       1.17.6. absent persons, at
+    50→       1.17.7. ailments after anger, vexation, etc.
+    51→           1.17.7.1. after anger with anxiety
+    52→           1.17.7.2. with fright
+    53→           1.17.7.3. indignation
+    54→           1.17.7.4. silent grief
+    55→       1.17.8. alternating with cheerfulness
+    56→       1.17.9. quick repentance
+    57→       1.17.10. answer, when obliged to
+    58→       1.17.11. consoled, when
+    59→       1.17.12. contradiction, from
+    60→       1.17.13. convulsion, before
+    61→       1.17.14. cough, before
+    62→           1.17.14.1. from the
+    63→       1.17.15. from nervous vexations, about
+    64→       1.17.16. mistakes, over his
+    65→       1.17.17. misunderstood, when
+    66→       1.17.18. past events, about
+    67→       1.17.19. stabbed, so that he could have, any one
+    68→       1.17.20. suppressed, from
+    69→       1.17.21. thinking of his ailments
+    70→       1.17.22. throws things away
+    71→       1.17.23. touched, when
+    72→       1.17.24. trembling, with
+    73→       1.17.25. violent
+    74→       1.17.26. voices of people
+    75→   1.18. ANGUISH
+    76→       1.18.1. daytime
+    77→       1.18.2. 5 a.m. to 5 p.m.
+    78→       1.18.3. morning
+    79→       1.18.4. forenoon
+    80→       1.18.5. afternoon
+    81→       1.18.6. evening
+    82→       1.18.7. night
+    83→       1.18.8. 4 a.m.
+    84→       1.18.9. chill, during
+    85→       1.18.10. driving from place to place
+    86→       1.18.11. eating, while
+    87→       1.18.12. heat, during
+    88→       1.18.13. menses, before
+    89→           1.18.13.1. during
+    90→       1.18.14. open air amel.
+    91→       1.18.15. perspiration, during
+    92→       1.18.16. stool, before
+    93→           1.18.16.1. during
+    94→       1.18.17. walking in open air
+    95→   1.19. ANSWERS abruptly, shortly, curtly
+    96→       1.19.1. aversion to
+    97→           1.19.1.1. morning
+    98→           1.19.1.2. loquacious at other times
+    99→       1.19.2. confusedly as though thinking of something else
+   100→       1.19.3. difficult
+   101→       1.19.4. disconnected
+   102→       1.19.5. foolish
+   103→       1.19.6. hastily
+   104→       1.19.7. imaginary questions
+   105→       1.19.8. incoherently
+   106→       1.19.9. incorrectly
+   107→       1.19.10. irrelevantly
+   108→       1.19.11. monosyllabic
+   109→       1.19.12. "no" to all questions
+   110→       1.19.13. reflects long
+   111→       1.19.14. refuses to
+   112→       1.19.15. repeats the question first
+   113→       1.19.16. slowly
+   114→       1.19.17. spoken to, when, yet knows no one
+   115→       1.19.18. stupor returns quickly after
+   116→       1.19.19. unintelligibly
+   117→   1.20. ANTAGONISM with herself
+   118→   1.21. ANTHROPOPHOBIA (See Fear.)
+   119→   1.22. ANTICIPATION, complaints from
+   120→   1.23. ANTICS, plays
+   121→   1.24. ANXIETY
+   122→       1.24.1. daytime
+   123→       1.24.2. 5 a.m. to 5 p.m.
+   124→       1.24.3. morning
+   125→           1.24.3.1. rising, on
+   126→           1.24.3.2. amel.
+   127→           1.24.3.3. waking, on
+   128→       1.24.4. forenoon
+   129→       1.24.5. 11 a.m.
+   130→       1.24.6. noon
+   131→       1.24.7. till 3 p.m.
+   132→       1.24.8. afternoon
+   133→       1.24.9. 3 to 6 p.m.
+   134→       1.24.10. 4 p.m.
+   135→       1.24.11. to 5 p.m.
+   136→       1.24.12. 6 p.m.
+   137→       1.24.13. 5 to 6 p.m.
+   138→       1.24.14. until evening
+   139→       1.24.15. evening
+   140→           1.24.15.1. bed, in
+   141→           1.24.15.2. closing the eyes, on
+   142→           1.24.15.3. violent exercise, from
+   143→           1.24.15.4. twilight, in
+   144→       1.24.16. 6 p.m.
+   145→       1.24.17. 7 to 8 p.m.
+   146→       1.24.18. 8 p.m.
+   147→       1.24.19. night
+   148→           1.24.19.1. waking, on
+   149→           1.24.19.2. midnight, before
+   150→           1.24.19.3. on waking, amel., on rising
+   151→           1.24.19.4. 11 p.m.
+   152→           1.24.19.5. midnight, after
+   153→           1.24.19.6. 1 to 3 a.m.
+   154→           1.24.19.7. 2 a.m.
+   155→           1.24.19.8. until 2 a.m.
+   156→           1.24.19.9. 3 a.m.
+   157→           1.24.19.10. after
+   158→           1.24.19.11. 4 a.m.
+   159→       1.24.20. air, in open
+   160→           1.24.20.1. amel.
+   161→       1.24.21. alone, when
+   162→       1.24.22. anger, during
+   163→       1.24.23. anticipating an engagement
+   164→       1.24.24. apparition, from horrible, while awake
+   165→       1.24.25. ascending steps, on
+   166→       1.24.26. bathing the feet, after
+   167→       1.24.27. bed, in
+   168→       1.24.28. breakfast, after
+   169→       1.24.29. breathing deeply, on
+   170→           1.24.29.1. amel.
+   171→       1.24.30. business, about
+   172→       1.24.31. chagrin, after
+   173→       1.24.32. children, in
+   174→           1.24.32.1. about his
+   175→           1.24.32.2. when lifted from the cradle
+   176→       1.24.33. chill, before
+   177→           1.24.33.1. during
+   178→           1.24.33.2. after
+   179→       1.24.34. church bells, from hearing
+   180→       1.24.35. closing eyes, on
+   181→       1.24.36. coffee, after
+   182→       1.24.37. coition, after
+   183→           1.24.37.1. thought of
+   184→       1.24.38. company, when in
+   185→       1.24.39. conscience, of (as if guilty of a crime)
+   186→       1.24.40. continence prolonged, from
+   187→       1.24.41. conversation, from
+   188→       1.24.42. cough, before
+   189→           1.24.42.1. before attack of whooping cough
+   190→       1.24.43. coughing, from
+   191→       1.24.44. crowd, in a
+   192→       1.24.45. cruelties, after hearing of
+   193→       1.24.46. dark, in
+   194→       1.24.47. dinner, during
+   195→           1.24.47.1. after
+   196→           1.24.47.2. amel.
+   197→       1.24.48. dreams, on waking from frightful (See Dreams)
+   198→       1.24.49. drinking, after
+   199→       1.24.50. eructations amel.
+   200→       1.24.51. excitement, from
+   201→       1.24.52. exercise amel.
+   202→       1.24.53. exertion of eyes
+   203→       1.24.54. expected of him, when anything is
+   204→       1.24.55. fear, with
+   205→       1.24.56. fever, during
+   206→           1.24.56.1. prodrome, during
+   207→       1.24.57. fits, with
+   208→       1.24.58. flatus, from
+   209→           1.24.58.1. emission of, amel.
+   210→       1.24.59. flushes of heat, during
+   211→       1.24.60. foot bath, after a
+   212→       1.24.61. friends at home, about
+   213→       1.24.62. fright, after
+   214→       1.24.63. future, about
+   215→           1.24.63.1. health, about
+   216→           1.24.63.2. especially during climacteric period
+   217→       1.24.64. hot air, as if in
+   218→       1.24.65. house in
+   219→           1.24.65.1. amel. in
+   220→           1.24.65.2. on entering
+   221→       1.24.66. hungry, when
+   222→       1.24.67. hypochondriacal
+   223→       1.24.68. looking steadily
+   224→       1.24.69. lying, while
+   225→           1.24.69.1. amel.
+   226→           1.24.69.2. must lie down, with anguish
+   227→           1.24.69.3. side, on
+   228→           1.24.69.4. right from flatulence
+   229→           1.24.69.5. left
+   230→       1.24.70. manual labor, from
+   231→       1.24.71. menses, before
+   232→           1.24.71.1. during
+   233→           1.24.71.2. amel.
+   234→           1.24.71.3. after
+   235→           1.24.71.4. which prevents sleep
+   236→       1.24.72. mental exertion
+   237→       1.24.73. motion, from
+   238→           1.24.73.1. amel.
+   239→           1.24.73.2. downward
+   240→       1.24.74. music, from
+   241→       1.24.75. night watching, from
+   242→       1.24.76. noise, from
+   243→           1.24.76.1. of rushing water
+   244→       1.24.77. others, for
+   245→       1.24.78. pains, from the
+   246→       1.24.79. paroxysms
+   247→       1.24.80. periodical
+   248→       1.24.81. playing piano, while
+   249→       1.24.82. pressure on the chest
+   250→       1.24.83. pursued when walking, as if
+   251→       1.24.84. railroad, when about to journey by, amel., while in train
+   252→       1.24.85. reading, while
+   253→       1.24.86. riding, while
+   254→           1.24.86.1. downhill
+   255→       1.24.87. rising, after
+   256→           1.24.87.1. from a seat, on
+   257→           1.24.87.2. amel.
+   258→       1.24.88. salvation, about
+   259→           1.24.88.1. morning
+   260→       1.24.89. sedentary employment, from
+   261→       1.24.90. sewing
+   262→       1.24.91. shaving, while
+   263→       1.24.92. shuddering, with
+   264→       1.24.93. sitting, while
+   265→           1.24.93.1. amel.
+   266→           1.24.93.2. bent
+   267→       1.24.94. sleep, before
+   268→           1.24.94.1. evening
+   269→           1.24.94.2. on going to
+   270→           1.24.94.3. during (compare Dreams)
+   271→           1.24.94.4. menses, after
+   272→           1.24.94.5. on starting from
+   273→           1.24.94.6. partial slumbering in the morning, during
+   274→       1.24.95. soup, after
+   275→       1.24.96. speaking, when
+   276→           1.24.96.1. in company
+   277→       1.24.97. standing, while
+   278→           1.24.97.1. amel.
+   279→       1.24.98. stool, before
+   280→           1.24.98.1. during
+   281→           1.24.98.2. after
+   282→           1.24.98.3. while straining at
+   283→       1.24.99. stooping, when
+   284→           1.24.99.1. amel.
+   285→       1.24.100. storm, during a thunder
+   286→       1.24.101. strangers, in the presence of
+   287→       1.24.102. sudden
+   288→       1.24.103. suicidal
+   289→       1.24.104. supper, after
+   290→       1.24.105. thinking about it, from
+   291→       1.24.106. thoughts, from
+   292→       1.24.107. time is set, if a
+   293→       1.24.108. tobacco, from smoking
+   294→       1.24.109. trifles, about
+   295→       1.24.110. urination, before
+   296→           1.24.110.1. during
+   297→           1.24.110.2. after
+   298→       1.24.111. vexation, after
+   299→       1.24.112. voice, on raising the
+   300→       1.24.113. waking, on
+   301→       1.24.114. walking, while
+   302→           1.24.114.1. in open air
+   303→           1.24.114.2. rapidly, when
+   304→           1.24.114.3. which makes him walk faster
+   305→       1.24.115. warmth, from
+   306→           1.24.115.1. amel.
+   307→       1.24.116. weeping, followed by
+   308→           1.24.116.1. amel.
+   309→       1.24.117. work, during
+   310→   1.25. APATHY (See Indifference.)
+   311→   1.26. APPREHENSIONS (See Fear, Anxiety, etc.)
+   312→   1.27. ARDENT
+   313→   1.28. ARROGANCE (See Haughty.)
+   314→   1.29. ASKS for nothing
+   315→   1.30. ATTENTION (See Concentration.)
+   316→   1.31. ATTITUDES, assumes strange
+   317→   1.32. AUDACITY
+   318→   1.33. AUTOMATIC (See Unconscious.)
+   319→   1.34. AVARICE
+   320→   1.35. AVERSION, a proached, to being
+   321→       1.35.1. everything, to
+   322→       1.35.2. friends, to
+   323→           1.35.2.1. during pregnancy
+   324→       1.35.3. husband
+   325→       1.35.4. in general (See name of thing disliked.)
+   326→       1.35.5. members of family, to
+   327→       1.35.6. persons, to certain
+   328→       1.35.7. religious, to the opposite sex
+   329→       1.35.8. strangers (see Company.)
+   330→       1.35.9. those around
+   331→   1.36. BAD news, ailments from
+   332→   1.37. BARKING
+   333→   1.38. BASHFUL (See Timidity.)
+   334→   1.39. BATTLES, talks about
+   335→   1.40. BED, aversion to (shuns)
+   336→       1.40.1. desires to remain in
+   337→       1.40.2. jumps out of, wants to destroy himself but lacks courage
+   338→       1.40.3. and runs recklessly about
+   339→   1.41. BEGGING, entreating
+   340→       1.41.1. in sleep
+   341→   1.42. BELLOWING
+   342→   1.43. BEMOANING (See Lamenting.)
+   343→   1.44. BENEVOLENCE
+   344→   1.45. BENUMBED (See Stupefaction.)
+   345→   1.46. BEWILDERED (See Confusion.)
+   346→   1.47. BITING
+   347→       1.47.1. night
+   348→       1.47.2. convulsions, with
+   349→       1.47.3. fingers
+   350→       1.47.4. hands
+   351→       1.47.5. himself
+   352→       1.47.6. pillow
+   353→       1.47.7. spoons, etc.
+   354→       1.47.8. tumbler
+   355→   1.48. BLACK and sombre, everything that is, aversion to
+   356→   1.49. BLINDNESS pretended
+   357→   1.50. BLOOD, cannot look at, or a knife
+   358→   1.51. BOLDNESS (See Courageous.)
+   359→   1.52. BREAK things, desire to
+   360→   1.53. BROODING (See Anxiety, Sadness)
+   361→       1.53.1. evening
+   362→   1.54. BUFFOONERY (See Foolish Behavior.)
+   363→   1.55. BUSINESS, averse to
+   364→       1.55.1. incapacity for
+   365→       1.55.2. talks of
+   366→   1.56. BUSY (See Occupied, Delirium)
+   367→       1.56.1. fruitlessly
+   368→   1.57. CALMNESS (See Tranquility.)
+   369→   1.58. CALUMNIATE, desire to (See Slander.)
+   370→   1.59. CAPRICIOUSNESS
+   371→       1.59.1. morning
+   372→   1.60. CAREFULNESS
+   373→   1.61. CARELESS (See Heedless.)
+   374→   1.62. CARES, full of (See Anxiety)
+   375→       1.62.1. ailments, from
+   376→       1.62.2. domestic affairs, about
+   377→       1.62.3. trifles, about
+   378→   1.63. CARPHOLOGIA (See Gestures.)
+   379→   1.64. CARRIED, desires to be
+   380→       1.64.1. in croup
+   381→       1.64.2. fast
+   382→       1.64.3. slowly
+   383→   1.65. CAUTIOUS
+   384→       1.65.1. anxiously
+   385→   1.66. CENSORIOUS, critical
+   386→       1.66.1. afternoon
+   387→       1.66.2. dearest friends, with
+   388→       1.66.3. disposed to find fault or is silent
+   389→   1.67. CHAGRIN (See Mortification.)
+   390→   1.68. CHANGEABLE (See Mood.)
+   391→   1.69. CHAOTIC
+   392→   1.70. CHASES imaginary objects
+   393→       1.70.1. persons
+   394→   1.71. CHEERFUL, gay, happy (See Mirth)
+   395→       1.71.1. daytime
+   396→       1.71.2. morning
+   397→           1.71.2.1. rising, on
+   398→           1.71.2.2. waking, on
+   399→       1.71.3. 8 a.m.
+   400→       1.71.4. forenoon
+   401→       1.71.5. afternoon
+   402→       1.71.6. evening
+   403→       1.71.7. night
+   404→       1.71.8. air, in open
+   405→       1.71.9. alternating with aversion to work
+   406→       1.71.10. ill humor, with (See Irritability.)
+   407→       1.71.11. mania, with
+   408→       1.71.12. pain, with
+   409→       1.71.13. passion, with burst of
+   410→       1.71.14. sadness, with
+   411→       1.71.15. violence, with
+   412→       1.71.16. want of sympathy, with
+   413→       1.71.17. weeping, with (See Weeping.)
+   414→       1.71.18. bed, in
+   415→       1.71.19. chill, during
+   416→       1.71.20. coition, after
+   417→       1.71.21. constipated, when
+   418→       1.71.22. convulsions, after
+   419→       1.71.23. eating, while
+   420→           1.71.23.1. after
+   421→           1.71.23.2. followed by irritability, etc.
+   422→           1.71.23.3. melancholy
+   423→           1.71.23.4. prostration, etc.
+   424→           1.71.23.5. sleepiness
+   425→       1.71.24. heat, during
+   426→       1.71.25. menses, before
+   427→           1.71.25.1. during
+   428→       1.71.26. pain, with all
+   429→       1.71.27. perspiration, during
+   430→       1.71.28. room, in the, amel.
+   431→       1.71.29. stools, after
+   432→       1.71.30. supper, after
+   433→       1.71.31. thinking of death, while
+   434→       1.71.32. thunders and lightens, when it
+   435→       1.71.33. urination, after
+   436→       1.71.34. waking, on
+   437→       1.71.35. walking in open air
+   438→   1.72. CHILDISH behavior (See Foolish)
+   439→   1.73. CHILDREN, aversion to
+   440→       1.73.1. desires to beat
+   441→       1.73.2. to have, to beget
+   442→       1.73.3. dislikes her own
+   443→           1.73.3.1. especially little girls (a woman)
+   444→       1.73.4. flies from his own
+   445→   1.74. CIRCUMSPECTION, lack of (See Indiscretion.)
+   446→   1.75. CLAIRVOYANCE
+   447→   1.76. CLINGING to persons or furniture
+   448→       1.76.1. child awakens terrified, knows no one, screams, clings to those near
+   449→   1.77. CLOSING eyes amel.
+   450→   1.78. CLOUDINESS, confusion (See Confusion, Stupefaction.)
+   451→   1.79. COLOR, aversion to red, yellow, green and black
+   452→   1.80. COMPANY, aversion to
+   453→       1.80.1. forenoon
+   454→       1.80.2. amel. when alone
+   455→       1.80.3. avoids the sight of people
+   456→           1.80.3.1. and lies with closed eyes
+   457→           1.80.3.2. shuts herself up
+   458→       1.80.4. country away from people, wants to get into the
+   459→       1.80.5. deep corner alone, wants to get into a
+   460→       1.80.6. desires solitude to practice masturbation
+   461→           1.80.6.1. to indulge her fancy
+   462→           1.80.6.2. lie with closed eyes
+   463→       1.80.7. dreads being alone, yet
+   464→       1.80.8. friends, of intimate
+   465→       1.80.9. heat, during
+   466→       1.80.10. meeting of friends, whom he imagines he has offended
+   467→       1.80.11. menses, during
+   468→           1.80.11.1. desires to be let alone
+   469→       1.80.12. perspiration, during
+   470→       1.80.13. pregnant, when
+   471→       1.80.14. presence of strangers, to
+   472→       1.80.15. people intolerable to her during stool
+   473→           1.80.15.1. during urination
+   474→       1.80.16. walk alone, wants to
+   475→       1.80.17. desire for
+   476→           1.80.17.1. evening
+   477→           1.80.17.2. night
+   478→           1.80.17.3. alone, while agg.
+   479→           1.80.17.4. friend, of a
+   480→           1.80.17.5. menses, during
+   481→           1.80.17.6. yet treats them outrageously
+   482→   1.81. COMPLAINING (See Lamenting)
+   483→       1.81.1. offenses long past
+   484→       1.81.2. sleep, in
+   485→       1.81.3. supposed injury, of
+   486→       1.81.4. waking, on
+   487→   1.82. COMPREHENSION difficult (See Dullness.)
+   488→   1.83. CONCENTRATION active
+   489→       1.83.1. difficult
+   490→           1.83.1.1. morning
+   491→           1.83.1.2. alternating with uterine pains
+   492→           1.83.1.3. calculating, while
+   493→           1.83.1.4. children, in
+   494→           1.83.1.5. conversation, during
+   495→           1.83.1.6. crazy feeling on top of head, wild feeling in head, with confusion of ideas
+   496→           1.83.1.7. interrupted, if
+   497→           1.83.1.8. on attempting to, it becomes dark before the eyes
+   498→           1.83.1.9. has a vacant feeling
+   499→           1.83.1.10. studying, reading, etc., while
+   500→           1.83.1.11. talking, while
+   501→           1.83.1.12. writing, while
+   502→   1.84. CONFIDENCE, want of self
+   503→       1.84.1. and thinks others have none which makes her unhappy
+   504→   1.85. CONFIDING
+   505→   1.86. CONFOUNDING objects and ideas
+   506→   1.87. CONFUSION of mind (See Concentration)
+   507→       1.87.1. morning
+   508→           1.87.1.1. rising, on
+   509→           1.87.1.2. after, amel.
+   510→           1.87.1.3. waking, on
+   511→       1.87.2. afternoon
+   512→       1.87.3. evening
+   513→       1.87.4. night
+   514→           1.87.4.1. lying down, on
+   515→           1.87.4.2. waking, on
+   516→       1.87.5. air, in open
+   517→           1.87.5.1. amel.
+   518→       1.87.6. arouse himself, compelled to
+   519→       1.87.7. ascending agg.
+   520→       1.87.8. bed, while in
+   521→           1.87.8.1. amel.
+   522→       1.87.9. beer, from
+   523→       1.87.10. bread agg.
+   524→       1.87.11. breakfast, before
+   525→           1.87.11.1. after
+   526→           1.87.11.2. amel.
+   527→       1.87.12. calculating, when
+   528→       1.87.13. carousal, after a
+   529→       1.87.14. chill, during
+   530→       1.87.15. coffee, after
+   531→           1.87.15.1. amel., after
+   532→       1.87.16. coition, after
+   533→       1.87.17. cold bath amel.
+   534→       1.87.18. concentrate the mind, on attempting to
+   535→       1.87.19. conversation agg.
+   536→       1.87.20. cough, before paroxysm of
+   537→       1.87.21. dinner, after
+   538→       1.87.22. dream, as if in
+   539→       1.87.23. drinking, after
+   540→       1.87.24. eating, after
+   541→           1.87.24.1. amel.
+   542→       1.87.25. emissions
+   543→       1.87.26. epistaxis amel.
+   544→       1.87.27. eructations amel.
+   545→       1.87.28. hat, putting on, agg.
+   546→       1.87.29. heat, during the
+   547→       1.87.30. identity, as to his
+   548→       1.87.31. injury to head, after
+   549→       1.87.32. interruption, from
+   550→       1.87.33. intoxicated, as if
+   551→           1.87.33.1. as after being
+   552→       1.87.34. laughing agg.
+   553→       1.87.35. loses his way in well-known streets
+   554→       1.87.36. lying, when
+   555→       1.87.37. menses, before
+   556→           1.87.37.1. during
+   557→           1.87.37.2. after
+   558→       1.87.38. mental exertion, from
+   559→           1.87.38.1. amel.
+   560→       1.87.39. motion, from
+   561→           1.87.39.1. amel.
+   562→       1.87.40. paroxysms of pain, during
+   563→       1.87.41. periodic
+   564→       1.87.42. perspiration, during
+   565→       1.87.43. pregnancy, during
+   566→       1.87.44. reading, while
+   567→       1.87.45. riding, while
+   568→       1.87.46. rising, after
+   569→       1.87.47. sitting, while
+   570→       1.87.48. sleeping, after
+   571→           1.87.48.1. after a siesta
+   572→       1.87.49. smoking, after
+   573→       1.87.50. spirituous liquors, from
+   574→       1.87.51. spoken to, when
+   575→       1.87.52. standing, while
+   576→       1.87.53. stool amel.
+   577→       1.87.54. stooping, when
+   578→           1.87.54.1. amel.
+   579→       1.87.55. sun, in the
+   580→       1.87.56. talking, while
+   581→       1.87.57. thinking of it agg.
+   582→       1.87.58. urination amel.
+   583→       1.87.59. vexation, after
+   584→       1.87.60. waking, on
+   585→       1.87.61. walking, while
+   586→           1.87.61.1. amel.
+   587→           1.87.61.2. open air, in
+   588→           1.87.61.3. warm room, in
+   589→       1.87.62. washing the face amel.
+   590→       1.87.63. weeping amel.
+   591→       1.87.64. will, strong effort of, amel.
+   592→       1.87.65. wine, after
+   593→       1.87.66. wrapping up head amel.
+   594→       1.87.67. writing, while
+   595→       1.87.68. yawning amel.
+   596→   1.88. CONSCIENTIOUS about trifles
+   597→       1.88.1. 4 to 8 p.m.
+   598→       1.88.2. eating, after
+   599→   1.89. CONSOLATION agg.
+   600→   1.90. CONTEMPTUOUS (See Scorn)
+   601→       1.90.1. in open air or when sun shines into room
+   602→       1.90.2. paroxysms against her will
+   603→       1.90.3. of everything
+   604→       1.90.4. self
+   605→   1.91. CONTENTED (See Cheerful.)
+   606→   1.92. CONTENTIONS (See Quarrelsome.)
+   607→   1.93. CONTRADICT, disposition to
+   608→       1.93.1. afternoon
+   609→   1.94. CONTRADICTION, is intolerant of
+   610→       1.94.1. has to restrain himself to keep from violence
+   611→   1.95. CONTRARY (See Obstinate, Irritable)
+   612→   1.96. CONVERSATION agg. (See Talking)
+   613→   1.97. COSMOPOLITAN (See Travel.)
+   614→   1.98. COUNTING continually
+   615→   1.99. COURAGEOUS
+   616→   1.100. COVETOUS (See Avarice.)
+   617→   1.101. COWARDICE
+   618→   1.102. CRAWLING on floor
+   619→   1.103. CRAZY (See Insanity, Delusions.)
+   620→   1.104. CRITICAL (See Censorious.)
+   621→   1.105. CROAKING
+   622→       1.105.1. in sleep
+   623→   1.106. CRUELTY (See Moral feeling, Malicious)
+   624→   1.107. CURSING
+   625→       1.107.1. all night, and complains of stupid feeling
+   626→       1.107.2. convulsions, during
+   627→   1.108. CUT others, desires to
+   628→   1.109. DANCING
+   629→       1.109.1. alternating with sighing
+   630→       1.109.2. grotesque
+   631→       1.109.3. unconscious
+   632→       1.109.4. wild
+   633→   1.110. DARKNESS, agg. (See Fear)
+   634→   1.111. DEAFNESS, pretended
+   635→   1.112. DEATH, desires (See Loathing of Life)
+   636→       1.112.1. forenoon
+   637→       1.112.2. evening
+   638→       1.112.3. chill, during
+   639→       1.112.4. convalescence, during
+   640→       1.112.5. presentiment of
+   641→           1.112.5.1. believes that she will die soon, and that she cannot be helped
+   642→           1.112.5.2. predicts the time
+   643→           1.112.5.3. thinks of death calmly
+   644→       1.112.6. sensation of
+   645→           1.112.6.1. chill, during
+   646→           1.112.6.2. spasm, during
+   647→       1.112.7. thoughts of
+   648→           1.112.7.1. morning
+   649→           1.112.7.2. alone, when
+   650→   1.113. DECEITFUL
+   651→   1.114. DEEDS, feels as if he could do great
+   652→   1.115. DEFIANT
+   653→   1.116. DEJECTION (See Sadness.)
+   654→   1.117. DELIRIUM
+   655→       1.117.1. morning
+   656→           1.117.1.1. at daybreak
+   657→           1.117.1.2. waking, on
+   658→       1.117.2. evening
+   659→       1.117.3. dark, in the
+   660→       1.117.4. nap, during
+   661→       1.117.5. night
+   662→           1.117.5.1. 1 to 2 a.m.
+   663→       1.117.6. abandons her relatives
+   664→       1.117.7. absurd things, does
+   665→       1.117.8. alternating with colic
+   666→       1.117.9. coma, also with somnolency
+   667→           1.117.9.1. sopor
+   668→           1.117.9.2. tetanic convulsions, lies on his back, knees and thighs flexed, hands joined
+   669→       1.117.10. angry
+   670→       1.117.11. antics, plays
+   671→       1.117.12. anxious
+   672→       1.117.13. apathetic
+   673→       1.117.14. arms, throws about
+   674→       1.117.15. aroused, on being
+   675→       1.117.16. attacks people with knife
+   676→       1.117.17. bed, attempts to leave (See Escape.)
+   677→           1.117.17.1. creeps about in
+   678→       1.117.18. bellows like a calf
+   679→       1.117.19. blames himself for his folly
+   680→       1.117.20. busy
+   681→       1.117.21. catches at flocks in air (See Gestures.)
+   682→       1.117.22. changing subject rapidly
+   683→       1.117.23. cheerful
+   684→       1.117.24. chill, during
+   685→       1.117.25. closing the eyes, on
+   686→       1.117.26. coldness, with
+   687→       1.117.27. comical
+   688→       1.117.28. constant
+   689→       1.117.29. convulsions, before
+   690→           1.117.29.1. during
+   691→           1.117.29.2. after
+   692→       1.117.30. crying
+   693→           1.117.30.1. for help
+   694→       1.117.31. dark, in
+   695→       1.117.32. depletion, after
+   696→       1.117.33. drunkards, of (See Mania-a-potu.)
+   697→       1.117.34. eating amel.
+   698→       1.117.35. embraces the stove
+   699→       1.117.36. epilepsy, during
+   700→           1.117.36.1. after
+   701→       1.117.37. erotic
+   702→       1.117.38. exaltation of strength, with
+   703→       1.117.39. fantastic
+   704→       1.117.40. fatigue, study, etc., from
+   705→       1.117.41. fear of men, with
+   706→       1.117.42. fierce
+   707→       1.117.43. fire, talks of
+   708→       1.117.44. foolish, silly
+   709→       1.117.45. foreign countries, talks of
+   710→           1.117.45.1. language, talks in a
+   711→       1.117.46. frightful
+   712→       1.117.47. gathers objects off the wall, tries to
+   713→       1.117.48. gay
+   714→           1.117.48.1. alternating, with laughing, singing, whistling, crying, etc.
+   715→           1.117.48.2. with melancholy
+   716→       1.117.49. headache, during
+   717→       1.117.50. heat agg.
+   718→       1.117.51. hemorrhage, after
+   719→       1.117.52. hysterical, almost
+   720→       1.117.53. intermittent
+   721→       1.117.54. laughing
+   722→       1.117.55. look fixed on one point, staring
+   723→           1.117.55.1. staring, with wrinkled face
+   724→       1.117.56. loquacious
+   725→           1.117.56.1. indistinct
+   726→       1.117.57. maniacal
+   727→       1.117.58. menses, before
+   728→           1.117.58.1. during
+   729→       1.117.59. merry (See Gay.)
+   730→       1.117.60. miscarriage, after
+   731→       1.117.61. mouth, moves lips as if talking
+   732→           1.117.61.1. puts stones in
+   733→       1.117.62. murmuring
+   734→           1.117.62.1. slowly
+   735→           1.117.62.2. to himself
+   736→       1.117.63. muttering
+   737→           1.117.63.1. himself, to
+   738→           1.117.63.2. sleep, in
+   739→           1.117.63.3. slowly
+   740→       1.117.64. noisy
+   741→       1.117.65. nonsense, with eyes open
+   742→       1.117.66. pains, with the
+   743→       1.117.67. paroxysmal
+   744→       1.117.68. periodic
+   745→       1.117.69. perspiration amel.
+   746→       1.117.70. picking at nose or lips, with
+   747→       1.117.71. quiet
+   748→       1.117.72. rabid
+   749→       1.117.73. raging, raving
+   750→       1.117.74. rambling
+   751→       1.117.75. recognizes no one
+   752→       1.117.76. religious
+   753→       1.117.77. repeats the same sentence
+   754→       1.117.78. reproachful
+   755→       1.117.79. restless
+   756→       1.117.80. rocking to and fro
+   757→       1.117.81. rolls on floor
+   758→       1.117.82. romping with children
+   759→       1.117.83. rope across the sky, sees a
+   760→       1.117.84. same subject all the time
+   761→       1.117.85. scolding
+   762→       1.117.86. silent
+   763→       1.117.87. sleep, during
+   764→           1.117.87.1. amel., after
+   765→           1.117.87.2. falling, on
+   766→       1.117.88. sleepiness, with
+   767→       1.117.89. sorrowful
+   768→       1.117.90. trembling, with
+   769→       1.117.91. tremens (See Mania-a-potu.)
+   770→       1.117.92. urinate on the floor, tries to
+   771→           1.117.92.1. urinates outside the pot
+   772→       1.117.93. violent
+   773→           1.117.93.1. is restrained and calmed with great difficulty
+   774→       1.117.94. vivid
+   775→       1.117.95. waking, on
+   776→       1.117.96. water, jumping into
+   777→       1.117.97. wedding, prepares for
+   778→       1.117.98. well, declares she is
+   779→       1.117.99. wild
+   780→           1.117.99.1. at night
+   781→       1.117.100. wraps up in fur during Summer
+   782→       1.117.101. wrongs, of fancied
+   783→   1.118. DELUSIONS, imaginations, hallucinations, illusions
+   784→       1.118.1. night
+   785→       1.118.2. afternoon, that it is always
+   786→       1.118.3. abdomen is fallen in, his stomach devoured, his scrotum swollen
+   787→       1.118.4. absurd, ludicrous
+   788→       1.118.5. accused, thinks she is
+   789→       1.118.6. active
+   790→       1.118.7. affection of friends, has lost
+   791→       1.118.8. air, that he is hovering in, like a spirit
+   792→       1.118.9. alone, that she is always
+   793→           1.118.9.1. that she is alone in a graveyard
+   794→           1.118.9.2. in a wilderness
+   795→           1.118.9.3. she is, in the world
+   796→       1.118.10. animals, of
+   797→           1.118.10.1. abdomen, are in
+   798→           1.118.10.2. bed, on
+   799→           1.118.10.3. dancing on the
+   800→           1.118.10.4. beetles, worms, etc.
+   801→           1.118.10.5. black, on walls and furniture, sees
+   802→           1.118.10.6. creeping of
+   803→           1.118.10.7. in her
+   804→           1.118.10.8. cup, in a, moving
+   805→           1.118.10.9. dark colored
+   806→           1.118.10.10. fire, in the
+   807→           1.118.10.11. frightful
+   808→           1.118.10.12. grotesque
+   809→           1.118.10.13. jump out of the ground
+   810→           1.118.10.14. jumping at her
+   811→           1.118.10.15. passing before her
+   812→           1.118.10.16. persons are
+   813→           1.118.10.17. rats, mice, insects, etc.
+   814→           1.118.10.18. unclean
+   815→       1.118.11. annihilation, about to sink into
+   816→       1.118.12. ants, bed seems full of
+   817→       1.118.13. apoplexy, thought he would have
+   818→       1.118.14. appreciated, that she is not
+   819→       1.118.15. argument, making an eloquent
+   820→       1.118.16. arms are bound to her body
+   821→           1.118.16.1. do not belong to her
+   822→           1.118.16.2. reach the clouds when going to sleep
+   823→           1.118.16.3. that she has three
+   824→       1.118.17. arrested, is about to be
+   825→       1.118.18. assaulted, is going to be
+   826→       1.118.19. asylum, that she will be sent to
+   827→       1.118.20. babies, are two in bed
+   828→       1.118.21. ball, that he is sitting on a
+   829→       1.118.22. beaten, that he is being
+   830→       1.118.23. beautiful
+   831→           1.118.23.1. landscape
+   832→           1.118.23.2. rags seem, even
+   833→       1.118.24. bed, feels as if not lying on, on waking, 4 a.m.
+   834→           1.118.24.1. evening, as if someone would get into and no room in it, or as if someone had sold it
+   835→           1.118.24.2. drawn from under her
+   836→           1.118.24.3. as if someone was in, with him
+   837→           1.118.24.4. bouncing her up and down
+   838→           1.118.24.5. two persons in bed with her
+   839→           1.118.24.6. motion, in
+   840→           1.118.24.7. naked man is wrapped in the bed clothes with her
+   841→           1.118.24.8. raised, were
+   842→           1.118.24.9. sinking, were
+   843→           1.118.24.10. someone over it
+   844→           1.118.24.11. drives him out
+   845→           1.118.24.12. stands at the foot menacing
+   846→           1.118.24.13. tries to take away the bed clothes
+   847→           1.118.24.14. under it
+   848→           1.118.24.15. knocking
+   849→       1.118.25. bees, sees
+   850→       1.118.26. behind him, that some one is (See People.)
+   851→       1.118.27. bells, hears ringing of
+   852→           1.118.27.1. his funeral
+   853→           1.118.27.2. numberless sweet toned
+   854→           1.118.27.3. door bell
+   855→       1.118.28. betrothal must be broken
+   856→       1.118.29. better than others, that he is
+   857→       1.118.30. bewitched, thinks he is
+   858→       1.118.31. bier, is lying on a
+   859→       1.118.32. birds, sees
+   860→           1.118.32.1. that he is picking feathers from
+   861→       1.118.33. black objects and people
+   862→       1.118.34. blind, that is
+   863→       1.118.35. blood rushed through like roar of many waters
+   864→       1.118.36. body adherent to woolen sack, night, while half awake
+   865→           1.118.36.1. alive on one side, buried on the other
+   866→           1.118.36.2. black, as if it were
+   867→           1.118.36.3. brittle, is
+   868→           1.118.36.4. covered the whole earth
+   869→           1.118.36.5. the whole bed
+   870→           1.118.36.6. delicate
+   871→           1.118.36.7. divided
+   872→           1.118.36.8. erroneous ideas as to the state of his
+   873→           1.118.36.9. greatness of, as to
+   874→           1.118.36.10. lighter than air
+   875→           1.118.36.11. putrify, will
+   876→           1.118.36.12. scattered about bed, tossed about to get the pieces together
+   877→           1.118.36.13. shrunken, like the dead
+   878→           1.118.36.14. spotted brown, as if
+   879→           1.118.36.15. sweets, is made of
+   880→           1.118.36.16. thin, is
+   881→           1.118.36.17. threefold, has a
+   882→           1.118.36.18. would sink down between the thighs
+   883→       1.118.37. born, feels as if newly, into the world and was overwhelmed with wonder at the novelty of his surroundings
+   884→       1.118.38. brain, has softening
+   885→       1.118.39. brother fell overboard in her sight
+   886→       1.118.40. building stones, appearance of
+   887→       1.118.41. business, fancies is doing
+   888→           1.118.41.1. thought they were pursuing ordinary
+   889→       1.118.42. butterflies, of
+   890→       1.118.43. calls some one
+   891→           1.118.43.1. for absent persons
+   892→           1.118.43.2. waking, on
+   893→       1.118.44. cancer, has a
+   894→       1.118.45. castles and palaces, sees
+   895→       1.118.46. cats, sees
+   896→           1.118.46.1. black
+   897→           1.118.46.2. caught, as if he would be
+   898→       1.118.47. chair is rising up
+   899→       1.118.48. chairs, thinks he is repairing old
+   900→       1.118.49. changed, thinks everything (See Strange)
+   901→           1.118.49.1. changing suddenly
+   902→       1.118.50. child, childish fantasies, has
+   903→           1.118.50.1. is with companions of his youth
+   904→           1.118.50.2. not hers
+   905→           1.118.50.3. thinks he is again a
+   906→       1.118.51. children, thinks he must drive, out of the house
+   907→       1.118.52. chin, too long, is
+   908→       1.118.53. choir, on hearing music thinks he is in a cathedral
+   909→       1.118.54. choked, thinks he is about to be, night on waking
+   910→           1.118.54.1. by icy-cold hands
+   911→       1.118.55. Christ, thinks himself to be
+   912→       1.118.56. churchyard, visits a
+   913→           1.118.56.1. that he is dancing in
+   914→       1.118.57. ciphers, sees
+   915→       1.118.58. clock, hears strike
+   916→       1.118.59. clothes, thinks beautiful
+   917→           1.118.59.1. is clad in rags
+   918→           1.118.59.2. would fly away and become wandering stars, on undressing
+   919→       1.118.60. clouds, strange, settled upon patients, or danced about the sun
+   920→           1.118.60.1. before the fancy
+   921→           1.118.60.2. heavy black enveloped her
+   922→           1.118.60.3. clouds and rocks as if looking over
+   923→       1.118.61. cockroaches swarmed about the room
+   924→       1.118.62. companions seemed half men, half plants
+   925→       1.118.63. confidence in him, his friends have lost all
+   926→       1.118.64. confusion, imagines others will observe her
+   927→       1.118.65. consciousness, belongs to another
+   928→       1.118.66. conspiracies against her father, thought the landlord's bills were
+   929→           1.118.66.1. against him, there were
+   930→       1.118.67. contaminates every thing she touches
+   931→       1.118.68. convent, thinks she will have to go to a
+   932→       1.118.69. corner, sees something coming out of
+   933→       1.118.70. corners of houses seem to project so that he fears he will run against them while walking in the street
+   934→       1.118.71. corpses (See Dead Persons.)
+   935→       1.118.72. cowards, thinks persons leaving him to be
+   936→       1.118.73. crabs, of
+   937→       1.118.74. creative power, has
+   938→       1.118.75. crime about to commit a
+   939→           1.118.75.1. as if he had committed
+   940→       1.118.76. criminal, that he is a
+   941→           1.118.76.1. and others known it
+   942→       1.118.77. criminals, about
+   943→       1.118.78. criticised, that she is
+   944→       1.118.79. cumcumbers, sees on the bed
+   945→       1.118.80. cut through, as if he were
+   946→           1.118.80.1. in two
+   947→       1.118.81. cylinder, seemed to be a
+   948→       1.118.82. danger, impression of
+   949→           1.118.82.1. to his life
+   950→           1.118.82.2. from his family
+   951→       1.118.83. dead, everything is
+   952→           1.118.83.1. persons sees
+   953→               1.118.83.1.1. morning on waking, frightened by images of
+   954→               1.118.83.1.2. midnight, on waking
+   955→               1.118.83.1.3. all her friends are dead and she must go to a convent
+   956→               1.118.83.1.4. corpse on a bier
+   957→               1.118.83.1.5. mutilated
+   958→               1.118.83.1.6. of absent acquaintance on sofa and has dread
+   959→               1.118.83.1.7. dead brother and child
+   960→               1.118.83.1.8. husband
+   961→               1.118.83.1.9. sister
+   962→               1.118.83.1.10. tall yellow, trying to share bed with him and promptly ejected
+   963→               1.118.83.1.11. that he himself was dead
+   964→               1.118.83.1.12. her child was dead
+   965→               1.118.83.1.13. his mother is dead
+   966→       1.118.84. deaf and dumb
+   967→       1.118.85. debate of being in
+   968→       1.118.86. delirious, at night, expected to become
+   969→           1.118.86.1. imagines he was
+   970→       1.118.87. deserted, forsaken
+   971→       1.118.88. despised, that is
+   972→       1.118.89. devils, sees
+   973→           1.118.89.1. possessed of a, is
+   974→           1.118.89.2. that everyone is
+   975→           1.118.89.3. present, are
+   976→           1.118.89.4. that all persons are
+   977→           1.118.89.5. he is a
+   978→       1.118.90. devoured, had been by animals
+   979→       1.118.91. die, thought he was about to
+   980→           1.118.91.1. time has come to
+   981→           1.118.91.2. while walking thinks he will have a fit or die, which makes him walk faster
+   982→           1.118.91.3. would, and soon be dissected
+   983→       1.118.92. diminished
+   984→           1.118.92.1. abdomen has fallen in
+   985→           1.118.92.2. everything in room is, while she is tall and elevated
+   986→           1.118.92.3. left side of body is smaller
+   987→           1.118.92.4. short
+   988→           1.118.92.5. shrunken, parts are
+   989→           1.118.92.6. small
+   990→           1.118.92.7. thin, is too
+   991→           1.118.92.8. whole body is
+   992→       1.118.93. dirty, that he is
+   993→           1.118.93.1. eating dirt
+   994→           1.118.93.2. everything is, that
+   995→       1.118.94. disabled, that she is
+   996→       1.118.95. disease, that he has every
+   997→           1.118.95.1. has incurable
+   998→           1.118.95.2. is deaf, dumb and has cancer
+   999→           1.118.95.3. unrecognized, has an
+  1000→       1.118.96. disgraced, that she is
+  1001→       1.118.97. dissected, that he will be
+  1002→       1.118.98. distinguished
+  1003→       1.118.99. divided into two parts
+  1004→           1.118.99.1. or cut in two
+  1005→           1.118.99.2. and could not tell of which part he had possession on waking
+  1006→       1.118.100. divine, thinks he is
+  1007→       1.118.101. doctors, thought three were coming
+  1008→       1.118.102. dogs, sees
+  1009→           1.118.102.1. attack him
+  1010→           1.118.102.2. biting his chest
+  1011→           1.118.102.3. black
+  1012→           1.118.102.4. swarm about him
+  1013→       1.118.103. dolls, people appeared like
+  1014→       1.118.104. door, that some one was coming in at the, at night
+  1015→       1.118.105. double, of being
+  1016→           1.118.105.1. one limb is
+  1017→           1.118.105.2. sensations present themselves in a double form
+  1018→       1.118.106. dragged from the lowest abyss of darkness, at night, on waking
+  1019→       1.118.107. dreaming when awake, imagines himself
+  1020→           1.118.107.1. drinking
+  1021→           1.118.107.2. driving sheep
+  1022→           1.118.107.3. peacocks
+  1023→       1.118.108. dumb, thinks he is
+  1024→       1.118.109. elevated in air
+  1025→           1.118.109.1. carried to an elevation
+  1026→           1.118.109.2. bed were raised
+  1027→       1.118.110. emaciation
+  1028→       1.118.111. emperor, thought himself an
+  1029→           1.118.111.1. talked of
+  1030→       1.118.112. encaged in wires
+  1031→       1.118.113. enemy, everyone is an
+  1032→           1.118.113.1. pursued by (See Pursued.)
+  1033→           1.118.113.2. surrounded by
+  1034→           1.118.113.3. under the bed, is
+  1035→       1.118.114. engaged in some occupation, is
+  1036→           1.118.114.1. in ordinary occupation
+  1037→       1.118.115. enlarged
+  1038→           1.118.115.1. body parts of
+  1039→           1.118.115.2. chin is
+  1040→           1.118.115.3. distances are
+  1041→           1.118.115.4. eyes are
+  1042→           1.118.115.5. eye-lashes are
+  1043→           1.118.115.6. head is
+  1044→           1.118.115.7. objects are
+  1045→           1.118.115.8. one leg is longer
+  1046→           1.118.115.9. persons are
+  1047→           1.118.115.10. scrotum is swollen
+  1048→           1.118.115.11. tall, very, is
+  1049→       1.118.116. epilepsy, fancies he has
+  1050→       1.118.117. eternity, that he was in
+  1051→       1.118.118. excited
+  1052→       1.118.119. executioner, visious of an
+  1053→       1.118.120. existence, doubt if anything had
+  1054→           1.118.120.1. doubted his own
+  1055→       1.118.121. expanding, thought passers-by were
+  1056→       1.118.122. experienced before, thought everything had been
+  1057→       1.118.123. eyes, falling out
+  1058→       1.118.124. faces, sees
+  1059→           1.118.124.1. closing eyes, on
+  1060→           1.118.124.2. dark, in the
+  1061→           1.118.124.3. diabolical, crowd upon him
+  1062→           1.118.124.4. distinguished people, of
+  1063→           1.118.124.5. distorted, day, on lying down
+  1064→           1.118.124.6. elongated, is
+  1065→           1.118.124.7. grows larger
+  1066→           1.118.124.8. hideous
+  1067→           1.118.124.9. ridiculous
+  1068→           1.118.124.10. ugly faces seem pleasing
+  1069→           1.118.124.11. wherever he turns his eyes, or looking out from corners
+  1070→       1.118.125. fail, everything will
+  1071→       1.118.126. fall as if things would
+  1072→           1.118.126.1. falling forward, that she is
+  1073→           1.118.126.2. inward, walls of room seem, before epileptic fit
+  1074→           1.118.126.3. walls
+  1075→       1.118.127. family, does not belong to her own
+  1076→       1.118.128. fancy illusions of
+  1077→           1.118.128.1. chill, during
+  1078→           1.118.128.2. heat, during
+  1079→           1.118.128.3. open air amel.
+  1080→       1.118.129. fighting, that people are
+  1081→       1.118.130. figures, sees
+  1082→           1.118.130.1. gigantic
+  1083→           1.118.130.2. hurled bottle at
+  1084→           1.118.130.3. large black, about to spring on him
+  1085→           1.118.130.4. marching in the air, evening while half asleep
+  1086→       1.118.131. filthy (See Dirty.)
+  1087→       1.118.132. fingers cut off
+  1088→       1.118.133. finger-nails seem as large as plates during drowsiness
+  1089→       1.118.134. fire, visions of
+  1090→           1.118.134.1. distant home, on
+  1091→           1.118.134.2. every noise is a cry of fire, she thinks, and she trembles
+  1092→           1.118.134.3. head is surrounded by
+  1093→           1.118.134.4. house, on
+  1094→           1.118.134.5. neighbor's house on, morning, waking in a fright
+  1095→           1.118.134.6. room is on
+  1096→           1.118.134.7. world is on
+  1097→       1.118.135. fishes, flies, etc.
+  1098→       1.118.136. fit, thinks she will have a fit and walks faster
+  1099→       1.118.137. floating in air (See Vertigo)
+  1100→           1.118.137.1. evening
+  1101→           1.118.137.2. beds, suspended is
+  1102→           1.118.137.3. is not resting in
+  1103→           1.118.137.4. walking, while
+  1104→       1.118.138. fluid: ethereal, surrounded by, resisting passage
+  1105→       1.118.139. flying, sensation of
+  1106→           1.118.139.1. from a rock into dark abyss, on going to bed
+  1107→       1.118.140. footsteps, hears
+  1108→           1.118.140.1. behind him
+  1109→           1.118.140.2. in next room
+  1110→       1.118.141. forsaken (See Deserted.)
+  1111→       1.118.142. fortune, that he was going to lose his
+  1112→       1.118.143. foul, everything appears
+  1113→       1.118.144. fowls, sees
+  1114→       1.118.145. friend, thinks she is about to lose a
+  1115→           1.118.145.1. has lost the affection of
+  1116→           1.118.145.2. met with an accident
+  1117→           1.118.145.3. offended
+  1118→       1.118.146. friendless, that he is
+  1119→       1.118.147. frightful (See Images and Visions.)
+  1120→       1.118.148. furniture, imagines it to be persons, night on waking
+  1121→       1.118.149. gallows, vision of, with fear of
+  1122→       1.118.150. geese, threw themselves into water, thinking themselves to be
+  1123→           1.118.150.1. sees
+  1124→       1.118.151. ghosts (See Spectres.)
+  1125→       1.118.152. giants, sees
+  1126→       1.118.153. giraffe, imagines himself to be a
+  1127→       1.118.154. glass, that she is made of
+  1128→       1.118.155. God, is the object of God's vengeance
+  1129→           1.118.155.1. that he is in communication with
+  1130→       1.118.156. goitre, imagines he has a
+  1131→           1.118.156.1. has one which he cannot see over when sitting down
+  1132→       1.118.157. grave that he is in his
+  1133→       1.118.158. great person, is
+  1134→       1.118.159. groans, fancies he hears
+  1135→       1.118.160. growling, as of a bear
+  1136→       1.118.161. hall, illusion of a gigantic hall
+  1137→       1.118.162. halves, left half does not belong to her
+  1138→       1.118.163. hand, midnight vision of something taking her
+  1139→           1.118.163.1. felt a delicate, smoothing her head
+  1140→           1.118.163.2. visions, of white, outspread, coming toward face in the darkness
+  1141→       1.118.164. hanging, sees persons
+  1142→           1.118.164.1. three feet from the ground, on falling asleep
+  1143→           1.118.164.2. or standing high, seems as if
+  1144→       1.118.165. happy, that he will never be, in his own house
+  1145→       1.118.166. harlequin, as if he were a
+  1146→       1.118.167. hat is a pair of trousers which he tries to put on
+  1147→       1.118.168. head belongs to another
+  1148→           1.118.168.1. can lift it off
+  1149→           1.118.168.2. cold breeze blows on
+  1150→           1.118.168.3. deceased acquaintances, of, without bodies, at night
+  1151→           1.118.168.4. heavy, his own seemed too
+  1152→           1.118.168.5. large, seems too
+  1153→           1.118.168.6. heads, make grimaces, evening on closing eyes
+  1154→           1.118.168.7. monstrous, on distant wall of room
+  1155→           1.118.168.8. pendulum, seems an inverted, oscillating
+  1156→           1.118.168.9. sees friend's, stick out of a bottle
+  1157→           1.118.168.10. shaking the
+  1158→           1.118.168.11. thinks disease will break out of
+  1159→           1.118.168.12. transparent and speckled brown
+  1160→           1.118.168.13. two, thinks she has
+  1161→       1.118.169. health, he has ruined his
+  1162→       1.118.170. hear, he thinks he cannot
+  1163→       1.118.171. heart disease, is going to have, and die
+  1164→           1.118.171.1. too large
+  1165→           1.118.171.2. turning around, is
+  1166→       1.118.172. heat, has a furious, radiating from epigastrium
+  1167→       1.118.173. heaven, is in
+  1168→       1.118.174. heavy, is
+  1169→       1.118.175. hell, at gate of, obliged to confess his sins
+  1170→           1.118.175.1. in shadows of, midnight, on waking
+  1171→           1.118.175.2. is in
+  1172→           1.118.175.3. suffers the torments of, without being able to explain
+  1173→       1.118.176. help, calling for
+  1174→       1.118.177. hemorrhage, after
+  1175→       1.118.178. herbs, gathering
+  1176→       1.118.179. hole, small, appears like a frightful chasm
+  1177→       1.118.180. home, thinks is at, when not
+  1178→           1.118.180.1. everything at, has changed
+  1179→           1.118.180.2. thinks is away from
+  1180→       1.118.181. horrible, everything seems
+  1181→       1.118.182. horses, sees
+  1182→           1.118.182.1. is on horseback
+  1183→       1.118.183. house is full of people
+  1184→           1.118.183.1. not in right place, while walking in the street after headache
+  1185→           1.118.183.2. seems movable
+  1186→           1.118.183.3. surrounded, is
+  1187→       1.118.184. houses on each side would approach and crush him
+  1188→       1.118.185. humility and lowness of others, while he is great
+  1189→       1.118.186. hunter, thinks he is a
+  1190→       1.118.187. husband, thinks he is not her
+  1191→       1.118.188. identity, errors of personal
+  1192→           1.118.188.1. thinks she is some one else
+  1193→       1.118.189. images, phantoms, sees (See Faces, Figures, Men, Spectres, Visions)
+  1194→           1.118.189.1. afternoon
+  1195→           1.118.189.2. evening
+  1196→               1.118.189.2.1. in bed
+  1197→           1.118.189.3. night
+  1198→               1.118.189.3.1. alone, when
+  1199→           1.118.189.4. black
+  1200→           1.118.189.5. closing the eyes, on
+  1201→               1.118.189.5.1. in bed
+  1202→           1.118.189.6. dark, in the
+  1203→           1.118.189.7. dwells upon
+  1204→           1.118.189.8. ever changing
+  1205→           1.118.189.9. past to present
+  1206→           1.118.189.10. frightful
+  1207→               1.118.189.10.1. night, while trying to sleep
+  1208→           1.118.189.11. pleasant
+  1209→           1.118.189.12. rising out of the earth
+  1210→           1.118.189.13. sees, all over
+  1211→           1.118.189.14. side, at his
+  1212→           1.118.189.15. sleep, before
+  1213→               1.118.189.15.1. during
+  1214→               1.118.189.15.2. preventing
+  1215→           1.118.189.16. wall, on the
+  1216→       1.118.190. inanimate objects are persons
+  1217→       1.118.191. inferior, on entering house after a walk, people seem mentally and physically
+  1218→       1.118.192. influence, is under a powerful
+  1219→       1.118.193. injury, is about to receive
+  1220→           1.118.193.1. is being injured
+  1221→               1.118.193.1.1. by his surroundings
+  1222→               1.118.193.1.2. his fingers and toes are being cut off
+  1223→       1.118.194. inkstand, fancied he saw one on bed
+  1224→           1.118.194.1. fancied he was one
+  1225→       1.118.195. insane, that she will become
+  1226→           1.118.195.1. that people think her
+  1227→       1.118.196. insects, sees
+  1228→           1.118.196.1. shining
+  1229→       1.118.197. insulted, thinks he is
+  1230→       1.118.198. iodine, illusions of fumes of
+  1231→       1.118.199. island, is on a distant
+  1232→       1.118.200. journey, that he is on a
+  1233→       1.118.201. juggler, thinks himself a
+  1234→       1.118.202. jumped up on the ground before her, all sorts of things
+  1235→       1.118.203. knees, that he walks on
+  1236→       1.118.204. knocking under the bed (See noise.)
+  1237→       1.118.205. knowledge, thought he possessed infinite
+  1238→       1.118.206. labor, pretends to be in, or thinks she has pains
+  1239→       1.118.207. large, people seemed too, during vertigo (See Enlarged.)
+  1240→           1.118.207.1. parts of body seem too
+  1241→           1.118.207.2. self seemed too
+  1242→           1.118.207.3. on entering the house after walking
+  1243→       1.118.208. laughed at, imagines she is
+  1244→       1.118.209. leg, tin case filled with stair rods, is
+  1245→       1.118.210. legs, conversing, are
+  1246→           1.118.210.1. cut off, are
+  1247→           1.118.210.2. don't belong to her
+  1248→           1.118.210.3. three, has
+  1249→           1.118.210.4. too long
+  1250→       1.118.211. lie, thinks all she said is a lie
+  1251→       1.118.212. life, symbols of, all past events revolve rapidly on wheels
+  1252→           1.118.212.1. is threatened
+  1253→       1.118.213. light, on falling to sleep, thinks there is too much in room
+  1254→       1.118.214. lip, lower, is swollen
+  1255→       1.118.215. living under ordinary relations, thinks is not
+  1256→       1.118.216. locomotive, imagines himself to be
+  1257→       1.118.217. longer, things seem
+  1258→           1.118.217.1. chin seems too long
+  1259→       1.118.218. looking at her that everyone is
+  1260→       1.118.219. lost, fancies herself
+  1261→           1.118.219.1. on waking
+  1262→       1.118.220. ludicrous
+  1263→       1.118.221. lying near him, fancies some one is
+  1264→           1.118.221.1. crosswise
+  1265→       1.118.222. machine, thinks he is working a
+  1266→       1.118.223. maelstrom, seemed carried down a psychical
+  1267→       1.118.224. magician, is a
+  1268→       1.118.225. man in the room intending to perforate his throat with a gimlet
+  1269→           1.118.225.1. does all the things he does
+  1270→           1.118.225.2. old men with long beards and distorted faces, sees
+  1271→           1.118.225.3. muffled, starts from the wall when walking in the streets
+  1272→           1.118.225.4. naked man in bed
+  1273→           1.118.225.5. thinks men are on the bed at night
+  1274→           1.118.225.6. the same man walking after him that he sees walking before him
+  1275→           1.118.225.7. who hung himself, saw
+  1276→       1.118.226. mandarin, mistook friend for a
+  1277→       1.118.227. marble statue, felt as if he were
+  1278→       1.118.228. marriage, must dissolve
+  1279→           1.118.228.1. that he is
+  1280→           1.118.228.2. is going to be
+  1281→       1.118.229. masks, sees
+  1282→       1.118.230. melancholy
+  1283→           1.118.230.1. while half awake at night
+  1284→       1.118.231. melting away, sensation of, worse from change, better in recumbent position
+  1285→       1.118.232. mesmerized, that she is, by her absent pastor
+  1286→       1.118.233. mice, sees
+  1287→       1.118.234. mind and body separated
+  1288→       1.118.235. misfortune, inconsolable over fancied
+  1289→       1.118.236. money, as if counting
+  1290→           1.118.236.1. sewed up in clothing, is
+  1291→           1.118.236.2. talks of
+  1292→       1.118.237. monsters, visions of horrible (See Visions and Spectres.)
+  1293→       1.118.238. mountain, thought himself to be on the ridge of a
+  1294→       1.118.239. mouth, fancied living things were creeping into, at night
+  1295→       1.118.240. move, hears things that are high up near him out of sight
+  1296→       1.118.241. murder, thinks she is about to, her husband and child
+  1297→           1.118.241.1. that she will murder her family with a hatchet
+  1298→           1.118.241.2. that he has to, someone
+  1299→           1.118.241.3. murdered, that he would be
+  1300→               1.118.241.3.1. conspiring to murder him, are
+  1301→               1.118.241.3.2. sees some one
+  1302→               1.118.241.3.3. that every one around him is a murderer
+  1303→               1.118.241.3.4. that he was killed, roasted and eaten
+  1304→               1.118.241.3.5. thinks persons were bribed to murder him
+  1305→               1.118.241.3.6. thought her mother had been
+  1306→       1.118.242. mushroom, fancies he is commanded to fall on his knees and confess his sins and rip up his bowels by a
+  1307→       1.118.243. music, fancies he hears
+  1308→           1.118.243.1. evening, hears the music heard in the day
+  1309→           1.118.243.2. delightful
+  1310→           1.118.243.3. sweetest and sublimest melody
+  1311→           1.118.243.4. unearthly
+  1312→       1.118.244. mutilated bodies, sees
+  1313→       1.118.245. mystery, everything around seemed a terrifying
+  1314→       1.118.246. naked, thinks is
+  1315→       1.118.247. narrow, everything seems too
+  1316→       1.118.248. neck is too large
+  1317→       1.118.249. needles, sees
+  1318→       1.118.250. neglected his duty, that he has
+  1319→           1.118.250.1. that he is
+  1320→       1.118.251. new, everything is
+  1321→       1.118.252. newspapers, thinks he sees
+  1322→       1.118.253. noble, thinks he is
+  1323→       1.118.254. noise, hears
+  1324→           1.118.254.1. clattering above the bed when falling asleep
+  1325→           1.118.254.2. knocking under bed
+  1326→           1.118.254.3. of shouts, vehicles
+  1327→       1.118.255. nose, has a transparent
+  1328→           1.118.255.1. has someone else's
+  1329→           1.118.255.2. takes people by
+  1330→       1.118.256. numeral, appeared nine inches long, night on waking, better lying on other side
+  1331→       1.118.257. nursing her child, that she was
+  1332→       1.118.258. objects, brilliantly colored
+  1333→           1.118.258.1. appear different
+  1334→           1.118.258.2. crooked
+  1335→           1.118.258.3. flight from
+  1336→           1.118.258.4. glittering
+  1337→           1.118.258.5. numerous, too, in room
+  1338→           1.118.258.6. open air, in
+  1339→           1.118.258.7. sometimes thick, sometimes thin, on closing eyes in slumber
+  1340→       1.118.259. obscene
+  1341→           1.118.259.1. actions of which she had not been guilty, accuses herself
+  1342→       1.118.260. offended people, that he has
+  1343→       1.118.261. officer, that he is an
+  1344→       1.118.262. old men, sees
+  1345→       1.118.263. paradise, thought he saw
+  1346→       1.118.264. past, of events long
+  1347→       1.118.265. peacocks, as if chasing
+  1348→       1.118.266. people sees
+  1349→           1.118.266.1. behind him, someone is
+  1350→               1.118.266.1.1. when walking in the dark
+  1351→           1.118.266.2. beside him, are
+  1352→           1.118.266.3. does as he does
+  1353→           1.118.266.4. closing eyes, on
+  1354→           1.118.266.5. converses, with absent
+  1355→           1.118.266.6. entering the house at night
+  1356→           1.118.266.7. persons are looking at him
+  1357→           1.118.266.8. persecuted, that he is
+  1358→           1.118.266.9. person, that something hanging over chair is a, sitting there
+  1359→           1.118.266.10. thinks she is some other
+  1360→           1.118.266.11. another person in the room
+  1361→       1.118.267. pins, about
+  1362→       1.118.268. place, that he cannot pass a certain
+  1363→       1.118.269. places, of being in different
+  1364→           1.118.269.1. at night on waking thought to find himself in strange and solitary
+  1365→           1.118.269.2. of being in two at the same time
+  1366→           1.118.269.3. wrong, in
+  1367→       1.118.270. pleasing
+  1368→           1.118.270.1. morning after sleep
+  1369→       1.118.271. poisoned, thought he had been
+  1370→           1.118.271.1. that he was about to be
+  1371→           1.118.271.2. medicine being
+  1372→       1.118.272. policeman come into house, thought he saw
+  1373→           1.118.272.1. that physician is a
+  1374→       1.118.273. poor, thinks he is
+  1375→       1.118.274. possessed, as if
+  1376→       1.118.275. pregnant, thought herself
+  1377→       1.118.276. present, some one is (See people)
+  1378→       1.118.277. prince, is a
+  1379→       1.118.278. proud
+  1380→       1.118.279. pursued, thought he was (See persecuted)
+  1381→           1.118.279.1. enemies, by
+  1382→               1.118.279.1.1. fiends, by
+  1383→               1.118.279.1.2. ghosts by
+  1384→               1.118.279.1.3. murderers, robbers, by
+  1385→               1.118.279.1.4. police, by
+  1386→               1.118.279.1.5. soldiers, by
+  1387→               1.118.279.1.6. some horrid thing
+  1388→       1.118.280. queen, thinks she is
+  1389→       1.118.281. rabbits, sees
+  1390→       1.118.282. railway train, thought he was obliged to go off by
+  1391→       1.118.283. rain, from having wet cloth on head, thought he had been out in
+  1392→       1.118.284. rank, thinks himself a person of
+  1393→       1.118.285. rats, sees
+  1394→           1.118.285.1. of all colors
+  1395→           1.118.285.2. running across the room
+  1396→       1.118.286. reading after her, some one is, which makes her read the faster
+  1397→       1.118.287. reproach, has neglected duty and deserves
+  1398→       1.118.288. repudiated by relatives, thinks is
+  1399→       1.118.289. repulsive fantastic imaginations
+  1400→       1.118.290. rich, that he is (See wealth.)
+  1401→       1.118.291. riding on an ox
+  1402→           1.118.291.1. a horse
+  1403→       1.118.292. right, does nothing
+  1404→       1.118.293. roaming in the fields
+  1405→       1.118.294. room, garden, is a
+  1406→           1.118.294.1. like the foam of a troubled sea, is
+  1407→           1.118.294.2. sees people in, at bedside
+  1408→           1.118.294.3. on entering
+  1409→           1.118.294.4. that the walls will crush him
+  1410→           1.118.294.5. walls of, seem gliding together
+  1411→           1.118.294.6. sees horrible things on the
+  1412→       1.118.295. saw, thought he was a huge, darting up and down
+  1413→       1.118.296. scorpions, sees
+  1414→       1.118.297. scratching on linen or similar substance, thought some one was
+  1415→       1.118.298. scrotum, thinks his, is swollen
+  1416→       1.118.299. seasick, that he is
+  1417→       1.118.300. sees, thinks some one else sees for him
+  1418→       1.118.301. seized, as if
+  1419→       1.118.302. sensations, misrepresents his
+  1420→       1.118.303. separated from the world, that he is
+  1421→       1.118.304. serpent, a crimson, fastening on his neck
+  1422→       1.118.305. servants, thinks he must get rid of
+  1423→       1.118.306. sewing, imagines herself to be
+  1424→       1.118.307. sheep, sees
+  1425→       1.118.308. ship, thinks they are on board of, in a storm
+  1426→       1.118.309. shoot, tries to, with a cane
+  1427→       1.118.310. shopping with her sister
+  1428→       1.118.311. shoulder, thinks people are looking over his
+  1429→       1.118.312. shouting, fancied himself to be
+  1430→       1.118.313. sick, imagines himself
+  1431→           1.118.313.1. that he was going to be
+  1432→           1.118.313.2. a beloved friend is sick and dying
+  1433→           1.118.313.3. members of the family are
+  1434→           1.118.313.4. two sick people were in bed, one of whom got well and the other did not
+  1435→       1.118.314. side, imagined himself alive on one side and buried on the other
+  1436→           1.118.314.1. that she did not own her left
+  1437→       1.118.315. sight and hearing, of
+  1438→       1.118.316. singing, fancied himself to be
+  1439→       1.118.317. skeletons, sees
+  1440→       1.118.318. sleeping, while awake, insists that he was
+  1441→       1.118.319. small, things appear (See Diminished)
+  1442→           1.118.319.1. sensation of being smaller
+  1443→               1.118.319.1.1. before epileptic fit
+  1444→           1.118.319.2. things grow smaller
+  1445→       1.118.320. snakes in and around her
+  1446→       1.118.321. soda water, thinks he is a bottle of
+  1447→       1.118.322. softening of the brain, thinks he has
+  1448→       1.118.323. sold, as if would be
+  1449→           1.118.323.1. his bed, some one has
+  1450→       1.118.324. soldiers, sees
+  1451→           1.118.324.1. cutting him down, better on getting cool
+  1452→           1.118.324.2. march silently past
+  1453→           1.118.324.3. on his bed
+  1454→       1.118.325. something else, appeared as if, objects
+  1455→       1.118.326. soot, shower of, fell on him
+  1456→       1.118.327. sorrow, thinks everyone he meets has a secret
+  1457→       1.118.328. soul, fancied body was too small for, or that it was separated from
+  1458→       1.118.329. sounds, listens to imaginary
+  1459→       1.118.330. space, fancied he was carried into, while lying
+  1460→           1.118.330.1. expansion of
+  1461→           1.118.330.2. that there is empty, between brain and skull
+  1462→       1.118.331. spectres, ghosts, spirits, sees
+  1463→           1.118.331.1. day and night
+  1464→           1.118.331.2. morning on waking, continues to enlarge until it disappears
+  1465→           1.118.331.3. evening, feel as if spectre would appear
+  1466→           1.118.331.4. black forms when dreaming
+  1467→           1.118.331.5. chill during
+  1468→           1.118.331.6. closing eyes, on
+  1469→           1.118.331.7. clutches at
+  1470→           1.118.331.8. death, of, as a gigantic black skeleton
+  1471→           1.118.331.9. fire, in
+  1472→           1.118.331.10. hovering in the air
+  1473→           1.118.331.11. pursued by, is
+  1474→           1.118.331.12. twilight, in
+  1475→           1.118.331.13. waking, on
+  1476→       1.118.332. sphere, thought himself a
+  1477→       1.118.333. spiders
+  1478→       1.118.334. spinal column a barometer
+  1479→       1.118.335. spinning, is
+  1480→       1.118.336. spirit, that he is a
+  1481→       1.118.337. spotted brown, is
+  1482→       1.118.338. square, fancies of a colossal surrounded by houses a hundred stories high
+  1483→       1.118.339. stabbed, that he had, a person who passed him on the street
+  1484→       1.118.340. stars, saw in his plate
+  1485→       1.118.341. starve, family will (See Poor)
+  1486→           1.118.341.1. he must
+  1487→       1.118.342. stomach, thinks has corrosion of
+  1488→       1.118.343. stove for a tree, mistakes
+  1489→       1.118.344. strange, everything is
+  1490→           1.118.344.1. familiar things seem
+  1491→               1.118.344.1.1. headache after
+  1492→           1.118.344.2. horrible, are
+  1493→           1.118.344.3. ludicrous, are
+  1494→           1.118.344.4. places seemed
+  1495→           1.118.344.5. land, as if in a
+  1496→           1.118.344.6. voice, her own seemed
+  1497→           1.118.344.7. strangers seemed to be in the room
+  1498→               1.118.344.7.1. about her while knitting
+  1499→               1.118.344.7.2. control of, under
+  1500→               1.118.344.7.3. friends appear as
+  1501→               1.118.344.7.4. looking over shoulder
+  1502→       1.118.345. succeed, that he cannot, does everything wrong
+  1503→       1.118.346. superhuman, is
+  1504→           1.118.346.1. control, under, is
+  1505→       1.118.347. superiority
+  1506→       1.118.348. surrounded by friends, is
+  1507→       1.118.349. surroundings, capacious, are
+  1508→       1.118.350. swimming, is
+  1509→       1.118.351. swine, thinks men are
+  1510→       1.118.352. swollen, is (See Enlarged)
+  1511→       1.118.353. sword hanging over head
+  1512→       1.118.354. talking, fancies herself
+  1513→           1.118.354.1. of persons as though near, about midnight
+  1514→       1.118.355. tall, as if he were
+  1515→           1.118.355.1. fancies herself very
+  1516→           1.118.355.2. had grown while walking
+  1517→           1.118.355.3. things grow taller
+  1518→       1.118.356. thieves, sees
+  1519→           1.118.356.1. night
+  1520→           1.118.356.2. after a dream, and will not believe the contrary until search is made
+  1521→           1.118.356.3. dreams of robbers is frightened on waking, and thinks dream is true
+  1522→           1.118.356.4. house, in
+  1523→           1.118.356.5. that he has been accused of robbing
+  1524→           1.118.356.6. that house and space under bed are full of
+  1525→       1.118.357. thin, is getting
+  1526→           1.118.357.1. body is
+  1527→       1.118.358. three persons, that he is
+  1528→       1.118.359. throat, someone with ice-cold hands took her by the
+  1529→       1.118.360. time, exaggeration of (See Time)
+  1530→           1.118.360.1. seems earlier
+  1531→       1.118.361. toes cut off
+  1532→       1.118.362. tongue made of wood
+  1533→           1.118.362.1. pulling out
+  1534→           1.118.362.2. seems to reach the clouds when going to sleep
+  1535→           1.118.362.3. too long
+  1536→       1.118.363. tormented, thinks is
+  1537→       1.118.364. touching everything
+  1538→       1.118.365. toys, fancied himself playing with
+  1539→           1.118.365.1. object seemed as attractive as
+  1540→       1.118.366. transferred to another room
+  1541→           1.118.366.1. to another world
+  1542→       1.118.367. transparent, seemed to be
+  1543→           1.118.367.1. head and nose are
+  1544→       1.118.368. traveling, of
+  1545→           1.118.368.1. through worlds
+  1546→       1.118.369. trees seem to be people in fantastic costume, afternoon, while riding
+  1547→       1.118.370. trembling, of everything on him, at night, when only half awake
+  1548→       1.118.371. troubles, broods over imaginary
+  1549→       1.118.372. turtles, sees large, in room
+  1550→       1.118.373. typhoid fever, thought he would have
+  1551→       1.118.374. unfortunate, that he is
+  1552→       1.118.375. unpleasant
+  1553→           1.118.375.1. distinct from surrounding objects
+  1554→       1.118.376. unreal, everything seems
+  1555→       1.118.377. unseen, thing
+  1556→       1.118.378. vagina, living things creep into at night
+  1557→       1.118.379. vanish, seems as if everything would
+  1558→       1.118.380. vegetable existence, thinks he is leading a
+  1559→           1.118.380.1. thinks he is selling green
+  1560→       1.118.381. vengeance, thinks he is singled out for Divine
+  1561→       1.118.382. vermin, sees, crawl about
+  1562→           1.118.382.1. his bed is covered with
+  1563→       1.118.383. vexations and offenses, of
+  1564→       1.118.384. violence, about
+  1565→       1.118.385. Virgin Mary, thinks she is
+  1566→       1.118.386. visions (See images, spectres)
+  1567→           1.118.386.1. daytime
+  1568→           1.118.386.2. evening
+  1569→           1.118.386.3. night
+  1570→           1.118.386.4. beautiful
+  1571→           1.118.386.5. closing the eyes, on
+  1572→           1.118.386.6. clouds of colors
+  1573→           1.118.386.7. fantastic
+  1574→           1.118.386.8. fire (See fire.)
+  1575→           1.118.386.9. grandeur, of magnificent
+  1576→           1.118.386.10. horrible
+  1577→               1.118.386.10.1. in the dark
+  1578→               1.118.386.10.2. waking, on
+  1579→           1.118.386.11. imaginary power, of
+  1580→           1.118.386.12. monsters
+  1581→               1.118.386.12.1. on falling asleep and on walking
+  1582→           1.118.386.13. rats and strange objects
+  1583→           1.118.386.14. wonderful
+  1584→           1.118.386.15. vivid
+  1585→       1.118.387. voices, hears
+  1586→           1.118.387.1. night
+  1587→           1.118.387.2. bed, in, ceases, when listening intently
+  1588→           1.118.387.3. calling his name
+  1589→           1.118.387.4. confused, agg., swallowing or walking in open air
+  1590→           1.118.387.5. dead people
+  1591→           1.118.387.6. distant
+  1592→           1.118.387.7. hears, that he must follow
+  1593→           1.118.387.8. his own, sounds strange and seems to reverberate like thunder
+  1594→           1.118.387.9. in his abdomen, are
+  1595→       1.118.388. vow, that she is breaking her
+  1596→       1.118.389. walk, cannot walk must run or hop
+  1597→           1.118.389.1. fancies he cannot
+  1598→           1.118.389.2. that he walks on his knees
+  1599→           1.118.389.3. some one walks beside him
+  1600→           1.118.389.4. behind him
+  1601→           1.118.389.5. he sees the same one walking after him that he sees walking before him
+  1602→       1.118.390. walls, is surrounded by high
+  1603→       1.118.391. want, fancied that he would come to (See Poor)
+  1604→           1.118.391.1. that they had come to
+  1605→       1.118.392. warts, thinks he has
+  1606→       1.118.393. washing, of
+  1607→       1.118.394. watched, that she is being
+  1608→       1.118.395. water, illusion of blue
+  1609→           1.118.395.1. of disasters by
+  1610→           1.118.395.2. sees flowing
+  1611→           1.118.395.3. spoonful, a, seems like a lake
+  1612→           1.118.395.4. when drinking, thought it delicious nectar
+  1613→       1.118.396. wealth, imaginations of
+  1614→       1.118.397. weight, has no
+  1615→       1.118.398. well, thinks he is
+  1616→       1.118.399. wife is faithless
+  1617→           1.118.399.1. will run away from him
+  1618→       1.118.400. wind sighing in chimney sounded like the hum of a vast wheel, and reverberated like a peal of thunder on a grand organ
+  1619→       1.118.401. wires, is caught in
+  1620→       1.118.402. wolves, of
+  1621→       1.118.403. women, fancies his mother's house is invaded by lewd
+  1622→           1.118.403.1. evil, are, and will injure his soul
+  1623→           1.118.403.2. illusions of old and wrinkled
+  1624→       1.118.404. wood, is made of
+  1625→       1.118.405. work, is hard at
+  1626→           1.118.405.1. is hindered at
+  1627→           1.118.405.2. will do him harm
+  1628→       1.118.406. worms, imagined vomitus to be a bunch of
+  1629→           1.118.406.1. imagines he is covered with
+  1630→       1.118.407. wretched, thinks she looks, when looking in a mirror
+  1631→       1.118.408. wrong, fancies he has done
+  1632→           1.118.408.1. has suffered (See Injured.)
+  1633→   1.119. DESERTED (See Forsaken.)
+  1634→   1.120. DESIRES (See Things Desired, also Longing)
+  1635→       1.120.1. more than she needs
+  1636→   1.121. DESPAIR
+  1637→       1.121.1. chill, during
+  1638→       1.121.2. health, of
+  1639→       1.121.3. heat, during
+  1640→       1.121.4. itching of the skin, from
+  1641→       1.121.5. menses, before
+  1642→       1.121.6. others, about
+  1643→       1.121.7. pains, with the
+  1644→           1.121.7.1. in the stomach
+  1645→       1.121.8. periodical
+  1646→       1.121.9. perspiration, during
+  1647→       1.121.10. recovery
+  1648→           1.121.10.1. convalescence, during
+  1649→       1.121.11. religious (of salvation, etc.)
+  1650→           1.121.11.1. alternating with sexual excitement
+  1651→       1.121.12. social position of
+  1652→       1.121.13. trifles, over
+  1653→   1.122. DESPISES (See Contemptuous.)
+  1654→   1.123. DESPONDENCY (See Sadness.)
+  1655→   1.124. DESTRUCTIVENESS
+  1656→       1.124.1. of clothes
+  1657→           1.124.1.1. cuts them up
+  1658→   1.125. DICTATORIAL
+  1659→   1.126. DIPSOMANIA
+  1660→       1.126.1. drinking on the sly
+  1661→       1.126.2. menses, before
+  1662→   1.127. DISAGREEABLE (See Irritable.)
+  1663→   1.128. DISCONCERTED
+  1664→   1.129. DISCONTENTED, displeased, dissatisfied, etc.
+  1665→       1.129.1. daytime
+  1666→       1.129.2. morning
+  1667→       1.129.3. afternoon
+  1668→       1.129.4. stool, before
+  1669→       1.129.5. evening
+  1670→       1.129.6. amel.
+  1671→       1.129.7. air, in open
+  1672→       1.129.8. coition, after
+  1673→       1.129.9. eating, after
+  1674→       1.129.10. everything, with
+  1675→       1.129.11. himself, with
+  1676→       1.129.12. inanimate objects
+  1677→       1.129.13. menses, during
+  1678→       1.129.14. rainy weather, during
+  1679→       1.129.15. stool, before
+  1680→       1.129.16. weeping amel.
+  1681→   1.130. DISCOURAGED
+  1682→       1.130.1. morning
+  1683→       1.130.2. afternoon
+  1684→       1.130.3. evening
+  1685→       1.130.4. eating amel.
+  1686→       1.130.5. alternating with haughtiness
+  1687→       1.130.6. coition, after
+  1688→       1.130.7. menses, before
+  1689→       1.130.8. walking, while
+  1690→       1.130.9. weeping amel.
+  1691→   1.131. DISGUST (See Loathing)
+  1692→   1.132. DISOBEDIENCE
+  1693→   1.133. DISPLEASED (See Discontented.)
+  1694→   1.134. DISSATISFIED (See Discontented.)
+  1695→   1.135. DISTANCE, inaccurate judge of
+  1696→       1.135.1. exaggerated, is
+  1697→   1.136. DISTRACTION (See Confusion, Concentration Difficult.)
+  1698→   1.137. DISTRUSTFUL (See Suspicious.)
+  1699→   1.138. DISTURBED, averse to being
+  1700→   1.139. DIVERSION amel. (See Thinking, Occupied.)
+  1701→   1.140. DOGMATIC (See Dictatorial.)
+  1702→   1.141. DOMINEERING (See Dictatorial.)
+  1703→   1.142. DOUBTFUL, recovery, of
+  1704→       1.142.1. soul's welfare, of
+  1705→   1.143. DREAD (See Fear.)
+  1706→   1.144. DREAM, as if in a
+  1707→       1.144.1. daytime
+  1708→       1.144.2. night
+  1709→       1.144.3. future, about the, poetical
+  1710→   1.145. DRINKING, after
+  1711→   1.146. DRUNKEN, seems as if (See Stupefaction.)
+  1712→   1.147. DULNESS, sluggishness, difficulty of thinking and comprehending
+  1713→       1.147.1. morning
+  1714→           1.147.1.1. rising, on
+  1715→           1.147.1.2. waking, on
+  1716→       1.147.2. noon
+  1717→       1.147.3. forenoon
+  1718→       1.147.4. afternoon
+  1719→       1.147.5. evening
+  1720→       1.147.6. night, on waking
+  1721→       1.147.7. air, in open
+  1722→           1.147.7.1. amel.
+  1723→       1.147.8. alone, when
+  1724→       1.147.9. alternating with hilarity
+  1725→       1.147.10. beer, after
+  1726→       1.147.11. chagrin, from
+  1727→       1.147.12. chill, during
+  1728→       1.147.13. closing eyes, on
+  1729→           1.147.13.1. amel.
+  1730→       1.147.14. company, in
+  1731→       1.147.15. conversation, from
+  1732→       1.147.16. copious flow of urine amel.
+  1733→       1.147.17. could not think of her condition
+  1734→       1.147.18. damp air, from
+  1735→       1.147.19. dinner, after
+  1736→       1.147.20. dreams, after
+  1737→       1.147.21. eating, after
+  1738→           1.147.21.1. amel.
+  1739→       1.147.22. emissions, after
+  1740→       1.147.23. emotions, from
+  1741→       1.147.24. epilepsy, before
+  1742→       1.147.25. gas light, after injurious effects of
+  1743→       1.147.26. heat, during
+  1744→       1.147.27. injuries of head, after
+  1745→       1.147.28. loss of fluids, after
+  1746→       1.147.29. lying, while
+  1747→           1.147.29.1. amel.
+  1748→       1.147.30. menses, during
+  1749→       1.147.31. mental exertion, from
+  1750→       1.147.32. mortification, after
+  1751→       1.147.33. motion amel.
+  1752→       1.147.34. news, from disagreeable
+  1753→       1.147.35. old people
+  1754→       1.147.36. periodical
+  1755→       1.147.37. perspiration, during
+  1756→       1.147.38. reading, while
+  1757→       1.147.39. rising from bed
+  1758→       1.147.40. room, in a
+  1759→       1.147.41. sleep, after sound
+  1760→           1.147.41.1. siesta, after
+  1761→       1.147.42. smoking, from
+  1762→       1.147.43. speaking, while
+  1763→       1.147.44. standing agg.
+  1764→       1.147.45. stool, after
+  1765→       1.147.46. think long, unable to
+  1766→       1.147.47. understands questions only after repetition
+  1767→       1.147.48. waking, on
+  1768→       1.147.49. walking, while
+  1769→           1.147.49.1. in open air amel.
+  1770→       1.147.50. warm room, on entering
+  1771→       1.147.51. wine, after
+  1772→       1.147.52. writing, while
+  1773→   1.148. DUPLICITY (See Deceitful.)
+  1774→   1.149. DWELLS on past disagreeable occurrences
+  1775→       1.149.1. night
+  1776→       1.149.2. midnight, after
+  1777→       1.149.3. recalls old grievances
+  1778→   1.150. EARNESTNESS (See Serious.)
+  1779→   1.151. EAT, refuses to
+  1780→   1.152. ECCENTRICITY
+  1781→   1.153. ECSTACY (See Exhilaration)
+  1782→       1.153.1. night
+  1783→       1.153.2. waking, on
+  1784→       1.153.3. walking in moonlight
+  1785→       1.153.4. alternating with sadness
+  1786→       1.153.5. amorous
+  1787→       1.153.6. sleep, during
+  1788→       1.153.7. heat, during
+  1789→       1.153.8. perspiration, during
+  1790→   1.154. EGOTISM
+  1791→       1.154.1. ailments, from
+  1792→   1.155. EMBARRASSED (See Timidity.)
+  1793→       1.155.1. ailments, after
+  1794→   1.156. EMBRACES companions
+  1795→       1.156.1. anything, in morning, worse in open air
+  1796→   1.157. EMOTIONAL (See Excitement.)
+  1797→   1.158. ENNUI (See Loathing of Life)
+  1798→       1.158.1. forenoon
+  1799→       1.158.2. afternoon
+  1800→       1.158.3. entertainment amel.
+  1801→   1.159. ENTERTAINMENT (See Excitement, Occupation.)
+  1802→   1.160. ENVY
+  1803→   1.161. ESCAPE, attempts to
+  1804→       1.161.1. from her family, children
+  1805→       1.161.2. is restrained with difficulty
+  1806→       1.161.3. springs up suddenly from bed
+  1807→       1.161.4. to run away
+  1808→       1.161.5. change beds
+  1809→       1.161.6. wants to visit his daughter
+  1810→       1.161.7. window, from
+  1811→   1.162. ESTRANGED, family, from her
+  1812→       1.162.1. flies from her own children
+  1813→       1.162.2. society, from
+  1814→       1.162.3. wife, from his
+  1815→   1.163. EXALTATION (See Exhilaration.)
+  1816→   1.164. EXCITEMENT, excitable
+  1817→       1.164.1. morning
+  1818→       1.164.2. afternoon
+  1819→       1.164.3. evening
+  1820→       1.164.4. night
+  1821→           1.164.4.1. sleep, during
+  1822→           1.164.4.2. waking, on
+  1823→       1.164.5. absent persons, about
+  1824→       1.164.6. alternate with convulsions
+  1825→       1.164.7. delirium
+  1826→       1.164.8. dulness
+  1827→       1.164.9. ameliorates
+  1828→       1.164.10. anticipating events, when
+  1829→       1.164.11. bad news, after
+  1830→       1.164.12. beer, after
+  1831→       1.164.13. chill, before
+  1832→           1.164.13.1. during
+  1833→       1.164.14. coition, after
+  1834→       1.164.15. company, in
+  1835→       1.164.16. confusion, as from
+  1836→       1.164.17. conversation, from hearing
+  1837→       1.164.18. convulsive
+  1838→       1.164.19. debate, during
+  1839→       1.164.20. emotional, ailments from
+  1840→       1.164.21. epilepsy, before
+  1841→       1.164.22. feverish
+  1842→           1.164.22.1. evening, in
+  1843→           1.164.22.2. night, at
+  1844→       1.164.23. dinner, after
+  1845→       1.164.24. menses, during
+  1846→       1.164.25. heat, during
+  1847→           1.164.25.1. of head, with
+  1848→       1.164.26. horrible things, after hearing
+  1849→       1.164.27. hungry, when
+  1850→       1.164.28. hurried, as if
+  1851→       1.164.29. menses, before
+  1852→           1.164.29.1. during
+  1853→           1.164.29.2. after
+  1854→       1.164.30. mental work, from
+  1855→       1.164.31. micturition, during
+  1856→       1.164.32. music, from
+  1857→       1.164.33. nervous
+  1858→       1.164.34. pain, during
+  1859→       1.164.35. perspiration, during
+  1860→       1.164.36. reading, while
+  1861→       1.164.37. religious
+  1862→       1.164.38. sadness, after
+  1863→       1.164.39. sleep, before
+  1864→       1.164.40. stammers when talking to strangers
+  1865→       1.164.41. stomach, with pain in pit of
+  1866→       1.164.42. swallows continually while talking
+  1867→       1.164.43. talking, while
+  1868→       1.164.44. tea, after
+  1869→       1.164.45. trifles, over
+  1870→       1.164.46. waking, on
+  1871→       1.164.47. walking, after
+  1872→       1.164.48. water poured out, from hearing
+  1873→       1.164.49. wine, as from
+  1874→       1.164.50. working, when
+  1875→       1.164.51. writing, while
+  1876→   1.165. EXCLAMATION (See Shrieking.)
+  1877→   1.166. EXERCISE, mental symptoms amel., by physical
+  1878→   1.167. EXERTION, from mental
+  1879→       1.167.1. amel.
+  1880→       1.167.2. physical amel.
+  1881→   1.168. EXHILARATION
+  1882→       1.168.1. morning
+  1883→       1.168.2. afternoon
+  1884→       1.168.3. evening
+  1885→       1.168.4. night
+  1886→       1.168.5. alternating with sadness
+  1887→       1.168.6. can recall things long forgotten
+  1888→       1.168.7. coition, after
+  1889→       1.168.8. diarrhoea, during
+  1890→       1.168.9. perspiration, during
+  1891→       1.168.10. walking in open air
+  1892→   1.169. EXTRAVAGANCE
+  1893→   1.170. FACETIOUSNESS (See Jesting.)
+  1894→   1.171. FACES, sees (See Delusions.)
+  1895→   1.172. FANATICISM
+  1896→   1.173. FANCIES, absorbed in
+  1897→       1.173.1. confused
+  1898→       1.173.2. exaltation of
+  1899→           1.173.2.1. morning
+  1900→           1.173.2.2. afternoon
+  1901→           1.173.2.3. evening
+  1902→           1.173.2.4. night
+  1903→           1.173.2.5. closing the eyes in bed
+  1904→           1.173.2.6. frightful
+  1905→           1.173.2.7. going to bed, after
+  1906→           1.173.2.8. heat, during
+  1907→           1.173.2.9. lascivious
+  1908→           1.173.2.10. lively
+  1909→           1.173.2.11. periodically returning
+  1910→           1.173.2.12. perspiration, during
+  1911→           1.173.2.13. pleasant
+  1912→           1.173.2.14. reading, on
+  1913→           1.173.2.15. repulsive, when alone
+  1914→           1.173.2.16. sleep, preventing
+  1915→               1.173.2.16.1. falling asleep on
+  1916→           1.173.2.17. vivid
+  1917→               1.173.2.17.1. midnight, after
+  1918→               1.173.2.17.2. falling asleep, when
+  1919→               1.173.2.17.3. followed by heat
+  1920→               1.173.2.17.4. waking, on
+  1921→   1.174. FASTIDIOUS
+  1922→   1.175. FAULTFINDING (See Censorious.)
+  1923→   1.176. FEAR (See Anxiety)
+  1924→       1.176.1. daytime, only
+  1925→       1.176.2. morning
+  1926→           1.176.2.1. until evening
+  1927→       1.176.3. noon until 3 p.m.
+  1928→       1.176.4. afternoon
+  1929→       1.176.5. 4 p.m.
+  1930→       1.176.6. 5 p.m.
+  1931→       1.176.7. evening
+  1932→           1.176.7.1. bed, in
+  1933→           1.176.7.2. amel., in bed
+  1934→           1.176.7.3. twilight
+  1935→       1.176.8. night, at
+  1936→           1.176.8.1. waking, after
+  1937→           1.176.8.2. midnight
+  1938→           1.176.8.3. after
+  1939→           1.176.8.4. 3 a.m.
+  1940→       1.176.9. abdomen, arising from
+  1941→       1.176.10. accidents, of
+  1942→       1.176.11. air, in open
+  1943→           1.176.11.1. amel.
+  1944→       1.176.12. alone, of being (See Company)
+  1945→           1.176.12.1. evening
+  1946→           1.176.12.2. night
+  1947→           1.176.12.3. lest he die
+  1948→           1.176.12.4. injure himself
+  1949→       1.176.13. alternating with mania
+  1950→       1.176.14. animals, of
+  1951→       1.176.15. apoplexy, of
+  1952→           1.176.15.1. night, at, with feeling as if head would burst
+  1953→           1.176.15.2. palpitation, with
+  1954→           1.176.15.3. stool, during
+  1955→           1.176.15.4. waking, on
+  1956→       1.176.16. approaching him, of others
+  1957→           1.176.16.1. children cannot bear to have anyone come near them
+  1958→           1.176.16.2. delirium, in
+  1959→           1.176.16.3. lest he be touched
+  1960→           1.176.16.4. of vehicles
+  1961→       1.176.17. bad news, of hearing
+  1962→       1.176.18. bed, of the
+  1963→       1.176.19. behind him, that someone is
+  1964→       1.176.20. betrayed, being
+  1965→       1.176.21. bitten, of being
+  1966→       1.176.22. black, everything
+  1967→       1.176.23. brain, of softening of
+  1968→       1.176.24. brilliant objects, looking-glass, etc., of, or cannot endure (See Mirrors)
+  1969→       1.176.25. burden, of becoming a
+  1970→       1.176.26. censured, of
+  1971→       1.176.27. chill, during
+  1972→       1.176.28. cholera, of the
+  1973→       1.176.29. church or opera, when ready to go
+  1974→       1.176.30. closing eyes, on
+  1975→       1.176.31. coal-scuttle, of the
+  1976→       1.176.32. coition, at thought of (See Anxiety.)
+  1977→       1.176.33. cold, of taking
+  1978→       1.176.34. confusion, that people would observe her
+  1979→       1.176.35. consumption, of
+  1980→       1.176.36. contagion of
+  1981→       1.176.37. corners, to walk past certain
+  1982→       1.176.38. creeping out of every corner, of something
+  1983→       1.176.39. crowd, in a
+  1984→           1.176.39.1. public places, of
+  1985→       1.176.40. cruelties, report of, excite
+  1986→       1.176.41. cutting himself when shaving
+  1987→           1.176.41.1. going to sleep, on
+  1988→       1.176.42. danger, impending, of (See Misfortune)
+  1989→       1.176.43. dark
+  1990→       1.176.44. dawn, of the return of
+  1991→       1.176.45. death, of
+  1992→           1.176.45.1. morning
+  1993→           1.176.45.2. evening
+  1994→           1.176.45.3. night
+  1995→           1.176.45.4. alone, when
+  1996→           1.176.45.5. evening in bed
+  1997→           1.176.45.6. die, fear he will, if he go to sleep, after night-mare
+  1998→           1.176.45.7. heart symptoms, during
+  1999→           1.176.45.8. heat, during
+  2000→           1.176.45.9. labor, during
+
+[showing lines 1-2000 of 7576; use offset=2001 with limit to continue reading]

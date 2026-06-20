@@ -1,0 +1,845 @@
+     1→HOMEOPATHIC REPERTORY - STRUCTURED OUTLINE
+     2→Source: Excerpt from a repertory covering Head, Eye, Vision, Ear, Hearing, Nose, Face.
+     3→
+     4→================================================================================
+     5→HEAD
+     6→================================================================================
+     7→
+     8→1. PAIN
+     9→   1.1. General (remedies listed under modalities, locations, etc.)
+    10→   1.2. Temples
+    11→        - Modalities: stooping, talking, touch, turning eyes up, walking, etc.
+    12→   1.3. Extending (from temples) to: ears, eye, forehead, jaw, neck, occiput, etc.
+    13→   1.4. Temples and Forehead (combined)
+    14→   1.5. Temples and Occiput
+    15→   1.6. Vertex
+    16→        - Time: daytime, morning, 5 a.m., forenoon, 10 a.m., noon, afternoon, evening, night
+    17→        - Modalities: bed, rising, waking, air cold/open, ascending steps, coughing, eating, jarring, lying, menses, mental exertion, motion, noise, pressure, reading, sitting, sleep, sneezing, standing, stooping, touch, walking, writing, etc.
+    18→   1.7. Vertex extending to: backward, ear, eyes, forehead, malar bones, neck, occiput, temples, etc.
+    19→   1.8. Vertex and Forehead (combined)
+    20→   1.9. Blows, as from (with specific locations and times)
+    21→   1.10. Boring, digging, screwing
+    22→        - Time: morning, afternoon, evening, night
+    23→        - Modalities: air, bed, bending, chill, coffee, eating, heat/cold, menses, motion, pressure, rest, stooping, walking, writing, etc.
+    24→        - Extending to: nose, forehead, eminence, eyes, occiput, sides, temples, vertex
+    25→   1.11. Bruised
+    26→        - Time: daytime, morning, forenoon, noon, afternoon, evening, night
+    27→        - Modalities: air, bed, brain sensation, cold applications, coughing, dinner, heat, lying, menses, mental exertion, motion, pressure, reading, rising, rubbing, sneezing, stepping, stooping, sun, talking, touch, walking, writing, etc.
+    28→        - Locations: brain, forehead, frontal eminence, eyes, nose, occiput, sides, temples, vertex
+    29→   1.12. Burning
+    30→        - Time: morning, noon, afternoon, evening, night
+    31→        - Modalities: air, alternating, brain sensation, chill, climacteric, dinner, light, lying, menses, mental exertion, motion, pressure, rest, room, rubbing, scratching, sitting, sneezing, standing, stooping, talking, vomiting, walking, warm room, wrapping
+    32→        - Locations: brain, forehead, eyes over, sides, occiput, temples, vertex
+    33→   1.13. Burrowing
+    34→        - Time: morning, afternoon, night
+    35→        - Modalities: air, bending, dinner, lying, motion, noise, opening mouth, talking, walking
+    36→        - Locations: forehead, occiput, sides, temples
+    37→   1.14. Bursting
+    38→        - Time: daytime, morning, evening, night
+    39→        - Modalities: air, binding, coughing, eating, fever, jar, lying, menses, mental exertion, motion, pressure, reading, sitting, sleep, stooping, talking, walking, weather, wrapping
+    40→        - Locations: brain, forehead, occiput, sides, temples, vertex
+    41→   1.15. Cramping
+    42→        - Time: morning, evening
+    43→        - Modalities: rubbing, suppressed catarrh, study, vexation
+    44→        - Locations: forehead, occiput, sides, temples
+    45→   1.16. Cutting, darting, stabbing
+    46→        - Time: afternoon, evening, night
+    47→        - Modalities: air, binding, closing eyes, cold applications, coughing, heat, lying, menses, motion, noise, rest, sleep, standing, stepping, stooping, thinking, vexation, walking
+    48→        - Locations: forehead, occiput, sides, temples, vertex
+    49→   1.17. Drawing
+    50→        - Time: morning, forenoon, noon, afternoon, evening, night
+    51→        - Modalities: air, bed, chewing, chill, church, cold applications, cough, dinner, eating, hat, heat, house, lying, menses, mental exertion, motion, nausea, pressure, pulsating, rest, rising, sitting, sneezing, standing, stooping, swallowing, touch, walking, warmth
+    52→        - Locations: forehead, eyes above, nose, occiput, sides, temples
+    53→   1.18. Dull
+    54→        - Time: morning, afternoon, evening
+    55→        - Modalities: eating, moving head, pressure
+    56→        - Locations: forehead, zygoma, vertex
+    57→   1.19. Gnawing
+    58→        - Time: night
+    59→        - Modalities: stepping heavily, otalgia, pulsating
+    60→        - Locations: forehead, occiput, sides, temples, vertex
+    61→   1.20. Jerking
+    62→        - Modalities: ascending steps, drinking, lying, menses, motion, raising eyes, rest, turning, walking
+    63→        - Locations: forehead, occiput, sides, temples, vertex
+    64→   1.21. Nail, as from a
+    65→        - Modalities: morning, air, alcohol, menses, walking
+    66→        - Locations: forehead, occiput, sides, temples, vertex
+    67→   1.22. Pressing
+    68→        - Time: morning, noon, afternoon, evening, night
+    69→        - Modalities: air, armor, ascending, band, bed, bending, binding, blowing, boards, breakfast, burning, cap, chill, closing eyes, coffee, company, congestion, coughing, darkness, dinner, downward, drawing, drinking, eating, excitement, fever, forward, hat, heat, inward, light, looking, lying, menses, mental exertion, motion, noise, opening eyes, outward, paroxysmal, perspiration, pressure, pulsating, reading, riding, rising, room, rubbing, shaking, sitting, sleep, sneezing, stepping, stooping, sun, talking, turning, using eyes, vise, walking, washing, wet weather, writing
+    70→        - Locations: brain, forehead, frontal eminence, eyes over, nose, occiput, sides, temples, vertex
+    71→   1.23. Pulled (hair sensation)
+    72→        - Locations: occiput, vertex
+    73→   1.24. Shooting
+    74→        - Time: morning, noon, afternoon, evening, night
+    75→        - Modalities: air, bending, coughing, cramps, crying, eating, exercise, lying, menses, moving head, pressure, pulsating, rising, singing, sitting, sneezing, stepping, stooping, talking, teeth clenching, turning eyes, vexation, walking, yawning
+    76→        - Locations: forehead, occiput, sides, temples, vertex
+    77→   1.25. Soreness
+    78→        - Time: morning, afternoon, evening, night
+    79→        - Modalities: air, breakfast, combing hair, conversation, coughing, dinner, heated, leaning, lying, mental exertion, motion, pressure, rest, riding, shaking head, speaking, stooping, vexation, walking, warm room, wet weather
+    80→        - Locations: forehead, occiput, sides, temples, vertex
+    81→   1.26. Stitching
+    82→        - Time: morning, noon, afternoon, evening, night
+    83→        - Modalities: air, bed, blowing nose, breakfast, chill, coryza, coughing, dinner, drawing, eating, exertion, fright, heat, jerking, lying, menses, mental exertion, motion, odors, periodic, pressure, pulsating, reading, respiration, rest, rising, rubbing, scratching, sitting, standing, stepping, stooping, sun, talking, tearing, touch, vexation, waking, walking, warmth, washing, weather
+    84→        - Locations: brain, forehead, frontal eminence, eyes over, nose, occiput, sides, temples, vertex
+    85→   1.27. Stunning, stupefying
+    86→        - Time: morning, afternoon, evening, night
+    87→        - Modalities: cold, chill, coughing, drawing, eating, motion, periodic, pressing, pressure, reading, rest, sitting, smoking, sunshine, tightening, warm room
+    88→        - Locations: forehead, eyes over, nose, occiput, sides, temple, vertex
+    89→   1.28. Tearing, rending
+    90→        - Time: morning, forenoon, noon, afternoon, evening, night
+    91→        - Modalities: air, alternating, coffee, dinner, eating, flying pain, heat, lying, menses, mental exertion, motion, paroxysmal, periodic, pulsating, radiating, riding, rising, sitting, standing, stooping, touch, waking, warm room
+    92→        - Locations: forehead, frontal eminence, eyes over, nose, occiput, sides, temples, vertex
+    93→   1.29. Torn, as if
+    94→        - Locations: forehead, occiput, sides, temples, vertex
+    95→
+    96→2. PARALYSIS of brain, incipient
+    97→
+    98→3. PERSPIRATION scalp
+    99→   3.1. Time: daytime, morning, forenoon, evening, night
+   100→   3.2. Modalities: breakfast, clammy, cold, coughing, eating, fetid, headache, hot, menses, mental exertion, motion, oily, one‑sided, reading, sleep, soup, sour, stool, waking, walking, washing
+   101→   3.3. Locations: forehead, occiput
+   102→
+   103→4. PRICKLING
+   104→   4.1. Locations: forehead, temple
+   105→
+   106→5. PULSATING, beating, throbbing
+   107→   5.1. Time: morning, forenoon, afternoon, evening, night
+   108→   5.2. Modalities: air, alternating, ascending, bathing, bed, bending, binding, blood loss, blowing, breakfast, burning, chill, closing eyes, cold, coughing, darkness, debauch, dinner, drawing, drinking, eating, epistaxis, excitement, exertion, fever, gnawing, hammers, heat, inspiration, jar, jerking, laughing, leaning, lying, menses, mental exertion, milk, motion, moving head, painless, paroxysmal, periodic, perspiration, pressure, reading, respiration, rest, riding, rising, room, rubbing, shaking, sitting, sleep, spots, standing, stool, stooping, stretching, sunlight, talking, tea, thinking, transient, turning, vertigo, waking, walking, warm food, warm room, wine, wrapping, writing, yawning
+   109→   5.3. Locations: brain, forehead, frontal eminence, eyes over, occiput, sides, temples, vertex
+   110→
+   111→6. PUSHED forward, as if
+   112→
+   113→7. PUSHING sensation
+   114→
+   115→8. QUIVERING sensation
+   116→
+   117→9. RAISE THE HEAD, difficult
+   118→
+   119→10. REDNESS of forehead
+   120→
+   121→11. REMOVED, as if calvarium
+   122→
+   123→12. RESTLESSNESS
+   124→
+   125→13. RIGID feeling
+   126→
+   127→14. RISING sensation
+   128→
+   129→15. ROLLING, in
+   130→
+   131→16. RUBBING
+   132→
+   133→17. SENSITIVENESS of brain
+   134→
+   135→18. SEPARATED from body, as if
+   136→
+   137→19. SHAKING sensation
+   138→
+   139→20. SHOCKS, blows
+   140→    20.1. Time: morning, evening, night
+   141→    20.2. Modalities: ascending, consciousness, coughing, drinking, eating, hawking, lying, menses, motion, noise, pressure, reading, running, shaking head, siesta, sitting, sleep, sneezing, stool, stooping, talking, walking, writing
+   142→    20.3. Locations: forehead, occiput, temples, vertex
+   143→
+   144→21. SINKING sensation
+   145→
+   146→22. SKULL-CAP, sensation of
+   147→
+   148→23. SMALLER, feels
+   149→
+   150→24. SOFTENING of brain
+   151→
+   152→25. SPLASHING
+   153→
+   154→26. STIFFNESS, sensation of
+   155→
+   156→27. STIRRED with a spoon, as if
+   157→
+   158→28. STOMACH, as if rising from
+   159→
+   160→29. STRIKING against the skull
+   161→
+   162→30. SUNSTROKE
+   163→
+   164→31. SURGING sensation
+   165→
+   166→32. SWASHING sensation
+   167→
+   168→33. SWOLLEN, distended, feeling
+   169→    33.1. Locations: forehead, occiput, sides, temples, vertex
+   170→
+   171→34. SWOLLEN glands of head
+   172→
+   173→35. THIN, cranium seemed
+   174→
+   175→36. TICKLING in
+   176→
+   177→37. TINGLING
+   178→
+   179→38. TIRED feeling
+   180→
+   181→39. TREMBLING sensation
+   182→
+   183→40. TURNING and twisting
+   184→
+   185→41. TWITCHING of muscles of the head
+   186→    41.1. Time: morning, noon, afternoon, evening, night
+   187→    41.2. Modalities: ascending, blowing, cough, eating, jerking arms, lying, motion, rest, standing, stepping, stool, stooping, touch, walking
+   188→    41.3. Locations: brain, forehead, occiput, sides, temples, vertex
+   189→
+   190→42. ULCERS
+   191→
+   192→43. UNCOVERING head agg.
+   193→
+   194→44. UNSTEADY feeling
+   195→
+   196→45. VACANT feeling
+   197→
+   198→46. WARM coverings on head agg.
+   199→
+   200→47. WATER, sensation as of
+   201→
+   202→48. WAVING sensation
+   203→
+   204→49. WEAKNESS
+   205→
+   206→50. WENS
+   207→
+   208→51. Wave‑like motion upward
+   209→
+   210→================================================================================
+   211→EYE
+   212→================================================================================
+   213→
+   214→1. AGGLUTINATED
+   215→2. AMAUROSIS
+   216→3. ANÆMIA of Conjunctiva / retina
+   217→4. ARCUS SENILIS
+   218→5. ATROPHY of optic nerve
+   219→6. AVERSION to bringing objects near
+   220→7. BAND around eyeballs
+   221→8. BLEEDING from eyes
+   222→    - Modalities: blowing nose, coughing, etc.
+   223→9. BLINKING
+   224→10. BLOODSHOT
+   225→11. BLUENESS of lids
+   226→12. BRILLIANT
+   227→13. CANCER
+   228→14. CATARACT
+   229→    - Types: capsular, cortical, incipient, lenticular, senile, etc.
+   230→    - Laterality: right, left
+   231→15. CHEMOSIS
+   232→16. CLOSE, desire to
+   233→    - Types: difficult, involuntary, spasmodic
+   234→17. CLOSED (inability to open)
+   235→18. COLD agg. / amel.
+   236→19. COLDNESS in eye
+   237→20. CONDYLOMATA
+   238→21. CONTRACTIVE sensation
+   239→22. CRACKS, canthi
+   240→23. CRAWLING
+   241→24. CROOKED objects
+   242→25. CRUSTY margins
+   243→26. DARK around eyes
+   244→27. DEGENERATE cornea
+   245→28. DETACHMENT of retina
+   246→29. DISCHARGES (mucus/pus)
+   247→    - Types: acrid, bloody, purulent, thick, thin, white, yellow
+   248→    - Locations: canthi, lachrymal sac
+   249→30. DISCOLORATION of iris
+   250→31. DISTORTED
+   251→32. DRAWN together, sensation
+   252→33. DRYNESS
+   253→34. DULNESS
+   254→35. ECCHYMOSIS
+   255→36. ENLARGEMENT, sensation
+   256→37. ENLARGED lens
+   257→38. ERUPTIONS about eyes
+   258→    - Types: boils, herpes, pimples, rash, vesicles
+   259→    - Locations: above/below eyes, canthi, eyebrows, lids
+   260→39. EVERSION of lids
+   261→40. EXCORIATION of lids
+   262→41. EXERTION, muscular, amel.
+   263→42. EYE GUM
+   264→43. FALLING of lids
+   265→44. FILMY
+   266→45. FIRE, looking into, agg.
+   267→46. FISTULA of cornea / lachrymalis
+   268→47. FRINGE, sensation as of
+   269→48. FULLNESS, sensation
+   270→49. GLASSY appearance
+   271→50. GLAZED
+   272→51. GRANULAR lids
+   273→52. HAIR falling from brows / eyelashes
+   274→53. HAIR, sensation of, in eye
+   275→54. HARDNESS
+   276→55. HEAT in eye
+   277→56. HEAT agg.
+   278→57. HEAVINESS
+   279→58. HYPERÆSTHESIA of retina
+   280→59. HYPERTROPHY of conjunctiva
+   281→60. INFLAMMATION
+   282→    - Types: acute, arthritic, catarrhal, croupous, erysipelatous, gonorrhoeal, scrofulous, syphilitic
+   283→    - Locations: canthi, choroid, conjunctiva, cornea, iris, lachrymal, lids, optic nerve, retina, sclerotics
+   284→61. INJECTED
+   285→62. INJURIES, from
+   286→63. INSENSIBILITY
+   287→64. INVERSION of lids
+   288→65. IRRITATION
+   289→66. ITCHING
+   290→    - Locations: canthi, eyebrows, lids
+   291→67. JERKING of eye muscles
+   292→68. LACHRYMATION (see Tears)
+   293→69. LOOKING steadily
+   294→70. LOOSE, sensation
+   295→71. LUPUS
+   296→72. MEMBRANE, sensation as if drawn over
+   297→73. MOONLIGHT amel.
+   298→74. MOVEMENT, eyeballs
+   299→    - Types: constant, convulsive, involuntary, pendulum, rolling, up/down, upward
+   300→75. NARROWING of intervals between eyelids
+   301→76. NODULES in lids
+   302→77. NUMBNESS around eyes
+   303→78. ONYX
+   304→79. OPACITY of cornea (see Spots)
+   305→80. OPENING the lids, difficult
+   306→81. OPEN lids (inability to close, half‑open, etc.)
+   307→82. PAIN (extensive list; see original text for full details)
+   308→83. PANNUS
+   309→84. PARALYSIS of iris / lids / eye muscles / optic nerve
+   310→85. PHOTOMANIA
+   311→86. PHOTOPHOBIA
+   312→87. PROTRUSION
+   313→88. PTERYGIUM
+   314→89. PULLING sensation
+   315→90. PULSATION in eyes
+   316→91. PUPILS
+   317→    - States: contracted, dilated, insensible to light, irregular, sluggish, unequal
+   318→92. PUSTULES on cornea
+   319→93. QUIVERING
+   320→94. REDNESS
+   321→95. RESTLESS eyes
+   322→96. ROUGH cornea
+   323→97. RUB, desire to
+   324→98. SCROFULOUS affections
+   325→99. SENSITIVE to cold, heat, light, etc.
+   326→100. SPASMS of lids
+   327→101. SPOTS, specks on cornea
+   328→102. STAPHYLOMA
+   329→103. STARING
+   330→104. STIFFNESS of eyeballs / lids
+   331→105. STRABISMUS
+   332→106. STRICTURE of lachrymal duct
+   333→107. STYES
+   334→108. SUNKEN
+   335→109. SWOLLEN
+   336→     - Locations: canthi, caruncles, conjunctiva, lachrymal, lids
+   337→110. TEARS (acrid, biting, bland, burning, cold, hot, oily, salty)
+   338→111. TENSION
+   339→112. THICKENING of cornea / lids
+   340→113. TINGLING
+   341→114. TIRED sensation
+   342→115. TUMORS on lids (cystic, polypus, sarcoma, etc.)
+   343→116. TURNED (upward, downward, inward, outward)
+   344→117. TWISTED sensation
+   345→118. TWITCHING
+   346→119. ULCERATION
+   347→120. UNSTEADY look
+   348→121. VEINS (see Redness)
+   349→122. VESICLES on cornea
+   350→123. WARTS (see Condylomata)
+   351→124. WEAK
+   352→125. WILD look
+   353→126. WINE agg.
+   354→127. WINKING
+   355→128. WIPE, inclination to
+   356→129. WRINKLED conjunctiva
+   357→130. YELLOWNESS
+   358→
+   359→================================================================================
+   360→VISION
+   361→================================================================================
+   362→
+   363→1. ACCOMMODATION defective
+   364→2. ACUTE vision
+   365→3. AMAUROSIS
+   366→4. APPROACH, objects seem to
+   367→5. BALLS (fiery, floating, luminous)
+   368→6. BLIND (see Lost)
+   369→7. BLURRED
+   370→8. BRIGHT (see Dazzling)
+   371→9. CHANGING (see Moving, Vanishing)
+   372→10. CIPHERS
+   373→11. CIRCLES (see Colors)
+   374→12. CLOUDY
+   375→13. COBWEBS (see Gauze)
+   376→14. COLORS before the eyes
+   377→    - Colors: black, blue, bright, dark, golden, gray, green, red, violet, white, yellow
+   378→    - Phenomena: circles, floating spots, sparks, stripes, veil, etc.
+   379→15. CONFUSED
+   380→16. CROOKED objects
+   381→17. DANCING
+   382→18. DAZZLING
+   383→19. DIM
+   384→20. DIPLOPIA
+   385→21. DISTANT, objects seem
+   386→22. EXERTION of vision agg.
+   387→23. FADE away then reappear
+   388→24. FAR‑SIGHTED (Hypermetropia)
+   389→25. FEATHERY
+   390→26. FIERY phenomena
+   391→27. FIRE, a sea of
+   392→28. FLAMES
+   393→29. FLASHES
+   394→30. FLICKERING
+   395→31. FOCAL distance changes
+   396→32. FOGGY
+   397→33. GAUZE
+   398→34. GLIMMERING (see Flickering)
+   399→35. GLITTERING objects
+   400→36. HAIR before sight
+   401→37. HEMIOPIA
+   402→38. HIGH objects (see Large)
+   403→39. HYPERMETROPIA
+   404→40. ILLUSIONS
+   405→41. IMAGES too long retained
+   406→42. INVERTED objects
+   407→43. JUMP, words when reading
+   408→44. LARGE field / objects
+   409→45. LIGHTS (points, streaks, waves)
+   410→46. LIGHTNINGS
+   411→47. LOSS OF VISION (blindness)
+   412→48. MIST (see Foggy)
+   413→49. MISTAKES
+   414→50. MOONLIGHT amel.
+   415→51. MOVING objects
+   416→52. MULTIPLIED (see Diplopia)
+   417→53. MUSCÆ volitantes (see Colors, black)
+   418→54. MYOPIA
+   419→55. NEARER objects
+   420→56. NET before eyes
+   421→57. OBLIQUITY
+   422→58. PALE objects
+   423→59. QUIVERING (see Trembling)
+   424→60. RAIN, seems looking through
+   425→61. RAINBOW (see Colors, halo)
+   426→62. RANGE of vision changes (see Focal)
+   427→63. RAYS, broken up
+   428→64. RECEDING (see Moving)
+   429→65. RUN together, letters
+   430→66. SCINTILLATIONS (see Sparks, Flickerings)
+   431→67. SHADOWS
+   432→68. SMALL objects
+   433→69. SMOKY (see Foggy)
+   434→70. SNAKE before vision
+   435→71. SNOW falling
+   436→72. SPARKS
+   437→73. SPOTS
+   438→74. STARS (see Sparks, Flashes)
+   439→75. STRIPES (see Colors)
+   440→76. SWIMMING of letters / objects
+   441→77. TREMBLING objects
+   442→78. TRIPLOPIA
+   443→79. VANISHING of sight (see Loss)
+   444→80. VARIEGATED colors (see Colors)
+   445→81. VEIL (see Foggy)
+   446→82. VIBRATION, as of heated air
+   447→83. VISIONS, sees on closing eyes
+   448→84. WAVERING
+   449→85. WAVING, luminous openings
+   450→86. WEAK
+   451→87. WHIRLING
+   452→88. ZIGZAGS
+   453→
+   454→================================================================================
+   455→EAR
+   456→================================================================================
+   457→
+   458→1. ABSCESS behind / below / in meatus
+   459→2. ADHESIONS in middle ear
+   460→3. AGGLUTINATION of auricle
+   461→4. AIR, sensation of, in
+   462→5. BALD spot above
+   463→6. BLEEDING (see Discharges)
+   464→7. BLOWING sensation
+   465→8. BOARD before, sensation
+   466→9. BORING fingers in
+   467→10. BREATH, sensation as if came from ear
+   468→11. CALCAREOUS deposit on tympanum
+   469→12. CARIES (mastoid, petrous portion)
+   470→13. CATARRH (Eustachian tube)
+   471→14. CHILBLAINS
+   472→15. COLDNESS
+   473→16. CONGESTION (see Fulness)
+   474→17. CONSTRICTION / CONTRACTION
+   475→18. CRACKS behind ear (see Eruptions)
+   476→19. CRAWLING (see Formication)
+   477→20. DILATATION of meatus, sensation
+   478→21. DISCHARGES
+   479→    - Types: bloody, cheesy, excoriating, fetid, gluey, green, ichorous, offensive, purulent, serous, thick, thin, watery, white, yellow
+   480→    - Modalities: after measles, scarlet fever, mercury abuse, etc.
+   481→22. DISCOLORATION (blue, livid, redness)
+   482→23. DISTENSION (see Fulness)
+   483→24. DRYNESS
+   484→25. ERUPTIONS (behind, below, in front, on lobes, in meatus)
+   485→    - Types: boils, eczema, herpes, pimples, pustules, scabby, scaly, vesicles
+   486→26. ERYSIPELAS (see Inflammation)
+   487→27. EXOSTOSIS
+   488→28. FLAPPING
+   489→29. FORMICATION
+   490→30. FREEZING easily
+   491→31. FROZEN, as if
+   492→32. FULNESS, sensation
+   493→33. FUNGUS excrescences
+   494→34. HARDNESS, glands about ear
+   495→35. HEAT
+   496→36. HOLLOWNESS, sensation
+   497→37. INFLAMMATION (erysipelatous, suppurative)
+   498→    - Locations: concha, eustachian tube, inside, media, petrous portion
+   499→38. ITCHING
+   500→39. LUMPS, hard, behind ear
+   501→40. LUPUS on lobe
+   502→41. MOISTURE behind ears / concha / margin
+   503→42. NODES on ears
+   504→43. NOISES in ears
+   505→    - Types: bagpipe, beating, bells, blowing, bubbling, buzzing, cannonading, chirping, clashing, clucking, cracking, crackling, crashing, creaking, drumming, fluttering, gong, hammering, hissing, humming, machinery, mill, music, piping, reports, reverberating, ringing, roaring, rolling, rumbling, rushing, rustling, singing, snapping, squeaking, steam escaping, thundering, ticking, tinkling, twanging, watch, water, whispering, whistling, whizzing, wind, etc.
+   506→    - Modalities: time of day, position, chewing, swallowing, etc.
+   507→44. NUMBNESS
+   508→45. OBSTRUCTION (see Stopped)
+   509→46. ODOR
+   510→47. OPEN, meatus seems open
+   511→48. OPENING, sensation of a valve
+   512→49. PAIN
+   513→    - Types: aching, biting, boring, bruised, burning, bursting, cramp, cutting, darting, digging, drawing, excoriating, gnawing, griping, jerking, lacerating, lancinating, pinching, pressing, pricking, scraping, shooting, sore, spasmodic, stitching, tearing, twinging, ulcerative
+   514→    - Modalities: time, position, motion, chewing, swallowing, etc.
+   515→    - Locations: above, behind, below, in front, inside (meatus), lobe, tragus, etc.
+   516→50. PERSPIRATION
+   517→51. POLYPUS
+   518→52. PUFFING
+   519→53. PULSATION
+   520→54. QUIVERING
+   521→55. RAWNESS behind (see Eruptions)
+   522→56. RETRACTION, sense of
+   523→57. REVERBERATIONS (see Noises)
+   524→58. ROLLING, as of something
+   525→59. ROUGH epidermis
+   526→60. RUSH of blood
+   527→61. SCRATCHING sensation
+   528→62. SENSIBILITY increased / diminished
+   529→63. SHOCKS on swallowing
+   530→64. STEATOMA (see Tumors)
+   531→65. STENOSIS (see Contraction)
+   532→66. STOPPED sensation
+   533→67. STROKES, blows in ears
+   534→68. SUPPURATION (middle ear, behind, in front)
+   535→69. SURGING
+   536→70. SWELLING
+   537→    - Locations: about ear, antitragus, behind, below, concha, in front, inside, lobes, parotid
+   538→71. TENSION
+   539→72. THROBBING (see Pulsation)
+   540→73. TICKLING (see Itching)
+   541→74. TINGLING
+   542→75. TREMBLING
+   543→76. TUBERCLE
+   544→77. TUMORS (cystic, steatoma, wen)
+   545→78. TWITCHING
+   546→79. ULCERATION
+   547→80. VALVE (see Opening)
+   548→81. WART‑LIKE growth
+   549→82. WATER, sensation of, in ear
+   550→83. WAX (black, brown, dry, hardened, increased, pale, purulent, red, soft, thick, thin, wanting, whitish, yellow)
+   551→84. WEN
+   552→85. WIND, sensitive to / sensation of
+   553→86. WORMS, sensation
+   554→
+   555→================================================================================
+   556→HEARING
+   557→================================================================================
+   558→
+   559→1. ACUTE (hypersensitive)
+   560→2. DISTANT, sounds seem
+   561→3. ILLUSIONS
+   562→4. IMPAIRED
+   563→    - Modalities: time, weather, after cold, damp, eating, etc.
+   564→    - Causes: catarrh, concussion, measles, mercury abuse, old age, paralysis, scarlet fever, etc.
+   565→5. LOST (deafness)
+   566→
+   567→================================================================================
+   568→NOSE
+   569→================================================================================
+   570→
+   571→1. ABSCESS
+   572→2. CARIES (at root)
+   573→3. AGGLUTINATION of nostrils
+   574→4. AIR, sensitive to inhaled
+   575→5. ANOSMIA (see Smell)
+   576→6. BLACK (see Sooty)
+   577→7. BLEEDING (see Epistaxis)
+   578→8. BLOOD, congestion of
+   579→9. BLOW, constant inclination to
+   580→10. BORING in with fingers
+   581→11. BUBBLING sensation
+   582→12. CANCER (epithelioma, of bones, septum, syphilitic)
+   583→13. CATARRH
+   584→    - Types: chronic, dry, fluent, post‑nasal
+   585→    - Modalities: seaside agg., extends to frontal sinuses, antrum, chest
+   586→14. CHAPPED nostrils
+   587→15. COLDNESS
+   588→16. CONDYLOMATA (see Warts)
+   589→17. CONSTRICTION
+   590→18. CONVULSIVE motion (see Twitching)
+   591→19. CORYZA
+   592→    - Types: annual (hay fever), chronic, fluent, dry
+   593→    - Modalities: time, air, bathing, eating, menses, etc.
+   594→20. CRACKLING
+   595→21. CRACKS in nostrils / corners / septum / tip / wings
+   596→22. CRAWLING (see Itching)
+   597→23. CREEPING (see Tingling)
+   598→24. CRUSTS (see Discharges)
+   599→25. DENTED in (see Sunken)
+   600→26. DESQUAMATION
+   601→27. DILATED nostrils (see Motion)
+   602→28. DIPHTHERIA in
+   603→29. DISCHARGE
+   604→    - Types: acrid, albuminous, bloody, brown, burning, clear, copious, crusts, excoriating, flocculent, gelatinous, glairy, greenish, ichorous, offensive, purulent, thick, thin, viscid, watery, white, yellow
+   605→    - Modalities: time, side, blowing nose, etc.
+   606→    - Locations: posterior nares
+   607→30. DISCOLORATION (black, bluish, brown, copper, cyanotic, dark, earthy, gray, green, lead‑colored, mottled, pale, purple, red, yellow)
+   608→    - Locations: root, tip, wings, septum, inside
+   609→31. DOUBLE, feels as if she had two noses
+   610→32. DRYNESS (inside, posterior nares)
+   611→33. ENLARGING, sensation
+   612→34. EPISTAXIS (nosebleed)
+   613→    - Modalities: time, after bath, anger, blowing nose, children, chill, cough, dinner, diphtheria, eating, exertion, fever, headache, lying, menses, old people, periodic, persistent, plethoric, singing, sleep, sneezing, spring, stool, stooping, talking, walking, washing, weeping, wine, etc.
+   614→35. ERUPTIONS (see Face)
+   615→36. ERYSIPELAS (see Face)
+   616→37. EXCORIATION (see Rawness)
+   617→38. EXHALATIONS fetid (see Discharge, Ozæna)
+   618→39. EXOSTOSES
+   619→40. EXPANSION, sensation
+   620→41. FAN‑LIKE motion (see Motion)
+   621→42. FOOD, sensation of, in posterior nares
+   622→43. FOREIGN body, sensation
+   623→44. FORMICATION (see Itching)
+   624→45. FRECKLES
+   625→46. FROST‑BITTEN
+   626→47. FULNESS, sense of
+   627→48. FURUNCLES (see Face)
+   628→49. GANGRENE
+   629→50. HAIR of nostrils falls out
+   630→51. HARDNESS
+   631→52. HAY FEVER (see Coryza, Annual)
+   632→53. HEAT in
+   633→54. HEAVINESS
+   634→55. INFLAMMATION (bones, inside, margins, septum, tip)
+   635→56. ITCHING (inside, posterior nares, root, septum, tip, wings)
+   636→57. KNOBBY tip
+   637→58. LACERATION
+   638→59. LIPOMA
+   639→60. LIQUIDS come out through nose on swallowing
+   640→61. LUPUS
+   641→62. MEMBRANE, mucous, destroyed / detached / gangrenous
+   642→63. MOTION of wings (constant, fan‑like)
+   643→64. NECROSIS (see Caries)
+   644→65. NODOSITIES
+   645→66. NUMBNESS
+   646→67. OBSTRUCTION
+   647→    - Modalities: time, children, chronic, after cold, diphtheria, eating, lying, menses, one‑sided, reading, riding, sleeping, stooping, talking, walking, warm room, wet weather
+   648→    - Locations: posterior nares, root
+   649→68. ODORS (imaginary and real)
+   650→    - Types: acid, agreeable, almonds, bad, beer, blood, brandy, brimstone, burning, burnt, cabbage, cancerous, cheese, corpse, dust, fetid, fish‑brine, garlic, manure, musk, musty, nauseating, offensive, onions, pitch, pus, putrid, sickly, smoke, sour, sulphurous, sweetish, tar, tobacco, ulcerous, whiskey
+   651→69. EDEMA
+   652→70. OILY
+   653→71. OPEN, sensation
+   654→72. OZÆNA
+   655→73. PAIN
+   656→    - Types: aching, beating, biting, boring, bruised, burning, burrowing, bursting, clawing, compressing, contracting, cramping, crushing, cutting, darting, digging, distending, dragging, drawing, gnawing, grasping, jerking, lacerating, lancinating, pinching, pressing, pricking, pulling, pulsating, rawness, scraping, shooting, sore, sticking, stitching, tearing, ulcerative
+   657→    - Modalities: blowing, breathing, coughing, menses, motion, pressure, sneezing, touch, etc.
+   658→    - Locations: bones, cartilage, dorsum, inside, nostril, posterior nares, root, septum, tip, wings
+   659→74. PARCHMENT, sensation
+   660→75. PEELING off (see Desquamation)
+   661→76. PERSPIRATION on
+   662→77. PICKING nose
+   663→78. PINCHED
+   664→79. POINTED
+   665→80. POLYPUS
+   666→81. PRICKLING (see Tingling)
+   667→82. PROTUBERANCES
+   668→83. PUFFINESS (see Swelling)
+   669→84. PULSATION
+   670→85. QUIVERING (see Twitching)
+   671→86. RED (see Discoloration and Spots)
+   672→87. ROUGHNESS inside / posterior nares
+   673→88. RUBS nose (see Itching)
+   674→89. SCABS (see Discharges)
+   675→90. SCRAPING posterior nares
+   676→91. SCURFY (see Discharges)
+   677→92. SENSITIVE (see Pain, Sore)
+   678→93. SHINY
+   679→94. SMELL
+   680→    - Acute (hyperosmia)
+   681→    - Diminished (hyposmia)
+   682→    - Lost (anosmia)
+   683→    - Illusions (see Odors)
+   684→95. SNEEZING
+   685→96. SNUFFLES (see Obstruction)
+   686→97. SNUFFLING
+   687→98. SOOTY nostrils
+   688→99. SORENESS (see Pain)
+   689→100. SPARKS, sensation of electric
+   690→101. SPASM in wings / muscles
+   691→102. SPOTS (see Discoloration)
+   692→103. SQUEAKING sensation
+   693→104. SUNKEN nose
+   694→105. SWELLING (of nose, bones, dorsum, posterior nares, root, septum, tip, wings)
+   695→106. TENDERNESS (see Pain)
+   696→107. TENSION
+   697→108. THICK (see Swelling)
+   698→109. THROBBING (see Pulsation)
+   699→110. TICKLING (see Itching)
+   700→111. TINGLING
+   701→112. TORPOR, sense of
+   702→113. TREMULOUS sensation at tip
+   703→114. TUMOR inside / root / tip
+   704→115. TWITCHING
+   705→116. ULCERS (inside, nostrils, posterior nares, septum, tip, wings)
+   706→117. VEINS, varicose (see Face)
+   707→118. WARTS
+   708→119. WEIGHT (see Heaviness)
+   709→120. WRINKLED skin
+   710→121. YELLOW (see Discoloration and Spots)
+   711→
+   712→================================================================================
+   713→FACE
+   714→================================================================================
+   715→
+   716→1. ABSCESS (antrum, lip, parotid, submaxillary)
+   717→2. ADHESION of skin to forehead
+   718→3. AIR, cool, seems blowing upon
+   719→4. ANEMIC (see Discoloration)
+   720→5. APHTHÆ on lips
+   721→6. BEARD falling
+   722→7. BIRTHMARKS (see Nævus)
+   723→8. BLEEDING lips
+   724→9. BLOATED (see Swelling, Congestion, Discoloration)
+   725→10. BLOOD vessels distended (see Veins)
+   726→11. BROAD, sensation of becoming (see Large)
+   727→12. CACHECTIC (see Expression)
+   728→13. CANCER (lips, epithelioma, lupus, scirrhus)
+   729→14. CARBUNCLES on chin (see Eruptions)
+   730→15. CARIES of bone (jaw, about eyes)
+   731→16. CHAPPED lips / corners of mouth
+   732→17. CHEWING motion of jaw (see Grinding Teeth)
+   733→18. CHILLINESS
+   734→19. CHLOROTIC
+   735→20. CHOREA (see Twitching and Distorting)
+   736→21. COBWEBS, sensation of
+   737→22. COLDNESS
+   738→23. COMEDONES (see Eruptions)
+   739→24. CONGESTION (see Heat)
+   740→25. CONTRACTION (see Distortion)
+   741→26. CONVULSIONS, spasms
+   742→    - Locations: jaws, lips, masseters, mouth
+   743→27. CRACKED lips / corners of mouth
+   744→28. CRACKING in jaw
+   745→29. CRAMP, maxillary articulation
+   746→30. CRAWLING (see Formication)
+   747→31. CREEPING (see Formication)
+   748→32. DISCOLORATION
+   749→    - Types: ashy, black, bluish, bronzed, brown, changing, coffee‑colored, copper‑colored, cyanotic, dark, dirty, dusky, earthy, ghastly, grayish, greenish, lead‑colored, liver‑colored, mahogany‑colored, marbled, mottled, pale, purple, red, yellow
+   750→    - Locations: eyes (circles around), cheeks, chin, forehead, lips, mouth (about)
+   751→33. DOUBLE, feels as if she had two noses
+   752→34. DRYNESS (inside, posterior nares)
+   753→35. ENLARGING, sensation
+   754→36. EPISTAXIS (see Nose)
+   755→37. ERUPTIONS (see also Nose)
+   756→38. ERYSIPELAS (see Face)
+   757→39. EXCORIATION (see Rawness)
+   758→40. EXHALATIONS fetid (see Nose)
+   759→41. EXOSTOSES (see Nose)
+   760→42. EXPANSION, sensation
+   761→43. FAN‑LIKE motion (see Nose)
+   762→44. FOOD, sensation of, in posterior nares
+   763→45. FOREIGN body, sensation
+   764→46. FORMICATION (see Itching)
+   765→47. FRECKLES
+   766→48. FROST‑BITTEN
+   767→49. FULNESS, sense of
+   768→50. FURUNCLES (see Face)
+   769→51. GANGRENE
+   770→52. HAIR of nostrils falls out
+   771→53. HARDNESS
+   772→54. HAY FEVER (see Nose)
+   773→55. HEAT in
+   774→56. HEAVINESS
+   775→57. INFLAMMATION
+   776→58. ITCHING
+   777→59. KNOBBY tip
+   778→60. LACERATION
+   779→61. LIPOMA
+   780→62. LIQUIDS come out through nose on swallowing
+   781→63. LUPUS
+   782→64. MEMBRANE, mucous, destroyed / detached / gangrenous
+   783→65. MOTION of wings
+   784→66. NECROSIS (see Caries)
+   785→67. NODOSITIES
+   786→68. NUMBNESS
+   787→69. OBSTRUCTION
+   788→70. ODORS
+   789→71. EDEMA
+   790→72. OILY
+   791→73. OPEN, sensation
+   792→74. OZÆNA
+   793→75. PAIN (see Nose)
+   794→76. PARCHMENT, sensation
+   795→77. PEELING off (see Desquamation)
+   796→78. PERSPIRATION on
+   797→79. PICKING nose
+   798→80. PINCHED
+   799→81. POINTED
+   800→82. POLYPUS
+   801→83. PRICKLING (see Tingling)
+   802→84. PROTUBERANCES
+   803→85. PUFFINESS (see Swelling)
+   804→86. PULSATION
+   805→87. QUIVERING (see Twitching)
+   806→88. RED (see Discoloration and Spots)
+   807→89. ROUGHNESS inside / posterior nares
+   808→90. RUBS nose (see Itching)
+   809→91. SCABS (see Discharges)
+   810→92. SCRAPING posterior nares
+   811→93. SCURFY (see Discharges)
+   812→94. SENSITIVE (see Pain, Sore)
+   813→95. SHINY
+   814→96. SMELL (acute, diminished, lost, illusions)
+   815→97. SNEEZING
+   816→98. SNUFFLES (see Obstruction)
+   817→99. SNUFFLING
+   818→100. SOOTY nostrils
+   819→101. SORENESS (see Pain)
+   820→102. SPARKS, sensation of electric
+   821→103. SPASM in wings / muscles
+   822→104. SPOTS (see Discoloration)
+   823→105. SQUEAKING sensation
+   824→106. SUNKEN nose
+   825→107. SWELLING (of nose, bones, dorsum, posterior nares, root, septum, tip, wings)
+   826→108. TENDERNESS (see Pain)
+   827→109. TENSION
+   828→110. THICK (see Swelling)
+   829→111. THROBBING (see Pulsation)
+   830→112. TICKLING (see Itching)
+   831→113. TINGLING
+   832→114. TORPOR, sense of
+   833→115. TREMULOUS sensation at tip
+   834→116. TUMOR inside / root / tip
+   835→117. TWITCHING
+   836→118. ULCERS (inside, nostrils, posterior nares, septum, tip, wings)
+   837→119. VEINS, varicose (see Face)
+   838→120. WARTS
+   839→121. WEIGHT (see Heaviness)
+   840→122. WRINKLED skin
+   841→123. YELLOW (see Discoloration and Spots)
+   842→
+   843→================================================================================
+   844→END OF OUTLINE
+   845→================================================================================

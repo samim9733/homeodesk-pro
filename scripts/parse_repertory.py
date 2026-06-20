@@ -1,429 +1,438 @@
 #!/usr/bin/env python3
 """
-Parse Kent's Repertory text files → TypeScript for HomeoDesk Pro.
-Properly handles indent-based structure in all 4 files.
+Parse uploaded Kent's Repertory text files into a hierarchical TypeScript data structure.
+Properly groups sub-sections under parent chapters.
 """
 
-import re, os, json
-from collections import OrderedDict
+import re
+import os
 
-UPLOAD = "/home/z/my-project/upload"
-OUT = "/home/z/my-project/homeodesk-pro/src"
+UPLOAD_DIR = "/home/z/my-project/upload"
+OUTPUT_FILE = "/home/z/my-project/homeodesk-pro/src/kentRepertoryData.ts"
 
 FILES = [
-    "1 mind to vtgo .txt",
-    "head to face .txt",
-    "face (dis colour)to abdomen (dis colour).txt",
-    "abdomen(dis colour)to menas.txt",
+    ("1 mind to vtgo .txt", "numbered"),
+    ("head to face .txt", "equals_separated"),
+    ("face (dis colour)to abdomen (dis colour).txt", "outline"),
+    ("abdomen(dis colour)to menas.txt", "indented"),
 ]
 
-def get_indent(line):
-    return len(line) - len(line.lstrip())
+def escape_ts(s):
+    """Escape string for TypeScript single quotes."""
+    s = s.replace('\\', '\\\\')
+    s = s.replace("'", "\\'")
+    s = s.replace('"', '\\"')
+    # Remove problematic unicode
+    s = s.replace('\u2013', '-')  # en dash
+    s = s.replace('\u2014', '-')  # em dash
+    s = s.replace('\u2018', "'")  # left single quote
+    s = s.replace('\u2019', "'")  # right single quote
+    s = s.replace('\u201c', '"')  # left double quote
+    s = s.replace('\u201d', '"')  # right double quote
+    return s
 
-def safename(s):
-    s = s.lower()
-    return re.sub(r'[^a-z0-9]+', '-', s).strip('-')[:60]
+def slugify(name):
+    """Convert chapter name to slug."""
+    s = re.sub(r'[^a-zA-Z0-9]', '-', name.lower())
+    return re.sub(r'-+', '-', s).strip('-')
 
-def clean(s):
-    s = re.sub(r'\s*\((?:See|compare|also|comp\.|with\s.+?)\)\s*', '', s)
-    return re.sub(r'\s+', ' ', s).strip()
-
-
-# ═══════════════════════════════════════════════════════════════
-# FILE 1: Numbered outline - "1. chp-MIND", "1.17. ANGER"
-# ═══════════════════════════════════════════════════════════════
-def parse_file1(path):
-    chapters = OrderedDict()
-    cur_ch = None
-    cur_rub = None
-    cur_subs = []
-
-    with open(path, 'r', encoding='utf-8', errors='replace') as f:
+def parse_numbered_file(filepath):
+    """Parse file with numbered hierarchy like: 1. chp-MIND, 1.1. RUBRIC, 1.1.1. subrubric"""
+    chapters = []
+    current_chapter = None
+    current_rubric = None
+    
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
         for line in f:
-            s = line.strip()
-            if not s:
+            line = line.strip()
+            if not line:
                 continue
-
-            # Chapter: "1. chp-MIND"
-            m = re.match(r'^(\d+)\.\s*chp-(.+)', s, re.I)
-            if m:
-                if cur_rub and cur_ch:
-                    chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                cur_ch = m.group(2).strip().title()
-                cur_rub = None
-                cur_subs = []
+            
+            # Match chapter: "1. chp-MIND" or "1. MIND"  
+            if re.match(r'^\d+\.\s+chp-', line):
+                ch_match = re.match(r'^\d+\.\s+chp-(.+)', line)
+                if ch_match:
+                    chapter_name = ch_match.group(1).strip()
+                    current_chapter = {
+                        'name': chapter_name,
+                        'rubrics': []
+                    }
+                    chapters.append(current_chapter)
+                    current_rubric = None
+                    continue
+            
+            if current_chapter is None:
                 continue
-
-            # Numbered item
-            m = re.match(r'^(\d+(?:\.\d+)+)\.\s+(.+)', s)
-            if m:
-                depth = len(m.group(1).split('.'))
-                text = m.group(2)
-                if depth >= 3:
-                    cur_subs.append(text)
-                else:
-                    if cur_rub and cur_ch:
-                        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                    cur_rub = text
-                    cur_subs = []
-
-    if cur_rub and cur_ch:
-        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
+            
+            # Match rubric: 1.1. TEXT
+            rub_match = re.match(r'^\d+\.\d+\.\s+(.*)', line)
+            if rub_match:
+                text = rub_match.group(1).strip()
+                if text:
+                    current_rubric = {
+                        'text': text,
+                        'children': []
+                    }
+                    current_chapter['rubrics'].append(current_rubric)
+                    continue
+            
+            # Match sub-rubric: 1.1.1. TEXT (any deeper level)
+            sub_match = re.match(r'^\d+(\.\d+){2,}\.\s+(.*)', line)
+            if sub_match and current_rubric:
+                text = sub_match.group(2).strip()
+                if text:
+                    current_rubric['children'].append(text)
+                    continue
+    
     return chapters
 
-
-# ═══════════════════════════════════════════════════════════════
-# FILE 2: === markers with chapter name between pairs
-# ═══════════════════════════════════════════════════════════════
-def parse_file2(path):
-    chapters = OrderedDict()
-    cur_ch = None
-    cur_rub = None
-    cur_subs = []
-    in_header = False  # True after first ===, waiting for name
-
-    with open(path, 'r', encoding='utf-8', errors='replace') as f:
+def parse_equals_separated_file(filepath):
+    """Parse files with ==== separators for chapter headings and numbered items.
+    Format:
+    ========
+    HEAD
+    ========
+    1. PAIN
+       1.1. Temples
+            - Modalities: ...
+    """
+    chapters = []
+    current_chapter = None
+    current_rubric = None
+    in_header = False
+    header_name = ""
+    
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
         for line in f:
-            s = line.strip()
-            if not s:
+            stripped = line.strip()
+            
+            # Skip empty lines, source comments, and opening header
+            if not stripped or stripped.startswith('Source:') or stripped.startswith('HOMEOPATHIC'):
                 continue
-
-            if s.startswith('Source:') or s.startswith('HOMEOPATHIC'):
-                continue
-
-            # === line
-            if re.match(r'^={5,}$', s):
-                if in_header:
-                    # Second === → chapter name was already read
+            
+            # Detect ==== separator
+            if stripped.startswith('====') or stripped.startswith('---'):
+                if in_header and header_name:
+                    current_chapter = {
+                        'name': header_name,
+                        'rubrics': []
+                    }
+                    chapters.append(current_chapter)
+                    current_rubric = None
                     in_header = False
+                    header_name = ""
                 else:
-                    # First === → start looking for chapter name
-                    if cur_rub and cur_ch:
-                        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                    cur_rub = None
-                    cur_subs = []
                     in_header = True
                 continue
-
-            # Chapter name after ===
-            if in_header and not re.match(r'^\d+\.', s):
-                cur_ch = s.strip().title()
+            
+            # If we're in a header area (between ==== lines), capture chapter name
+            if in_header and stripped and not stripped.startswith('====') and not stripped.startswith('---'):
+                header_name = stripped.strip().upper()
                 continue
-
-            # Numbered rubric
-            m = re.match(r'^(\d+)\.\s+(.+)', s)
-            if m:
-                if cur_rub and cur_ch:
-                    chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                cur_rub = m.group(2).strip()
-                cur_subs = []
-
-    if cur_rub and cur_ch:
-        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-    return chapters
-
-
-# ═══════════════════════════════════════════════════════════════
-# FILE 3: Markdown ## / ### headers + bullet sub-items
-# ═══════════════════════════════════════════════════════════════
-def parse_file3(path):
-    chapters = OrderedDict()
-    cur_ch = None
-    cur_rub = None
-    cur_subs = []
-
-    with open(path, 'r', encoding='utf-8', errors='replace') as f:
-        for line in f:
-            s = line.strip()
-            if not s:
+            
+            if current_chapter is None:
                 continue
-
-            if s.startswith('Source:') or s.startswith('# HOMEOPATHIC') or s.startswith('# Excerpt'):
+            
+            # Numbered rubric: handle "1. TEXT", "1.1. TEXT", "1.1.1. TEXT" etc.
+            num_match = re.match(r'^(\d+(?:\.\d+)*)\.\s+(.*)', stripped)
+            if num_match:
+                full_num = num_match.group(1)
+                text = num_match.group(2).strip()
+                if text:
+                    dot_count = full_num.count('.')
+                    if dot_count == 0:
+                        # Main rubric: "1. PAIN"
+                        current_rubric = {
+                            'text': text,
+                            'children': []
+                        }
+                        current_chapter['rubrics'].append(current_rubric)
+                    elif current_rubric:
+                        # Sub-rubric: "1.1. Temples" or deeper
+                        current_rubric['children'].append(text)
                 continue
-
-            # ## HEADER
-            m = re.match(r'^##\s+(.+)', s)
-            if m:
-                header = m.group(1).strip()
-                if cur_rub and cur_ch:
-                    chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-
-                # Short ALL CAPS = new chapter (e.g. "MOUTH", "TEETH")
-                if header == header.upper() and len(header.split()) <= 4 and '(' not in header:
-                    cur_ch = header.title()
-                    cur_rub = None
+            
+            # Bullet items under current rubric
+            bullet_match = re.match(r'^-\s+(.+)', stripped)
+            if bullet_match and current_rubric:
+                bullet_text = bullet_match.group(1).strip()
+                if bullet_text.startswith('Modalities:'):
+                    items = bullet_text.replace('Modalities:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
+                elif bullet_text.startswith('Time:'):
+                    items = bullet_text.replace('Time:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
+                elif bullet_text.startswith('Locations:'):
+                    items = bullet_text.replace('Locations:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
+                elif bullet_text.startswith('Extending to:'):
+                    items = bullet_text.replace('Extending to:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
+                elif bullet_text.startswith('Types:'):
+                    items = bullet_text.replace('Types:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
+                elif bullet_text.startswith('Laterality:'):
+                    items = bullet_text.replace('Laterality:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item and len(item) > 1:
+                            current_rubric['children'].append(item)
                 else:
-                    # "FACE - DISCOLORATION" → section rubric under Face
-                    if '-' in header:
-                        first_word = header.split('-')[0].strip().title()
-                        if first_word != cur_ch:
-                            cur_ch = first_word
-                    # Keep as rubric
-                    cur_rub = header
-                cur_subs = []
+                    current_rubric['children'].append(bullet_text)
                 continue
-
-            # ### sub-section
-            m = re.match(r'^###\s+(.+)', s)
-            if m:
-                if cur_rub and cur_ch:
-                    chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                cur_rub = m.group(1).strip()
-                cur_subs = []
-                continue
-
-            # Bullet sub-items
-            if cur_rub and cur_ch and s.startswith('- '):
-                item = s[2:].strip()
-                if item and not item.startswith('Modalities:') and not item.startswith('Locations:'):
-                    cur_subs.append(item.rstrip(':'))
-
-    if cur_rub and cur_ch:
-        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
+            
+            # Indented text lines that are sub-items (not numbered, not bullets)
+            indent = len(line) - len(line.lstrip())
+            if indent > 2 and current_rubric and stripped:
+                current_rubric['children'].append(stripped)
+    
+    # Remove empty chapters
+    chapters = [ch for ch in chapters if len(ch['rubrics']) > 0]
     return chapters
 
-
-# ═══════════════════════════════════════════════════════════════
-# FILE 4: Indent-based - Indent 0=chapter, Indent 2=rubric, Indent 4=sub
-# ═══════════════════════════════════════════════════════════════
-
-# Map known ALL CAPS top-level words to canonical chapter names
-CHAPTER_MAP = {
-    'ABDOMEN': 'Abdomen',
-    'RECTUM': 'Stool',
-    'STOOL': 'Stool',
-    'URINARY': 'Urine',
-    'URINARY ORGANS': 'Urine',
-    'KIDNEYS': 'Kidney',
-    'PROSTATE': 'Male Genitalia',
-    'PROSTATE GLAND': 'Male Genitalia',
-    'URETHRA': 'Urethra',
-    'GENITALIA': 'Female Genitalia',
-    'GENITALIA - FEMALE': 'Female Genitalia',
-    'MALE GENITALIA': 'Male Genitalia',
-    'FEMALE GENITALIA': 'Female Genitalia',
-    'BLADDER': 'Bladder',
-    'LARYNX': 'Larynx and Trachea',
-    'RESPIRATION': 'Respiration',
-    'COUGH': 'Cough',
-    'EXPECTORATION': 'Expectoration',
-    'CHEST': 'Chest',
-    'HEART': 'Heart',
-    'BACK': 'Back',
-    'EXTREMITIES': 'Extremities',
-    'UPPER LIMBS': 'Extremities',
-    'LOWER LIMBS': 'Extremities',
-    'SLEEP': 'Sleep',
-    'DREAMS': 'Sleep',
-    'CHILL': 'Chills',
-    'FEVER': 'Fever',
-    'PERSPIRATION': 'Perspiration',
-    'SWEAT': 'Perspiration',
-    'SKIN': 'Skin',
-    'GENERALITIES': 'Generalities',
-    'THROAT': 'Throat',
-    'EXTERNAL THROAT': 'External Throat',
-    'MOUTH': 'Mouth',
-    'TEETH': 'Teeth',
-    'TASTE': 'Taste',
-    'NOSE': 'Nose',
-    'SMELL': 'Smell',
-    'EYE': 'Eye',
-    'VISION': 'Vision',
-    'EAR': 'Ear',
-    'HEARING': 'Hearing',
-    'FACE': 'Face',
-    'HEAD': 'Head',
-    'MIND': 'Mind',
-    'VERTIGO': 'Vertigo',
-    'STOMACH': 'Stomach',
-    'HYPOCHONDRIUM': 'Hypochondrium',
-    'UMBILICUS': 'Umbilicus',
-    'UMBILICAL REGION': 'Umbilicus',
-    'HYPOGASTRIUM': 'Hypochondrium',
-    'MALE': 'Male Genitalia',
-    'FEMALE': 'Female Genitalia',
-    'MENSTRUATION': 'Female Genitalia',
-    'LEUCORRHOEA': 'Female Genitalia',
-    'DYSMENORRHOEA': 'Female Genitalia',
-    'PREGNANCY': 'Female Genitalia',
-    'LABOR': 'Female Genitalia',
-    'MENOPAUSE': 'Female Genitalia',
-    'UTERUS': 'Female Genitalia',
-    'OVARY': 'Female Genitalia',
-    'OVARIES': 'Female Genitalia',
-    'VAGINA': 'Female Genitalia',
-    'MAMMAE': 'Female Genitalia',
-    'SCROTUM': 'Male Genitalia',
-    'TESTES': 'Male Genitalia',
-    'TESTICLES': 'Male Genitalia',
-    'PENIS': 'Male Genitalia',
-    'SEMINAL': 'Male Genitalia',
-    'SEXUAL': 'Male Genitalia',
-}
-
-def parse_file4(path):
-    chapters = OrderedDict()
-    cur_ch = 'Abdomen'
-    cur_rub = None
-    cur_subs = []
-
-    with open(path, 'r', encoding='utf-8', errors='replace') as f:
+def parse_outline_file(filepath):
+    """Parse structured outline files with ## CHAPTER, ### SECTION, - bullet items.
+    Groups FACE - DISCOLORATION, FACE - DISTORTION, etc. under FACE chapter."""
+    chapters = []
+    current_chapter = None
+    current_section = None
+    
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
         for line in f:
-            s = line.strip()
-            if not s:
+            stripped = line.strip()
+            if not stripped or stripped.startswith('Source:') or stripped.startswith('# HOMEOPATHIC') or stripped.startswith('====') or stripped == '---':
                 continue
-
-            ind = get_indent(line)
-
-            # Indent 0: chapter header (ALL CAPS, short)
-            if ind == 0 and s == s.upper() and any(c.isalpha() for c in s) and len(s) < 40:
-                if not s.startswith('extending') and not s.startswith('turning') and not s.startswith('(') and not s.startswith('ring'):
-                    # Try to match to a known chapter
-                    matched = False
-                    for key, ch_name in CHAPTER_MAP.items():
-                        if key in s.upper():
-                            if cur_rub:
-                                chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                            cur_ch = ch_name
-                            cur_rub = None
-                            cur_subs = []
-                            matched = True
-                            break
-                    if matched:
-                        continue
-
-            # Indent 2: rubric name
-            if ind == 2:
-                if cur_rub:
-                    chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
-                cur_rub = s.rstrip(':').strip()
-                cur_subs = []
+            
+            # Chapter heading: ## CHAPTER or ## CHAPTER (continued)
+            ch_match = re.match(r'^##\s+([A-Z][A-Za-z\s&,/()\-]+?)(?:\s*\(continued\))?\s*$', stripped)
+            if ch_match:
+                raw_name = ch_match.group(1).strip()
+                # Extract base chapter name (e.g., "FACE" from "FACE - DISCOLORATION")
+                base_match = re.match(r'^([A-Z][A-Za-z\s]+?)(?:\s*-\s+)', raw_name)
+                if base_match:
+                    base_name = base_match.group(1).strip()
+                else:
+                    base_name = raw_name
+                
+                # Find or create chapter
+                found = None
+                for ch in chapters:
+                    if ch['name'] == base_name:
+                        found = ch
+                        break
+                
+                if not found:
+                    found = {
+                        'name': base_name,
+                        'rubrics': []
+                    }
+                    chapters.append(found)
+                
+                current_chapter = found
+                # Create a section for the sub-heading
+                current_section = {
+                    'text': raw_name,
+                    'children': []
+                }
+                current_chapter['rubrics'].append(current_section)
                 continue
-
-            # Indent 4+: sub-rubric
-            if ind >= 4 and cur_rub:
-                sub = s.rstrip(':').strip()
-                if sub and not sub.startswith('('):
-                    cur_subs.append(sub)
-
-    if cur_rub:
-        chapters.setdefault(cur_ch, []).append({'text': cur_rub, 'subs': cur_subs})
+            
+            # Section heading: ### SECTION
+            sec_match = re.match(r'^###\s+(.+)', stripped)
+            if sec_match and current_chapter:
+                section_text = sec_match.group(1).strip()
+                current_section = {
+                    'text': section_text,
+                    'children': []
+                }
+                current_chapter['rubrics'].append(current_section)
+                continue
+            
+            # Bullet items
+            bullet_match = re.match(r'^-\s+(.+)', stripped)
+            if bullet_match and current_section and current_chapter:
+                bullet_text = bullet_match.group(1).strip()
+                if bullet_text.startswith('Modalities:'):
+                    items = bullet_text.replace('Modalities:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item:
+                            current_section['children'].append(item)
+                elif bullet_text.startswith('Locations:'):
+                    items = bullet_text.replace('Locations:', '').strip().split(',')
+                    for item in items:
+                        item = item.strip()
+                        if item:
+                            current_section['children'].append(item)
+                else:
+                    current_section['children'].append(bullet_text)
+                continue
+    
     return chapters
 
-
-# ═══════════════════════════════════════════════════════════════
-# MERGE & OUTPUT
-# ═══════════════════════════════════════════════════════════════
-
-def build_categories(all_chapters):
-    cats = {}
-    for ch, rubs in all_chapters.items():
-        items = []
-        for r in rubs:
-            t = clean(r['text'])
-            if t:
-                items.append(t)
-            for sub in r['subs'][:10]:
-                st = clean(f"{r['text']} - {sub}")
-                if st and len(st) < 80:
-                    items.append(st)
-        if items:
-            cats[ch] = items
-    return cats
-
-
-def build_data(all_chapters):
-    data = []
-    for ch, rubs in all_chapters.items():
-        cid = safename(ch)
-        entries = []
-        n = 0
-        for r in rubs:
-            t = clean(r['text'])
-            if not t:
+def parse_indented_file(filepath):
+    """Parse indented flat files with UPPERCASE chapter headings and indented rubrics/sub-rubrics."""
+    chapters = []
+    current_chapter = None
+    current_rubric = None
+    
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
+        for line in f:
+            stripped = line.rstrip('\n\r')
+            if not stripped.strip():
                 continue
-            n += 1
-            entries.append({'id': f'{cid}-{n}', 'text': t, 'chapter': ch})
-            for sub in r['subs'][:15]:
-                st = clean(f"{t} - {sub}")
-                if st:
-                    n += 1
-                    entries.append({'id': f'{cid}-{n}', 'text': st, 'chapter': ch})
-        if entries:
-            data.append({'id': cid, 'chapter': ch, 'rubrics': entries})
-    return data
+            
+            indent = len(stripped) - len(stripped.lstrip())
+            text = stripped.strip()
+            
+            if not text or text.startswith('#') or text.startswith('=='):
+                continue
+            
+            # Chapter heading: ALL CAPS, no indent, no leading number
+            if indent == 0 and text == text.upper() and len(text) > 2 and not text.startswith('(') and not text[0].isdigit():
+                # Only treat as chapter if it looks like a body part name
+                if re.match(r'^[A-Z][A-Z\s&]+$', text):
+                    current_chapter = {
+                        'name': text.title(),
+                        'rubrics': []
+                    }
+                    chapters.append(current_chapter)
+                    current_rubric = None
+                    continue
+            
+            if current_chapter is None:
+                continue
+            
+            # Main rubric: starts with uppercase, not a sub-item
+            if indent <= 2:
+                if text and text[0].isupper() and not text.startswith('('):
+                    current_rubric = {
+                        'text': text,
+                        'children': []
+                    }
+                    current_chapter['rubrics'].append(current_rubric)
+                    continue
+            
+            # Sub-rubric: indented
+            if indent > 2 and current_rubric:
+                sub_text = text.rstrip(':').strip()
+                if sub_text:
+                    current_rubric['children'].append(sub_text)
+                continue
+    
+    return chapters
 
-
-def to_ts(data):
-    lines = ["import { RubricData } from './types';", "",
-             "export const KENT_REPERTORY_DATA: RubricData[] = ["]
-    for entry in data:
-        lines.append("  {")
-        lines.append(f"    id: '{entry['id']}',")
-        lines.append(f"    chapter: '{entry['chapter']}',")
-        lines.append("    rubrics: [")
-        for r in entry['rubrics']:
-            txt = r['text'].replace("\\", "\\\\").replace("'", "\\'").replace('"', '\\"').replace('\n', ' ').replace('\r', '')
-            lines.append(f"      {{ id: '{r['id']}', text: '{txt}', chapter: '{r['chapter']}', remedies: [] as string[], grade: 1 }},")
-        lines.append("    ],")
-        lines.append("  },")
+def generate_typescript(all_chapters):
+    """Generate TypeScript file from parsed chapters."""
+    lines = []
+    lines.append("import { RubricData } from './types';")
+    lines.append("")
+    lines.append("export const KENT_REPERTORY_DATA: RubricData[] = [")
+    
+    total_rubrics = 0
+    total_subs = 0
+    
+    for ci, ch in enumerate(all_chapters):
+        ch_id = slugify(ch['name'])
+        
+        lines.append(f"  {{")
+        lines.append(f"    id: '{ch_id}',")
+        lines.append(f"    chapter: '{escape_ts(ch['name'])}',")
+        lines.append(f"    rubrics: [")
+        
+        for ri, rub in enumerate(ch['rubrics'], 1):
+            rub_id = f"{ch_id}-{ri}"
+            rub_text = escape_ts(rub['text'])
+            
+            lines.append(f"      {{ id: '{rub_id}', text: '{rub_text}', chapter: '{escape_ts(ch['name'])}', remedies: [] as string[], grade: 1 }},")
+            total_rubrics += 1
+            
+            for si, sub in enumerate(rub.get('children', []), 1):
+                sub_id = f"{ch_id}-{ri}-{si}"
+                sub_text = escape_ts(f"{rub['text']} - {sub}")
+                if sub_text:
+                    lines.append(f"      {{ id: '{sub_id}', text: '{sub_text}', chapter: '{escape_ts(ch['name'])}', remedies: [] as string[], grade: 1 }},")
+                    total_subs += 1
+        
+        if ci < len(all_chapters) - 1:
+            lines.append(f"    ],")
+        else:
+            lines.append(f"    ]")
+        if ci < len(all_chapters) - 1:
+            lines.append(f"  }},")
+        else:
+            lines.append(f"  }}")
+    
     lines.append("];")
+    lines.append("")
+    lines.append(f"// Generated: {len(all_chapters)} chapters, {total_rubrics} rubrics, {total_subs} sub-rubrics")
+    
     return '\n'.join(lines)
 
-
 def main():
-    all = OrderedDict()
-
-    print("=== File 1: Mind/Vertigo/Head ===")
-    ch1 = parse_file1(os.path.join(UPLOAD, FILES[0]))
-    for c, r in ch1.items():
-        all.setdefault(c, []).extend(r)
-        print(f"  {c}: {len(r)} rubrics")
-
-    print("\n=== File 2: Head/Eye/Vision/Ear/Hearing/Nose/Face ===")
-    ch2 = parse_file2(os.path.join(UPLOAD, FILES[1]))
-    for c, r in ch2.items():
-        all.setdefault(c, []).extend(r)
-        print(f"  {c}: {len(r)} rubrics")
-
-    print("\n=== File 3: Face/Mouth/Teeth/Throat/Stomach/Abdomen ===")
-    ch3 = parse_file3(os.path.join(UPLOAD, FILES[2]))
-    for c, r in ch3.items():
-        all.setdefault(c, []).extend(r)
-        print(f"  {c}: {len(r)} rubrics")
-
-    print("\n=== File 4: Abdomen/Menstruation ===")
-    ch4 = parse_file4(os.path.join(UPLOAD, FILES[3]))
-    for c, r in ch4.items():
-        all.setdefault(c, []).extend(r)
-        print(f"  {c}: {len(r)} rubrics")
-
-    print(f"\n{'='*50}")
-    print(f"MERGED: {len(all)} chapters")
-    for c, r in all.items():
-        print(f"  {c}: {len(r)} rubrics")
-
-    cats = build_categories(all)
-    data = build_data(all)
-    total = sum(len(e['rubrics']) for e in data)
-    print(f"\nTotal entries (with sub-rubrics): {total:,}")
-
-    # Write TypeScript
-    ts = to_ts(data)
-    p = os.path.join(OUT, "kentRepertoryData.ts")
-    with open(p, 'w', encoding='utf-8') as f:
-        f.write(ts)
-    print(f"\nWrote {p} ({os.path.getsize(p):,} bytes)")
-
-    # Write categories JSON
-    jp = os.path.join(OUT, "_repertory_categories.json")
-    with open(jp, 'w', encoding='utf-8') as f:
-        json.dump(cats, f, indent=2, ensure_ascii=False)
-    print(f"Wrote {jp}")
-
-    print("\nDone!")
-
+    all_chapters = []
+    
+    for filename, fmt in FILES:
+        filepath = os.path.join(UPLOAD_DIR, filename)
+        if not os.path.exists(filepath):
+            print(f"  WARNING: File not found: {filepath}")
+            continue
+        
+        print(f"Parsing: {filename} (format: {fmt})")
+        if fmt == 'numbered':
+            chapters = parse_numbered_file(filepath)
+        elif fmt == 'equals_separated':
+            chapters = parse_equals_separated_file(filepath)
+        elif fmt == 'outline':
+            chapters = parse_outline_file(filepath)
+        elif fmt == 'indented':
+            chapters = parse_indented_file(filepath)
+        else:
+            chapters = []
+        
+        print(f"  Found {len(chapters)} chapters")
+        for ch in chapters:
+            print(f"    - {ch['name']}: {len(ch['rubrics'])} main rubrics, "
+                  f"{sum(len(r.get('children', [])) for r in ch['rubrics'])} sub-rubrics")
+        all_chapters.extend(chapters)
+    
+    # Merge chapters with same name
+    merged = {}
+    for ch in all_chapters:
+        name = ch['name']
+        if name in merged:
+            merged[name]['rubrics'].extend(ch['rubrics'])
+        else:
+            merged[name] = ch
+    
+    unique_chapters = list(merged.values())
+    print(f"\nMerged: {len(unique_chapters)} unique chapters")
+    
+    total_main = sum(len(ch['rubrics']) for ch in unique_chapters)
+    total_sub = sum(sum(len(r.get('children', [])) for r in ch['rubrics']) for ch in unique_chapters)
+    print(f"Total: {total_main} main rubrics, {total_sub} sub-rubrics")
+    
+    ts_content = generate_typescript(unique_chapters)
+    
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        f.write(ts_content)
+    
+    print(f"\nGenerated: {OUTPUT_FILE}")
 
 if __name__ == '__main__':
     main()

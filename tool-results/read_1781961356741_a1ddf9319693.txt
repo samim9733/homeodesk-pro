@@ -1,0 +1,2002 @@
+     1→ABDOMEN
+     2→  PAIN, cramping, griping
+     3→    turning the body: (subrubric)
+     4→
+     5→  PAIN, cramping, griping, hypochondria
+     6→    turning the body:
+     7→
+     8→  PAIN, cramping, griping, sides
+     9→    turning the body:
+    10→
+    11→  PAIN, cramping, griping, umbilicus
+    12→    turning the body:
+    13→
+    14→  PAIN, cramping, griping, hypogastrium
+    15→    extending to back:
+    16→    extending to groin:
+    17→    extending to sides:
+    18→    extending to stomach:
+    19→    extending to thighs:
+    20→    extending to umbilicus:
+    21→    extending to vagina:
+    22→
+    23→  PAIN, cramping, griping, inguinal region
+    24→    extending to knee:
+    25→    extending to axilla:
+    26→    extending to back:
+    27→    extending to calf:
+    28→    extending to crest of ilium:
+    29→    extending down leg:
+    30→    extending to genitals:
+    31→    extending to hip:
+    32→    extending to hypogastrium:
+    33→    extending to knee:
+    34→    extending to nipple:
+    35→    extending to pelvis:
+    36→    extending to pubis:
+    37→    extending to shoulder blade:
+    38→    extending to spermatic cord:
+    39→    extending to testicles:
+    40→    extending to thigh:
+    41→    extending to glands:
+    42→    ring, coughing on:
+    43→    extending into testes:
+    44→
+    45→  PAIN, cramping, griping, liver
+    46→    extending back to:
+    47→    extending downward:
+    48→    extending to epigastrium:
+    49→    extending right to left:
+    50→
+    51→  PAIN, cramping, griping, sides
+    52→    extending to small of back:
+    53→    extending downward:
+    54→    extending to groin:
+    55→    extending outward:
+    56→    extending to sacrum:
+    57→    extending to spermatic cords:
+    58→
+    59→  PAIN, cramping, griping, spleen
+    60→    extending to abdomen:
+    61→
+    62→  PAIN, cramping, griping, umbilicus, region of
+    63→    extending to anus:
+    64→    extending to back:
+    65→    extending to bladder:
+    66→    extending to chest:
+    67→    extending downward:
+    68→    extending to ilium:
+    69→    extending to inguinal region:
+    70→    extending to lumbar region:
+    71→    extending to mammary region:
+    72→    extending to pudendum:
+    73→    extending to rectum:
+    74→    extending to spine:
+    75→    extending to sternum:
+    76→    extending to stomach pit:
+    77→    extending to throat:
+    78→    extending to uterus:
+    79→    extending to vagina:
+    80→
+    81→  PAIN, cutting
+    82→    extending to anus:
+    83→    extending backwards and upwards:
+    84→    extending to chest:
+    85→    extending to groin:
+    86→    extending from right to left:
+    87→    extending from left to right:
+    88→    extending to thigh:
+    89→
+    90→  PAIN, cutting, hypochondria
+    91→    extending to back:
+    92→    extending downward:
+    93→    extending to umbilicus:
+    94→
+    95→  PAIN, cutting, hypogastrium
+    96→    extending to back:
+    97→    extending to groin:
+    98→    extending to sides:
+    99→    extending to stomach:
+   100→    extending to thighs:
+   101→    extending to umbilicus:
+   102→    extending to vagina:
+   103→
+   104→  PAIN, cutting, iliac region
+   105→    extending into testicle:
+   106→    extending to rectum:
+   107→    extending to fossa, right to left:
+   108→    ilium, anterior superior spinous process:
+   109→
+   110→  PAIN, cutting, inguinal region
+   111→    extending to left:
+   112→    extending to back:
+   113→    extending to testes:
+   114→    through urethra to glans penis:
+   115→
+   116→  PAIN, cutting, liver
+   117→
+   118→  PAIN, cutting, sides
+   119→    extending to right:
+   120→    extending to left:
+   121→
+   122→  PAIN, cutting, spleen
+   123→
+   124→  PAIN, cutting, umbilicus
+   125→    extending to back:
+   126→    extending to stomach:
+   127→
+   128→  PAIN, cutting, umbilicus, region of
+   129→    extending downward:
+   130→    extending to rectum:
+   131→    extending into thighs:
+   132→    extending to uterus:
+   133→
+   134→  PAIN, dragging
+   135→    extending toward anus:
+   136→    extending to thighs:
+   137→
+   138→  PAIN, dragging, hypochondrium, right
+   139→    extending to back:
+   140→    extending to abdomen:
+   141→    extending outward:
+   142→    extending to scapula:
+   143→    extending to spleen:
+   144→    extending upwards:
+   145→
+   146→  PAIN, dragging, hypogastrium
+   147→    extending to back:
+   148→    extending to umbilicus:
+   149→
+   150→  PAIN, dragging, inguinal region
+   151→    extending forward:
+   152→    extending outward:
+   153→    extending to testicles:
+   154→
+   155→  PAIN, drawing
+   156→    extending to hip:
+   157→    extending downward:
+   158→    extending to small of back:
+   159→    extending to legs:
+   160→    extending to spine:
+   161→    extending to thighs:
+   162→    extending upward:
+   163→
+   164→  PAIN, drawing, hypogastrium
+   165→    extending around pelvis:
+   166→    extending to pubis:
+   167→    extending to testicles:
+   168→    extending to thighs:
+   169→
+   170→  PAIN, drawing, inguinal region
+   171→    extending to vagina:
+   172→
+   173→  PAIN, drawing, sides
+   174→    extending to navel:
+   175→
+   176→  PAIN, drawing, umbilicus
+   177→    extending to vagina:
+   178→
+   179→  PAIN, gnawing
+   180→    bend forward, obliging to:
+   181→
+   182→  PAIN, lancinating
+   183→    extending to ilium:
+   184→    extending to right side:
+   185→
+   186→  PAIN, pressing
+   187→    extending toward anus:
+   188→    extending to genitals:
+   189→    extending to pit of stomach:
+   190→    extending to rectum:
+   191→    extending to throat:
+   192→    extending to umbilicus:
+   193→
+   194→  PAIN, pressing, hypochondria
+   195→    extending to abdomen:
+   196→    extending outward:
+   197→    extending to scapula:
+   198→    extending to spleen:
+   199→    extending upwards:
+   200→
+   201→  PAIN, pressing, hypogastrium
+   202→    extending to back:
+   203→    extending to umbilicus:
+   204→    extending to vagina:
+   205→
+   206→  PAIN, pressing, inguinal region
+   207→    extending to genitals:
+   208→
+   209→  PAIN, pressing, sides
+   210→    extending to navel:
+   211→
+   212→  PAIN, sore
+   213→    extending into stomach:
+   214→    extending to shoulder:
+   215→
+   216→  PAIN, sore, hypogastrium
+   217→    extending to back:
+   218→    extending to groin:
+   219→    extending to sides:
+   220→    extending to stomach:
+   221→    extending to thighs:
+   222→    extending to umbilicus:
+   223→    extending to vagina:
+   224→
+   225→  PAIN, stitching
+   226→    extending across:
+   227→    extending to anus:
+   228→    extending to back:
+   229→    extending to bladder:
+   230→    extending into body, on every step:
+   231→    extending to chest:
+   232→    extending to clavicle:
+   233→    extending downward:
+   234→    extending to hypochondriac region:
+   235→    extending to lower limbs:
+   236→    extending to pelvis:
+   237→    extending to penis:
+   238→    extending to perineum:
+   239→    extending to rectum:
+   240→    extending from right to left:
+   241→    extending toward:
+   242→    extending to shoulders:
+   243→    extending to spermatic cord:
+   244→    extending to testicle:
+   245→    extending transversely:
+   246→    extending upward:
+   247→    extending to vagina:
+   248→
+   249→  PAIN, stitching, hip, region of
+   250→    extending to small of back when coughing:
+   251→
+   252→  PAIN, stitching, hypochondria
+   253→    extending to abdomen:
+   254→    extending to back:
+   255→    extending to chest:
+   256→    extending downward:
+   257→    extending forward:
+   258→    extending front:
+   259→    extending outward:
+   260→    extending to sacrum:
+   261→    extending to shoulder:
+   262→    extending to stomach:
+   263→
+   264→  PAIN, stitching, hypogastrium
+   265→    extending to epigastrium:
+   266→    extending to groin:
+   267→    extending to hypochondrium:
+   268→    extending to ilium:
+   269→    extending to vagina:
+   270→
+   271→  PAIN, stitching, iliac region
+   272→    extending down leg:
+   273→
+   274→  PAIN, stitching, ilium, crest of
+   275→    extending to gluteal muscles:
+   276→
+   277→  PAIN, stitching, inguinal region
+   278→    extending to abdomen:
+   279→    extending to axilla:
+   280→    extending to back, small of:
+   281→    extending downward:
+   282→    extending to hip:
+   283→    extending to left mamma:
+   284→    extending outward through ilium:
+   285→    extending to testicle:
+   286→    extending to thighs:
+   287→    extending to vagina:
+   288→
+   289→  PAIN, stitching, liver
+   290→    extending from right to left:
+   291→    extending to back:
+   292→    extending to right shoulder:
+   293→    extending upward:
+   294→
+   295→  PAIN, stitching, sides
+   296→    extending to small of back:
+   297→    extending downward:
+   298→    extending to groin:
+   299→    extending outward:
+   300→    extending to sacrum:
+   301→    extending to spermatic cords:
+   302→
+   303→  PAIN, stitching, spleen
+   304→    extending to abdomen:
+   305→
+   306→  PAIN, stitching, umbilicus
+   307→    extending to back:
+   308→    extending to bladder:
+   309→    extending to mammary region:
+   310→    extending to pudendum:
+   311→    extending above:
+   312→    extending below:
+   313→
+   314→  PAIN, stitching, umbilicus, region of
+   315→    extending to uterus:
+   316→    extending to sides:
+   317→
+   318→  PAIN, tearing
+   319→    extending downward:
+   320→    extending to genitals:
+   321→    extending to loins:
+   322→    extending to right mamma:
+   323→
+   324→  PAIN, tearing, hypochondria
+   325→    extending to hip:
+   326→
+   327→  PAIN, tearing, hypogastrium
+   328→    extending to right nipple:
+   329→    extending to thighs:
+   330→
+   331→  PAIN, tearing, inguinal region
+   332→    extending to right nipple:
+   333→
+   334→  PAIN, tearing, sides
+   335→    extending to bladder:
+   336→
+   337→  PAIN, tearing, umbilicus, region of
+   338→    extending downward:
+   339→    extending to rectum:
+   340→    extending into thighs:
+   341→    extending to uterus:
+   342→
+   343→  PAIN, twinging
+   344→    extending to chest:
+   345→
+   346→  PAIN, twisting
+   347→    extending downward:
+   348→
+   349→  PERSPIRATION
+   350→    spreading from umbilicus:
+   351→
+   352→  PROTRUSION
+   353→    umbilicus:
+   354→
+   355→  PULSATION
+   356→    hypochondria:
+   357→    hypogastrium:
+   358→    inguinal region:
+   359→    sides:
+   360→    spleen:
+   361→    umbilicus:
+   362→
+   363→  RELAXED feeling
+   364→    lying on back amel.:
+   365→    stool, after:
+   366→    walking, while:
+   367→
+   368→  RESTLESSNESS, uneasiness
+   369→    hypochondria:
+   370→
+   371→  RETRACTION
+   372→    umbilicus:
+   373→
+   374→  RUMBLING
+   375→    hypogastrium:
+   376→    ileo-cæcal region:
+   377→
+   378→  SENSITIVE skin
+   379→
+   380→  SHAKING
+   381→
+   382→  SHOCKS
+   383→    hypogastrium:
+   384→
+   385→  SHRIVELED or wilted appearance
+   386→
+   387→  SPASMS muscles
+   388→
+   389→  SPLEEN, complaints of
+   390→
+   391→  SPONGE, sensation of
+   392→
+   393→  SPOTS
+   394→
+   395→  SPRING, sensation as if a
+   396→
+   397→  STONE in, sensation of
+   398→    umbilicus:
+   399→
+   400→  STOPPED sensation
+   401→
+   402→  SUNKEN
+   403→
+   404→  SUPPURATION inguinal glands
+   405→
+   406→  SWASHING
+   407→
+   408→  SWELLING
+   409→    mesenteric glands:
+   410→    inguinal region:
+   411→    glands:
+   412→    liver:
+   413→    spleen:
+   414→    umbilicus:
+   415→
+   416→  TABES mesenterica
+   417→
+   418→  TENSION
+   419→    hypochondria:
+   420→    hypogastrium:
+   421→    iliac region:
+   422→    inguinal region:
+   423→    sides:
+   424→    spleen:
+   425→    umbilicus:
+   426→
+   427→  TINGLING
+   428→
+   429→  TREMBLING
+   430→    hypogastrium:
+   431→    inguinal region:
+   432→
+   433→  TUBERCULOSIS
+   434→
+   435→  TURNING sensation
+   436→
+   437→  TWITCHING and jerking
+   438→    hypochondria:
+   439→    hypogastrium:
+   440→    inguinal region:
+   441→    sides:
+   442→
+   443→  TYMPANITIC
+   444→
+   445→  ULCERS
+   446→    inguinal region:
+   447→    umbilicus:
+   448→
+   449→  UNEASINESS
+   450→
+   451→  VEINS distended
+   452→    inguinal region:
+   453→
+   454→  WATER, as if full of
+   455→
+   456→  WEAKNESS, sense of
+   457→    inguinal region:
+   458→
+   459→RECTUM
+   460→  ABSCESS
+   461→    perineum:
+   462→
+   463→  APHTHOUS condition of anus
+   464→
+   465→  BALL in rectum, sensation of
+   466→
+   467→  BLACK
+   468→
+   469→  BOILS in anus
+   470→
+   471→  CANCER
+   472→
+   473→  CATARRH of the rectum
+   474→
+   475→  CHILLINESS in rectum before stool
+   476→
+   477→  CHOLERA
+   478→    infantum:
+   479→    morbus:
+   480→
+   481→  COLDNESS in anus
+   482→
+   483→  CONDYLOMATA
+   484→    extremely sensitive:
+   485→    flat:
+   486→    sore:
+   487→
+   488→  CONSTIPATION
+   489→    alternating with diarrhoea:
+   490→    aged people, in:
+   491→    coffee, after:
+   492→    difficult stool:
+   493→    natural stool:
+   494→    soft stool:
+   495→    stool recedes:
+   496→    urinating, can pass stool only when:
+   497→    drugs, after abuse of:
+   498→    dryness of rectum, from:
+   499→    fruitless urging, with:
+   500→    hard stool, from:
+   501→    home, when away from:
+   502→    ineffectual straining:
+   503→    insufficient, incomplete, unsatisfactory stools:
+   504→    lean far back to pass a stool, must:
+   505→    menses, before:
+   506→    during:
+   507→    after:
+   508→    instead of:
+   509→    suppressed, during:
+   510→    old people:
+   511→    painful:
+   512→    periodical:
+   513→    portal stasis, from:
+   514→    pregnancy, during:
+   515→    seashore, at:
+   516→    sedentary habits, from:
+   517→    standing, passes stool easier when:
+   518→    stool remains long in rectum with no urging:
+   519→    with general amel.:
+   520→    with awful anxiety:
+   521→    traveling, while:
+   522→    unable to pass stool in presence of nurse:
+   523→    vexation, after:
+   524→    wine, after:
+   525→
+   526→  CONSTRICTION, contraction, closure
+   527→    alternating with itching:
+   528→    breakfast, after:
+   529→    coition, during:
+   530→    flatus, passing:
+   531→    lying amel.:
+   532→    menses, during:
+   533→    mental exertion, after:
+   534→    motion amel.:
+   535→    painful:
+   536→    prolapsed anus:
+   537→    sitting, while:
+   538→    rising from:
+   539→    spasmodic:
+   540→    standing agg.:
+   541→    stool, before:
+   542→    during:
+   543→    after:
+   544→    preventing:
+   545→    urging to, during:
+   546→    urinating, on:
+   547→    at close of:
+   548→    walking, on:
+   549→    extending into rectum:
+   550→    upward:
+   551→    to testes:
+   552→    to vagina:
+   553→
+   554→  CORD extending from anus to navel
+   555→
+   556→  CRAMP
+   557→    perineum:
+   558→
+   559→  CRAWLING in
+   560→
+   561→  DIARRHEA
+   562→    daytime only:
+   563→    and night:
+   564→    morning:
+   565→    afternoon, until:
+   566→    bed, driving out of:
+   567→    rising, after:
+   568→    and moving about:
+   569→    waking with urging:
+   570→    forenoon:
+   571→    noon:
+   572→    afternoon:
+   573→    regularly:
+   574→    evening:
+   575→    night:
+   576→    lying agg.:
+   577→    midnight, before:
+   578→    after:
+   579→    acids, after:
+   580→    acute diseases, after:
+   581→    aged people:
+   582→    prematurely, with syphilitic mercurial dyscrasia:
+   583→    women:
+   584→    air, in cold:
+   585→    currents of:
+   586→    open, in:
+   587→    alcoholic drinks, after:
+   588→    aloe, after abuse of:
+   589→    alone, when:
+   590→    alternate days, on:
+   591→    alternating with constipation:
+   592→    catarrh of chest, with:
+   593→    headache:
+   594→    rheumatism:
+   595→    ameliorates all symptoms:
+   596→    anger, after:
+   597→    anticipation, after:
+   598→    anxiety, after:
+   599→    apyrexia, during:
+   600→    autumn, in:
+   601→    bad news, from:
+   602→    bathing, after:
+   603→    cold, after:
+   604→    battle, on going into:
+   605→    beer, after:
+   606→    bilious:
+   607→    boils begin to heal, as soon as:
+   608→    breakfast, after:
+   609→    burns, after:
+   610→    cabbage, after:
+   611→    castor oil, after:
+   612→    catarrh or coryza, after:
+   613→    cathartics, after:
+   614→    chagrin, after:
+   615→    chamomile, after abuse of:
+   616→    change of diet, least:
+   617→    weather, from:
+   618→    chest, after pains in:
+   619→    children, in:
+   620→    chill, during:
+   621→    after:
+   622→    chocolate, after:
+   623→    cholera epidemic, during:
+   624→    after an attack of:
+   625→    cider, after:
+   626→    climaxis, during:
+   627→    coffee, after:
+   628→    smell of, after:
+   629→    cold applications amel.:
+   630→    becoming, after:
+   631→    drinks, after:
+   632→    in summer:
+   633→    food:
+   634→    nights:
+   635→    place amel.:
+   636→    taking cold, after:
+   637→    summer, in:
+   638→    weather, from:
+   639→    coryza, following:
+   640→    cucumbers, after:
+   641→    damp weather:
+   642→    cold weather:
+   643→    darkness agg.:
+   644→    debauch, after a:
+   645→    dentition, during:
+   646→    diet, after trivial errors in:
+   647→    dinner, after:
+   648→    domestic cares, from:
+   649→    draft, after:
+   650→    drinking water, from:
+   651→    immediately after:
+   652→    drugging, after:
+   653→    drunkards, in old:
+   654→    dry weather:
+   655→    eating, while:
+   656→    after:
+   657→    effluvia, noxious, from:
+   658→    eggs, after:
+   659→    emaciated people, in:
+   660→    eructations amel.:
+   661→    eruptions, suppressed, after:
+   662→    exanthemata, during:
+   663→    after suppression of:
+   664→    excitement:
+   665→    as before theatre:
+   666→    exciting news, from:
+   667→    exertion, bodily, after:
+   668→    fat, flabby people:
+   669→    fever, hectic, during:
+   670→    intermittent, during:
+   671→    pernicious:
+   672→    puerperal:
+   673→    typhoid:
+   674→    fish, after:
+   675→    food, acid, amel.:
+   676→    artificial, after:
+   677→    change of, after:
+   678→    cold agg.:
+   679→    farinaceous, after:
+   680→    fat, after:
+   681→    rancid, after:
+   682→    rich, after:
+   683→    solid, after:
+   684→    fright, after:
+   685→    fruit, after:
+   686→    sour, after:
+   687→    with milk, after:
+   688→    stewed, after:
+   689→    unripe fruit, after:
+   690→    game, high, after:
+   691→    ginger, after:
+   692→    glistening objects, looking at:
+   693→    gouty subjects:
+   694→    grief, after:
+   695→    ground, standing on damp, after:
+   696→    hair cutting, after:
+   697→    heat, dry, amel.:
+   698→    external, amel.:
+   699→    moist external, amel.:
+   700→    sun:
+   701→    hot weather:
+   702→    hydrocephalus acutus, during:
+   703→    ice cream, after:
+   704→    imagination, from exalted:
+   705→    indignation, from:
+   706→    indiscretion in eating, after the slightest:
+   707→    injuries, after:
+   708→    jaundice, during:
+   709→    joy, sudden, from:
+   710→    lemonade, after:
+   711→    light, bright, from:
+   712→    loss of fluids, after:
+   713→    lying agg.:
+   714→    abdomen, on the, amel.:
+   715→    back, on the, agg.:
+   716→    side, on the, agg.:
+   717→    magnesia, after:
+   718→    measles, during:
+   719→    after:
+   720→    meat, from:
+   721→    smoked, from:
+   722→    melons, from:
+   723→    menses, before:
+   724→    during:
+   725→    after:
+   726→    mental exertion, after:
+   727→    mercury, after abuse of:
+   728→    milk, after:
+   729→    boiled, after:
+   730→    hot, amel.:
+   731→    sour, after:
+   732→    motion agg.:
+   733→    noise, from:
+   734→    sudden, from:
+   735→    nursing, after:
+   736→    women:
+   737→    onions, after:
+   738→    opium, after:
+   739→    overheated, after being:
+   740→    oysters, after:
+   741→    painless:
+   742→    night:
+   743→    only after eating in daytime:
+   744→    pastry, after:
+   745→    pears, after:
+   746→    periodical, on alternate days:
+   747→    same hour, at:
+   748→    hour later each day:
+   749→    every fourth day:
+   750→    three weeks:
+   751→    summer:
+   752→    perspiration suppressed:
+   753→    pork, after:
+   754→    potatoes, after:
+   755→    sweet, after:
+   756→    pregnancy, during:
+   757→    quinine, after abuse of:
+   758→    rhubarb, after:
+   759→    riding, from:
+   760→    in a train:
+   761→    rising up agg.:
+   762→    from bed amel.:
+   763→    rubbing amel.:
+   764→    salmon, after eating:
+   765→    sauer kraut, after:
+   766→    school girls, in:
+   767→    sea bathing, from:
+   768→    seashore, while at:
+   769→    septic conditions, from:
+   770→    shell-fish, from:
+   771→    shining objects agg.:
+   772→    sitting agg.:
+   773→    erect agg.:
+   774→    sleep, during:
+   775→    after:
+   776→    small-pox, during:
+   777→    smoking agg.:
+   778→    soup, from:
+   779→    spices, from:
+   780→    Spring, in:
+   781→    standing agg.:
+   782→    strain, after a:
+   783→    sugar, after:
+   784→    maple sugar:
+   785→    Summer:
+   786→    supper, after:
+   787→    teething:
+   788→    thinking of it:
+   789→    thunder-storm, before:
+   790→    during:
+   791→    tobacco, from:
+   792→    urinating agg.:
+   793→    vaccination, after:
+   794→    veal, after:
+   795→    vegetables, after:
+   796→    vexation, from:
+   797→    vinegar, after:
+   798→    walking agg.:
+   799→    warm application amel.:
+   800→    drinks agg.:
+   801→    food agg.:
+   802→    room agg.:
+   803→    warmth agg.:
+   804→    of bed amel.:
+   805→    washing the head, after:
+   806→    water, hearing running, agg.:
+   807→    weakness, without:
+   808→    weaning, after:
+   809→    wet, after getting:
+   810→    after getting feet:
+   811→    wind, after exposure to cold:
+   812→    east:
+   813→    wine, from:
+   814→    winter:
+   815→    wrapping up warmly amel.:
+   816→    sensation as before a:
+   817→
+   818→  DIFFICULT stool
+   819→
+   820→  DISTENSION
+   821→
+   822→  DRAGGING, heaviness, weight
+   823→    morning:
+   824→    stool, after:
+   825→    afternoon:
+   826→    dinner, after:
+   827→    sleep, after:
+   828→    evening, during loose stool:
+   829→    menses, before:
+   830→    during:
+   831→    standing, while:
+   832→    stool, before:
+   833→    during:
+   834→    after:
+   835→    perineum:
+   836→
+   837→  DRAW in, desire to, anus
+   838→
+   839→  DRYNESS
+   840→    sensation of:
+   841→
+   842→  DYSENTERY
+   843→
+   844→  ERUPTION about anus
+   845→    perineum:
+   846→    boil:
+   847→    herpes:
+   848→
+   849→  EXCORIATION
+   850→    riding on horseback:
+   851→    in a wagon:
+   852→    stools, from the:
+   853→    nates, between:
+   854→    walking, from:
+   855→    perineum, of:
+   856→
+   857→  FISSURE
+   858→
+   859→  FISTULA
+   860→
+   861→  FLATUS
+   862→    daytime:
+   863→    morning:
+   864→    stool, during:
+   865→    waking, on:
+   866→    forenoon:
+   867→    stool, before:
+   868→    noon:
+   869→    afternoon:
+   870→    evening:
+   871→    stool, during:
+   872→    night:
+   873→    menses, before:
+   874→    stool, during:
+   875→    acids, after:
+   876→    without, Chin.:
+   877→    cold:
+   878→    diarrhoea, during:
+   879→    difficult:
+   880→    dinner, after:
+   881→    eating, after:
+   882→    hot:
+   883→    inspiration, during:
+   884→    involuntary:
+   885→    loud:
+   886→    stool, during:
+   887→    spluttering:
+   888→    after:
+   889→    sugar, after:
+   890→    menses, during:
+   891→    moist:
+   892→    odorless:
+   893→    offensive:
+   894→    ammoniacal odor:
+   895→    cheese-like:
+   896→    spoiled eggs:
+   897→    stool, before:
+   898→    during:
+   899→    after:
+   900→    urging for stool, but only flatus is passed:
+   901→    sugar, after:
+   902→
+   903→  FOREIGN body, sensation of
+   904→
+   905→  FORMICATION in anus
+   906→    evening:
+   907→    in bed:
+   908→    night:
+   909→    sitting, while:
+   910→    stool, before:
+   911→    after:
+   912→    perineum:
+   913→
+   914→  FULNESS
+   915→    alternating with sensation of emptiness:
+   916→    stool, after:
+   917→    walking, after:
+   918→    perineum:
+   919→
+   920→  GRUMBLING
+   921→
+   922→  GURGLING in rectum
+   923→
+   924→  HÆMORRHAGE from anus
+   925→    morning:
+   926→    stool, after:
+   927→    afternoon:
+   928→    evening, stool, during:
+   929→    night:
+   930→    black:
+   931→    liquid:
+   932→    exertion, after:
+   933→    flatus, during emission of:
+   934→    menses, before:
+   935→    during:
+   936→    scanty, during:
+   937→    suppressed:
+   938→    periodic:
+   939→    rubbing, on:
+   940→    stool, during:
+   941→    after:
+   942→    from hard:
+   943→    walking, while:
+   944→
+   945→  HÆMORRHOIDS
+   946→    morning agg.:
+   947→    bed, in, agg.:
+   948→    waking him:
+   949→    night agg.:
+   950→    alternating with palpitation:
+   951→    beer agg.:
+   952→    bleeding:
+   953→    as soon as the rheumatism is better:
+   954→    blind:
+   955→    bluish:
+   956→    chronic:
+   957→    cold amel.:
+   958→    congested:
+   959→    drunkards, in:
+   960→    external:
+   961→    flatus, protrude when passing:
+   962→    hard:
+   963→    inflamed:
+   964→    internal:
+   965→    large:
+   966→    menses, before:
+   967→    during, agg.:
+   968→    after, agg.:
+   969→    suppressed, during:
+   970→    mental excitement agg.:
+   971→    mental exertion:
+   972→    mercury, after abuse of:
+   973→    milk agg.:
+   974→    motion agg.:
+   975→    offensive:
+   976→    parturition agg.:
+   977→    pendulous:
+   978→    pregnancy, during:
+   979→    purgations, after:
+   980→    rheumatism abates, after:
+   981→    riding amel.:
+   982→    standing agg.:
+   983→    stool, preventing:
+   984→    protrude during:
+   985→    strangulated:
+   986→    suppressed:
+   987→    suppurating:
+   988→    thinking of them agg.:
+   989→    touch agg.:
+   990→    ulcerating:
+   991→    urination, protrude during:
+   992→    after, agg.:
+   993→    walking agg.:
+   994→    warmth, external, amel.:
+   995→    warm weather agg.:
+   996→    wiping after stool agg.:
+   997→
+   998→  HEAT
+   999→    morning:
+  1000→    rising, on:
+  1001→    noon:
+  1002→    afternoon:
+  1003→    stool, during:
+  1004→    after:
+  1005→    urination, after:
+  1006→    perineum:
+  1007→
+  1008→  HEAVINESS
+  1009→
+  1010→  INACTIVITY of rectum
+  1011→
+  1012→  INEFFECTUAL urging
+  1013→
+  1014→  INFLAMMATION
+  1015→
+  1016→  INSENSIBILITY
+  1017→
+  1018→  INVOLUNTARY stool
+  1019→    night:
+  1020→    bed, in:
+  1021→    stool hard:
+  1022→    bending over, on:
+  1023→    coughing or sneezing, on:
+  1024→    eating, while:
+  1025→    after:
+  1026→    flatus, on passing:
+  1027→    formed stool:
+  1028→    fright, after:
+  1029→    hard stools:
+  1030→    labor, after:
+  1031→    laughing, on:
+  1032→    lumps of:
+  1033→    motion, on:
+  1034→    paralysis, from:
+  1035→    sleep, during:
+  1036→    sneezing, on:
+  1037→    standing, on:
+  1038→    stooping, on:
+  1039→    urination, during:
+  1040→    and stool:
+  1041→    and stool when not straining; voluntary defæcation impossible:
+  1042→    vomiting, during:
+  1043→    walking, on:
+  1044→
+  1045→  ITCHING
+  1046→    daytime:
+  1047→    morning:
+  1048→    bed, in:
+  1049→    forenoon:
+  1050→    evening:
+  1051→    bed, in:
+  1052→    night:
+  1053→    midnight, before:
+  1054→    alternating with ear:
+  1055→    ascarides, from:
+  1056→    burning:
+  1057→    coition, after:
+  1058→    cold bathing amel.:
+  1059→    dinner, after:
+  1060→    discharge of moisture, after:
+  1061→    menses, during:
+  1062→    pain, ending in:
+  1063→    riding, while:
+  1064→    rubbing agg.:
+  1065→    scratching agg.:
+  1066→    sitting, while:
+  1067→    sleep, on going to:
+  1068→    after:
+  1069→    stool, before:
+  1070→    during:
+  1071→    after:
+  1072→    stooping, on:
+  1073→    voluptuous:
+  1074→    walking, while:
+  1075→    in open air:
+  1076→    warm bed, in:
+  1077→    extending into urethra during stool:
+  1078→    around anus:
+  1079→    warmth of bed:
+  1080→    perineum:
+  1081→    forenoon:
+  1082→    night:
+  1083→    scratching agg.:
+  1084→    after, pain:
+  1085→    stool, during:
+  1086→    touched, when:
+  1087→    walking, while:
+  1088→
+  1089→  LUMP, sensation of
+  1090→    perineum:
+  1091→
+  1092→  MOISTURE
+  1093→    evening:
+  1094→    night:
+  1095→    acrid:
+  1096→    bloody:
+  1097→    flatus, from:
+  1098→    glutinous:
+  1099→    herring brine, smelling like:
+  1100→    menses, during:
+  1101→    musty odor:
+  1102→    stool, before:
+  1103→    after:
+  1104→    perineum:
+  1105→
+  1106→  NUMBNESS of anus
+  1107→
+  1108→  OPEN anus
+  1109→    sensation of:
+  1110→    stool, after:
+  1111→
+  1112→  PAIN
+  1113→    morning:
+  1114→    stool, during:
+  1115→    after:
+  1116→    forenoon:
+  1117→    afternoon:
+  1118→    evening:
+  1119→    lying, while:
+  1120→    night:
+  1121→    midnight:
+  1122→    coition, after:
+  1123→    continuous:
+  1124→    convulsive:
+  1125→    cough, from:
+  1126→    eating, after:
+  1127→    flatus, on passing:
+  1128→    kneeling amel.:
+  1129→    lying agg.:
+  1130→    on abdomen amel.:
+  1131→    back:
+  1132→    menses, before:
+  1133→    during:
+  1134→    mental exertion, after:
+  1135→    motion agg.:
+  1136→    periodical, every day:
+  1137→    pressing upon umbilicus:
+  1138→    sitting, while:
+  1139→    sleep, during:
+  1140→    standing agg.:
+  1141→    stool, before:
+  1142→    during:
+  1143→    after:
+  1144→    straining at, after:
+  1145→    urination, during:
+  1146→    walking, while:
+  1147→    warm bathing agg.:
+  1148→    extending to abdomen:
+  1149→    genitals:
+  1150→    umbilicus:
+  1151→    urethra, through:
+  1152→    perineum:
+  1153→    urging to urinate:
+  1154→    burning:
+  1155→    daytime, walking, while:
+  1156→    morning:
+  1157→    bed, in:
+  1158→    noon:
+  1159→    afternoon:
+  1160→    sleeping, after:
+  1161→    evening:
+  1162→    night:
+  1163→    midnight, before:
+  1164→    stool, after:
+  1165→    cold application amel.:
+  1166→    constant:
+  1167→    diarrhoea, during:
+  1168→    after:
+  1169→    dysentery, in:
+  1170→    exercise, after:
+  1171→    fissure, in:
+  1172→    flatus, during:
+  1173→    after:
+  1174→    heat agg.:
+  1175→    menses, during:
+  1176→    after:
+  1177→    moving, after:
+  1178→    paroxysmal:
+  1179→    pregnancy, during:
+  1180→    prolapsed, in the:
+  1181→    rhagades:
+  1182→    rubbing, after:
+  1183→    sitting, while:
+  1184→    standing, while:
+  1185→    stool, before:
+  1186→    during:
+  1187→    after:
+  1188→    after a hard:
+  1189→    tickling:
+  1190→    urination, after:
+  1191→    vexation agg.:
+  1192→    walking, while:
+  1193→    washing with cold water amel.:
+  1194→    perineum:
+  1195→    coition, after:
+  1196→    clawing, squeezing, as from a claw in anus:
+  1197→    stool, during:
+  1198→    cutting:
+  1199→    morning:
+  1200→    bed, in:
+  1201→    rising, after:
+  1202→    forenoon, walking, while:
+  1203→    afternoon:
+  1204→    evening:
+  1205→    night:
+  1206→    diarrhoea, during:
+  1207→    dysentery, in:
+  1208→    standing agg.:
+  1209→    stool, before:
+  1210→    during:
+  1211→    after:
+  1212→    walking, while:
+  1213→    extending up rectum:
+  1214→    perineum:
+  1215→    morning:
+  1216→    evening:
+  1217→    drawing:
+  1218→    coition, after:
+  1219→    downwards:
+  1220→    sitting, while:
+  1221→    walking, while:
+  1222→    extending into abdomen:
+  1223→    through genitals:
+  1224→    before stool:
+  1225→    to umbilicus:
+  1226→    upwards:
+  1227→    urethra, through:
+  1228→    perineum:
+  1229→    gnawing:
+  1230→    griping:
+  1231→    afternoon:
+  1232→    evening:
+  1233→    driving, while:
+  1234→    sitting:
+  1235→    stool, when not at:
+  1236→    extending to abdomen:
+  1237→    lancinating:
+  1238→    pinching:
+  1239→    perineum:
+  1240→    pressing (pressure):
+  1241→    morning:
+  1242→    forenoon:
+  1243→    noon:
+  1244→    afternoon:
+  1245→    sleep, during:
+  1246→    evening:
+  1247→    bed, in:
+  1248→    night:
+  1249→    diarrhoea would come on, as if:
+  1250→    downward, outward, etc.:
+  1251→    fæces were lodged in rectum, as if:
+  1252→    flatus, during:
+  1253→    lying, while:
+  1254→    menses, before:
+  1255→    during:
+  1256→    mental exertion:
+  1257→    motion agg.:
+  1258→    sitting, while:
+  1259→    standing, while:
+  1260→    stool, before:
+  1261→    during:
+  1262→    after:
+  1263→    not for:
+  1264→    walking:
+  1265→    perineum:
+  1266→    rasping:
+  1267→    scraping:
+  1268→    shooting:
+  1269→    smarting:
+  1270→    soreness:
+  1271→    morning:
+  1272→    evening:
+  1273→    night:
+  1274→    lying on back:
+  1275→    menses, during:
+  1276→    moving, after:
+  1277→    sitting, while:
+  1278→    stool, during:
+  1279→    hard, during:
+  1280→    after:
+  1281→    diarrhoeic, after:
+  1282→    walking, while:
+  1283→    perineum:
+  1284→    sticking:
+  1285→    stool, during:
+  1286→    after:
+  1287→    stinging:
+  1288→    menses, during:
+  1289→    stool, during:
+  1290→    after:
+  1291→    walking, while:
+  1292→    stitching:
+  1293→    morning:
+  1294→    waking, after:
+  1295→    forenoon:
+  1296→    afternoon:
+  1297→    evening:
+  1298→    bed, in:
+  1299→    night:
+  1300→    midnight:
+  1301→    alternating with burning in prepuce:
+  1302→    with itching in glans penis:
+  1303→    coition, after:
+  1304→    coughing, on:
+  1305→    dinner, after:
+  1306→    eating, before:
+  1307→    after:
+  1308→    erect, when body is:
+  1309→    flatus, on passing:
+  1310→    itching:
+  1311→    lying, while:
+  1312→    menses, during:
+  1313→    mental exertion, after:
+  1314→    pregnancy, during:
+  1315→    sitting, while:
+  1316→    sneezing, when:
+  1317→    standing, while:
+  1318→    stool, before:
+  1319→    during:
+  1320→    hard, during:
+  1321→    after:
+  1322→    difficult stool, after:
+  1323→    urination, during:
+  1324→    walking, while:
+  1325→    after:
+  1326→    in open air amel.:
+  1327→    extending to abdomen:
+  1328→    back:
+  1329→    bladder:
+  1330→    downwards and outwards:
+  1331→    genitals, to, while walking:
+  1332→    ilium and glans penis:
+  1333→    inguinal region, left:
+  1334→    loins:
+  1335→    outward:
+  1336→    penis:
+  1337→    pudendum, during menses:
+  1338→    after stool:
+  1339→    root of penis:
+  1340→    upward:
+  1341→    stool, after:
+  1342→    urethra:
+  1343→    perineum:
+  1344→    evening:
+  1345→    extending to anus:
+  1346→    uterus:
+  1347→    tearing:
+  1348→    morning:
+  1349→    evening:
+  1350→    after hard stool:
+  1351→    bed, in:
+  1352→    bending forward amel.:
+  1353→    coughing on:
+  1354→    dinner, after:
+  1355→    lying on back amel.:
+  1356→    moving, on:
+  1357→    stool, during:
+  1358→    after:
+  1359→    twitching:
+  1360→    urinating, while:
+  1361→    extending into abdomen:
+  1362→    during stool:
+  1363→    upward:
+  1364→    perineum:
+  1365→    tenesmus:
+  1366→    morning:
+  1367→    rising, after:
+  1368→    evening:
+  1369→    night:
+  1370→    bladder, and:
+  1371→    coffee, after:
+  1372→    constipation, during:
+  1373→    diarrhoea, before:
+  1374→    during:
+  1375→    after:
+  1376→    dinner, after:
+  1377→    dysentery, during:
+  1378→    eating:
+  1379→    flatus, on attempting to suppress:
+  1380→    hard stool, with:
+  1381→    menses, before:
+  1382→    during:
+  1383→    milk, after:
+  1384→    sitting, while:
+  1385→    stool, before:
+  1386→    during:
+  1387→    after:
+  1388→    urination, during:
+  1389→    after:
+  1390→    walking, while:
+  1391→    warmth amel.:
+  1392→    extending to bladder:
+  1393→    perineum:
+  1394→    urethra:
+  1395→    twinging:
+  1396→    exercise, after:
+  1397→    flatus amel.:
+  1398→    stool, during:
+  1399→    after:
+  1400→    writhing in anus:
+  1401→
+  1402→  PARALYSIS
+  1403→    sensation of:
+  1404→
+  1405→  PERSPIRATION about the anus and perinæum
+  1406→    morning:
+  1407→    night:
+  1408→
+  1409→  PLUG was pressing out, sensation as if
+  1410→
+  1411→  POLYPI
+  1412→
+  1413→  PRICKLING
+  1414→    stool, during:
+  1415→    after:
+  1416→
+  1417→  PROLAPSUS
+  1418→    morning:
+  1419→    forenoon:
+  1420→    evening:
+  1421→    night:
+  1422→    children:
+  1423→    convulsive:
+  1424→    diarrhæa, during:
+  1425→    flatus, when passing:
+  1426→    hæmorrhage of rectum, after:
+  1427→    menses, during:
+  1428→    mental excitement, from:
+  1429→    painful:
+  1430→    parturition, after:
+  1431→    sitting agg.:
+  1432→    smoking agg.:
+  1433→    sneezing, after:
+  1434→    stool, before:
+  1435→    during:
+  1436→    after:
+  1437→    stooping, on:
+  1438→    straining, without:
+  1439→    urinating, when:
+  1440→    vomiting, when:
+  1441→    sensation of:
+  1442→
+  1443→  PULSATION
+  1444→    evening:
+  1445→    sitting, amel. in bed:
+  1446→    menses, during:
+  1447→    sitting, while:
+  1448→    stool, during:
+  1449→    after:
+  1450→    perineum:
+  1451→
+  1452→  RECEDES, stool
+  1453→
+  1454→  REDNESS of anus
+  1455→
+  1456→  RELAXED anus
+  1457→    sensation of, after stool:
+  1458→
+  1459→  RETRACTION
+  1460→    stool, after:
+  1461→
+  1462→  SENSITIVE
+  1463→
+  1464→  SHOCK, electric-like
+  1465→    stool, before:
+  1466→
+  1467→  SLIP back, stools
+  1468→
+  1469→  SLOW action of rectum
+  1470→
+  1471→  SPASMS in
+  1472→    coition, during:
+  1473→    with urging to urinate:
+  1474→
+  1475→  STRAINING
+  1476→
+  1477→  STRICTURE
+  1478→
+  1479→  SWELLING of anus
+  1480→    menses, during:
+  1481→    sensation of:
+  1482→    raphe of perineum:
+  1483→
+  1484→  TENESMUS
+  1485→
+  1486→  TENSION
+  1487→    convulsive:
+  1488→    stool, after:
+  1489→    perineum:
+  1490→
+  1491→  TICKLING
+  1492→
+  1493→  TINGLING
+  1494→    evening:
+  1495→    stool, during:
+  1496→
+  1497→  TREMBLING in anus
+  1498→
+  1499→  TUBERCLE on perineum
+  1500→
+  1501→  TWITCHING
+  1502→    afternoon:
+  1503→    bed, in:
+  1504→
+  1505→  ULCERATION
+  1506→
+  1507→  UNNOTICED stool
+  1508→    hard stool:
+  1509→    thin, watery, passes while urinating:
+  1510→
+  1511→  URGING, desire
+  1512→    evening in sleep:
+  1513→    night:
+  1514→    menses, before:
+  1515→    waking, on:
+  1516→    absent in company:
+  1517→    anxious:
+  1518→    breakfast, during:
+  1519→    after:
+  1520→    clothing, on tightening:
+  1521→    coffee, after:
+  1522→    coition, after:
+  1523→    colic, during:
+  1524→    constant:
+  1525→    dinner, during:
+  1526→    after:
+  1527→    eating, after:
+  1528→    effort, great desire passes away with:
+  1529→    eructation, on each:
+  1530→    exciting news, after:
+  1531→    flatus, when passing:
+  1532→    passing amel.:
+  1533→    frequent:
+  1534→    hang down, letting feet:
+  1535→    labor pain, with every:
+  1536→    lying, while:
+  1537→    menses, before:
+  1538→    during:
+  1539→    motion, on:
+  1540→    rising, on:
+  1541→    sitting, on:
+  1542→    smoking, while:
+  1543→    standing, while:
+  1544→    startled, when:
+  1545→    stool, before:
+  1546→    during:
+  1547→    after:
+  1548→    not for stool, but:
+  1549→    rising from:
+  1550→    after, amel.:
+  1551→    sudden:
+  1552→    morning:
+  1553→    evening:
+  1554→    night:
+  1555→    supper, after:
+  1556→    thinking about it, on:
+  1557→    tormenting, but not for stool:
+  1558→    urination, during:
+  1559→    after:
+  1560→    vertigo, during:
+  1561→    walking, while:
+  1562→
+  1563→  WARTS
+  1564→
+  1565→  WEAKNESS, weak feeling
+  1566→    stool, before:
+  1567→    after:
+  1568→    urination, during:
+  1569→
+  1570→  WEIGHT, and a feeling as if a plug were wedged between the pubis and coccyx
+  1571→    perineum:
+  1572→
+  1573→  WORM, sensation of
+  1574→    complaints:
+  1575→    ascarides:
+  1576→    lumbricoides:
+  1577→    tæniæ:
+  1578→
+  1579→STOOL
+  1580→  ACRID, corrosive, excoriating
+  1581→
+  1582→  ALBUMINOUS
+  1583→    coagulated:
+  1584→
+  1585→  ASH-COLORED
+  1586→
+  1587→  BALLS, like
+  1588→
+  1589→  BILIOUS
+  1590→
+  1591→  BLACK
+  1592→    fecal:
+  1593→
+  1594→  BLOODY
+  1595→    streaks, in:
+  1596→
+  1597→  BLUISH
+  1598→
+  1599→  BROWN
+  1600→    fecal:
+  1601→
+  1602→  CHALKY
+  1603→
+  1604→  CHANGEABLE
+  1605→
+  1606→  CHOPPED
+  1607→    beets:
+  1608→    eggs:
+  1609→    spinach:
+  1610→
+  1611→  CLAY-COLORED
+  1612→
+  1613→  CLAY-LIKE
+  1614→
+  1615→  COFFEE grounds, like
+  1616→
+  1617→  COLD
+  1618→
+  1619→  COLORLESS
+  1620→
+  1621→  CONSTANT discharge
+  1622→
+  1623→  COPIOUS
+  1624→    night:
+  1625→    which does not exhaust:
+  1626→
+  1627→  CREAM-COLORED
+  1628→
+  1629→  CRUMBLING
+  1630→
+  1631→  CURDLED
+  1632→    milk, like, forcibly expelled:
+  1633→
+  1634→  DARK
+  1635→    fecal:
+  1636→
+  1637→  DIFFICULT
+  1638→
+  1639→  DOG'S, like a
+  1640→
+  1641→  DRY
+  1642→    sand, like:
+  1643→
+  1644→  FALLING out
+  1645→
+  1646→  FATTY, greasy
+  1647→    oily-looking fecal:
+  1648→
+  1649→  FERMENTED
+  1650→
+  1651→  FILAMENTS like hair in fæces
+  1652→
+  1653→  FLAKY
+  1654→
+  1655→  FLAT
+  1656→
+  1657→  FLOCCULI
+  1658→
+  1659→  FORCIBLE, sudden, gushing
+  1660→
+  1661→  FREQUENT
+  1662→
+  1663→  FROG spawn
+  1664→
+  1665→  FROTHY
+  1666→
+  1667→  GELATINOUS
+  1668→
+  1669→  GRAY
+  1670→    whitish, in part:
+  1671→
+  1672→  GREASY
+  1673→
+  1674→  GREEN
+  1675→    blackish:
+  1676→    brownish:
+  1677→    fecal:
+  1678→    hard:
+  1679→    mucus:
+  1680→    olive green:
+  1681→    scum on a frog-pond, like:
+  1682→
+  1683→  GUSHING
+  1684→
+  1685→  HARD
+  1686→    alternating hard and soft:
+  1687→    burnt, as if:
+  1688→    first, then fluid:
+  1689→    then pasty:
+  1690→    menses, during:
+  1691→    tough and greasy:
+  1692→
+  1693→  HOT
+  1694→
+  1695→  INSUFFICIENT
+  1696→
+  1697→  JELLY-LIKE
+  1698→
+  1699→  KNOTTY, nodular, lumpy
+  1700→    green:
+  1701→    liquid, and:
+  1702→    mucus, covered with:
+  1703→    united by threads of mucus:
+  1704→
+  1705→  LARGE
+  1706→
+  1707→  LIENTERIC
+  1708→    morning:
+  1709→    night:
+  1710→    food of the previous day:
+  1711→    hard:
+  1712→
+  1713→  LIGHT-COLORED
+  1714→
+  1715→  LIQUID
+  1716→
+  1717→  LONG, narrow
+  1718→
+  1719→  LUMPS like chalk
+  1720→
+  1721→  LUMPY and liquid
+  1722→
+  1723→  MEAL-LIKE sediment, with:
+  1724→
+  1725→  MEMBRANOUS
+  1726→
+  1727→  MUCOUS, slimy
+  1728→    black:
+  1729→    bloody:
+  1730→    boiled starch:
+  1731→    brown:
+  1732→    cheesy:
+  1733→    chopped eggs and spinach:
+  1734→    colorless:
+  1735→    covered with mucus:
+  1736→    cream-colored:
+  1737→    dark:
+  1738→    like frothy molasses:
+  1739→    fetid:
+  1740→    granular:
+  1741→    green:
+  1742→    jelly-like:
+  1743→    frog-spawn, like:
+  1744→    liquid:
+  1745→    lumpy mucus:
+  1746→    red:
+  1747→    shaggy masses:
+  1748→    shreddy:
+  1749→    tenacious:
+  1750→    transparent:
+  1751→    watery:
+  1752→    white:
+  1753→    masses:
+  1754→    like little pieces of popped corn:
+  1755→    milk white:
+  1756→    yellow:
+  1757→
+  1758→  MUSHY
+  1759→    brown:
+  1760→    yellow:
+  1761→    white:
+  1762→
+  1763→  NARROW
+  1764→
+  1765→  ODOR
+  1766→    acid:
+  1767→    brassy:
+  1768→    brown paper, burning, like:
+  1769→    burnt meat:
+  1770→    cadaveric:
+  1771→    carrion-like:
+  1772→    cheese, rotten, like:
+  1773→    coppery:
+  1774→    eggs, like rotten:
+  1775→    musky:
+  1776→    musty:
+  1777→    offensive:
+  1778→    putrid:
+  1779→    sour:
+  1780→    urine, like:
+  1781→    odorless:
+  1782→
+  1783→  PASTY, papescent
+  1784→
+  1785→  PURULENT
+  1786→
+  1787→  REDDISH
+  1788→
+  1789→  SCANTY
+  1790→
+  1791→  SCRAPINGS of intestines, like
+  1792→    of meat, like:
+  1793→
+  1794→  SHEEP dung, like
+  1795→
+  1796→  SHOOTING out
+  1797→    all at once in a somewhat prolonged effort:
+  1798→    in a torrent:
+  1799→
+  1800→  SLATE-COLORED
+  1801→
+  1802→  SMALL
+  1803→
+  1804→  SOFT
+  1805→
+  1806→  SPUTTERING
+  1807→
+  1808→  STRINGY
+  1809→
+  1810→  SUDDEN
+  1811→
+  1812→  TARRY-LOOKING
+  1813→
+  1814→  TENACIOUS
+  1815→
+  1816→  THIN, liquid
+  1817→    black:
+  1818→    brown:
+  1819→    dark:
+  1820→    fecal:
+  1821→    followed by hard:
+  1822→    formed then thin:
+  1823→    green:
+  1824→    liver-colored:
+  1825→    lumpy and liquid:
+  1826→    pouring out:
+  1827→    red:
+  1828→    yellow:
+  1829→
+  1830→  TOUGH
+  1831→
+  1832→  TRANSPARENT
+  1833→
+  1834→  UNDIGESTED
+  1835→
+  1836→  WATERY
+  1837→    morning:
+  1838→    afternoon:
+  1839→    night:
+  1840→    black:
+  1841→    bloody:
+  1842→    meat washings, like:
+  1843→    brown:
+  1844→    clay-colored:
+  1845→    clear:
+  1846→    dirty:
+  1847→    flakes, with:
+  1848→    frothy:
+  1849→    gelatinous on standing:
+  1850→    green:
+  1851→    scum, with:
+  1852→    prune juice, like:
+  1853→    rice water, like:
+  1854→    white:
+  1855→    yellow:
+  1856→
+  1857→  WHITE
+  1858→    fecal:
+  1859→    alternating with black:
+  1860→    grains or particles:
+  1861→    gray, streaked with blood:
+  1862→    grayish white:
+  1863→    greenish white:
+  1864→    hard:
+  1865→    jelly-like:
+  1866→    masses like tallow:
+  1867→    milk-like, chyle-like:
+  1868→    shreddy particles:
+  1869→
+  1870→  YELLOW
+  1871→    bright:
+  1872→    brownish:
+  1873→    fecal:
+  1874→    painless immediately after eating:
+  1875→    granular:
+  1876→    green on standing, turning:
+  1877→    greenish:
+  1878→    hard:
+  1879→    orange:
+  1880→    like pulp of:
+  1881→    saffron, like:
+  1882→    salmon:
+  1883→    whitish:
+  1884→
+  1885→URINARY ORGANS
+  1886→  BLADDER
+  1887→    APPREHENSION in region of:
+  1888→    BALL in, sensation of:
+  1889→    forced from behind neck of, sensation of:
+  1890→    BAND:
+  1891→    CALCULI:
+  1892→    after operation for:
+  1893→    CARTILAGINOUS induration:
+  1894→    CATARRH, muco-pus:
+  1895→    gonorrhoea, from suppressed:
+  1896→    hæmorrhoidal subjects, in:
+  1897→    old people, in:
+  1898→    COLD sensation in:
+  1899→    alternating with heat:
+  1900→    CONSTRICTION:
+  1901→    afternoon:
+  1902→    urination, before:
+  1903→    during:
+  1904→    after:
+  1905→    neck:
+  1906→    morning:
+  1907→    urination, during:
+  1908→    after:
+  1909→    CONTRACTION, sensation of:
+  1910→    CRAMP in:
+  1911→    night:
+  1912→    causing him to bend double:
+  1913→    urination, during:
+  1914→    after:
+  1915→    CRAWLING, urination, after:
+  1916→    DROPS came out of, sensation as if, rest agg.:
+  1917→    EMPTINESS, sensation of:
+  1918→    FALLS to side lain on, sensation as if:
+  1919→    FULNESS, sensation of:
+  1920→    urination, after:
+  1921→    without desire to urinate:
+  1922→    FUNGOID growths:
+  1923→    GANGRENE:
+  1924→    GAS passes from:
+  1925→    HEAT in:
+  1926→    HEAVINESS:
+  1927→    HÆMORRHAGE:
+  1928→    HÆMORRHOIDS of:
+  1929→    bleeding:
+  1930→    INACTIVITY of:
+  1931→    INFLAMMATION:
+  1932→    cold, from taking:
+  1933→    injuries, after:
+  1934→    pus-like discharge after lithotomy, with:
+  1935→    scarlatina, after:
+  1936→    suppression of menses or hæmorrhoidal flow, after:
+  1937→    violent pain and almost clear blood, with:
+  1938→    neck:
+  1939→    INSENSIBILITY:
+  1940→    ITCHING in region of bladder with urging to urinate, agg. night:
+  1941→    neck, evening:
+  1942→    JAR, sensitive to:
+  1943→    MOTION in:
+  1944→    NUMBNESS:
+  1945→    OBSTRUCTION, sensation of, neck, urinating, while:
+  1946→    PAIN:
+  1947→    morning:
+  1948→    evening:
+  1949→    urination, after:
+  1950→    night:
+  1951→    coition, after:
+  1952→    cold, from taking:
+  1953→    coughing, when:
+  1954→    desire be postponed, if:
+  1955→    distension, as from:
+  1956→    drinking agg.:
+  1957→    jarring:
+  1958→    lithotomy, after:
+  1959→    lying on abdomen amel.:
+  1960→    menses, during:
+  1961→    moving, on:
+  1962→    up and down at every step after urination:
+  1963→    paroxysmal:
+  1964→    pulsating:
+  1965→    retarding urination:
+  1966→    riding in a carriage:
+  1967→    sitting, while:
+  1968→    soon attended to, if the desire be not:
+  1969→    standing agg.:
+  1970→    turning over in bed, as if bladder would fall to side lain on:
+  1971→    urging to urinate, during:
+  1972→    urinating, before:
+  1973→    beginning:
+  1974→    when urine starts he is amel.:
+  1975→    during:
+  1976→    after a few drops pass:
+  1977→    after:
+  1978→    walking, on:
+  1979→    extending to kidney:
+  1980→    spermatic cords:
+  1981→    thighs:
+  1982→    uterus:
+  1983→    neck:
+  1984→    attempting to urinate, on:
+  1985→    beginning to urinate, on:
+  1986→    close of urination:
+  1987→    urging to urinate, on:
+  1988→    urination, before:
+  1989→    after:
+  1990→    when last drops are voided:
+  1991→    walking, while:
+  1992→    aching:
+  1993→    coition, after:
+  1994→    lying, while:
+  1995→    menses, during:
+  1996→    urination, before:
+  1997→    during:
+  1998→    after:
+  1999→    neck:
+  2000→    urination, after:
+
+[showing lines 1-2000 of 4062; use offset=2001 with limit to continue reading]

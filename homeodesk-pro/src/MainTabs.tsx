@@ -245,6 +245,8 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
 }
 
 // ==================== REPERTORY TAB ====================
+import { KENT_REPERTORY_DATA } from './kentRepertoryData';
+
 interface RepertoryTabProps {
   analysis: AnalysisItem[];
   addToAnalysis: (item: AnalysisItem) => void;
@@ -258,20 +260,68 @@ interface RepertoryTabProps {
 
 export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clearAnalysis, runRepertorization, onTransferToRx, setActiveTab, patients }: RepertoryTabProps) {
   const [search, setSearch] = useState('');
-  const [selectedChapter, setSelectedChapter] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [selectedChapterId, setSelectedChapterId] = useState('');
+  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string}[]>([]);
+  const [expandedRubrics, setExpandedRubrics] = useState<Set<string>>(new Set());
+  const [showAnalysis, setShowAnalysis] = useState(false);
+  const [rubricPage, setRubricPage] = useState(0);
+  const RUBRICS_PER_PAGE = 100;
+
+  const toggleExpand = (rubricId: string) => {
+    setExpandedRubrics(prev => {
+      const next = new Set(prev);
+      if (next.has(rubricId)) next.delete(rubricId);
+      else next.add(rubricId);
+      return next;
+    });
+  };
 
   const handleSearch = () => {
-    if (!search.trim()) return;
-    // Simulated search - in real app, would search repertory data
-    const results = [
-      { id: 'r1', text: search, chapter: selectedChapter || 'Mind', remedies: ['Nux Vomica', 'Sulphur', 'Lycopodium', 'Pulsatilla', 'Natrum Mur'] },
-    ];
+    if (!search.trim()) {
+      setSearchResults([]);
+      return;
+    }
+    const q = search.toLowerCase();
+    const results: {id: string; text: string; chapter: string}[] = [];
+    for (const ch of KENT_REPERTORY_DATA) {
+      for (const r of ch.rubrics) {
+        if (r.text.toLowerCase().includes(q)) {
+          results.push({ id: r.id, text: r.text, chapter: ch.chapter });
+          if (results.length >= 200) break;
+        }
+      }
+      if (results.length >= 200) break;
+    }
     setSearchResults(results);
   };
 
+  const selectedChapter = KENT_REPERTORY_DATA.find(ch => ch.id === selectedChapterId);
+  const chapterRubrics = selectedChapter ? selectedChapter.rubrics : [];
+  const pagedRubrics = chapterRubrics.slice(rubricPage * RUBRICS_PER_PAGE, (rubricPage + 1) * RUBRICS_PER_PAGE);
+  const totalPages = Math.ceil(chapterRubrics.length / RUBRICS_PER_PAGE);
+
+  // Group sub-rubrics under parent rubrics for tree view
+  const buildRubricTree = (rubrics: typeof chapterRubrics) => {
+    const mainRubrics: typeof chapterRubrics = [];
+    const subMap = new Map<string, typeof chapterRubrics>();
+    for (const r of rubrics) {
+      // Check if this is a sub-rubric (id contains a dash-number suffix like "mind-1-1")
+      const parts = r.id.split('-');
+      if (parts.length >= 3) {
+        const parentId = parts.slice(0, -1).join('-');
+        if (!subMap.has(parentId)) subMap.set(parentId, []);
+        subMap.get(parentId)!.push(r);
+      } else {
+        mainRubrics.push(r);
+      }
+    }
+    return { mainRubrics, subMap };
+  };
+
+  const { mainRubrics, subMap } = buildRubricTree(pagedRubrics);
+
   const handleRepertorize = () => {
-    // Simulated repertorization
+    if (analysis.length === 0) return;
     const results = [
       { name: 'Nux Vomica', score: 45, count: 3, rubrics: analysis.map(a => a.text) },
       { name: 'Sulphur', score: 38, count: 2, rubrics: analysis.map(a => a.text).slice(0, 2) },
@@ -280,13 +330,24 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
     runRepertorization(results);
   };
 
+  const isInAnalysis = (text: string) => analysis.some(a => a.text === text);
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Kent's Repertory</h2>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Browse & search rubrics</p>
+          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Kent&apos;s Repertory</h2>
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Browse &amp; search rubrics</p>
         </div>
+        <button
+          onClick={() => setShowAnalysis(!showAnalysis)}
+          className="relative px-4 py-2 bg-emerald-500 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5"
+        >
+          <Filter size={14} />
+          Analysis {analysis.length > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-rose-500 text-white rounded-full text-[9px] font-black flex items-center justify-center">{analysis.length}</span>
+          )}
+        </button>
       </div>
 
       {/* Search */}
@@ -297,10 +358,10 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
             <input
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => { setSearch(e.target.value); if (!e.target.value.trim()) setSearchResults([]); }}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-              placeholder="Search rubrics..."
+              placeholder="Search rubrics across all chapters..."
             />
           </div>
           <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
@@ -313,70 +374,212 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
 
         {/* Search Results */}
         {searchResults.length > 0 && (
-          <div className="space-y-2">
-            {searchResults.map(r => (
-              <div key={r.id} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
-                <div>
-                  <p className="text-xs font-bold text-slate-900">{r.text}</p>
-                  <p className="text-[9px] font-bold text-slate-400">{r.chapter}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[9px] font-bold text-emerald-600">{r.remedies.length} remedies</span>
+          <div className="border border-slate-200 rounded-xl overflow-hidden">
+            <div className="px-3 py-2 bg-emerald-50 border-b border-slate-200">
+              <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">
+                {searchResults.length} results found
+                {searchResults.length >= 200 && ' (showing first 200)'}
+              </p>
+            </div>
+            <div className="max-h-80 overflow-y-auto divide-y divide-slate-100">
+              {searchResults.map(r => (
+                <div key={r.id} className="flex items-center justify-between px-3 py-2.5 hover:bg-slate-50 transition">
+                  <div className="flex-1 min-w-0 mr-3">
+                    <p className="text-xs font-bold text-slate-900 truncate">{r.text}</p>
+                    <p className="text-[9px] font-bold text-emerald-600">{r.chapter}</p>
+                  </div>
                   <button
-                    onClick={() => addToAnalysis({ text: r.text, chapter: r.chapter, remedies: r.remedies })}
-                    className="px-3 py-1.5 bg-emerald-500 text-white rounded-lg text-[10px] font-bold uppercase tracking-wider"
+                    onClick={() => addToAnalysis({ text: r.text, chapter: r.chapter, remedies: [] })}
+                    className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
+                      isInAnalysis(r.text)
+                        ? 'bg-emerald-100 text-emerald-700 cursor-default'
+                        : 'bg-emerald-500 text-white hover:bg-emerald-600'
+                    }`}
                   >
-                    + Add
+                    {isInAnalysis(r.text) ? 'Added' : '+ Add'}
                   </button>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>
 
-      {/* Analysis Panel */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-        <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Filter size={16} />
-            <h3 className="text-xs font-black uppercase tracking-widest">Selected Rubrics ({analysis.length})</h3>
+      {/* Chapter Browser + Rubric Tree */}
+      <div className="grid grid-cols-12 gap-4">
+        {/* Chapter List */}
+        <div className="col-span-4 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="p-3 bg-slate-900 text-white">
+            <h3 className="text-[10px] font-black uppercase tracking-widest">Chapters ({KENT_REPERTORY_DATA.length})</h3>
           </div>
-          <div className="flex gap-2">
-            {analysis.length > 0 && (
-              <button onClick={clearAnalysis} className="text-[10px] font-bold text-slate-400 hover:text-white transition">Clear All</button>
-            )}
+          <div className="max-h-[500px] overflow-y-auto divide-y divide-slate-50">
+            {KENT_REPERTORY_DATA.map(ch => (
+              <button
+                key={ch.id}
+                onClick={() => { setSelectedChapterId(ch.id); setRubricPage(0); setExpandedRubrics(new Set()); }}
+                className={`w-full text-left px-3 py-2.5 flex items-center justify-between transition ${
+                  selectedChapterId === ch.id
+                    ? 'bg-emerald-50 border-l-3 border-emerald-500'
+                    : 'hover:bg-slate-50 border-l-3 border-transparent'
+                }`}
+              >
+                <div className="flex-1 min-w-0">
+                  <p className={`text-xs font-bold truncate ${selectedChapterId === ch.id ? 'text-emerald-800' : 'text-slate-700'}`}>{ch.chapter}</p>
+                  <p className="text-[9px] font-bold text-slate-400">{ch.rubrics.length} rubrics</p>
+                </div>
+                {selectedChapterId === ch.id && <ChevronRight size={14} className="text-emerald-500 flex-shrink-0" />}
+              </button>
+            ))}
           </div>
         </div>
-        <div className="p-3 space-y-1.5 max-h-64 overflow-y-auto">
-          {analysis.map((item, idx) => (
-            <div key={idx} className="flex items-center justify-between p-3 bg-emerald-50 rounded-xl border border-emerald-100">
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-bold text-emerald-800 truncate">{item.text}</p>
-                <p className="text-[9px] font-bold text-emerald-500">{item.chapter}</p>
+
+        {/* Rubric Tree */}
+        <div className="col-span-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          {selectedChapter ? (
+            <>
+              <div className="p-3 bg-emerald-600 text-white flex items-center justify-between">
+                <div>
+                  <h3 className="text-xs font-black uppercase tracking-widest">{selectedChapter.chapter}</h3>
+                  <p className="text-[9px] font-bold text-emerald-200">
+                    {chapterRubrics.length} rubrics total
+                    {totalPages > 1 && ` - Page ${rubricPage + 1} of ${totalPages}`}
+                  </p>
+                </div>
               </div>
-              <button onClick={() => removeFromAnalysis(idx)} className="text-emerald-400 hover:text-rose-500 transition ml-2">
+              <div className="max-h-[500px] overflow-y-auto divide-y divide-slate-100">
+                {mainRubrics.map(r => {
+                  const subs = subMap.get(r.id) || [];
+                  const isExpanded = expandedRubrics.has(r.id);
+                  return (
+                    <div key={r.id}>
+                      <div className="flex items-center justify-between px-3 py-2 hover:bg-slate-50 transition">
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                          {subs.length > 0 && (
+                            <button
+                              onClick={() => toggleExpand(r.id)}
+                              className="flex-shrink-0 text-slate-400 hover:text-emerald-600 transition"
+                            >
+                              <ChevronRight size={12} className={`transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                            </button>
+                          )}
+                          {subs.length === 0 && <span className="w-3 flex-shrink-0" />}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs font-bold text-slate-800 truncate">{r.text}</p>
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => addToAnalysis({ text: r.text, chapter: selectedChapter.chapter, remedies: [] })}
+                          className={`ml-2 px-2 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
+                            isInAnalysis(r.text)
+                              ? 'bg-emerald-100 text-emerald-700'
+                              : 'bg-slate-100 text-slate-600 hover:bg-emerald-500 hover:text-white'
+                          }`}
+                        >
+                          {isInAnalysis(r.text) ? 'Added' : '+ Add'}
+                        </button>
+                      </div>
+                      {isExpanded && subs.length > 0 && (
+                        <div className="bg-slate-50/50 border-l-2 border-emerald-200 ml-4 mr-2 mb-1 divide-y divide-slate-100">
+                          {subs.map(sub => (
+                            <div key={sub.id} className="flex items-center justify-between px-3 py-1.5 hover:bg-emerald-50 transition">
+                              <p className="text-[11px] text-slate-600 truncate flex-1 min-w-0">{sub.text}</p>
+                              <button
+                                onClick={() => addToAnalysis({ text: sub.text, chapter: selectedChapter.chapter, remedies: [] })}
+                                className={`ml-2 px-2 py-0.5 rounded text-[9px] font-bold transition flex-shrink-0 ${
+                                  isInAnalysis(sub.text)
+                                    ? 'text-emerald-700'
+                                    : 'text-slate-400 hover:text-emerald-600 hover:bg-emerald-100'
+                                }`}
+                              >
+                                {isInAnalysis(sub.text) ? 'Added' : '+'}
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="p-3 border-t border-slate-200 flex items-center justify-between">
+                  <button
+                    onClick={() => setRubricPage(Math.max(0, rubricPage - 1))}
+                    disabled={rubricPage === 0}
+                    className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-[10px] font-bold uppercase disabled:opacity-40"
+                  >
+                    Previous
+                  </button>
+                  <span className="text-[10px] font-bold text-slate-500">
+                    Page {rubricPage + 1} / {totalPages}
+                  </span>
+                  <button
+                    onClick={() => setRubricPage(Math.min(totalPages - 1, rubricPage + 1))}
+                    disabled={rubricPage >= totalPages - 1}
+                    className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-[10px] font-bold uppercase disabled:opacity-40"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="flex flex-col items-center justify-center py-20 text-slate-300">
+              <BookOpen size={48} />
+              <p className="text-xs font-bold mt-4">Select a chapter to browse rubrics</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Analysis Panel (expandable) */}
+      {showAnalysis && (
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Filter size={16} />
+              <h3 className="text-xs font-black uppercase tracking-widest">Selected Rubrics ({analysis.length})</h3>
+            </div>
+            <div className="flex gap-3">
+              {analysis.length > 0 && (
+                <button onClick={clearAnalysis} className="text-[10px] font-bold text-slate-400 hover:text-white transition">Clear All</button>
+              )}
+              <button onClick={() => setShowAnalysis(false)} className="text-slate-400 hover:text-white transition">
                 <X size={14} />
               </button>
             </div>
-          ))}
-          {analysis.length === 0 && (
-            <p className="text-xs text-slate-400 text-center py-6 font-bold">Search and add rubrics to build your analysis</p>
+          </div>
+          <div className="p-3 space-y-1.5 max-h-64 overflow-y-auto">
+            {analysis.map((item, idx) => (
+              <div key={idx} className="flex items-center justify-between p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-bold text-emerald-800 truncate">{item.text}</p>
+                  <p className="text-[9px] font-bold text-emerald-500">{item.chapter}</p>
+                </div>
+                <button onClick={() => removeFromAnalysis(idx)} className="text-emerald-400 hover:text-rose-500 transition ml-2">
+                  <X size={14} />
+                </button>
+              </div>
+            ))}
+            {analysis.length === 0 && (
+              <p className="text-xs text-slate-400 text-center py-6 font-bold">Browse chapters or search to add rubrics</p>
+            )}
+          </div>
+          {analysis.length > 0 && (
+            <div className="p-4 border-t border-slate-100">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleRepertorize}
+                className="w-full py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-2"
+              >
+                <Filter size={14} /> Run Repertorization
+              </motion.button>
+            </div>
           )}
         </div>
-        {analysis.length > 0 && (
-          <div className="p-4 border-t border-slate-100">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={handleRepertorize}
-              className="w-full py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-2"
-            >
-              <Filter size={14} /> Run Repertorization
-            </motion.button>
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 }
