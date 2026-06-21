@@ -1,0 +1,1604 @@
+[
+  {
+    "line": 8,
+    "id": "mind-1",
+    "text": "ABANDONED (See Forsaken.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 9,
+    "id": "mind-2",
+    "text": "ABRUPT",
+    "chapter": "MIND"
+  },
+  {
+    "line": 29,
+    "id": "mind-6",
+    "text": "ABUSIVE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 37,
+    "id": "mind-8",
+    "text": "ACUTENESS (See Memory.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 43,
+    "id": "mind-14",
+    "text": "AMBITION, loss of",
+    "chapter": "MIND"
+  },
+  {
+    "line": 126,
+    "id": "mind-23",
+    "text": "ANTICS, plays",
+    "chapter": "MIND"
+  },
+  {
+    "line": 316,
+    "id": "mind-25",
+    "text": "APATHY (See Indifference.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 320,
+    "id": "mind-29",
+    "text": "ASKS for nothing",
+    "chapter": "MIND"
+  },
+  {
+    "line": 321,
+    "id": "mind-30",
+    "text": "ATTENTION (See Concentration.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 347,
+    "id": "mind-42",
+    "text": "BELLOWING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 348,
+    "id": "mind-43",
+    "text": "BEMOANING (See Lamenting.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 364,
+    "id": "mind-51",
+    "text": "BOLDNESS (See Courageous.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 374,
+    "id": "mind-57",
+    "text": "CALMNESS (See Tranquility.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 376,
+    "id": "mind-59",
+    "text": "CAPRICIOUSNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 378,
+    "id": "mind-60",
+    "text": "CAREFULNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 379,
+    "id": "mind-61",
+    "text": "CARELESS (See Heedless.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 384,
+    "id": "mind-63",
+    "text": "CARPHOLOGIA (See Gestures.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 389,
+    "id": "mind-65",
+    "text": "CAUTIOUS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 391,
+    "id": "mind-66",
+    "text": "CENSORIOUS, critical",
+    "chapter": "MIND"
+  },
+  {
+    "line": 397,
+    "id": "mind-69",
+    "text": "CHAOTIC",
+    "chapter": "MIND"
+  },
+  {
+    "line": 452,
+    "id": "mind-75",
+    "text": "CLAIRVOYANCE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 488,
+    "id": "mind-81",
+    "text": "COMPLAINING (See Lamenting)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 510,
+    "id": "mind-85",
+    "text": "CONFIDING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 606,
+    "id": "mind-90",
+    "text": "CONTEMPTUOUS (See Scorn)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 609,
+    "id": "mind-90-3",
+    "text": "CONTEMPTUOUS (See Scorn) - of everything",
+    "chapter": "MIND"
+  },
+  {
+    "line": 612,
+    "id": "mind-92",
+    "text": "CONTENTIONS (See Quarrelsome.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 615,
+    "id": "mind-94",
+    "text": "CONTRADICTION, is intolerant of",
+    "chapter": "MIND"
+  },
+  {
+    "line": 619,
+    "id": "mind-97",
+    "text": "COSMOPOLITAN (See Travel.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 620,
+    "id": "mind-98",
+    "text": "COUNTING continually",
+    "chapter": "MIND"
+  },
+  {
+    "line": 621,
+    "id": "mind-99",
+    "text": "COURAGEOUS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 623,
+    "id": "mind-101",
+    "text": "COWARDICE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 626,
+    "id": "mind-104",
+    "text": "CRITICAL (See Censorious.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 934,
+    "id": "mind-118-145",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - conspiracies against her father, thought the landlord",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1100,
+    "id": "mind-118-311",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - neighbor",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1134,
+    "id": "mind-118-345",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - God, is the object of God",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1162,
+    "id": "mind-118-373",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - sees friend",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1253,
+    "id": "mind-118-464",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - don",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1334,
+    "id": "mind-118-545",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - has someone else",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1627,
+    "id": "mind-118-838",
+    "text": "DELUSIONS, imaginations, hallucinations, illusions - women, fancies his mother",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1653,
+    "id": "mind-121-11",
+    "text": "DESPAIR - recovery",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1659,
+    "id": "mind-122",
+    "text": "DESPISES (See Contemptuous.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1661,
+    "id": "mind-124",
+    "text": "DESTRUCTIVENESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1662,
+    "id": "mind-124-1",
+    "text": "DESTRUCTIVENESS - of clothes",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1664,
+    "id": "mind-125",
+    "text": "DICTATORIAL",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1665,
+    "id": "mind-126",
+    "text": "DIPSOMANIA",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1697,
+    "id": "mind-131",
+    "text": "DISGUST (See Loathing)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1698,
+    "id": "mind-132",
+    "text": "DISOBEDIENCE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1704,
+    "id": "mind-137",
+    "text": "DISTRUSTFUL (See Suspicious.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1707,
+    "id": "mind-140",
+    "text": "DOGMATIC (See Dictatorial.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1708,
+    "id": "mind-141",
+    "text": "DOMINEERING (See Dictatorial.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1709,
+    "id": "mind-142",
+    "text": "DOUBTFUL, recovery, of",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1710,
+    "id": "mind-142-1",
+    "text": "DOUBTFUL, recovery, of - soul",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1780,
+    "id": "mind-149",
+    "text": "DWELLS on past disagreeable occurrences",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1783,
+    "id": "mind-149-3",
+    "text": "DWELLS on past disagreeable occurrences - recalls old grievances",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1785,
+    "id": "mind-151",
+    "text": "EAT, refuses to",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1787,
+    "id": "mind-153",
+    "text": "ECSTACY (See Exhilaration)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1796,
+    "id": "mind-154",
+    "text": "EGOTISM",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1800,
+    "id": "mind-156",
+    "text": "EMBRACES companions",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1808,
+    "id": "mind-160",
+    "text": "ENVY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1821,
+    "id": "mind-163",
+    "text": "EXALTATION (See Exhilaration.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1899,
+    "id": "mind-170",
+    "text": "FACETIOUSNESS (See Jesting.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 1901,
+    "id": "mind-172",
+    "text": "FANATICISM",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2222,
+    "id": "mind-178",
+    "text": "FEIGNING sick",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2224,
+    "id": "mind-179",
+    "text": "FICKLE (See Inconstant, Irresolute, Capricious, etc.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2230,
+    "id": "mind-183",
+    "text": "FITFUL (See Capricious.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2271,
+    "id": "mind-190",
+    "text": "FORSAKEN feeling",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2279,
+    "id": "mind-192",
+    "text": "FRANTIC, frenzy (See Rage.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2297,
+    "id": "mind-195",
+    "text": "FRIVOLOUS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2298,
+    "id": "mind-196",
+    "text": "FROWN, disposed to",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2300,
+    "id": "mind-198",
+    "text": "FURY (See Rage.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2303,
+    "id": "mind-201",
+    "text": "GESTURES, makes",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2326,
+    "id": "mind-201-23",
+    "text": "GESTURES, makes - throwing about",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2348,
+    "id": "mind-207",
+    "text": "GOSSIPING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2361,
+    "id": "mind-210",
+    "text": "GRIMACES",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2366,
+    "id": "mind-215",
+    "text": "GRUNTING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2369,
+    "id": "mind-217",
+    "text": "HARDHEARTED (See Cruelty.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2370,
+    "id": "mind-218",
+    "text": "HASTINESS (See Hurry.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2380,
+    "id": "mind-222",
+    "text": "HEEDLESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2386,
+    "id": "mind-225",
+    "text": "HIDES things",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2393,
+    "id": "mind-230",
+    "text": "HOME-SICKNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2399,
+    "id": "mind-231",
+    "text": "HONOR, effects of wounded",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2400,
+    "id": "mind-232",
+    "text": "HOPEFUL",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2405,
+    "id": "mind-236",
+    "text": "HOWLING (See Lamenting.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2406,
+    "id": "mind-237",
+    "text": "HUMOR (See Mood.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2408,
+    "id": "mind-239",
+    "text": "HURRY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2413,
+    "id": "mind-239-5",
+    "text": "HURRY - duties, as if",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2416,
+    "id": "mind-239-8",
+    "text": "HURRY - movements, in",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2420,
+    "id": "mind-239-12",
+    "text": "HURRY - speech (See Speech.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2451,
+    "id": "mind-246",
+    "text": "IDIOCY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2452,
+    "id": "mind-246-1",
+    "text": "IDIOCY - idiotic actions",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2454,
+    "id": "mind-247",
+    "text": "IMBECILITY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2477,
+    "id": "mind-250",
+    "text": "IMPERTINENCE (See Insolent, Rudeness)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2490,
+    "id": "mind-254",
+    "text": "IMPULSIVE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2495,
+    "id": "mind-257",
+    "text": "INCONSTANCY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2577,
+    "id": "mind-263",
+    "text": "INHUMANITY (See Cruelty.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2597,
+    "id": "mind-266-14",
+    "text": "INSANITY, madness - erotic",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2620,
+    "id": "mind-268",
+    "text": "INSOLENT (See Rudeness)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2624,
+    "id": "mind-271",
+    "text": "INTROSPECTION",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2731,
+    "id": "mind-280",
+    "text": "JOYLESS (See Indifference.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2759,
+    "id": "mind-286",
+    "text": "KISSES everyone",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2760,
+    "id": "mind-286-1",
+    "text": "KISSES everyone - his companions",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2762,
+    "id": "mind-287",
+    "text": "KLEPTOMANIA",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2763,
+    "id": "mind-287-1",
+    "text": "KLEPTOMANIA - steals dainties",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2764,
+    "id": "mind-287-2",
+    "text": "KLEPTOMANIA - steals money",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2835,
+    "id": "mind-293",
+    "text": "LIBERTINISM",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2840,
+    "id": "mind-296",
+    "text": "LISTLESS (See Indifference.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2855,
+    "id": "mind-299",
+    "text": "LOCALITY, errors of (See Mistakes.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2856,
+    "id": "mind-300",
+    "text": "LONELINESS (See Forsaken.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2861,
+    "id": "mind-302",
+    "text": "LOOKED at, cannot bear to be",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2882,
+    "id": "mind-305",
+    "text": "LOW-MINDED (See Repulsive Cowardice.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2897,
+    "id": "mind-316",
+    "text": "MEMORY active (See Ideas)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2904,
+    "id": "mind-316-7",
+    "text": "MEMORY active (See Ideas) - business, for",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2905,
+    "id": "mind-316-8",
+    "text": "MEMORY active (See Ideas) - dates, for",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2908,
+    "id": "mind-316-11",
+    "text": "MEMORY active (See Ideas) - expressing one",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2914,
+    "id": "mind-316-17",
+    "text": "MEMORY active (See Ideas) - names, for proper",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2925,
+    "id": "mind-316-28",
+    "text": "MEMORY active (See Ideas) - words, for",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2955,
+    "id": "mind-322",
+    "text": "MISANTHROPY (Compare Hatred)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2957,
+    "id": "mind-324",
+    "text": "MISERLY (See Avarice.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2958,
+    "id": "mind-325",
+    "text": "MISTAKES in calculating",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2959,
+    "id": "mind-325-1",
+    "text": "MISTAKES in calculating - localities",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2967,
+    "id": "mind-325-9",
+    "text": "MISTAKES in calculating - answers, gives",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2968,
+    "id": "mind-325-10",
+    "text": "MISTAKES in calculating - spelling, in",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2973,
+    "id": "mind-325-15",
+    "text": "MISTAKES in calculating - transposes sounds",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2974,
+    "id": "mind-325-16",
+    "text": "MISTAKES in calculating - words, misplacing",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2982,
+    "id": "mind-325-24",
+    "text": "MISTAKES in calculating - syllables",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2983,
+    "id": "mind-325-25",
+    "text": "MISTAKES in calculating - words",
+    "chapter": "MIND"
+  },
+  {
+    "line": 2984,
+    "id": "mind-325-26",
+    "text": "MISTAKES in calculating - repeating words",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3008,
+    "id": "mind-327",
+    "text": "MOCKING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3010,
+    "id": "mind-328",
+    "text": "MONOMANIA",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3020,
+    "id": "mind-331",
+    "text": "MORAL feeling, want of",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3021,
+    "id": "mind-332",
+    "text": "MOROSE",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3035,
+    "id": "mind-334",
+    "text": "MOTIONS (See Gestures.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3066,
+    "id": "mind-349",
+    "text": "PERTINACITY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3068,
+    "id": "mind-351",
+    "text": "PHLEGMATIC (See Indifference.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3071,
+    "id": "mind-354",
+    "text": "PITIES herself",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3072,
+    "id": "mind-355",
+    "text": "PLANS, making many",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3076,
+    "id": "mind-356",
+    "text": "PLAYFUL",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3095,
+    "id": "mind-365",
+    "text": "PROPHESYING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3107,
+    "id": "mind-367",
+    "text": "PULL, desires to pull one",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3108,
+    "id": "mind-367-1",
+    "text": "PULL, desires to pull one",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3109,
+    "id": "mind-367-2",
+    "text": "PULL, desires to pull one",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3127,
+    "id": "mind-369",
+    "text": "QUESTIONS, speaks continually in",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3160,
+    "id": "mind-373",
+    "text": "RASHNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3186,
+    "id": "mind-380",
+    "text": "REPULSIVE mood",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3187,
+    "id": "mind-381",
+    "text": "RESERVED",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3198,
+    "id": "mind-382",
+    "text": "RESOLUTE (See Courageous.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3304,
+    "id": "mind-388",
+    "text": "REVERIES (See Absorbed.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3315,
+    "id": "mind-396",
+    "text": "RUNS about (See Escape)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3421,
+    "id": "mind-398",
+    "text": "SCOLDING (See Quarrelsome.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3426,
+    "id": "mind-402",
+    "text": "SCRUPULOUS (See Conscientious.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3427,
+    "id": "mind-403",
+    "text": "SEARCHING on floor",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3432,
+    "id": "mind-406",
+    "text": "SELFISHNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3474,
+    "id": "mind-409",
+    "text": "SENTIMENTAL",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3478,
+    "id": "mind-410",
+    "text": "SERENE (See Tranquillity.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3498,
+    "id": "mind-415-9",
+    "text": "SHRIEKING - feels as tho",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3511,
+    "id": "mind-416",
+    "text": "SHY (See Timid.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3532,
+    "id": "mind-421",
+    "text": "SIT, inclination to",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3533,
+    "id": "mind-421-1",
+    "text": "SIT, inclination to - sits quite stiff",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3544,
+    "id": "mind-424",
+    "text": "SLANDER, disposition to",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3545,
+    "id": "mind-425",
+    "text": "SLOWNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3558,
+    "id": "mind-429",
+    "text": "SNEERS at everyone (See Contempt.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3561,
+    "id": "mind-432",
+    "text": "SOLEMN (See Serious.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3601,
+    "id": "mind-437",
+    "text": "SPITEFUL (See Vindictive.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3738,
+    "id": "mind-455",
+    "text": "SULKY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3742,
+    "id": "mind-459",
+    "text": "SUSPICIOUS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3745,
+    "id": "mind-459-3",
+    "text": "SUSPICIOUS - 3 to 8 p.m.",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3749,
+    "id": "mind-461",
+    "text": "SYMPATHETIC",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3787,
+    "id": "mind-466",
+    "text": "TEARS things",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3882,
+    "id": "mind-477",
+    "text": "TRANQUILITY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3996,
+    "id": "mind-485",
+    "text": "UNFRIENDLY humor",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3997,
+    "id": "mind-486",
+    "text": "UNOBSERVING",
+    "chapter": "MIND"
+  },
+  {
+    "line": 3999,
+    "id": "mind-488",
+    "text": "UNSYMPATHETIC (See Indifferent.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4002,
+    "id": "mind-491",
+    "text": "VACILLATION (See Mood.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4004,
+    "id": "mind-493",
+    "text": "VERSES, makes",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4019,
+    "id": "mind-499",
+    "text": "WAILING (See Lamenting.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4026,
+    "id": "mind-505",
+    "text": "WEARISOME",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4154,
+    "id": "mind-509",
+    "text": "WHIMSICAL (See Mood.)",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4159,
+    "id": "mind-512",
+    "text": "WICKED disposition",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4161,
+    "id": "mind-514",
+    "text": "WILDNESS",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4168,
+    "id": "mind-515",
+    "text": "WILL, contradiction of",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4172,
+    "id": "mind-516",
+    "text": "WITTY",
+    "chapter": "MIND"
+  },
+  {
+    "line": 4258,
+    "id": "vertigo-31",
+    "text": "COLORED glass, light shining thro",
+    "chapter": "VERTIGO"
+  },
+  {
+    "line": 4264,
+    "id": "vertigo-37",
+    "text": "CROSSING a bridge",
+    "chapter": "VERTIGO"
+  },
+  {
+    "line": 4301,
+    "id": "vertigo-57",
+    "text": "FALL, tendency to",
+    "chapter": "VERTIGO"
+  },
+  {
+    "line": 4376,
+    "id": "vertigo-80-7",
+    "text": "LYING down, on (in the act of) - sinking down thro",
+    "chapter": "VERTIGO"
+  },
+  {
+    "line": 4991,
+    "id": "head-29",
+    "text": "DANDRUFF",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 4994,
+    "id": "head-30",
+    "text": "DILATED (See \\\"Expanded.\\\")",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 5157,
+    "id": "head-41-27",
+    "text": "FALLING backward of head (comp. \\\"Heaviness\\\") - Forehead, as if everything would fall out (comp",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 5860,
+    "id": "head-81",
+    "text": "NODDING (See \\\"Motions.\\\")",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 6071,
+    "id": "head-87-183",
+    "text": "PAIN, headache in general - unable to collect one",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 6458,
+    "id": "head-87-570",
+    "text": "PAIN, headache in general - waking, on (See \\\"sleep,\\\" \\\"morning, waking,\\\" ",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 8228,
+    "id": "head-112",
+    "text": "SPLASHING",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 8251,
+    "id": "head-131",
+    "text": "UNSTEADY feeling",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 8252,
+    "id": "head-132",
+    "text": "VACANT feeling",
+    "chapter": "HEAD"
+  },
+  {
+    "line": 8265,
+    "id": "eye-1",
+    "text": "AGGLUTINATED",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8266,
+    "id": "eye-2",
+    "text": "AMAUROSIS",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8268,
+    "id": "eye-4",
+    "text": "ARCUS SENILIS",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8277,
+    "id": "eye-10",
+    "text": "BLOODSHOT",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8287,
+    "id": "eye-14-6",
+    "text": "CATARACT - etc.",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8306,
+    "id": "eye-28",
+    "text": "DETACHMENT of retina",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8375,
+    "id": "eye-61",
+    "text": "INJECTED",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8395,
+    "id": "eye-74-4",
+    "text": "MOVEMENT, eyeballs - pendulum",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8396,
+    "id": "eye-74-5",
+    "text": "MOVEMENT, eyeballs - rolling",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8402,
+    "id": "eye-78",
+    "text": "ONYX",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8409,
+    "id": "eye-85",
+    "text": "PHOTOMANIA",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8410,
+    "id": "eye-86",
+    "text": "PHOTOPHOBIA",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8411,
+    "id": "eye-87",
+    "text": "PROTRUSION",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8412,
+    "id": "eye-88",
+    "text": "PTERYGIUM",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8423,
+    "id": "eye-98",
+    "text": "SCROFULOUS affections",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8427,
+    "id": "eye-102",
+    "text": "STAPHYLOMA",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8432,
+    "id": "eye-107",
+    "text": "STYES",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8450,
+    "id": "eye-120",
+    "text": "UNSTEADY look",
+    "chapter": "EYE"
+  },
+  {
+    "line": 8467,
+    "id": "vision-1",
+    "text": "ACCOMMODATION defective",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8469,
+    "id": "vision-3",
+    "text": "AMAUROSIS",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8479,
+    "id": "vision-13",
+    "text": "COBWEBS (see Gauze)",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8483,
+    "id": "vision-15",
+    "text": "CONFUSED",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8491,
+    "id": "vision-23",
+    "text": "FADE away then reappear",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8493,
+    "id": "vision-25",
+    "text": "FEATHERY",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8494,
+    "id": "vision-26",
+    "text": "FIERY phenomena",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8501,
+    "id": "vision-33",
+    "text": "GAUZE",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8514,
+    "id": "vision-46",
+    "text": "LIGHTNINGS",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8516,
+    "id": "vision-48",
+    "text": "MIST (see Foggy)",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8520,
+    "id": "vision-52",
+    "text": "MULTIPLIED (see Diplopia)",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8522,
+    "id": "vision-54",
+    "text": "MYOPIA",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8530,
+    "id": "vision-62",
+    "text": "RANGE of vision changes (see Focal)",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8547,
+    "id": "vision-79",
+    "text": "VANISHING of sight (see Loss)",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8552,
+    "id": "vision-84",
+    "text": "WAVERING",
+    "chapter": "VISION"
+  },
+  {
+    "line": 8617,
+    "id": "ear-28",
+    "text": "FLAPPING",
+    "chapter": "EAR"
+  },
+  {
+    "line": 8746,
+    "id": "ear-58",
+    "text": "ROLLING, as of something",
+    "chapter": "EAR"
+  },
+  {
+    "line": 8801,
+    "id": "hearing-5",
+    "text": "LOST (deafness)",
+    "chapter": "HEARING"
+  },
+  {
+    "line": 8810,
+    "id": "nose-3",
+    "text": "AGGLUTINATION of nostrils",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 8823,
+    "id": "nose-13-3",
+    "text": "CATARRH - fluent",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 8824,
+    "id": "nose-13-4",
+    "text": "CATARRH - post\u2011nasal",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 8826,
+    "id": "nose-13-6",
+    "text": "CATARRH - extends to frontal sinuses",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 8827,
+    "id": "nose-13-7",
+    "text": "CATARRH - antrum",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 9015,
+    "id": "nose-72",
+    "text": "OZ\u00c6NA",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 9081,
+    "id": "nose-82",
+    "text": "PROTUBERANCES",
+    "chapter": "NOSE"
+  },
+  {
+    "line": 9149,
+    "id": "face-19",
+    "text": "CHLOROTIC",
+    "chapter": "FACE"
+  },
+  {
+    "line": 9239,
+    "id": "face-74",
+    "text": "OZ\u00c6NA",
+    "chapter": "FACE"
+  },
+  {
+    "line": 9249,
+    "id": "face-84",
+    "text": "PROTUBERANCES",
+    "chapter": "FACE"
+  },
+  {
+    "line": 10426,
+    "id": "mouth-99-6",
+    "text": "MOUTH - PROTRUDED, Tongue - rapidly, darting in and out like a snake",
+    "chapter": "MOUTH"
+  },
+  {
+    "line": 11472,
+    "id": "stomach-6-1",
+    "text": "STOMACH - AVERSION to - Types: acids, alcoholic stimulants, ale, apples, bananas, beef, beer, brandy, bread, breakfast, butter, cereals, cheese, chocolate, coffee, cold drinks, dinner, drinks, eggs, everything, farinaceous food, fats and rich food, fish, flour, food, fruit, garlic, gruel, herring, hot food, liquids, meat, milk, mother",
+    "chapter": "STOMACH"
+  },
+  {
+    "line": 12362,
+    "id": "stomach-94-72",
+    "text": "STOMACH - VOMITING - mother",
+    "chapter": "STOMACH"
+  },
+  {
+    "line": 12827,
+    "id": "abdomen-60",
+    "text": "PROTRUSION",
+    "chapter": "Abdomen"
+  },
+  {
+    "line": 12836,
+    "id": "abdomen-62",
+    "text": "RELAXED feeling",
+    "chapter": "Abdomen"
+  },
+  {
+    "line": 12870,
+    "id": "abdomen-81",
+    "text": "TABES mesenterica",
+    "chapter": "Abdomen"
+  },
+  {
+    "line": 12883,
+    "id": "abdomen-85",
+    "text": "TUBERCULOSIS",
+    "chapter": "Abdomen"
+  },
+  {
+    "line": 12895,
+    "id": "abdomen-91",
+    "text": "VEINS distended",
+    "chapter": "Abdomen"
+  },
+  {
+    "line": 13279,
+    "id": "rectum-27",
+    "text": "FISTULA",
+    "chapter": "Rectum"
+  },
+  {
+    "line": 13863,
+    "id": "rectum-68",
+    "text": "TENESMUS",
+    "chapter": "Rectum"
+  },
+  {
+    "line": 13965,
+    "id": "stool-12",
+    "text": "CHOPPED",
+    "chapter": "Stool"
+  },
+  {
+    "line": 13979,
+    "id": "stool-21",
+    "text": "CRUMBLING",
+    "chapter": "Stool"
+  },
+  {
+    "line": 13985,
+    "id": "stool-25",
+    "text": "DOG",
+    "chapter": "Stool"
+  },
+  {
+    "line": 13991,
+    "id": "stool-29",
+    "text": "FERMENTED",
+    "chapter": "Stool"
+  },
+  {
+    "line": 13993,
+    "id": "stool-31",
+    "text": "FLAKY",
+    "chapter": "Stool"
+  },
+  {
+    "line": 13995,
+    "id": "stool-33",
+    "text": "FLOCCULI",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14029,
+    "id": "stool-49",
+    "text": "LIENTERIC",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14040,
+    "id": "stool-56",
+    "text": "MEMBRANOUS",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14071,
+    "id": "stool-58",
+    "text": "MUSHY",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14106,
+    "id": "stool-71",
+    "text": "SPUTTERING",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14126,
+    "id": "stool-79",
+    "text": "UNDIGESTED",
+    "chapter": "Stool"
+  },
+  {
+    "line": 14875,
+    "id": "kidneys-2",
+    "text": "ADDILON",
+    "chapter": "Kidneys"
+  },
+  {
+    "line": 15325,
+    "id": "urethra-18",
+    "text": "FUNGOID growth",
+    "chapter": "Urethra"
+  },
+  {
+    "line": 15762,
+    "id": "urethra-57",
+    "text": "ASCARIDES",
+    "chapter": "Urethra"
+  },
+  {
+    "line": 15773,
+    "id": "urethra-64",
+    "text": "CAULIFLOWER",
+    "chapter": "Urethra"
+  },
+  {
+    "line": 15945,
+    "id": "urethra-99-6",
+    "text": "INDURATION - cervix",
+    "chapter": "Urethra"
+  },
+  {
+    "line": 16098,
+    "id": "urethra-105-19",
+    "text": "LOCHIA - returning",
+    "chapter": "Urethra"
+  }
+]
