@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   Bell, Calendar, Clock, Plus, X, Trash2, Eye, UserPlus, Filter, Save, CheckCircle,
-  ArrowRightLeft, ChevronRight, AlertCircle
+  ArrowRightLeft, ChevronRight, AlertCircle, Star, Trophy, Award, Zap
 } from 'lucide-react';
 import { Patient, AnalysisItem, Reminder } from './types';
 
@@ -149,6 +149,25 @@ interface AnalysisTabProps {
 export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearAnalysis, onRemoveRubric, onTransferToRx, onCompare, onUpdatePatient, onAddPatient, setActiveTab }: AnalysisTabProps) {
   const [selectedPatient, setSelectedPatient] = useState(preSelectedPatientId);
 
+  // Compute top remedies across all selected rubrics
+  const remedyScores = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const item of analysis) {
+      const seen = new Set<string>();
+      for (const remedy of (item.remedies || [])) {
+        if (seen.has(remedy)) continue;
+        seen.add(remedy);
+        counts.set(remedy, (counts.get(remedy) || 0) + 1);
+      }
+    }
+    return Array.from(counts.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [analysis]);
+
+  // Get top 3 remedy names for highlighting
+  const top3Remedies = useMemo(() => remedyScores.slice(0, 3).map(r => r.name), [remedyScores]);
+
   return (
     <div className="space-y-4">
       <div>
@@ -184,6 +203,110 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
         )}
       </div>
 
+      {/* Top 3 Remedy Spotlight */}
+      {top3Remedies.length > 0 && (
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/10 overflow-hidden">
+          <div className="p-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Trophy size={18} className="text-amber-400" />
+              <h3 className="text-xs font-black text-white uppercase tracking-widest">Top Remedies</h3>
+            </div>
+            <span className="text-[9px] font-bold text-emerald-300 uppercase tracking-wider">Based on {analysis.length} rubrics</span>
+          </div>
+          <div className="px-4 pb-4 flex gap-3">
+            {top3Remedies.map((remedy, i) => {
+              const count = remedyScores[i].count;
+              const percentage = Math.round((count / analysis.length) * 100);
+              const medals = ['bg-amber-500/20 border-amber-400/50 text-amber-300', 'bg-slate-400/20 border-slate-300/50 text-slate-300', 'bg-orange-700/20 border-orange-600/50 text-orange-300'];
+              const icons = [<Star key="s" size={12} className="text-amber-400" />, <Star key="s2" size={12} className="text-slate-400" />, <Star key="s3" size={12} className="text-orange-400" />];
+              return (
+                <motion.div
+                  key={remedy}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`flex-1 rounded-xl border p-3 ${medals[i]}`}
+                >
+                  <div className="flex items-center gap-1.5 mb-2">
+                    {icons[i]}
+                    <span className="text-[9px] font-black uppercase tracking-widest">#{i + 1}</span>
+                  </div>
+                  <p className="text-sm font-black truncate mb-1.5">{remedy}</p>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[9px] font-bold opacity-70">{count}/{analysis.length} rubrics</span>
+                    <span className="text-[9px] font-black">{percentage}%</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-black/20 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${percentage}%` }}
+                      transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
+                      className="h-full bg-current rounded-full"
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Remedy Analysis Table */}
+      {remedyScores.length > 0 && (
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Zap size={16} className="text-emerald-400" />
+              <h3 className="text-xs font-black uppercase tracking-widest">Remedy Ranking ({remedyScores.length})</h3>
+            </div>
+          </div>
+          <div className="max-h-80 overflow-y-auto">
+            <table className="w-full">
+              <thead className="bg-slate-50 sticky top-0">
+                <tr className="text-left">
+                  <th className="px-4 py-2 text-[9px] font-black text-slate-400 uppercase tracking-widest w-10">#</th>
+                  <th className="px-4 py-2 text-[9px] font-black text-slate-400 uppercase tracking-widest">Remedy</th>
+                  <th className="px-4 py-2 text-[9px] font-black text-slate-400 uppercase tracking-widest w-20 text-center">Coverage</th>
+                  <th className="px-4 py-2 text-[9px] font-black text-slate-400 uppercase tracking-widest w-24 text-center">Rubrics</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {remedyScores.slice(0, 20).map((remedy, i) => {
+                  const isTop3 = i < 3;
+                  const pct = Math.round((remedy.count / analysis.length) * 100);
+                  const barColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
+                  return (
+                    <tr key={remedy.name} className={`transition ${isTop3 ? 'bg-emerald-50/50 hover:bg-emerald-50' : 'hover:bg-slate-50'}`}>
+                      <td className="px-4 py-2.5">
+                        {isTop3 ? (
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black text-white ${i === 0 ? 'bg-amber-500' : i === 1 ? 'bg-slate-500' : 'bg-orange-600'}`}>{i + 1}</span>
+                        ) : (
+                          <span className="text-[10px] font-bold text-slate-400">{i + 1}</span>
+                        )}
+                      </td>
+                      <td className="px-4 py-2.5">
+                        <p className={`text-xs font-black truncate ${isTop3 ? 'text-emerald-800' : 'text-slate-700'}`}>{remedy.name}</p>
+                      </td>
+                      <td className="px-4 py-2.5">
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div className={`h-full rounded-full ${isTop3 ? barColors[i] : 'bg-emerald-400'}`} style={{ width: `${Math.min(pct, 100)}%` }} />
+                          </div>
+                          <span className={`text-[9px] font-black ${isTop3 ? 'text-emerald-700' : 'text-slate-500'}`}>{pct}%</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-2.5 text-center">
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${isTop3 ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-600'}`}>{remedy.count}/{analysis.length}</span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* Selected Rubrics */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
@@ -203,11 +326,29 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
                 <p className="text-[9px] font-bold text-slate-400">{item.chapter}</p>
                 {item.remedies && item.remedies.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-1">
-                    {item.remedies.slice(0, 5).map((r, i) => (
-                      <span key={i} className="text-[8px] font-bold bg-emerald-50 text-emerald-600 px-1.5 py-0.5 rounded">{r}</span>
-                    ))}
-                    {item.remedies.length > 5 && (
-                      <span className="text-[8px] font-bold text-slate-400">+{item.remedies.length - 5} more</span>
+                    {item.remedies.slice(0, 8).map((r, i) => {
+                      const rank = top3Remedies.indexOf(r);
+                      const isTop3 = rank >= 0;
+                      return (
+                        <span
+                          key={i}
+                          className={`text-[8px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5 ${
+                            isTop3
+                              ? rank === 0
+                                ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-300'
+                                : rank === 1
+                                ? 'bg-slate-200 text-slate-700 ring-1 ring-slate-300'
+                                : 'bg-orange-100 text-orange-700 ring-1 ring-orange-300'
+                              : 'bg-emerald-50 text-emerald-600'
+                          }`}
+                        >
+                          {isTop3 && <Star size={7} className="" />}
+                          {r}
+                        </span>
+                      );
+                    })}
+                    {item.remedies.length > 8 && (
+                      <span className="text-[8px] font-bold text-slate-400">+{item.remedies.length - 8} more</span>
                     )}
                   </div>
                 )}

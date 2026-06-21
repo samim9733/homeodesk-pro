@@ -261,7 +261,7 @@ interface RepertoryTabProps {
 export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clearAnalysis, runRepertorization, onTransferToRx, setActiveTab, patients }: RepertoryTabProps) {
   const [search, setSearch] = useState('');
   const [selectedChapterId, setSelectedChapterId] = useState('');
-  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string}[]>([]);
+  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string; remedies: string[]}[]>([]);
   const [expandedRubrics, setExpandedRubrics] = useState<Set<string>>(new Set());
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [rubricPage, setRubricPage] = useState(0);
@@ -282,11 +282,11 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
       return;
     }
     const q = search.toLowerCase();
-    const results: {id: string; text: string; chapter: string}[] = [];
+    const results: {id: string; text: string; chapter: string; remedies: string[]}[] = [];
     for (const ch of KENT_REPERTORY_DATA) {
       for (const r of ch.rubrics) {
         if (r.text.toLowerCase().includes(q)) {
-          results.push({ id: r.id, text: r.text, chapter: ch.chapter });
+          results.push({ id: r.id, text: r.text, chapter: ch.chapter, remedies: r.remedies || [] });
           if (results.length >= 200) break;
         }
       }
@@ -389,7 +389,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                     <p className="text-[9px] font-bold text-emerald-600">{r.chapter}</p>
                   </div>
                   <button
-                    onClick={() => addToAnalysis({ text: r.text, chapter: r.chapter, remedies: [] })}
+                    onClick={() => addToAnalysis({ text: r.text, chapter: r.chapter, remedies: r.remedies || [] })}
                     className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
                       isInAnalysis(r.text)
                         ? 'bg-emerald-100 text-emerald-700 cursor-default'
@@ -468,7 +468,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                           </div>
                         </div>
                         <button
-                          onClick={() => addToAnalysis({ text: r.text, chapter: selectedChapter.chapter, remedies: [] })}
+                          onClick={() => addToAnalysis({ text: r.text, chapter: selectedChapter.chapter, remedies: r.remedies || [] })}
                           className={`ml-2 px-2 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
                             isInAnalysis(r.text)
                               ? 'bg-emerald-100 text-emerald-700'
@@ -484,7 +484,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                             <div key={sub.id} className="flex items-center justify-between px-3 py-1.5 hover:bg-emerald-50 transition">
                               <p className="text-[11px] text-slate-600 truncate flex-1 min-w-0">{sub.text}</p>
                               <button
-                                onClick={() => addToAnalysis({ text: sub.text, chapter: selectedChapter.chapter, remedies: [] })}
+                                onClick={() => addToAnalysis({ text: sub.text, chapter: selectedChapter.chapter, remedies: sub.remedies || [] })}
                                 className={`ml-2 px-2 py-0.5 rounded text-[9px] font-bold transition flex-shrink-0 ${
                                   isInAnalysis(sub.text)
                                     ? 'text-emerald-700'
