@@ -1,0 +1,10 @@
+{
+  "name": "homeodesk-pro-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd homeodesk-pro && npm install && npm run build",
+    "dev": "cd homeodesk-pro && npm run dev",
+    "preview": "cd homeodesk-pro && npm run preview"
+  }
+}
