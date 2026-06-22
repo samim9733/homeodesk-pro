@@ -15,6 +15,13 @@ export interface PhysicalGeneral {
   category?: string;
 }
 
+export interface SavedAnalysis {
+  id: string;
+  date: string;
+  rubrics: AnalysisItem[];
+  topRemedies: { name: string; count: number; percentage: number }[];
+}
+
 export interface Patient {
   id: string;
   name: string;
@@ -30,6 +37,7 @@ export interface Patient {
   email?: string;
   notes?: string;
   prescriptions?: Prescription[];
+  savedAnalysis?: SavedAnalysis[];
   allergies?: string[];
   pastHistory?: string;
   familyHistory?: string;

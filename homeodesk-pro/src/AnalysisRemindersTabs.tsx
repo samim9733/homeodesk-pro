@@ -2,9 +2,9 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   Bell, Calendar, Clock, Plus, X, Trash2, Eye, UserPlus, Filter, Save, CheckCircle,
-  ArrowRightLeft, ChevronRight, AlertCircle, Star, Trophy, Award, Zap
+  ArrowRightLeft, ChevronRight, AlertCircle, Star, Trophy, Award, Zap, Pill, Send
 } from 'lucide-react';
-import { Patient, AnalysisItem, Reminder } from './types';
+import { Patient, AnalysisItem, Reminder, SavedAnalysis } from './types';
 
 // ==================== REMINDERS TAB ====================
 interface RemindersTabProps {
@@ -148,6 +148,7 @@ interface AnalysisTabProps {
 
 export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearAnalysis, onRemoveRubric, onTransferToRx, onCompare, onUpdatePatient, onAddPatient, setActiveTab }: AnalysisTabProps) {
   const [selectedPatient, setSelectedPatient] = useState(preSelectedPatientId);
+  const [saveSuccess, setSaveSuccess] = useState(false);
 
   // Compute top remedies across all selected rubrics
   const remedyScores = useMemo(() => {
@@ -168,6 +169,43 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
   // Get top 3 remedy names for highlighting
   const top3Remedies = useMemo(() => remedyScores.slice(0, 3).map(r => r.name), [remedyScores]);
 
+  // Save analysis to patient
+  const handleSaveAnalysis = () => {
+    if (!selectedPatient || analysis.length === 0) return;
+    const patient = patients.find(p => p.id === selectedPatient);
+    if (!patient) return;
+
+    const topRemediesData = remedyScores.slice(0, 10).map(r => ({
+      name: r.name,
+      count: r.count,
+      percentage: Math.round((r.count / analysis.length) * 100),
+    }));
+
+    const newSavedAnalysis: SavedAnalysis = {
+      id: `sa-${Date.now()}`,
+      date: new Date().toLocaleDateString(),
+      rubrics: [...analysis],
+      topRemedies: topRemediesData,
+    };
+
+    const updatedPatient: Patient = {
+      ...patient,
+      savedAnalysis: [...(patient.savedAnalysis || []), newSavedAnalysis],
+      lastVisit: new Date().toLocaleDateString(),
+    };
+
+    onUpdatePatient(updatedPatient);
+    setSaveSuccess(true);
+    setTimeout(() => setSaveSuccess(false), 2500);
+  };
+
+  // Add top remedy to Rx
+  const handleAddToRx = () => {
+    if (!selectedPatient || remedyScores.length === 0) return;
+    const patient = patients.find(p => p.id === selectedPatient);
+    if (patient) onTransferToRx(patient);
+  };
+
   return (
     <div className="space-y-4">
       <div>
@@ -175,7 +213,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
         <p className="section-subtitle">{analysis.length} rubrics selected</p>
       </div>
 
-      {/* Patient Selection */}
+      {/* Patient Selection & Actions */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
         <h3 className="text-xs font-black text-slate-500 uppercase tracking-widest mb-3">Assign to Patient</h3>
         <select
@@ -189,17 +227,74 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
           ))}
         </select>
         {selectedPatient && (
-          <div className="flex gap-2 mt-3">
-            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+          <div className="flex flex-wrap gap-2 mt-3">
+            {/* Save Analysis Button */}
+            <motion.button 
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+              onClick={handleSaveAnalysis}
+              disabled={analysis.length === 0}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                saveSuccess 
+                  ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30' 
+                  : analysis.length === 0 
+                    ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                    : 'bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100'
+              }`}
+            >
+              {saveSuccess ? (
+                <>
+                  <CheckCircle size={14} /> Saved!
+                </>
+              ) : (
+                <>
+                  <Save size={14} /> Save Analysis
+                </>
+              )}
+            </motion.button>
+
+            {/* Add to Rx Button - auto adds top remedy */}
+            <motion.button 
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+              onClick={handleAddToRx}
+              disabled={remedyScores.length === 0}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                remedyScores.length === 0 
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40'
+              }`}
+            >
+              <Send size={14} /> Add to Rx
+            </motion.button>
+
+            {/* Transfer to Rx Button (original) */}
+            <motion.button 
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
               onClick={() => {
                 const patient = patients.find(p => p.id === selectedPatient);
                 if (patient) onTransferToRx(patient);
               }}
-              className="btn-emerald"
+              disabled={analysis.length === 0}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                analysis.length === 0 
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-slate-900 text-white hover:bg-slate-800'
+              }`}
             >
-              Transfer to Rx
+              <Pill size={14} /> Transfer to Rx
             </motion.button>
           </div>
+        )}
+        {saveSuccess && (
+          <motion.p 
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-[10px] font-bold text-emerald-600 mt-2 flex items-center gap-1"
+          >
+            <CheckCircle size={12} /> Analysis saved to patient record successfully
+          </motion.p>
         )}
       </div>
 

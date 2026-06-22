@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Printer, Save, FileText, Plus, ChevronRight, ChevronLeft, Eye, Clock } from 'lucide-react';
+import { X, Printer, Save, FileText, Plus, ChevronRight, ChevronLeft, Eye, Clock, Microscope, Star, Trophy, Zap, Trash2, CheckCircle } from 'lucide-react';
 import { Patient, AnalysisItem } from './types';
 
 interface PrescriptionCanvasProps {
@@ -12,7 +12,14 @@ interface PrescriptionCanvasProps {
 }
 
 export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialResults, quickRemedy }: PrescriptionCanvasProps) {
-  const [remedy, setRemedy] = useState(quickRemedy || '');
+  // Auto-fill top remedy from analysis results
+  const topRemedy = useMemo(() => {
+    if (quickRemedy) return quickRemedy;
+    if (initialResults && initialResults.length > 0) return initialResults[0].name;
+    return '';
+  }, [quickRemedy, initialResults]);
+
+  const [remedy, setRemedy] = useState(topRemedy);
   const [potency, setPotency] = useState('30C');
   const [dosage, setDosage] = useState('BD × 7 days');
   const [instructions, setInstructions] = useState('');
@@ -21,6 +28,11 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
   const handleSave = () => {
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
+  };
+
+  // Quick-fill remedy from results
+  const handleSelectRemedy = (name: string) => {
+    setRemedy(name);
   };
 
   return (
@@ -139,18 +151,40 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
             </div>
           </div>
 
-          {/* Repertorization Results */}
+          {/* Repertorization Results - Click to select */}
           {initialResults && initialResults.length > 0 && (
             <div>
-              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Repertorization Results</h4>
+              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2">
+                <Zap size={14} className="text-emerald-500" />
+                Suggested Remedies (click to select)
+              </h4>
               <div className="space-y-2">
-                {initialResults.slice(0, 5).map((res, i) => (
-                  <div key={res.name} className="flex items-center gap-3 p-2 bg-slate-50 rounded-lg">
-                    <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-[10px] font-black">{i + 1}</span>
-                    <span className="text-xs font-bold text-slate-900 flex-1">{res.name}</span>
-                    <span className="text-xs font-black text-slate-600">{res.score}pts</span>
-                  </div>
-                ))}
+                {initialResults.slice(0, 5).map((res, i) => {
+                  const isSelected = remedy === res.name;
+                  const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
+                  return (
+                    <motion.button
+                      key={res.name}
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                      onClick={() => handleSelectRemedy(res.name)}
+                      className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${
+                        isSelected
+                          ? 'bg-emerald-50 border-emerald-300 shadow-sm shadow-emerald-500/10'
+                          : 'bg-slate-50 border-slate-100 hover:bg-slate-100'
+                      }`}
+                    >
+                      <span className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black text-white flex-shrink-0 ${
+                        i < 3 ? medalColors[i] : 'bg-slate-900'
+                      }`}>
+                        {i + 1}
+                      </span>
+                      <span className={`text-xs font-bold flex-1 ${isSelected ? 'text-emerald-800' : 'text-slate-900'}`}>{res.name}</span>
+                      <span className="text-xs font-black text-slate-500">{res.score}pts</span>
+                      {isSelected && <CheckCircle size={16} className="text-emerald-500 flex-shrink-0" />}
+                    </motion.button>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -190,12 +224,14 @@ interface PatientDetailsCanvasProps {
 }
 
 export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onSave }: PatientDetailsCanvasProps) {
-  const [activeSection, setActiveSection] = useState<'details' | 'symptoms' | 'generals' | 'prescriptions' | 'notes'>('details');
+  const [activeSection, setActiveSection] = useState<'details' | 'symptoms' | 'generals' | 'prescriptions' | 'notes' | 'analysis'>('details');
+  const [expandedAnalysis, setExpandedAnalysis] = useState<string | null>(null);
 
   const sections = [
     { id: 'details' as const, label: 'Details' },
     { id: 'symptoms' as const, label: 'Symptoms' },
     { id: 'generals' as const, label: 'Generals' },
+    { id: 'analysis' as const, label: 'Analysis', badge: patient.savedAnalysis?.length || 0 },
     { id: 'prescriptions' as const, label: 'Rx History' },
     { id: 'notes' as const, label: 'Notes' },
   ];
@@ -239,13 +275,18 @@ export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onS
             <button
               key={s.id}
               onClick={() => setActiveSection(s.id)}
-              className={`px-4 py-3 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition-all border-b-2 ${
+              className={`px-4 py-3 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition-all border-b-2 flex items-center gap-1.5 ${
                 activeSection === s.id
                   ? 'border-slate-900 text-slate-900'
                   : 'border-transparent text-slate-400 hover:text-slate-600'
               }`}
             >
               {s.label}
+              {s.badge ? (
+                <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${
+                  activeSection === s.id ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'
+                }`}>{s.badge}</span>
+              ) : null}
             </button>
           ))}
         </div>
@@ -310,6 +351,94 @@ export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onS
                     </div>
                   ))}
                 </div>
+              )}
+            </div>
+          )}
+
+          {activeSection === 'analysis' && (
+            <div className="space-y-4">
+              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                <Microscope size={14} className="text-emerald-500" />
+                Saved Case Analysis History
+              </h4>
+              {(!patient.savedAnalysis || patient.savedAnalysis.length === 0) ? (
+                <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-100">
+                  <Microscope size={40} className="mx-auto mb-3 text-slate-200" />
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">No analysis saved yet</p>
+                  <p className="text-[10px] text-slate-300 mt-1">Save analysis from the Case Analysis tab</p>
+                </div>
+              ) : (
+                patient.savedAnalysis.map((sa) => (
+                  <div key={sa.id} className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+                    {/* Analysis Header */}
+                    <div 
+                      className="p-4 flex items-center justify-between cursor-pointer hover:bg-slate-100 transition"
+                      onClick={() => setExpandedAnalysis(expandedAnalysis === sa.id ? null : sa.id)}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center">
+                          <Trophy size={16} className="text-emerald-600" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-black text-slate-900">Case Analysis</p>
+                          <p className="text-[9px] font-bold text-slate-400">{sa.date} • {sa.rubrics.length} rubrics</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {/* Top remedy badge */}
+                        {sa.topRemedies.length > 0 && (
+                          <span className="text-[9px] font-black bg-amber-100 text-amber-700 px-2 py-1 rounded-lg flex items-center gap-1">
+                            <Star size={8} className="text-amber-500" />
+                            {sa.topRemedies[0].name} ({sa.topRemedies[0].percentage}%)
+                          </span>
+                        )}
+                        <ChevronRight size={16} className={`text-slate-400 transition-transform ${expandedAnalysis === sa.id ? 'rotate-90' : ''}`} />
+                      </div>
+                    </div>
+
+                    {/* Expanded Content */}
+                    {expandedAnalysis === sa.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        className="px-4 pb-4 space-y-3"
+                      >
+                        {/* Top Remedies */}
+                        {sa.topRemedies.length > 0 && (
+                          <div>
+                            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Top Remedies</p>
+                            <div className="flex flex-wrap gap-1.5">
+                              {sa.topRemedies.slice(0, 5).map((r, i) => {
+                                const medalBg = i === 0 ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-300' : i === 1 ? 'bg-slate-200 text-slate-700 ring-1 ring-slate-300' : i === 2 ? 'bg-orange-100 text-orange-700 ring-1 ring-orange-300' : 'bg-emerald-50 text-emerald-600';
+                                return (
+                                  <span key={r.name} className={`text-[9px] font-bold px-2 py-1 rounded-lg flex items-center gap-1 ${medalBg}`}>
+                                    {i < 3 && <Star size={7} />}
+                                    {r.name}
+                                    <span className="opacity-60">({r.percentage}%)</span>
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Rubrics List */}
+                        <div>
+                          <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Selected Rubrics ({sa.rubrics.length})</p>
+                          <div className="space-y-1">
+                            {sa.rubrics.map((rubric, i) => (
+                              <div key={i} className="flex items-center gap-2 text-[10px] bg-white rounded-lg px-3 py-2 border border-slate-100">
+                                <span className="font-bold text-slate-400">{i + 1}.</span>
+                                <span className="font-bold text-slate-700 flex-1 truncate">{rubric.text}</span>
+                                <span className="text-[8px] font-bold text-slate-400">{rubric.chapter}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                ))
               )}
             </div>
           )}
