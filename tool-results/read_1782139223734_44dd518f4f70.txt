@@ -1,0 +1,586 @@
+     1→     1→import React, { useState } from 'react';
+     2→     2→import { motion } from 'motion/react';
+     3→     3→import {
+     4→     4→  LayoutDashboard, Users, UserPlus, Search, Eye, TrendingUp, TrendingDown,
+     5→     5→  Bell, Calendar, Star, Filter, Stethoscope, BookOpen, Leaf, Clock, ChevronRight, Plus, Trash2, X
+     6→     6→} from 'lucide-react';
+     7→     7→import { Patient, AnalysisItem, Reminder } from './types';
+     8→     8→
+     9→     9→// ==================== DASHBOARD ====================
+    10→    10→interface DashboardProps {
+    11→    11→  patients: Patient[];
+    12→    12→  analysisCount: number;
+    13→    13→  reminders: Reminder[];
+    14→    14→  setActiveTab: (tab: string) => void;
+    15→    15→  onOpenPD: (patient: Patient) => void;
+    16→    16→}
+    17→    17→
+    18→    18→export function Dashboard({ patients, analysisCount, reminders, setActiveTab, onOpenPD }: DashboardProps) {
+    19→    19→  const stats = [
+    20→    20→    { label: 'Total Patients', value: patients.length, icon: Users, color: 'emerald', change: '+3 this month' },
+    21→    21→    { label: 'Active Cases', value: patients.filter(p => p.status === 'Active').length, icon: Stethoscope, color: 'blue', change: 'Ongoing' },
+    22→    22→    { label: 'Analyses Run', value: analysisCount, icon: Filter, color: 'amber', change: 'All time' },
+    23→    23→    { label: 'Pending Reminders', value: reminders.filter(r => !r.completed).length, icon: Bell, color: 'rose', change: 'Action needed' },
+    24→    24→  ];
+    25→    25→
+    26→    26→  const colorClasses: Record<string, { bg: string; icon: string; border: string }> = {
+    27→    27→    emerald: { bg: 'bg-emerald-50', icon: 'bg-emerald-500', border: 'border-emerald-100' },
+    28→    28→    blue: { bg: 'bg-blue-50', icon: 'bg-blue-500', border: 'border-blue-100' },
+    29→    29→    amber: { bg: 'bg-amber-50', icon: 'bg-amber-500', border: 'border-amber-100' },
+    30→    30→    rose: { bg: 'bg-rose-50', icon: 'bg-rose-500', border: 'border-rose-100' },
+    31→    31→  };
+    32→    32→
+    33→    33→  return (
+    34→    34→    <div className="space-y-6">
+    35→    35→      {/* Stats Grid */}
+    36→    36→      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    37→    37→        {stats.map((stat) => {
+    38→    38→          const colors = colorClasses[stat.color];
+    39→    39→          const Icon = stat.icon;
+    40→    40→          return (
+    41→    41→            <motion.div
+    42→    42→              key={stat.label}
+    43→    43→              initial={{ opacity: 0, y: 20 }}
+    44→    44→              animate={{ opacity: 1, y: 0 }}
+    45→    45→              className={`bg-white rounded-2xl border border-slate-200 shadow-sm p-5 hover:border-slate-300 transition-all`}
+    46→    46→            >
+    47→    47→              <div className="flex items-start justify-between">
+    48→    48→                <div>
+    49→    49→                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{stat.label}</p>
+    50→    50→                  <p className="text-3xl font-black text-slate-900 mt-2">{stat.value}</p>
+    51→    51→                  <p className="text-[10px] font-bold text-slate-400 mt-1">{stat.change}</p>
+    52→    52→                </div>
+    53→    53→                <div className={`w-12 h-12 rounded-2xl ${colors.icon} flex items-center justify-center shadow-lg`}>
+    54→    54→                  <Icon size={22} className="text-white" />
+    55→    55→                </div>
+    56→    56→              </div>
+    57→    57→            </motion.div>
+    58→    58→          );
+    59→    59→        })}
+    60→    60→      </div>
+    61→    61→
+    62→    62→      {/* Recent Patients */}
+    63→    63→      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+    64→    64→        <div className="p-5 border-b border-slate-100 flex items-center justify-between">
+    65→    65→          <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest">Recent Patients</h2>
+    66→    66→          <button onClick={() => setActiveTab('patients')} className="text-[10px] font-bold text-emerald-600 hover:text-emerald-700 uppercase tracking-widest flex items-center gap-1">
+    67→    67→            View All <ChevronRight size={12} />
+    68→    68→          </button>
+    69→    69→        </div>
+    70→    70→        <div className="divide-y divide-slate-50">
+    71→    71→          {patients.slice(0, 5).map((patient) => (
+    72→    72→            <div key={patient.id} className="flex items-center gap-4 p-4 hover:bg-slate-50 transition cursor-pointer" onClick={() => onOpenPD(patient)}>
+    73→    73→              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-xs">
+    74→    74→                {patient.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+    75→    75→              </div>
+    76→    76→              <div className="flex-1 min-w-0">
+    77→    77→                <p className="text-sm font-black text-slate-900 truncate">{patient.name}</p>
+    78→    78→                <p className="text-[10px] font-bold text-slate-400">{patient.id} • {patient.age}y / {patient.gender}</p>
+    79→    79→              </div>
+    80→    80→              <div className="text-right">
+    81→    81→                <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full ${
+    82→    82→                  patient.status === 'Active' ? 'bg-emerald-50 text-emerald-600' :
+    83→    83→                  patient.status === 'Follow-up' ? 'bg-amber-50 text-amber-600' :
+    84→    84→                  'bg-slate-50 text-slate-400'
+    85→    85→                }`}>
+    86→    86→                  {patient.status || 'Active'}
+    87→    87→                </span>
+    88→    88→                <p className="text-[9px] font-bold text-slate-300 mt-1">{patient.lastVisit}</p>
+    89→    89→              </div>
+    90→    90→            </div>
+    91→    91→          ))}
+    92→    92→        </div>
+    93→    93→      </div>
+    94→    94→
+    95→    95→      {/* Quick Actions */}
+    96→    96→      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+    97→    97→        <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-4">Quick Actions</h2>
+    98→    98→        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    99→    99→          {[
+   100→   100→            { label: 'New Patient', icon: UserPlus, action: () => setActiveTab('patients') },
+   101→   101→            { label: 'Repertory', icon: Stethoscope, action: () => setActiveTab('repertory') },
+   102→   102→            { label: 'Case Analysis', icon: Filter, action: () => setActiveTab('analysis') },
+   103→   103→            { label: 'Organon', icon: BookOpen, action: () => setActiveTab('organon') },
+   104→   104→          ].map((item) => {
+   105→   105→            const Icon = item.icon;
+   106→   106→            return (
+   107→   107→              <motion.button
+   108→   108→                key={item.label}
+   109→   109→                whileHover={{ scale: 1.02 }}
+   110→   110→                whileTap={{ scale: 0.98 }}
+   111→   111→                onClick={item.action}
+   112→   112→                className="flex flex-col items-center gap-2 p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-all border border-slate-100"
+   113→   113→              >
+   114→   114→                <Icon size={20} className="text-slate-600" />
+   115→   115→                <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">{item.label}</span>
+   116→   116→              </motion.button>
+   117→   117→            );
+   118→   118→          })}
+   119→   119→        </div>
+   120→   120→      </div>
+   121→   121→    </div>
+   122→   122→  );
+   123→   123→}
+   124→   124→
+   125→   125→// ==================== PATIENTS TAB ====================
+   126→   126→interface PatientsTabProps {
+   127→   127→  patients: Patient[];
+   128→   128→  addPatient: (p: Omit<Patient, 'id' | 'date'>) => void;
+   129→   129→  removePatient: (id: string) => void;
+   130→   130→  setSelectedPatientForRx: (patient: Patient) => void;
+   131→   131→  onOpenPD: (patient: Patient) => void;
+   132→   132→  onSetReminder: (patient: Patient) => void;
+   133→   133→}
+   134→   134→
+   135→   135→export function PatientsTab({ patients, addPatient, removePatient, setSelectedPatientForRx, onOpenPD, onSetReminder }: PatientsTabProps) {
+   136→   136→  const [search, setSearch] = useState('');
+   137→   137→  const [showAdd, setShowAdd] = useState(false);
+   138→   138→  const [newName, setNewName] = useState('');
+   139→   139→  const [newAge, setNewAge] = useState('');
+   140→   140→  const [newGender, setNewGender] = useState('Male');
+   141→   141→
+   142→   142→  const filtered = patients.filter(p =>
+   143→   143→    p.name.toLowerCase().includes(search.toLowerCase()) ||
+   144→   144→    p.id.toLowerCase().includes(search.toLowerCase()) ||
+   145→   145→    p.phone.includes(search)
+   146→   146→  );
+   147→   147→
+   148→   148→  const handleAdd = () => {
+   149→   149→    if (!newName) return;
+   150→   150→    addPatient({
+   151→   151→      name: newName,
+   152→   152→      age: Number(newAge) || 0,
+   153→   153→      gender: newGender as Patient['gender'],
+   154→   154→      phone: '',
+   155→   155→      chiefSymptoms: [],
+   156→   156→      physicalGenerals: [],
+   157→   157→      status: 'Active',
+   158→   158→    });
+   159→   159→    setNewName('');
+   160→   160→    setNewAge('');
+   161→   161→    setShowAdd(false);
+   162→   162→  };
+   163→   163→
+   164→   164→  return (
+   165→   165→    <div className="space-y-4">
+   166→   166→      {/* Header */}
+   167→   167→      <div className="flex items-center justify-between">
+   168→   168→        <div>
+   169→   169→          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Patient Database</h2>
+   170→   170→          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{patients.length} Total Patients</p>
+   171→   171→        </div>
+   172→   172→        <motion.button
+   173→   173→          whileHover={{ scale: 1.02 }}
+   174→   174→          whileTap={{ scale: 0.98 }}
+   175→   175→          onClick={() => setShowAdd(true)}
+   176→   176→          className="px-4 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center gap-2"
+   177→   177→        >
+   178→   178→          <Plus size={14} /> Add Patient
+   179→   179→        </motion.button>
+   180→   180→      </div>
+   181→   181→
+   182→   182→      {/* Search */}
+   183→   183→      <div className="relative">
+   184→   184→        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+   185→   185→        <input
+   186→   186→          type="text"
+   187→   187→          value={search}
+   188→   188→          onChange={(e) => setSearch(e.target.value)}
+   189→   189→          className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+   190→   190→          placeholder="Search patients by name, ID, or phone..."
+   191→   191→        />
+   192→   192→      </div>
+   193→   193→
+   194→   194→      {/* Add Patient Modal */}
+   195→   195→      {showAdd && (
+   196→   196→        <div className="bg-white rounded-2xl border border-emerald-200 shadow-sm p-5 space-y-4">
+   197→   197→          <div className="flex items-center justify-between">
+   198→   198→            <h3 className="text-xs font-black text-emerald-700 uppercase tracking-widest">New Patient</h3>
+   199→   199→            <button onClick={() => setShowAdd(false)} className="text-slate-400 hover:text-slate-600"><X size={18} /></button>
+   200→   200→          </div>
+   201→   201→          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+   202→   202→            <input type="text" value={newName} onChange={e => setNewName(e.target.value)} placeholder="Patient Name" className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
+   203→   203→            <input type="number" value={newAge} onChange={e => setNewAge(e.target.value)} placeholder="Age" className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
+   204→   204→            <select value={newGender} onChange={e => setNewGender(e.target.value)} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20">
+   205→   205→              <option>Male</option><option>Female</option><option>Other</option>
+   206→   206→            </select>
+   207→   207→          </div>
+   208→   208→          <div className="flex gap-3 justify-end">
+   209→   209→            <button onClick={() => setShowAdd(false)} className="px-5 py-2.5 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest">Cancel</button>
+   210→   210→            <button onClick={handleAdd} className="px-5 py-2.5 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg">Add Patient</button>
+   211→   211→          </div>
+   212→   212→        </div>
+   213→   213→      )}
+   214→   214→
+   215→   215→      {/* Patient List */}
+   216→   216→      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+   217→   217→        <div className="divide-y divide-slate-50">
+   218→   218→          {filtered.map((patient) => (
+   219→   219→            <div key={patient.id} className="flex items-center gap-4 p-4 hover:bg-slate-50 transition">
+   220→   220→              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-xs flex-shrink-0">
+   221→   221→                {patient.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+   222→   222→              </div>
+   223→   223→              <div className="flex-1 min-w-0">
+   224→   224→                <p className="text-sm font-black text-slate-900 truncate">{patient.name}</p>
+   225→   225→                <p className="text-[10px] font-bold text-slate-400">{patient.id} • {patient.age}y / {patient.gender}</p>
+   226→   226→              </div>
+   227→   227→              <div className="flex items-center gap-2 flex-shrink-0">
+   228→   228→                <button onClick={() => setSelectedPatientForRx(patient)} className="px-3 py-1.5 bg-emerald-50 text-emerald-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-emerald-100 transition">Rx</button>
+   229→   229→                <button onClick={() => onOpenPD(patient)} className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-blue-100 transition flex items-center gap-1"><Eye size={10} /> View</button>
+   230→   230→                <button onClick={() => onSetReminder(patient)} className="px-3 py-1.5 bg-amber-50 text-amber-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-amber-100 transition"><Bell size={10} /></button>
+   231→   231→                <button onClick={() => removePatient(patient.id)} className="p-1.5 text-slate-300 hover:text-rose-500 transition"><Trash2 size={14} /></button>
+   232→   232→              </div>
+   233→   233→            </div>
+   234→   234→          ))}
+   235→   235→          {filtered.length === 0 && (
+   236→   236→            <div className="text-center py-12 text-slate-400">
+   237→   237→              <Users size={40} className="mx-auto mb-3 text-slate-200" />
+   238→   238→              <p className="text-xs font-bold uppercase tracking-widest">No patients found</p>
+   239→   239→            </div>
+   240→   240→          )}
+   241→   241→        </div>
+   242→   242→      </div>
+   243→   243→    </div>
+   244→   244→  );
+   245→   245→}
+   246→   246→
+   247→   247→// ==================== REPERTORY TAB ====================
+   248→   248→import { KENT_REPERTORY_DATA } from './kentRepertoryData';
+   249→   249→
+   250→   250→interface RepertoryTabProps {
+   251→   251→  analysis: AnalysisItem[];
+   252→   252→  addToAnalysis: (item: AnalysisItem) => void;
+   253→   253→  removeFromAnalysis: (idx: number) => void;
+   254→   254→  clearAnalysis: () => void;
+   255→   255→  runRepertorization: (results: any[]) => void;
+   256→   256→  onTransferToRx: (patient: Patient) => void;
+   257→   257→  setActiveTab: (tab: string) => void;
+   258→   258→  patients: Patient[];
+   259→   259→}
+   260→   260→
+   261→   261→export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clearAnalysis, runRepertorization, onTransferToRx, setActiveTab, patients }: RepertoryTabProps) {
+   262→   262→  const [search, setSearch] = useState('');
+   263→   263→  const [selectedChapterId, setSelectedChapterId] = useState('');
+   264→   264→  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string; remedies: string[]}[]>([]);
+   265→   265→  const [expandedRubrics, setExpandedRubrics] = useState<Set<string>>(new Set());
+   266→   266→  const [showAnalysis, setShowAnalysis] = useState(false);
+   267→   267→  const [rubricPage, setRubricPage] = useState(0);
+   268→   268→  const RUBRICS_PER_PAGE = 100;
+   269→   269→
+   270→   270→  const toggleExpand = (rubricId: string) => {
+   271→   271→    setExpandedRubrics(prev => {
+   272→   272→      const next = new Set(prev);
+   273→   273→      if (next.has(rubricId)) next.delete(rubricId);
+   274→   274→      else next.add(rubricId);
+   275→   275→      return next;
+   276→   276→    });
+   277→   277→  };
+   278→   278→
+   279→   279→  const handleSearch = () => {
+   280→   280→    if (!search.trim()) {
+   281→   281→      setSearchResults([]);
+   282→   282→      return;
+   283→   283→    }
+   284→   284→    const q = search.toLowerCase();
+   285→   285→    const results: {id: string; text: string; chapter: string; remedies: string[]}[] = [];
+   286→   286→    for (const ch of KENT_REPERTORY_DATA) {
+   287→   287→      for (const r of ch.rubrics) {
+   288→   288→        if (r.text.toLowerCase().includes(q)) {
+   289→   289→          results.push({ id: r.id, text: r.text, chapter: ch.chapter, remedies: r.remedies || [] });
+   290→   290→          if (results.length >= 200) break;
+   291→   291→        }
+   292→   292→      }
+   293→   293→      if (results.length >= 200) break;
+   294→   294→    }
+   295→   295→    setSearchResults(results);
+   296→   296→  };
+   297→   297→
+   298→   298→  const selectedChapter = KENT_REPERTORY_DATA.find(ch => ch.id === selectedChapterId);
+   299→   299→  const chapterRubrics = selectedChapter ? selectedChapter.rubrics : [];
+   300→   300→  const pagedRubrics = chapterRubrics.slice(rubricPage * RUBRICS_PER_PAGE, (rubricPage + 1) * RUBRICS_PER_PAGE);
+   301→   301→  const totalPages = Math.ceil(chapterRubrics.length / RUBRICS_PER_PAGE);
+   302→   302→
+   303→   303→  // Group sub-rubrics under parent rubrics for tree view
+   304→   304→  const buildRubricTree = (rubrics: typeof chapterRubrics) => {
+   305→   305→    const mainRubrics: typeof chapterRubrics = [];
+   306→   306→    const subMap = new Map<string, typeof chapterRubrics>();
+   307→   307→    for (const r of rubrics) {
+   308→   308→      // Check if this is a sub-rubric (id contains a dash-number suffix like "mind-1-1")
+   309→   309→      const parts = r.id.split('-');
+   310→   310→      if (parts.length >= 3) {
+   311→   311→        const parentId = parts.slice(0, -1).join('-');
+   312→   312→        if (!subMap.has(parentId)) subMap.set(parentId, []);
+   313→   313→        subMap.get(parentId)!.push(r);
+   314→   314→      } else {
+   315→   315→        mainRubrics.push(r);
+   316→   316→      }
+   317→   317→    }
+   318→   318→    return { mainRubrics, subMap };
+   319→   319→  };
+   320→   320→
+   321→   321→  const { mainRubrics, subMap } = buildRubricTree(pagedRubrics);
+   322→   322→
+   323→   323→  const handleRepertorize = () => {
+   324→   324→    if (analysis.length === 0) return;
+   325→   325→    const results = [
+   326→   326→      { name: 'Nux Vomica', score: 45, count: 3, rubrics: analysis.map(a => a.text) },
+   327→   327→      { name: 'Sulphur', score: 38, count: 2, rubrics: analysis.map(a => a.text).slice(0, 2) },
+   328→   328→      { name: 'Lycopodium', score: 30, count: 2, rubrics: analysis.map(a => a.text).slice(1, 3) },
+   329→   329→    ];
+   330→   330→    runRepertorization(results);
+   331→   331→  };
+   332→   332→
+   333→   333→  const isInAnalysis = (text: string) => analysis.some(a => a.text === text);
+   334→   334→
+   335→   335→  return (
+   336→   336→    <div className="space-y-4">
+   337→   337→      <div className="flex items-center justify-between">
+   338→   338→        <div>
+   339→   339→          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Kent&apos;s Repertory</h2>
+   340→   340→          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Browse &amp; search rubrics</p>
+   341→   341→        </div>
+   342→   342→        <button
+   343→   343→          onClick={() => setShowAnalysis(!showAnalysis)}
+   344→   344→          className="relative px-4 py-2 bg-emerald-500 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5"
+   345→   345→        >
+   346→   346→          <Filter size={14} />
+   347→   347→          Analysis {analysis.length > 0 && (
+   348→   348→            <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-rose-500 text-white rounded-full text-[9px] font-black flex items-center justify-center">{analysis.length}</span>
+   349→   349→          )}
+   350→   350→        </button>
+   351→   351→      </div>
+   352→   352→
+   353→   353→      {/* Search */}
+   354→   354→      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 space-y-3">
+   355→   355→        <div className="flex gap-3">
+   356→   356→          <div className="flex-1 relative">
+   357→   357→            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+   358→   358→            <input
+   359→   359→              type="text"
+   360→   360→              value={search}
+   361→   361→              onChange={(e) => { setSearch(e.target.value); if (!e.target.value.trim()) setSearchResults([]); }}
+   362→   362→              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+   363→   363→              className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+   364→   364→              placeholder="Search rubrics across all chapters..."
+   365→   365→            />
+   366→   366→          </div>
+   367→   367→          <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   368→   368→            onClick={handleSearch}
+   369→   369→            className="px-5 py-3 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg"
+   370→   370→          >
+   371→   371→            Search
+   372→   372→          </motion.button>
+   373→   373→        </div>
+   374→   374→
+   375→   375→        {/* Search Results */}
+   376→   376→        {searchResults.length > 0 && (
+   377→   377→          <div className="border border-slate-200 rounded-xl overflow-hidden">
+   378→   378→            <div className="px-3 py-2 bg-emerald-50 border-b border-slate-200">
+   379→   379→              <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">
+   380→   380→                {searchResults.length} results found
+   381→   381→                {searchResults.length >= 200 && ' (showing first 200)'}
+   382→   382→              </p>
+   383→   383→            </div>
+   384→   384→            <div className="max-h-80 overflow-y-auto divide-y divide-slate-100">
+   385→   385→              {searchResults.map(r => (
+   386→   386→                <div key={r.id} className="flex items-center justify-between px-3 py-2.5 hover:bg-slate-50 transition">
+   387→   387→                  <div className="flex-1 min-w-0 mr-3">
+   388→   388→                    <p className="text-xs font-bold text-slate-900 truncate">{r.text}</p>
+   389→   389→                    <p className="text-[9px] font-bold text-emerald-600">{r.chapter}</p>
+   390→   390→                  </div>
+   391→   391→                  <button
+   392→   392→                    onClick={() => addToAnalysis({ text: r.text, chapter: r.chapter, remedies: r.remedies || [] })}
+   393→   393→                    className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
+   394→   394→                      isInAnalysis(r.text)
+   395→   395→                        ? 'bg-emerald-100 text-emerald-700 cursor-default'
+   396→   396→                        : 'bg-emerald-500 text-white hover:bg-emerald-600'
+   397→   397→                    }`}
+   398→   398→                  >
+   399→   399→                    {isInAnalysis(r.text) ? 'Added' : '+ Add'}
+   400→   400→                  </button>
+   401→   401→                </div>
+   402→   402→              ))}
+   403→   403→            </div>
+   404→   404→          </div>
+   405→   405→        )}
+   406→   406→      </div>
+   407→   407→
+   408→   408→      {/* Chapter Browser + Rubric Tree */}
+   409→   409→      <div className="grid grid-cols-12 gap-4">
+   410→   410→        {/* Chapter List */}
+   411→   411→        <div className="col-span-4 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+   412→   412→          <div className="p-3 bg-slate-900 text-white">
+   413→   413→            <h3 className="text-[10px] font-black uppercase tracking-widest">Chapters ({KENT_REPERTORY_DATA.length})</h3>
+   414→   414→          </div>
+   415→   415→          <div className="max-h-[500px] overflow-y-auto divide-y divide-slate-50">
+   416→   416→            {KENT_REPERTORY_DATA.map(ch => (
+   417→   417→              <button
+   418→   418→                key={ch.id}
+   419→   419→                onClick={() => { setSelectedChapterId(ch.id); setRubricPage(0); setExpandedRubrics(new Set()); }}
+   420→   420→                className={`w-full text-left px-3 py-2.5 flex items-center justify-between transition ${
+   421→   421→                  selectedChapterId === ch.id
+   422→   422→                    ? 'bg-emerald-50 border-l-3 border-emerald-500'
+   423→   423→                    : 'hover:bg-slate-50 border-l-3 border-transparent'
+   424→   424→                }`}
+   425→   425→              >
+   426→   426→                <div className="flex-1 min-w-0">
+   427→   427→                  <p className={`text-xs font-bold truncate ${selectedChapterId === ch.id ? 'text-emerald-800' : 'text-slate-700'}`}>{ch.chapter}</p>
+   428→   428→                  <p className="text-[9px] font-bold text-slate-400">{ch.rubrics.length} rubrics</p>
+   429→   429→                </div>
+   430→   430→                {selectedChapterId === ch.id && <ChevronRight size={14} className="text-emerald-500 flex-shrink-0" />}
+   431→   431→              </button>
+   432→   432→            ))}
+   433→   433→          </div>
+   434→   434→        </div>
+   435→   435→
+   436→   436→        {/* Rubric Tree */}
+   437→   437→        <div className="col-span-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+   438→   438→          {selectedChapter ? (
+   439→   439→            <>
+   440→   440→              <div className="p-3 bg-emerald-600 text-white flex items-center justify-between">
+   441→   441→                <div>
+   442→   442→                  <h3 className="text-xs font-black uppercase tracking-widest">{selectedChapter.chapter}</h3>
+   443→   443→                  <p className="text-[9px] font-bold text-emerald-200">
+   444→   444→                    {chapterRubrics.length} rubrics total
+   445→   445→                    {totalPages > 1 && ` - Page ${rubricPage + 1} of ${totalPages}`}
+   446→   446→                  </p>
+   447→   447→                </div>
+   448→   448→              </div>
+   449→   449→              <div className="max-h-[500px] overflow-y-auto divide-y divide-slate-100">
+   450→   450→                {mainRubrics.map(r => {
+   451→   451→                  const subs = subMap.get(r.id) || [];
+   452→   452→                  const isExpanded = expandedRubrics.has(r.id);
+   453→   453→                  return (
+   454→   454→                    <div key={r.id}>
+   455→   455→                      <div className="flex items-center justify-between px-3 py-2 hover:bg-slate-50 transition">
+   456→   456→                        <div className="flex items-center gap-2 flex-1 min-w-0">
+   457→   457→                          {subs.length > 0 && (
+   458→   458→                            <button
+   459→   459→                              onClick={() => toggleExpand(r.id)}
+   460→   460→                              className="flex-shrink-0 text-slate-400 hover:text-emerald-600 transition"
+   461→   461→                            >
+   462→   462→                              <ChevronRight size={12} className={`transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+   463→   463→                            </button>
+   464→   464→                          )}
+   465→   465→                          {subs.length === 0 && <span className="w-3 flex-shrink-0" />}
+   466→   466→                          <div className="flex-1 min-w-0">
+   467→   467→                            <p className="text-xs font-bold text-slate-800 truncate">{r.text}</p>
+   468→   468→                          </div>
+   469→   469→                        </div>
+   470→   470→                        <button
+   471→   471→                          onClick={() => addToAnalysis({ text: r.text, chapter: selectedChapter.chapter, remedies: r.remedies || [] })}
+   472→   472→                          className={`ml-2 px-2 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wider transition flex-shrink-0 ${
+   473→   473→                            isInAnalysis(r.text)
+   474→   474→                              ? 'bg-emerald-100 text-emerald-700'
+   475→   475→                              : 'bg-slate-100 text-slate-600 hover:bg-emerald-500 hover:text-white'
+   476→   476→                          }`}
+   477→   477→                        >
+   478→   478→                          {isInAnalysis(r.text) ? 'Added' : '+ Add'}
+   479→   479→                        </button>
+   480→   480→                      </div>
+   481→   481→                      {isExpanded && subs.length > 0 && (
+   482→   482→                        <div className="bg-slate-50/50 border-l-2 border-emerald-200 ml-4 mr-2 mb-1 divide-y divide-slate-100">
+   483→   483→                          {subs.map(sub => (
+   484→   484→                            <div key={sub.id} className="flex items-center justify-between px-3 py-1.5 hover:bg-emerald-50 transition">
+   485→   485→                              <p className="text-[11px] text-slate-600 truncate flex-1 min-w-0">{sub.text}</p>
+   486→   486→                              <button
+   487→   487→                                onClick={() => addToAnalysis({ text: sub.text, chapter: selectedChapter.chapter, remedies: sub.remedies || [] })}
+   488→   488→                                className={`ml-2 px-2 py-0.5 rounded text-[9px] font-bold transition flex-shrink-0 ${
+   489→   489→                                  isInAnalysis(sub.text)
+   490→   490→                                    ? 'text-emerald-700'
+   491→   491→                                    : 'text-slate-400 hover:text-emerald-600 hover:bg-emerald-100'
+   492→   492→                                }`}
+   493→   493→                              >
+   494→   494→                                {isInAnalysis(sub.text) ? 'Added' : '+'}
+   495→   495→                              </button>
+   496→   496→                            </div>
+   497→   497→                          ))}
+   498→   498→                        </div>
+   499→   499→                      )}
+   500→   500→                    </div>
+   501→   501→                  );
+   502→   502→                })}
+   503→   503→              </div>
+   504→   504→              {/* Pagination */}
+   505→   505→              {totalPages > 1 && (
+   506→   506→                <div className="p-3 border-t border-slate-200 flex items-center justify-between">
+   507→   507→                  <button
+   508→   508→                    onClick={() => setRubricPage(Math.max(0, rubricPage - 1))}
+   509→   509→                    disabled={rubricPage === 0}
+   510→   510→                    className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-[10px] font-bold uppercase disabled:opacity-40"
+   511→   511→                  >
+   512→   512→                    Previous
+   513→   513→                  </button>
+   514→   514→                  <span className="text-[10px] font-bold text-slate-500">
+   515→   515→                    Page {rubricPage + 1} / {totalPages}
+   516→   516→                  </span>
+   517→   517→                  <button
+   518→   518→                    onClick={() => setRubricPage(Math.min(totalPages - 1, rubricPage + 1))}
+   519→   519→                    disabled={rubricPage >= totalPages - 1}
+   520→   520→                    className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-[10px] font-bold uppercase disabled:opacity-40"
+   521→   521→                  >
+   522→   522→                    Next
+   523→   523→                  </button>
+   524→   524→                </div>
+   525→   525→              )}
+   526→   526→            </>
+   527→   527→          ) : (
+   528→   528→            <div className="flex flex-col items-center justify-center py-20 text-slate-300">
+   529→   529→              <BookOpen size={48} />
+   530→   530→              <p className="text-xs font-bold mt-4">Select a chapter to browse rubrics</p>
+   531→   531→            </div>
+   532→   532→          )}
+   533→   533→        </div>
+   534→   534→      </div>
+   535→   535→
+   536→   536→      {/* Analysis Panel (expandable) */}
+   537→   537→      {showAnalysis && (
+   538→   538→        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+   539→   539→          <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
+   540→   540→            <div className="flex items-center gap-2">
+   541→   541→              <Filter size={16} />
+   542→   542→              <h3 className="text-xs font-black uppercase tracking-widest">Selected Rubrics ({analysis.length})</h3>
+   543→   543→            </div>
+   544→   544→            <div className="flex gap-3">
+   545→   545→              {analysis.length > 0 && (
+   546→   546→                <button onClick={clearAnalysis} className="text-[10px] font-bold text-slate-400 hover:text-white transition">Clear All</button>
+   547→   547→              )}
+   548→   548→              <button onClick={() => setShowAnalysis(false)} className="text-slate-400 hover:text-white transition">
+   549→   549→                <X size={14} />
+   550→   550→              </button>
+   551→   551→            </div>
+   552→   552→          </div>
+   553→   553→          <div className="p-3 space-y-1.5 max-h-64 overflow-y-auto">
+   554→   554→            {analysis.map((item, idx) => (
+   555→   555→              <div key={idx} className="flex items-center justify-between p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+   556→   556→                <div className="flex-1 min-w-0">
+   557→   557→                  <p className="text-xs font-bold text-emerald-800 truncate">{item.text}</p>
+   558→   558→                  <p className="text-[9px] font-bold text-emerald-500">{item.chapter}</p>
+   559→   559→                </div>
+   560→   560→                <button onClick={() => removeFromAnalysis(idx)} className="text-emerald-400 hover:text-rose-500 transition ml-2">
+   561→   561→                  <X size={14} />
+   562→   562→                </button>
+   563→   563→              </div>
+   564→   564→            ))}
+   565→   565→            {analysis.length === 0 && (
+   566→   566→              <p className="text-xs text-slate-400 text-center py-6 font-bold">Browse chapters or search to add rubrics</p>
+   567→   567→            )}
+   568→   568→          </div>
+   569→   569→          {analysis.length > 0 && (
+   570→   570→            <div className="p-4 border-t border-slate-100">
+   571→   571→              <motion.button
+   572→   572→                whileHover={{ scale: 1.02 }}
+   573→   573→                whileTap={{ scale: 0.98 }}
+   574→   574→                onClick={handleRepertorize}
+   575→   575→                className="w-full py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-2"
+   576→   576→              >
+   577→   577→                <Filter size={14} /> Run Repertorization
+   578→   578→              </motion.button>
+   579→   579→            </div>
+   580→   580→          )}
+   581→   581→        </div>
+   582→   582→      )}
+   583→   583→    </div>
+   584→   584→  );
+   585→   585→}
+   586→   586→
