@@ -60,13 +60,13 @@ export function RemindersTab({ reminders, setReminders, patients, preSelectedPat
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Reminders</h2>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{reminders.filter(r => !r.completed).length} Pending</p>
+          <h2 className="section-title">Reminders</h2>
+          <p className="section-subtitle">{reminders.filter(r => !r.completed).length} Pending</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
           onClick={() => setShowAdd(true)}
-          className="px-4 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center gap-2"
+          className="btn-primary"
         >
           <Plus size={14} /> New Reminder
         </motion.button>
@@ -80,20 +80,20 @@ export function RemindersTab({ reminders, setReminders, patients, preSelectedPat
             <button onClick={() => setShowAdd(false)} className="text-slate-400 hover:text-slate-600"><X size={18} /></button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <select value={selectedPatient} onChange={e => setSelectedPatient(e.target.value)} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20">
+            <select value={selectedPatient} onChange={e => setSelectedPatient(e.target.value)} className="modern-input">
               <option value="">Select Patient</option>
               {patients.map(p => <option key={p.id} value={p.id}>{p.name} ({p.id})</option>)}
             </select>
-            <select value={reminderType} onChange={e => setReminderType(e.target.value as Reminder['type'])} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20">
+            <select value={reminderType} onChange={e => setReminderType(e.target.value as Reminder['type'])} className="modern-input">
               <option>Follow-up</option><option>Appointment</option><option>Medication</option><option>Lab</option>
             </select>
-            <input type="date" value={reminderDate} onChange={e => setReminderDate(e.target.value)} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
-            <input type="time" value={reminderTime} onChange={e => setReminderTime(e.target.value)} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
+            <input type="date" value={reminderDate} onChange={e => setReminderDate(e.target.value)} className="modern-input" />
+            <input type="time" value={reminderTime} onChange={e => setReminderTime(e.target.value)} className="modern-input" />
           </div>
-          <textarea value={reminderMessage} onChange={e => setReminderMessage(e.target.value)} rows={2} className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 resize-none" placeholder="Reminder message..." />
+          <textarea value={reminderMessage} onChange={e => setReminderMessage(e.target.value)} rows={2} className="modern-input resize-none w-full" placeholder="Reminder message..." />
           <div className="flex gap-3 justify-end">
-            <button onClick={() => setShowAdd(false)} className="px-5 py-2.5 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest">Cancel</button>
-            <button onClick={handleAdd} className="px-5 py-2.5 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg">Add</button>
+            <button onClick={() => setShowAdd(false)} className="btn-ghost">Cancel</button>
+            <button onClick={handleAdd} className="btn-emerald">Add</button>
           </div>
         </div>
       )}
@@ -101,7 +101,7 @@ export function RemindersTab({ reminders, setReminders, patients, preSelectedPat
       {/* Reminders List */}
       <div className="space-y-3">
         {reminders.map(reminder => (
-          <div key={reminder.id} className={`bg-white rounded-2xl border shadow-sm p-4 transition ${reminder.completed ? 'border-slate-100 opacity-60' : 'border-slate-200'}`}>
+          <div key={reminder.id} className={`modern-card p-4 ${reminder.completed ? '!opacity-60 border-slate-100' : 'border-slate-200'}`}>
             <div className="flex items-start gap-4">
               <button onClick={() => toggleComplete(reminder.id)} className={`mt-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition ${reminder.completed ? 'bg-emerald-500 border-emerald-500' : 'border-slate-300 hover:border-emerald-500'}`}>
                 {reminder.completed && <CheckCircle size={12} className="text-white" />}
@@ -171,8 +171,8 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
   return (
     <div className="space-y-4">
       <div>
-        <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Case Analysis</h2>
-        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{analysis.length} rubrics selected</p>
+        <h2 className="section-title">Case Analysis</h2>
+        <p className="section-subtitle">{analysis.length} rubrics selected</p>
       </div>
 
       {/* Patient Selection */}
@@ -181,7 +181,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
         <select
           value={selectedPatient || ''}
           onChange={(e) => setSelectedPatient(e.target.value)}
-          className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          className="modern-input w-full"
         >
           <option value="">Select patient...</option>
           {patients.map(p => (
@@ -195,7 +195,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
                 const patient = patients.find(p => p.id === selectedPatient);
                 if (patient) onTransferToRx(patient);
               }}
-              className="px-4 py-2 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg"
+              className="btn-emerald"
             >
               Transfer to Rx
             </motion.button>
@@ -205,7 +205,10 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
 
       {/* Top 3 Remedy Spotlight */}
       {top3Remedies.length > 0 && (
-        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/10 overflow-hidden">
+        <div
+          className="rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/10 overflow-hidden"
+          style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #065f46 100%)' }}
+        >
           <div className="p-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Trophy size={18} className="text-amber-400" />
@@ -253,7 +256,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
 
       {/* Remedy Analysis Table */}
       {remedyScores.length > 0 && (
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="modern-card overflow-hidden">
           <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Zap size={16} className="text-emerald-400" />
@@ -261,7 +264,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
             </div>
           </div>
           <div className="max-h-80 overflow-y-auto">
-            <table className="w-full">
+            <table className="modern-table w-full">
               <thead className="bg-slate-50 sticky top-0">
                 <tr className="text-left">
                   <th className="px-4 py-2 text-[9px] font-black text-slate-400 uppercase tracking-widest w-10">#</th>
@@ -308,7 +311,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
       )}
 
       {/* Selected Rubrics */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="modern-card overflow-hidden">
         <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Filter size={16} />
@@ -320,7 +323,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
         </div>
         <div className="p-3 space-y-1.5 max-h-96 overflow-y-auto custom-scrollbar">
           {analysis.map((item, idx) => (
-            <div key={idx} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition">
+            <div key={idx} className="flex items-center justify-between p-3 bg-slate-50 rounded-2xl hover:bg-slate-100 transition">
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold text-slate-900 truncate">{item.text}</p>
                 <p className="text-[9px] font-bold text-slate-400">{item.chapter}</p>

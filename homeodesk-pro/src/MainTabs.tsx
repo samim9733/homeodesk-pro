@@ -23,11 +23,11 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
     { label: 'Pending Reminders', value: reminders.filter(r => !r.completed).length, icon: Bell, color: 'rose', change: 'Action needed' },
   ];
 
-  const colorClasses: Record<string, { bg: string; icon: string; border: string }> = {
-    emerald: { bg: 'bg-emerald-50', icon: 'bg-emerald-500', border: 'border-emerald-100' },
-    blue: { bg: 'bg-blue-50', icon: 'bg-blue-500', border: 'border-blue-100' },
-    amber: { bg: 'bg-amber-50', icon: 'bg-amber-500', border: 'border-amber-100' },
-    rose: { bg: 'bg-rose-50', icon: 'bg-rose-500', border: 'border-rose-100' },
+  const gradientMap: Record<string, string> = {
+    emerald: 'linear-gradient(135deg, #10b981, #059669)',
+    blue: 'linear-gradient(135deg, #3b82f6, #2563eb)',
+    amber: 'linear-gradient(135deg, #f59e0b, #d97706)',
+    rose: 'linear-gradient(135deg, #ef4444, #dc2626)',
   };
 
   return (
@@ -35,14 +35,13 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => {
-          const colors = colorClasses[stat.color];
           const Icon = stat.icon;
           return (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`bg-white rounded-2xl border border-slate-200 shadow-sm p-5 hover:border-slate-300 transition-all`}
+              className={`stat-card stat-card-${stat.color}`}
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -50,7 +49,10 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
                   <p className="text-3xl font-black text-slate-900 mt-2">{stat.value}</p>
                   <p className="text-[10px] font-bold text-slate-400 mt-1">{stat.change}</p>
                 </div>
-                <div className={`w-12 h-12 rounded-2xl ${colors.icon} flex items-center justify-center shadow-lg`}>
+                <div
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg"
+                  style={{ background: gradientMap[stat.color] }}
+                >
                   <Icon size={22} className="text-white" />
                 </div>
               </div>
@@ -60,7 +62,7 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
       </div>
 
       {/* Recent Patients */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="modern-card overflow-hidden">
         <div className="p-5 border-b border-slate-100 flex items-center justify-between">
           <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest">Recent Patients</h2>
           <button onClick={() => setActiveTab('patients')} className="text-[10px] font-bold text-emerald-600 hover:text-emerald-700 uppercase tracking-widest flex items-center gap-1">
@@ -70,7 +72,7 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
         <div className="divide-y divide-slate-50">
           {patients.slice(0, 5).map((patient) => (
             <div key={patient.id} className="flex items-center gap-4 p-4 hover:bg-slate-50 transition cursor-pointer" onClick={() => onOpenPD(patient)}>
-              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-xs">
+              <div className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xs" style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)' }}>
                 {patient.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
               </div>
               <div className="flex-1 min-w-0">
@@ -79,9 +81,9 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
               </div>
               <div className="text-right">
                 <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full ${
-                  patient.status === 'Active' ? 'bg-emerald-50 text-emerald-600' :
-                  patient.status === 'Follow-up' ? 'bg-amber-50 text-amber-600' :
-                  'bg-slate-50 text-slate-400'
+                  patient.status === 'Active' ? 'badge-active' :
+                  patient.status === 'Follow-up' ? 'badge-followup' :
+                  'badge-inactive'
                 }`}>
                   {patient.status || 'Active'}
                 </span>
@@ -93,7 +95,7 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+      <div className="modern-card p-5">
         <h2 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
@@ -109,7 +111,7 @@ export function Dashboard({ patients, analysisCount, reminders, setActiveTab, on
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={item.action}
-                className="flex flex-col items-center gap-2 p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-all border border-slate-100"
+                className="flex flex-col items-center gap-2 p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-all border border-slate-100 hover:!shadow-md"
               >
                 <Icon size={20} className="text-slate-600" />
                 <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">{item.label}</span>
@@ -166,14 +168,14 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Patient Database</h2>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">{patients.length} Total Patients</p>
+          <h2 className="section-title">Patient Database</h2>
+          <p className="section-subtitle">{patients.length} Total Patients</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => setShowAdd(true)}
-          className="px-4 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center gap-2"
+          className="btn-primary shadow-lg flex items-center gap-2"
         >
           <Plus size={14} /> Add Patient
         </motion.button>
@@ -186,7 +188,7 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+          className="modern-input"
           placeholder="Search patients by name, ID, or phone..."
         />
       </div>
@@ -199,9 +201,9 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
             <button onClick={() => setShowAdd(false)} className="text-slate-400 hover:text-slate-600"><X size={18} /></button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <input type="text" value={newName} onChange={e => setNewName(e.target.value)} placeholder="Patient Name" className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
-            <input type="number" value={newAge} onChange={e => setNewAge(e.target.value)} placeholder="Age" className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20" />
-            <select value={newGender} onChange={e => setNewGender(e.target.value)} className="px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20">
+            <input type="text" value={newName} onChange={e => setNewName(e.target.value)} placeholder="Patient Name" className="modern-input" />
+            <input type="number" value={newAge} onChange={e => setNewAge(e.target.value)} placeholder="Age" className="modern-input" />
+            <select value={newGender} onChange={e => setNewGender(e.target.value)} className="modern-input">
               <option>Male</option><option>Female</option><option>Other</option>
             </select>
           </div>
@@ -213,11 +215,11 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
       )}
 
       {/* Patient List */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="modern-card overflow-hidden">
         <div className="divide-y divide-slate-50">
           {filtered.map((patient) => (
             <div key={patient.id} className="flex items-center gap-4 p-4 hover:bg-slate-50 transition">
-              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-xs flex-shrink-0">
+              <div className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xs flex-shrink-0" style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)' }}>
                 {patient.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
               </div>
               <div className="flex-1 min-w-0">
@@ -225,9 +227,9 @@ export function PatientsTab({ patients, addPatient, removePatient, setSelectedPa
                 <p className="text-[10px] font-bold text-slate-400">{patient.id} • {patient.age}y / {patient.gender}</p>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
-                <button onClick={() => setSelectedPatientForRx(patient)} className="px-3 py-1.5 bg-emerald-50 text-emerald-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-emerald-100 transition">Rx</button>
-                <button onClick={() => onOpenPD(patient)} className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-blue-100 transition flex items-center gap-1"><Eye size={10} /> View</button>
-                <button onClick={() => onSetReminder(patient)} className="px-3 py-1.5 bg-amber-50 text-amber-600 rounded-lg text-[10px] font-bold uppercase tracking-wider hover:bg-amber-100 transition"><Bell size={10} /></button>
+                <button onClick={() => setSelectedPatientForRx(patient)} className="px-3 py-1.5 bg-emerald-50 text-emerald-600 rounded-2xl text-[10px] font-bold uppercase tracking-wider hover:bg-emerald-100 transition">Rx</button>
+                <button onClick={() => onOpenPD(patient)} className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-2xl text-[10px] font-bold uppercase tracking-wider hover:bg-blue-100 transition flex items-center gap-1"><Eye size={10} /> View</button>
+                <button onClick={() => onSetReminder(patient)} className="px-3 py-1.5 bg-amber-50 text-amber-600 rounded-2xl text-[10px] font-bold uppercase tracking-wider hover:bg-amber-100 transition"><Bell size={10} /></button>
                 <button onClick={() => removePatient(patient.id)} className="p-1.5 text-slate-300 hover:text-rose-500 transition"><Trash2 size={14} /></button>
               </div>
             </div>
@@ -336,12 +338,12 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Kent&apos;s Repertory</h2>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Browse &amp; search rubrics</p>
+          <h2 className="section-title">Kent&apos;s Repertory</h2>
+          <p className="section-subtitle">Browse &amp; search rubrics</p>
         </div>
         <button
           onClick={() => setShowAnalysis(!showAnalysis)}
-          className="relative px-4 py-2 bg-emerald-500 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5"
+          className="btn-emerald relative shadow-lg flex items-center gap-1.5"
         >
           <Filter size={14} />
           Analysis {analysis.length > 0 && (
@@ -351,7 +353,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
       </div>
 
       {/* Search */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 space-y-3">
+      <div className="modern-card p-4 space-y-3">
         <div className="flex gap-3">
           <div className="flex-1 relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
@@ -360,13 +362,13 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
               value={search}
               onChange={(e) => { setSearch(e.target.value); if (!e.target.value.trim()) setSearchResults([]); }}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-              className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              className="modern-input"
               placeholder="Search rubrics across all chapters..."
             />
           </div>
           <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
             onClick={handleSearch}
-            className="px-5 py-3 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg"
+            className="btn-primary shadow-lg"
           >
             Search
           </motion.button>
@@ -408,8 +410,8 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
       {/* Chapter Browser + Rubric Tree */}
       <div className="grid grid-cols-12 gap-4">
         {/* Chapter List */}
-        <div className="col-span-4 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-          <div className="p-3 bg-slate-900 text-white">
+        <div className="col-span-4 modern-card overflow-hidden">
+          <div className="p-3 gradient-dark text-white">
             <h3 className="text-[10px] font-black uppercase tracking-widest">Chapters ({KENT_REPERTORY_DATA.length})</h3>
           </div>
           <div className="max-h-[500px] overflow-y-auto divide-y divide-slate-50">
@@ -419,7 +421,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                 onClick={() => { setSelectedChapterId(ch.id); setRubricPage(0); setExpandedRubrics(new Set()); }}
                 className={`w-full text-left px-3 py-2.5 flex items-center justify-between transition ${
                   selectedChapterId === ch.id
-                    ? 'bg-emerald-50 border-l-3 border-emerald-500'
+                    ? 'bg-emerald-50 border-l-3 border-emerald-500 hover:bg-emerald-100'
                     : 'hover:bg-slate-50 border-l-3 border-transparent'
                 }`}
               >
@@ -434,10 +436,10 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
         </div>
 
         {/* Rubric Tree */}
-        <div className="col-span-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="col-span-8 modern-card overflow-hidden">
           {selectedChapter ? (
             <>
-              <div className="p-3 bg-emerald-600 text-white flex items-center justify-between">
+              <div className="p-3 gradient-primary text-white flex items-center justify-between">
                 <div>
                   <h3 className="text-xs font-black uppercase tracking-widest">{selectedChapter.chapter}</h3>
                   <p className="text-[9px] font-bold text-emerald-200">
@@ -452,7 +454,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                   const isExpanded = expandedRubrics.has(r.id);
                   return (
                     <div key={r.id}>
-                      <div className="flex items-center justify-between px-3 py-2 hover:bg-slate-50 transition">
+                      <div className="flex items-center justify-between px-3 py-2 hover:bg-slate-50 hover:pl-4 transition-all">
                         <div className="flex items-center gap-2 flex-1 min-w-0">
                           {subs.length > 0 && (
                             <button
@@ -535,7 +537,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
 
       {/* Analysis Panel (expandable) */}
       {showAnalysis && (
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="modern-card overflow-hidden">
           <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Filter size={16} />
@@ -572,7 +574,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleRepertorize}
-                className="w-full py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-2"
+                className="btn-emerald w-full flex items-center justify-center gap-2"
               >
                 <Filter size={14} /> Run Repertorization
               </motion.button>

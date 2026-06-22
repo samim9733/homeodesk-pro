@@ -24,22 +24,22 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm print:bg-white print:p-0 print:backdrop-blur-none">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-white modal-container w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh]"
       >
         {/* Header */}
-        <div className="p-6 bg-slate-900 text-white flex justify-between items-center print:bg-white print:text-slate-900 print:border-b print:border-slate-200">
+        <div className="modal-header-dark flex justify-between items-center print:bg-white print:text-slate-900 print:border-b print:border-slate-200">
           <div>
             <h3 className="text-xl font-black uppercase tracking-widest">Prescription</h3>
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
               {patient.name} • {patient.id}
             </p>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-all print:hidden">
+          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all print:hidden">
             <X size={24} />
           </button>
         </div>
@@ -48,19 +48,19 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
         <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
           {/* Patient Info */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="bg-slate-50 rounded-xl p-3">
+            <div className="bg-slate-50/80 rounded-2xl p-4">
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Name</p>
               <p className="text-sm font-black text-slate-900 mt-1">{patient.name}</p>
             </div>
-            <div className="bg-slate-50 rounded-xl p-3">
+            <div className="bg-slate-50/80 rounded-2xl p-4">
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Age / Gender</p>
               <p className="text-sm font-black text-slate-900 mt-1">{patient.age} / {patient.gender}</p>
             </div>
-            <div className="bg-slate-50 rounded-xl p-3">
+            <div className="bg-slate-50/80 rounded-2xl p-4">
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Date</p>
               <p className="text-sm font-black text-slate-900 mt-1">{new Date().toLocaleDateString()}</p>
             </div>
-            <div className="bg-slate-50 rounded-xl p-3">
+            <div className="bg-slate-50/80 rounded-2xl p-4">
               <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Phone</p>
               <p className="text-sm font-black text-slate-900 mt-1">{patient.phone || 'N/A'}</p>
             </div>
@@ -86,7 +86,7 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
 
           {/* Rx Form */}
           <div className="border border-slate-200 rounded-2xl overflow-hidden">
-            <div className="p-4 bg-emerald-50 border-b border-emerald-100">
+            <div className="px-5 py-4 bg-emerald-50/80 border-b border-emerald-100">
               <div className="flex items-center gap-2">
                 <FileText size={16} className="text-emerald-600" />
                 <h4 className="text-xs font-black uppercase tracking-widest text-emerald-800">Prescription</h4>
@@ -157,22 +157,22 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
         </div>
 
         {/* Footer */}
-        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50 flex flex-col sm:flex-row justify-between items-center gap-3 print:hidden">
+        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row justify-between items-center gap-3 print:hidden">
           <div className="flex gap-3">
             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
               onClick={() => window.print()}
-              className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition-all flex items-center gap-2"
+              className="btn-primary flex items-center gap-2"
             >
               <Printer size={14} /> Print
             </motion.button>
             <motion.button whileHover={{ scale: 1.02, backgroundColor: '#10b981' }} whileTap={{ scale: 0.98 }}
               onClick={handleSave}
-              className="px-5 py-2.5 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition-all flex items-center gap-2"
+              className="btn-emerald flex items-center gap-2"
             >
               <Save size={14} /> {saved ? 'Saved!' : 'Save'}
             </motion.button>
           </div>
-          <button onClick={onClose} className="px-5 py-2.5 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all">
+          <button onClick={onClose} className="btn-ghost">
             Close
           </button>
         </div>
@@ -201,15 +201,15 @@ export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onS
   ];
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm print:bg-white print:p-0 print:backdrop-blur-none">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-white modal-container w-full max-w-4xl overflow-hidden flex flex-col max-h-[90vh]"
       >
         {/* Header */}
-        <div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+        <div className="modal-header-dark flex justify-between items-center">
           <div>
             <h3 className="text-xl font-black uppercase tracking-widest">Patient Details</h3>
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
@@ -218,16 +218,16 @@ export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onS
           </div>
           <div className="flex items-center gap-2">
             {onPrevious && (
-              <button onClick={onPrevious} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+              <button onClick={onPrevious} className="p-2 hover:bg-white/10 rounded-xl transition-all">
                 <ChevronLeft size={20} />
               </button>
             )}
             {onNext && (
-              <button onClick={onNext} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+              <button onClick={onNext} className="p-2 hover:bg-white/10 rounded-xl transition-all">
                 <ChevronRight size={20} />
               </button>
             )}
-            <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+            <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
               <X size={24} />
             </button>
           </div>
@@ -344,8 +344,8 @@ export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onS
         </div>
 
         {/* Footer */}
-        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50 flex justify-end gap-3 print:hidden">
-          <button onClick={onClose} className="px-5 py-2.5 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all">
+        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50/50 flex justify-end gap-3 print:hidden">
+          <button onClick={onClose} className="btn-ghost">
             Close
           </button>
         </div>

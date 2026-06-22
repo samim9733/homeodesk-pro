@@ -13,14 +13,14 @@ export function QRScannerModal({ onClose, onScan }: QRScannerModalProps) {
   const [isScanning, setIsScanning] = useState(false);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden"
+        className="bg-white modal-container w-full max-w-lg overflow-hidden"
       >
-        <div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+        <div className="modal-header-dark flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Camera size={24} />
             <div>
@@ -28,13 +28,13 @@ export function QRScannerModal({ onClose, onScan }: QRScannerModalProps) {
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Scan or enter data</p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
             <X size={24} />
           </button>
         </div>
         <div className="p-6 space-y-4">
           {/* Scanner placeholder */}
-          <div className="w-full aspect-square max-h-64 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex flex-col items-center justify-center gap-3">
+          <div className="w-full aspect-square max-h-64 bg-slate-50/80 rounded-2xl border-2 border-dashed border-slate-200 flex flex-col items-center justify-center gap-3">
             <Camera size={48} className="text-slate-300" />
             <p className="text-xs font-bold text-slate-400">Camera feed will appear here</p>
             <p className="text-[10px] text-slate-300">QR code scanning requires camera access</p>
@@ -53,7 +53,7 @@ export function QRScannerModal({ onClose, onScan }: QRScannerModalProps) {
           </div>
 
           <div className="flex gap-3">
-            <button onClick={onClose} className="flex-1 px-5 py-3 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all">
+            <button onClick={onClose} className="btn-ghost flex-1">
               Cancel
             </button>
             <motion.button
@@ -61,7 +61,7 @@ export function QRScannerModal({ onClose, onScan }: QRScannerModalProps) {
               whileTap={{ scale: 0.98 }}
               onClick={() => manualInput && onScan(manualInput)}
               disabled={!manualInput}
-              className="flex-1 px-5 py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="btn-emerald flex-1 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               <CheckCircle size={14} /> Process Data
             </motion.button>
@@ -79,19 +79,19 @@ interface AnalysisResultModalProps {
 
 export function AnalysisResultModal({ result, onClose }: AnalysisResultModalProps) {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-white modal-container w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]"
       >
-        <div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+        <div className="modal-header-dark flex justify-between items-center">
           <div>
             <h3 className="text-xl font-black uppercase tracking-widest">AI Analysis Result</h3>
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Powered by Gemini AI</p>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
             <X size={24} />
           </button>
         </div>
@@ -99,7 +99,7 @@ export function AnalysisResultModal({ result, onClose }: AnalysisResultModalProp
           <ReactMarkdown>{result}</ReactMarkdown>
         </div>
         <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-end">
-          <button onClick={onClose} className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition-all">
+          <button onClick={onClose} className="btn-primary">
             Close
           </button>
         </div>
@@ -127,24 +127,24 @@ export function ImageEditorModal({ imageUrl, onClose, onUpdate }: ImageEditorMod
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden"
+        className="bg-white modal-container w-full max-w-xl overflow-hidden"
       >
-        <div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+        <div className="modal-header-dark flex justify-between items-center">
           <div>
             <h3 className="text-xl font-black uppercase tracking-widest">Image Editor</h3>
             <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Update or replace image</p>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-full transition-all">
+          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
             <X size={24} />
           </button>
         </div>
         <div className="p-6 space-y-4">
-          <div className="w-full aspect-video bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center">
+          <div className="w-full aspect-video bg-slate-50/80 rounded-2xl border-2 border-dashed border-slate-200 flex items-center justify-center">
             {imageUrl ? (
               <img src={imageUrl} alt="Preview" className="max-w-full max-h-full object-contain rounded-xl" />
             ) : (
@@ -162,14 +162,14 @@ export function ImageEditorModal({ imageUrl, onClose, onUpdate }: ImageEditorMod
             />
           </div>
           <div className="flex gap-3">
-            <button onClick={onClose} className="flex-1 px-5 py-3 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all">
+            <button onClick={onClose} className="btn-ghost flex-1">
               Cancel
             </button>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleUpdate}
-              className="flex-1 px-5 py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition-all flex items-center justify-center gap-2"
+              className="btn-emerald flex-1 flex items-center justify-center gap-2"
             >
               {isProcessing ? <Loader2 size={14} className="animate-spin" /> : <CheckCircle size={14} />}
               {isProcessing ? 'Processing...' : 'Update'}

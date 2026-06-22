@@ -111,23 +111,30 @@ default: return 'HomeoDesk Pro';
 };
 if (isLoading) {
 return (
-<div className="fixed inset-0 bg-[#0f172a] flex flex-col items-center justify-center z-[9999]">
+<div className="fixed inset-0 flex flex-col items-center justify-center z-[9999]" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #064e3b 100%)' }}>
 <motion.div 
-animate={{ scale: [1, 1.1, 1] }}
-transition={{ repeat: Infinity, duration: 1.5 }}
-className="text-emerald-400 mb-4"
+animate={{ scale: [1, 1.08, 1], rotate: [0, 3, -3, 0] }}
+transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+className="mb-6"
 >
-<Leaf size={64} />
+<div className="w-20 h-20 rounded-3xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #10b981, #059669)', boxShadow: '0 8px 32px rgba(16,185,129,0.4)' }}>
+<Leaf size={36} className="text-white" />
+</div>
 </motion.div>
-<h1 className="text-white text-3xl font-bold tracking-widest uppercase">
-HomeoDesk <span className="text-emerald-500">Pro</span>
+<h1 className="text-white text-3xl font-black tracking-tight">
+HomeoDesk <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Pro</span>
 </h1>
-<p className="text-slate-400 mt-2 text-sm tracking-widest">ADVANCED CLINICAL SUITE</p>
+<p className="text-slate-500 mt-2 text-[11px] font-semibold tracking-[0.2em] uppercase">Advanced Clinical Suite</p>
+<div className="mt-8 flex items-center gap-1.5">
+<motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0 }} className="w-2 h-2 rounded-full bg-emerald-400" />
+<motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.2 }} className="w-2 h-2 rounded-full bg-emerald-400" />
+<motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.4 }} className="w-2 h-2 rounded-full bg-emerald-400" />
+</div>
 </div>
 );
 }
 return (
-<div className="flex h-screen text-slate-800 bg-slate-50 overflow-hidden">
+<div className="flex h-screen text-slate-800 overflow-hidden" style={{ background: '#f8fafc' }}>
 <Sidebar 
 activeTab={activeTab} 
 setActiveTab={(tab) => {
@@ -139,46 +146,46 @@ toggleMenu={() => setIsSidebarOpen(!isSidebarOpen)}
 isCollapsed={isSidebarCollapsed}
 toggleCollapse={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
 />
-<main className={`flex-1 flex flex-col min-w-0 overflow-hidden print:overflow-visible print:h-auto transition-all duration-300 ${isSidebarCollapsed ? 'lg:ml-[80px]' : 'lg:ml-[260px]'} ml-0`}>
-<header className="h-20 bg-white border-b border-slate-100 flex items-center px-4 lg:px-8 gap-8 justify-between shadow-sm z-10 print:hidden">
+<main className={`flex-1 flex flex-col min-w-0 overflow-hidden print:overflow-visible print:h-auto transition-all duration-500 ${isSidebarCollapsed ? 'lg:ml-[76px]' : 'lg:ml-[272px]'} ml-0`}>
+<header className="h-[68px] bg-white/80 backdrop-blur-xl border-b border-slate-100/80 flex items-center px-4 lg:px-8 gap-8 justify-between z-10 print:hidden" style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.03)' }}>
 <div className="flex items-center gap-4 flex-1">
 <button 
 onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
-className="p-2 text-slate-600 hover:bg-slate-50 rounded-lg transition lg:hidden"
+className="p-2.5 text-slate-500 hover:bg-slate-100 rounded-xl transition lg:hidden"
 >
-<Menu size={24} />
+<Menu size={22} />
 </button>
-<div className="relative flex-1 max-w-md hidden md:block">
-<Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+<div className="relative flex-1 max-w-lg hidden md:block">
+<Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
 <input 
 type="text" 
 placeholder="Search symptoms, remedies, or patients..." 
-className="w-full pl-12 pr-4 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+className="modern-input w-full !py-2.5 !pl-11 !pr-4 !rounded-2xl !text-sm"
 />
 </div>
 </div>
 <div className="flex items-center gap-6">
-<div className="hidden xl:flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-2xl text-[10px] font-black text-slate-500 uppercase tracking-widest border border-slate-100">
-<Calendar size={14} className="text-primary" />
-<span>{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</span>
+<div className="hidden xl:flex items-center gap-2.5 px-4 py-2 bg-slate-50/80 rounded-2xl text-[10px] font-bold text-slate-400 uppercase tracking-[0.1em] border border-slate-100/60">
+<Calendar size={13} className="text-emerald-500" />
+<span>{new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
 </div>
 <div className="flex items-center gap-2">
 <button 
 onClick={() => setIsQRScannerOpen(true)}
-className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-primary/5 hover:text-primary transition flex items-center justify-center border border-slate-100 shadow-sm"
+className="w-10 h-10 rounded-2xl bg-slate-50 text-slate-400 hover:bg-emerald-50 hover:text-emerald-600 transition-all flex items-center justify-center border border-slate-100/60"
 title="Scan QR Code"
 >
-<QrCode size={20} />
+<QrCode size={18} />
 </button>
-<button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-amber-50 hover:text-amber-600 transition flex items-center justify-center border border-slate-100 shadow-sm relative">
-<Bell size={20} />
-<span className="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white" />
+<button className="w-10 h-10 rounded-2xl bg-slate-50 text-slate-400 hover:bg-amber-50 hover:text-amber-600 transition-all flex items-center justify-center border border-slate-100/60 relative">
+<Bell size={18} />
+<span className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-rose-500 rounded-full border-2 border-white" />
 </button>
 <button 
 onClick={() => setActiveTab('settings')}
-className={`w-10 h-10 rounded-xl transition flex items-center justify-center border border-slate-100 shadow-sm ${activeTab === 'settings' ? 'bg-primary/5 text-primary' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'}`}
+className={`w-10 h-10 rounded-2xl transition-all flex items-center justify-center border border-slate-100/60 ${activeTab === 'settings' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-400 hover:bg-slate-100'}`}
 >
-<Settings size={20} />
+<Settings size={18} />
 </button>
 </div>
 <div className="h-8 w-px bg-slate-100 hidden sm:block" />
@@ -187,13 +194,13 @@ className={`w-10 h-10 rounded-xl transition flex items-center justify-center bor
 <p className="text-xs font-black text-slate-900 tracking-tight">Dr. Rahim Ahmed</p>
 <p className="text-[9px] font-bold text-primary uppercase tracking-widest">Available</p>
 </div>
-<div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-slate-200">
+<div className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-bold text-sm" style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)', boxShadow: '0 4px 12px rgba(15,23,42,0.2)' }}>
 RA
 </div>
 </div>
 </div>
 </header>
-<section className="flex-1 p-4 lg:p-8 overflow-y-auto print:hidden">
+<section className="flex-1 p-5 lg:p-8 overflow-y-auto print:hidden" style={{ background: '#f8fafc' }}>
 <AnimatePresence mode="wait">
 {isQRScannerOpen && (
 <QRScannerModal 
@@ -202,11 +209,13 @@ onScan={handleQRScan}
 />
 )}
 {isAnalyzing && (
-<div className="fixed inset-0 bg-black/40 z-[90] flex items-center justify-center backdrop-blur-sm">
-<div className="bg-white p-8 rounded-3xl shadow-2xl flex flex-col items-center gap-4">
-<Loader2 className="animate-spin text-emerald-500" size={48} />
-<p className="font-bold text-slate-800">Analyzing QR Data...</p>
-<p className="text-sm text-slate-500">Please wait while Gemini processes the information.</p>
+<div className="fixed inset-0 modal-overlay z-[90] flex items-center justify-center">
+<div className="modal-container p-8 flex flex-col items-center gap-4">
+<div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mb-2">
+<Loader2 className="animate-spin text-emerald-500" size={32} />
+</div>
+<p className="font-bold text-slate-800 text-sm">Analyzing QR Data...</p>
+<p className="text-xs text-slate-400">Gemini AI is processing the information</p>
 </div>
 </div>
 )}
@@ -462,38 +471,38 @@ transition={{ duration: 0.2 }}
 {/* Repertorization Results Modal */}
 <AnimatePresence>
 {repertorizationResults && (
-<div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm print:hidden">
+<div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:hidden">
 <motion.div 
-initial={{ opacity: 0, scale: 0.9, y: 20 }}
+initial={{ opacity: 0, scale: 0.95, y: 20 }}
 animate={{ opacity: 1, scale: 1, y: 0 }}
-exit={{ opacity: 0, scale: 0.9, y: 20 }}
-className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]"
+exit={{ opacity: 0, scale: 0.95, y: 20 }}
+className="modal-container w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]"
 >
-<div className="p-6 bg-slate-900 text-white flex justify-between items-center">
+<div className="modal-header-dark flex justify-between items-center">
 <div>
-<h3 className="text-xl font-black uppercase tracking-widest">Repertorization Results</h3>
-<p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Top remedies covering your selected rubrics</p>
+<h3 className="text-lg font-extrabold uppercase tracking-tight">Repertorization Results</h3>
+<p className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.12em] mt-1">Top remedies covering your selected rubrics</p>
 </div>
 <motion.button 
 whileHover={{ scale: 1.1, rotate: 90 }}
 whileTap={{ scale: 0.9 }}
 onClick={() => setRepertorizationResults(null)}
-className="p-2 hover:bg-slate-800 rounded-full transition-all"
+className="p-2 hover:bg-white/10 rounded-xl transition-all"
 >
-<X size={24} />
+<X size={22} />
 </motion.button>
 </div>
-<div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
-<div className="grid grid-cols-1 gap-3">
+<div className="flex-1 overflow-y-auto p-5 space-y-3 custom-scrollbar">
+<div className="grid grid-cols-1 gap-2.5">
 {repertorizationResults.map((res, i) => (
 <motion.div 
 initial={{ opacity: 0, x: -20 }}
 animate={{ opacity: 1, x: 0 }}
 transition={{ delay: i * 0.1 }}
 key={res.name} 
-className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-slate-900 transition-all group"
+className="modern-card flex items-center gap-4 p-4 !rounded-2xl group cursor-default"
 >
-<div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
+<div className="w-11 h-11 rounded-2xl flex items-center justify-center font-extrabold text-sm text-white shadow-lg group-hover:scale-105 transition-transform" style={{ background: i === 0 ? 'linear-gradient(135deg, #f59e0b, #d97706)' : i === 1 ? 'linear-gradient(135deg, #94a3b8, #64748b)' : i === 2 ? 'linear-gradient(135deg, #f97316, #ea580c)' : 'linear-gradient(135deg, #0f172a, #1e293b)' }}>
 {i + 1}
 </div>
 <div className="flex-1 min-w-0">
@@ -505,16 +514,16 @@ className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-
 </div>
 </div>
 <div className="flex items-center gap-4 mt-2">
-<div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+<div className="flex-1 progress-bar">
 <motion.div 
 initial={{ width: 0 }}
 animate={{ width: `${(res.score / repertorizationResults[0].score) * 100}%` }}
 transition={{ duration: 1, ease: "easeOut" }}
-className="h-full bg-slate-900 rounded-full" 
+className="progress-bar-fill" style={{ background: i === 0 ? 'linear-gradient(90deg, #f59e0b, #d97706)' : i === 1 ? 'linear-gradient(90deg, #94a3b8, #64748b)' : i === 2 ? 'linear-gradient(90deg, #f97316, #ea580c)' : 'linear-gradient(90deg, #10b981, #059669)' }}
 />
 </div>
-<span className="text-[9px] font-black text-slate-500 uppercase tracking-widest whitespace-nowrap">
-Covers {res.count} / {analysis.length} rubrics
+<span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.1em] whitespace-nowrap">
+Covers {res.count} / {analysis.length}
 </span>
 </div>
 </div>
@@ -527,18 +536,18 @@ Covers {res.count} / {analysis.length} rubrics
 </div>
 )}
 </div>
-<div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50 flex flex-col sm:flex-row justify-between items-center gap-4">
-<div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+<div className="p-4 md:p-5 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row justify-between items-center gap-3">
+<div className="flex flex-col sm:flex-row gap-2.5 w-full sm:w-auto">
 <motion.button 
-whileHover={{ scale: 1.02, backgroundColor: '#000' }}
+whileHover={{ scale: 1.02 }}
 whileTap={{ scale: 0.98 }}
 onClick={() => window.print()}
-className="w-full sm:w-auto px-6 py-3 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-slate-200 transition-all flex items-center justify-center gap-2"
+className="btn-primary flex items-center justify-center gap-2 w-full sm:w-auto"
 >
-<Printer size={16} /> Print Analysis
+<Printer size={14} /> Print
 </motion.button>
 <motion.button 
-whileHover={{ scale: 1.02, backgroundColor: '#10b981' }}
+whileHover={{ scale: 1.02 }}
 whileTap={{ scale: 0.98 }}
 onClick={() => {
 if (patients.length > 0) {
@@ -549,18 +558,17 @@ alert("Please add a patient first to create a prescription.");
 setActiveTab('patients');
 }
 }}
-className="w-full sm:w-auto px-6 py-3 bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-2"
+className="btn-emerald flex items-center justify-center gap-2 w-full sm:w-auto"
 >
-<FileText size={16} /> Transfer to Rx
+<FileText size={14} /> Transfer to Rx
 </motion.button>
 </div>
 <motion.button 
-whileHover={{ backgroundColor: '#f1f5f9' }}
 whileTap={{ scale: 0.98 }}
 onClick={() => setRepertorizationResults(null)}
-className="w-full sm:w-auto px-6 py-3 bg-white text-slate-500 border border-slate-200 rounded-xl text-xs font-black uppercase tracking-widest transition-all"
+className="btn-ghost w-full sm:w-auto"
 >
-Close Results
+Close
 </motion.button>
 </div>
 </motion.div>
