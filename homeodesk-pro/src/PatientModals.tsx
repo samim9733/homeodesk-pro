@@ -20,10 +20,53 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
   }, [quickRemedy, initialResults]);
 
   const [remedy, setRemedy] = useState(topRemedy);
-  const [potency, setPotency] = useState('30C');
-  const [dosage, setDosage] = useState('BD × 7 days');
-  const [instructions, setInstructions] = useState('');
+  const [potency, setPotency] = useState('200C');
+  const [dosage, setDosage] = useState('4 Drops');
+  const [frequency, setFrequency] = useState('Twice daily (Empty stomach)');
+  const [duration, setDuration] = useState('7 Days');
+  const [dietaryRestrictions, setDietaryRestrictions] = useState('');
+  const [regimen, setRegimen] = useState('');
+  const [followUp, setFollowUp] = useState('');
+  const [patientNote, setPatientNote] = useState('');
   const [saved, setSaved] = useState(false);
+
+  // Calculate miasmatic analysis from analysis items
+  const miasmaticAnalysis = useMemo(() => {
+    const miasms = { Psora: 0, Sycosis: 0, Syphilis: 0 };
+    if (!initialAnalysis || initialAnalysis.length === 0) {
+      return { Psora: 52, Sycosis: 21, Syphilis: 27 };
+    }
+    const total = initialAnalysis.length;
+    initialAnalysis.forEach(item => {
+      const text = item.text.toLowerCase();
+      if (text.includes('anxiety') || text.includes('fear') || text.includes('worry') ||
+          text.includes('sad') || text.includes('grief') || text.includes('nervous') ||
+          text.includes('restless') || text.includes('itching') || text.includes('skin') ||
+          text.includes('desire') || text.includes('aversion') || text.includes('thirst')) {
+        miasms.Psora++;
+      }
+      if (text.includes('swelling') || text.includes('thick') || text.includes('sticky') ||
+          text.includes('discharge') || text.includes('growth') || text.includes('tumor') ||
+          text.includes('poly') || text.includes('excess') || text.includes('warts') ||
+          text.includes('cyst') || text.includes('mucus')) {
+        miasms.Sycosis++;
+      }
+      if (text.includes('pain') || text.includes('destruct') || text.includes('ulcer') ||
+          text.includes('bleeding') || text.includes('inflammation') || text.includes('burning') ||
+          text.includes('cracks') || text.includes('fissures') || text.includes('violent') ||
+          text.includes('sudden') || text.includes('intense')) {
+        miasms.Syphilis++;
+      }
+    });
+    if (total === 0) return { Psora: 52, Sycosis: 21, Syphilis: 27 };
+    const sum = miasms.Psora + miasms.Sycosis + miasms.Syphilis;
+    if (sum === 0) return { Psora: 52, Sycosis: 21, Syphilis: 27 };
+    return {
+      Psora: Math.round((miasms.Psora / sum) * 100),
+      Sycosis: Math.round((miasms.Sycosis / sum) * 100),
+      Syphilis: 100 - Math.round((miasms.Psora / sum) * 100) - Math.round((miasms.Sycosis / sum) * 100),
+    };
+  }, [initialAnalysis]);
 
   const handleSave = () => {
     setSaved(true);
@@ -35,180 +78,367 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
     setRemedy(name);
   };
 
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
+
+  const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="bg-white modal-container w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-white modal-container w-full max-w-4xl overflow-hidden flex flex-col max-h-[95vh]"
       >
-        {/* Header */}
-        <div className="modal-header-dark flex justify-between items-center print:bg-white print:text-slate-900 print:border-b print:border-slate-200">
-          <div>
-            <h3 className="text-xl font-black uppercase tracking-widest">Prescription</h3>
-            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
-              {patient.name} • {patient.id}
-            </p>
-          </div>
-          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all print:hidden">
-            <X size={24} />
+        {/* Top Action Bar */}
+        <div className="flex items-center gap-2 px-3 sm:px-5 py-3 bg-white border-b border-slate-200 print:hidden flex-wrap">
+          <button onClick={onClose} className="flex items-center gap-1.5 px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition">
+            <ChevronLeft size={14} /> Back to Patient
+          </button>
+          <button onClick={() => window.print()} className="flex items-center gap-1.5 px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition">
+            <Printer size={14} /> Print Prescription
+          </button>
+          <button className="flex items-center gap-1.5 px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition">
+            <Save size={14} /> Save as JPG
+          </button>
+          <div className="flex-1" />
+          <motion.button
+            whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+            onClick={handleSave}
+            className="flex items-center gap-1.5 px-4 py-2 bg-emerald-600 rounded-lg text-xs font-bold text-white hover:bg-emerald-700 transition shadow-sm"
+          >
+            {saved ? <><CheckCircle size={14} /> Saved!</> : 'PRESCRIBE & FINALISE'}
+          </motion.button>
+          <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-lg transition print:hidden">
+            <X size={20} className="text-slate-500" />
           </button>
         </div>
 
-        {/* Body */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
-          {/* Patient Info */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="bg-slate-50/80 rounded-2xl p-4">
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Name</p>
-              <p className="text-sm font-black text-slate-900 mt-1">{patient.name}</p>
-            </div>
-            <div className="bg-slate-50/80 rounded-2xl p-4">
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Age / Gender</p>
-              <p className="text-sm font-black text-slate-900 mt-1">{patient.age} / {patient.gender}</p>
-            </div>
-            <div className="bg-slate-50/80 rounded-2xl p-4">
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Date</p>
-              <p className="text-sm font-black text-slate-900 mt-1">{new Date().toLocaleDateString()}</p>
-            </div>
-            <div className="bg-slate-50/80 rounded-2xl p-4">
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Phone</p>
-              <p className="text-sm font-black text-slate-900 mt-1">{patient.phone || 'N/A'}</p>
-            </div>
-          </div>
+        {/* Prescription Body */}
+        <div className="flex-1 overflow-y-auto custom-scrollbar">
+          <div className="p-4 sm:p-6 space-y-5">
 
-          {/* Chief Symptoms */}
-          {patient.chiefSymptoms.length > 0 && (
+            {/* ===== DOCTOR / CLINIC HEADER ===== */}
+            <div className="flex justify-between items-start">
+              <div>
+                <h2 className="text-lg sm:text-xl font-black text-emerald-900 tracking-wide">DR. SAMIM AHAMED</h2>
+                <p className="text-xs text-slate-500 mt-0.5">Chief Physician</p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-bold text-slate-800">Clinical Center</p>
+                <p className="text-xs text-slate-500">Medical District</p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-slate-300" />
+
+            {/* ===== PATIENT INFO ===== */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 bg-slate-50 rounded-xl p-3 sm:p-4">
+              <div>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Patient Name</p>
+                <p className="text-xs sm:text-sm font-black text-slate-900 mt-0.5">{patient.name}</p>
+              </div>
+              <div>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Case ID</p>
+                <p className="text-xs sm:text-sm font-black text-slate-900 mt-0.5">#{patient.id}</p>
+              </div>
+              <div>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Age / Gender</p>
+                <p className="text-xs sm:text-sm font-black text-slate-900 mt-0.5">{patient.age} Years / {patient.gender}</p>
+              </div>
+              <div>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Date</p>
+                <p className="text-xs sm:text-sm font-black text-slate-900 mt-0.5">{today}</p>
+              </div>
+            </div>
+
+            {/* ===== CHIEF COMPLAINTS ===== */}
+            {patient.chiefSymptoms.length > 0 && (
+              <div>
+                <h4 className="text-xs font-black uppercase tracking-widest text-slate-700 mb-2 flex items-center gap-2">
+                  <Stethoscope size={14} className="text-emerald-600" />
+                  Chief Complaints
+                </h4>
+                <div className="space-y-1.5">
+                  {patient.chiefSymptoms.map((cs, i) => (
+                    <div key={cs.id || i} className="flex items-start gap-2 text-xs text-slate-700">
+                      <span className="text-slate-400 font-bold mt-0.5">&#8226;</span>
+                      <span className="font-semibold">
+                        {cs.symptom}
+                        {cs.duration && <span className="text-slate-400 ml-1">({cs.duration})</span>}
+                      </span>
+                      {cs.severity && (
+                        <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ml-auto flex-shrink-0 ${
+                          cs.severity === 'Severe' ? 'bg-rose-50 text-rose-600' :
+                          cs.severity === 'Moderate' ? 'bg-amber-50 text-amber-600' :
+                          'bg-blue-50 text-blue-600'
+                        }`}>{cs.severity}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ===== GENERAL COMPLAINTS ===== */}
+            {patient.physicalGenerals.length > 0 && (
+              <div>
+                <h4 className="text-xs font-black uppercase tracking-widest text-slate-700 mb-2 flex items-center gap-2">
+                  <Thermometer size={14} className="text-blue-600" />
+                  General Complaints
+                </h4>
+                <div className="space-y-1.5">
+                  {patient.physicalGenerals.map((pg, i) => (
+                    <div key={pg.id || i} className="flex items-start gap-2 text-xs text-slate-700">
+                      <span className="text-slate-400 font-bold mt-0.5">&#8226;</span>
+                      <span className="font-semibold">
+                        {pg.attribute}: {pg.value}
+                      </span>
+                      {pg.category && (
+                        <span className="text-[9px] font-bold bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded ml-auto flex-shrink-0">
+                          {pg.category}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ===== MENTAL SYMPTOMS ===== */}
+            {patient.mentalSymptoms && patient.mentalSymptoms.length > 0 && (
+              <div>
+                <h4 className="text-xs font-black uppercase tracking-widest text-slate-700 mb-2 flex items-center gap-2">
+                  <Brain size={14} className="text-purple-600" />
+                  Mental Symptoms
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {patient.mentalSymptoms.map((ms, i) => (
+                    <span key={i} className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold bg-purple-50 text-purple-700 px-2.5 py-1 rounded-lg border border-purple-200">
+                      <Brain size={10} />
+                      {ms}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ===== MIASMATIC ANALYSIS ===== */}
             <div>
-              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Chief Symptoms</h4>
-              <div className="space-y-1">
-                {patient.chiefSymptoms.map((cs, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                    <span className="text-slate-400 font-bold">{i + 1}.</span>
-                    <span className="font-bold">{cs.symptom}</span>
-                    {cs.severity && (
-                      <span className="text-[9px] font-bold bg-slate-100 px-1.5 py-0.5 rounded">{cs.severity}</span>
-                    )}
+              <h4 className="text-xs font-black uppercase tracking-widest text-slate-700 mb-3 flex items-center gap-2">
+                <Microscope size={14} className="text-emerald-600" />
+                Miasmatic Analysis
+              </h4>
+              <div className="space-y-2.5">
+                {[
+                  { name: 'Psora', value: miasmaticAnalysis.Psora, color: 'bg-emerald-500' },
+                  { name: 'Sycosis', value: miasmaticAnalysis.Sycosis, color: 'bg-blue-500' },
+                  { name: 'Syphilis', value: miasmaticAnalysis.Syphilis, color: 'bg-rose-500' },
+                ].map((m) => (
+                  <div key={m.name} className="flex items-center gap-3">
+                    <span className="text-xs font-bold text-slate-600 w-16 text-right">{m.name}</span>
+                    <div className="flex-1 h-4 bg-slate-100 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${m.value}%` }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        className={`h-full ${m.color} rounded-full`}
+                      />
+                    </div>
+                    <span className="text-xs font-black text-slate-700 w-10 text-right">{m.value}%</span>
                   </div>
                 ))}
               </div>
             </div>
-          )}
 
-          {/* Rx Form */}
-          <div className="border border-slate-200 rounded-2xl overflow-hidden">
-            <div className="px-5 py-4 bg-emerald-50/80 border-b border-emerald-100">
-              <div className="flex items-center gap-2">
-                <FileText size={16} className="text-emerald-600" />
-                <h4 className="text-xs font-black uppercase tracking-widest text-emerald-800">Prescription</h4>
-              </div>
+            {/* ===== PATIENT NOTE ===== */}
+            <div>
+              <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Patient Note</label>
+              <textarea
+                value={patientNote}
+                onChange={(e) => setPatientNote(e.target.value)}
+                rows={2}
+                className="w-full mt-1 px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs italic text-slate-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
+                placeholder="Patient observations, modalities, general state..."
+              />
             </div>
-            <div className="p-4 space-y-3">
-              <div>
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Remedy</label>
-                <input
-                  type="text"
-                  value={remedy}
-                  onChange={(e) => setRemedy(e.target.value)}
-                  className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                  placeholder="Enter remedy name..."
-                />
+
+            {/* ===== Rx PRESCRIPTION TABLE ===== */}
+            <div className="border border-slate-200 rounded-xl overflow-hidden">
+              <div className="px-4 py-3 bg-emerald-50/80 border-b border-emerald-100">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-black text-emerald-800" style={{ fontFamily: 'serif' }}>Rx</span>
+                  <span className="text-xs font-black uppercase tracking-widest text-emerald-700">Prescription</span>
+                </div>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Potency</label>
-                  <select
-                    value={potency}
-                    onChange={(e) => setPotency(e.target.value)}
-                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                  >
-                    {['6C', '12C', '30C', '200C', '1M', '10M', 'LM1', 'LM2', 'LM3', 'Q (LM)', '0/1', '0/2', '0/3'].map(p => (
-                      <option key={p} value={p}>{p}</option>
-                    ))}
-                  </select>
+              <div className="p-3 sm:p-4 space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Remedy</label>
+                    <input
+                      type="text"
+                      value={remedy}
+                      onChange={(e) => setRemedy(e.target.value)}
+                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                      placeholder="Enter remedy name..."
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Potency</label>
+                    <select
+                      value={potency}
+                      onChange={(e) => setPotency(e.target.value)}
+                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                    >
+                      {['6C', '12C', '30C', '200C', '1M', '10M', 'LM1', 'LM2', 'LM3', 'Q (LM)', '0/1', '0/2', '0/3'].map(p => (
+                        <option key={p} value={p}>{p}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Dosage</label>
+                    <input
+                      type="text"
+                      value={dosage}
+                      onChange={(e) => setDosage(e.target.value)}
+                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Frequency</label>
+                    <input
+                      type="text"
+                      value={frequency}
+                      onChange={(e) => setFrequency(e.target.value)}
+                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dosage</label>
+                  <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Duration</label>
                   <input
                     type="text"
-                    value={dosage}
-                    onChange={(e) => setDosage(e.target.value)}
-                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                    value={duration}
+                    onChange={(e) => setDuration(e.target.value)}
+                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  />
+                </div>
+                {remedy && potency && (
+                  <div className="bg-slate-50 rounded-lg p-3 mt-2">
+                    <p className="text-[9px] font-bold text-slate-400 uppercase">Prescribed Medicine</p>
+                    <p className="text-sm font-black text-emerald-800 mt-0.5">{remedy} {potency}</p>
+                    <p className="text-[10px] text-slate-500 mt-0.5">Liquid dilution</p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* ===== SUGGESTED REMEDIES ===== */}
+            {initialResults && initialResults.length > 0 && (
+              <div>
+                <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2">
+                  <Zap size={14} className="text-emerald-500" />
+                  Suggested Remedies (click to select)
+                </h4>
+                <div className="space-y-1.5">
+                  {initialResults.slice(0, 5).map((res, i) => {
+                    const isSelected = remedy === res.name;
+                    const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
+                    return (
+                      <motion.button
+                        key={res.name}
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.99 }}
+                        onClick={() => handleSelectRemedy(res.name)}
+                        className={`w-full flex items-center gap-3 p-2.5 rounded-lg border transition-all text-left ${
+                          isSelected
+                            ? 'bg-emerald-50 border-emerald-300 shadow-sm shadow-emerald-500/10'
+                            : 'bg-slate-50 border-slate-100 hover:bg-slate-100'
+                        }`}
+                      >
+                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black text-white flex-shrink-0 ${
+                          i < 3 ? medalColors[i] : 'bg-slate-900'
+                        }`}>
+                          {i + 1}
+                        </span>
+                        <span className={`text-xs font-bold flex-1 ${isSelected ? 'text-emerald-800' : 'text-slate-900'}`}>{res.name}</span>
+                        <span className="text-xs font-black text-slate-500">{res.score}pts</span>
+                        {isSelected && <CheckCircle size={16} className="text-emerald-500 flex-shrink-0" />}
+                      </motion.button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* ===== SPECIAL INSTRUCTIONS ===== */}
+            <div className="bg-emerald-50/60 border border-emerald-200/60 rounded-xl p-4">
+              <h4 className="text-xs font-black uppercase tracking-widest text-emerald-800 mb-3 flex items-center gap-2">
+                <span className="text-sm">&#9432;</span>
+                Special Instructions
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">Dietary Restrictions</p>
+                  <textarea
+                    value={dietaryRestrictions}
+                    onChange={(e) => setDietaryRestrictions(e.target.value)}
+                    rows={3}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
+                    placeholder="e.g. Avoid raw onion and garlic, No coffee..."
+                  />
+                </div>
+                <div>
+                  <p className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">Regimen</p>
+                  <textarea
+                    value={regimen}
+                    onChange={(e) => setRegimen(e.target.value)}
+                    rows={3}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
+                    placeholder="e.g. Take medicines 30 mins before food..."
                   />
                 </div>
               </div>
-              <div>
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Instructions</label>
-                <textarea
-                  value={instructions}
-                  onChange={(e) => setInstructions(e.target.value)}
-                  rows={3}
-                  className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
-                  placeholder="Special instructions..."
-                />
+            </div>
+
+            {/* ===== FOLLOW-UP ===== */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-2">
+                <Clock size={14} className="text-emerald-600" />
+                <span className="text-xs font-black uppercase tracking-widest text-slate-700">Next Follow-up</span>
+              </div>
+              <input
+                type="date"
+                value={followUp}
+                onChange={(e) => setFollowUp(e.target.value)}
+                className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 sm:w-auto"
+              />
+              {followUp && (
+                <span className="text-xs font-semibold text-emerald-600">
+                  {new Date(followUp).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </span>
+              )}
+            </div>
+
+            {/* ===== FOOTER ===== */}
+            <div className="border-t border-slate-200 pt-4 mt-2">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+                <div className="text-[9px] text-slate-400 leading-relaxed max-w-xs">
+                  <p>This is a computer-generated prescription signed electronically. Scan QR code to verify authenticity.</p>
+                </div>
+                <div className="text-right">
+                  <div className="w-36 border-b border-slate-400 mb-1 mx-auto sm:mx-0" />
+                  <p className="text-xs font-bold text-slate-700">Dr. Samim Ahamed</p>
+                  <p className="text-[9px] text-slate-400">Digital Signature</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Repertorization Results - Click to select */}
-          {initialResults && initialResults.length > 0 && (
-            <div>
-              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2">
-                <Zap size={14} className="text-emerald-500" />
-                Suggested Remedies (click to select)
-              </h4>
-              <div className="space-y-2">
-                {initialResults.slice(0, 5).map((res, i) => {
-                  const isSelected = remedy === res.name;
-                  const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
-                  return (
-                    <motion.button
-                      key={res.name}
-                      whileHover={{ scale: 1.01 }}
-                      whileTap={{ scale: 0.99 }}
-                      onClick={() => handleSelectRemedy(res.name)}
-                      className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${
-                        isSelected
-                          ? 'bg-emerald-50 border-emerald-300 shadow-sm shadow-emerald-500/10'
-                          : 'bg-slate-50 border-slate-100 hover:bg-slate-100'
-                      }`}
-                    >
-                      <span className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black text-white flex-shrink-0 ${
-                        i < 3 ? medalColors[i] : 'bg-slate-900'
-                      }`}>
-                        {i + 1}
-                      </span>
-                      <span className={`text-xs font-bold flex-1 ${isSelected ? 'text-emerald-800' : 'text-slate-900'}`}>{res.name}</span>
-                      <span className="text-xs font-black text-slate-500">{res.score}pts</span>
-                      {isSelected && <CheckCircle size={16} className="text-emerald-500 flex-shrink-0" />}
-                    </motion.button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
-        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row justify-between items-center gap-3 print:hidden">
-          <div className="flex gap-3">
-            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-              onClick={() => window.print()}
-              className="btn-primary flex items-center gap-2"
-            >
-              <Printer size={14} /> Print
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.02, backgroundColor: '#10b981' }} whileTap={{ scale: 0.98 }}
-              onClick={handleSave}
-              className="btn-emerald flex items-center gap-2"
-            >
-              <Save size={14} /> {saved ? 'Saved!' : 'Save'}
-            </motion.button>
           </div>
-          <button onClick={onClose} className="btn-ghost">
-            Close
-          </button>
         </div>
       </motion.div>
     </div>

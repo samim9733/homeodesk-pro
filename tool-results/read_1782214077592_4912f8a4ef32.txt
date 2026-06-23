@@ -1,0 +1,951 @@
+     1→     1→import React, { useState, useMemo } from 'react';
+     2→     2→import { motion, AnimatePresence } from 'motion/react';
+     3→     3→import { X, Printer, Save, FileText, Plus, ChevronRight, ChevronLeft, Eye, Clock, Microscope, Star, Trophy, Zap, Trash2, CheckCircle, Stethoscope, Brain, Thermometer, ChevronDown } from 'lucide-react';
+     4→     4→import { Patient, AnalysisItem, ChiefSymptom, PhysicalGeneral } from './types';
+     5→     5→
+     6→     6→interface PrescriptionCanvasProps {
+     7→     7→  patient: Patient;
+     8→     8→  onClose: () => void;
+     9→     9→  initialAnalysis?: AnalysisItem[];
+    10→    10→  initialResults?: { name: string; score: number; count: number }[];
+    11→    11→  quickRemedy?: string;
+    12→    12→}
+    13→    13→
+    14→    14→export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialResults, quickRemedy }: PrescriptionCanvasProps) {
+    15→    15→  // Auto-fill top remedy from analysis results
+    16→    16→  const topRemedy = useMemo(() => {
+    17→    17→    if (quickRemedy) return quickRemedy;
+    18→    18→    if (initialResults && initialResults.length > 0) return initialResults[0].name;
+    19→    19→    return '';
+    20→    20→  }, [quickRemedy, initialResults]);
+    21→    21→
+    22→    22→  const [remedy, setRemedy] = useState(topRemedy);
+    23→    23→  const [potency, setPotency] = useState('30C');
+    24→    24→  const [dosage, setDosage] = useState('BD × 7 days');
+    25→    25→  const [instructions, setInstructions] = useState('');
+    26→    26→  const [saved, setSaved] = useState(false);
+    27→    27→
+    28→    28→  const handleSave = () => {
+    29→    29→    setSaved(true);
+    30→    30→    setTimeout(() => setSaved(false), 2000);
+    31→    31→  };
+    32→    32→
+    33→    33→  // Quick-fill remedy from results
+    34→    34→  const handleSelectRemedy = (name: string) => {
+    35→    35→    setRemedy(name);
+    36→    36→  };
+    37→    37→
+    38→    38→  return (
+    39→    39→    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
+    40→    40→      <motion.div
+    41→    41→        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+    42→    42→        animate={{ opacity: 1, scale: 1, y: 0 }}
+    43→    43→        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+    44→    44→        className="bg-white modal-container w-full max-w-3xl overflow-hidden flex flex-col max-h-[90vh]"
+    45→    45→      >
+    46→    46→        {/* Header */}
+    47→    47→        <div className="modal-header-dark flex justify-between items-center print:bg-white print:text-slate-900 print:border-b print:border-slate-200">
+    48→    48→          <div>
+    49→    49→            <h3 className="text-xl font-black uppercase tracking-widest">Prescription</h3>
+    50→    50→            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
+    51→    51→              {patient.name} • {patient.id}
+    52→    52→            </p>
+    53→    53→          </div>
+    54→    54→          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all print:hidden">
+    55→    55→            <X size={24} />
+    56→    56→          </button>
+    57→    57→        </div>
+    58→    58→
+    59→    59→        {/* Body */}
+    60→    60→        <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
+    61→    61→          {/* Patient Info */}
+    62→    62→          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    63→    63→            <div className="bg-slate-50/80 rounded-2xl p-4">
+    64→    64→              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Name</p>
+    65→    65→              <p className="text-sm font-black text-slate-900 mt-1">{patient.name}</p>
+    66→    66→            </div>
+    67→    67→            <div className="bg-slate-50/80 rounded-2xl p-4">
+    68→    68→              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Age / Gender</p>
+    69→    69→              <p className="text-sm font-black text-slate-900 mt-1">{patient.age} / {patient.gender}</p>
+    70→    70→            </div>
+    71→    71→            <div className="bg-slate-50/80 rounded-2xl p-4">
+    72→    72→              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Date</p>
+    73→    73→              <p className="text-sm font-black text-slate-900 mt-1">{new Date().toLocaleDateString()}</p>
+    74→    74→            </div>
+    75→    75→            <div className="bg-slate-50/80 rounded-2xl p-4">
+    76→    76→              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Phone</p>
+    77→    77→              <p className="text-sm font-black text-slate-900 mt-1">{patient.phone || 'N/A'}</p>
+    78→    78→            </div>
+    79→    79→          </div>
+    80→    80→
+    81→    81→          {/* Chief Symptoms */}
+    82→    82→          {patient.chiefSymptoms.length > 0 && (
+    83→    83→            <div>
+    84→    84→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Chief Symptoms</h4>
+    85→    85→              <div className="space-y-1">
+    86→    86→                {patient.chiefSymptoms.map((cs, i) => (
+    87→    87→                  <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
+    88→    88→                    <span className="text-slate-400 font-bold">{i + 1}.</span>
+    89→    89→                    <span className="font-bold">{cs.symptom}</span>
+    90→    90→                    {cs.severity && (
+    91→    91→                      <span className="text-[9px] font-bold bg-slate-100 px-1.5 py-0.5 rounded">{cs.severity}</span>
+    92→    92→                    )}
+    93→    93→                  </div>
+    94→    94→                ))}
+    95→    95→              </div>
+    96→    96→            </div>
+    97→    97→          )}
+    98→    98→
+    99→    99→          {/* Rx Form */}
+   100→   100→          <div className="border border-slate-200 rounded-2xl overflow-hidden">
+   101→   101→            <div className="px-5 py-4 bg-emerald-50/80 border-b border-emerald-100">
+   102→   102→              <div className="flex items-center gap-2">
+   103→   103→                <FileText size={16} className="text-emerald-600" />
+   104→   104→                <h4 className="text-xs font-black uppercase tracking-widest text-emerald-800">Prescription</h4>
+   105→   105→              </div>
+   106→   106→            </div>
+   107→   107→            <div className="p-4 space-y-3">
+   108→   108→              <div>
+   109→   109→                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Remedy</label>
+   110→   110→                <input
+   111→   111→                  type="text"
+   112→   112→                  value={remedy}
+   113→   113→                  onChange={(e) => setRemedy(e.target.value)}
+   114→   114→                  className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+   115→   115→                  placeholder="Enter remedy name..."
+   116→   116→                />
+   117→   117→              </div>
+   118→   118→              <div className="grid grid-cols-2 gap-3">
+   119→   119→                <div>
+   120→   120→                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Potency</label>
+   121→   121→                  <select
+   122→   122→                    value={potency}
+   123→   123→                    onChange={(e) => setPotency(e.target.value)}
+   124→   124→                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+   125→   125→                  >
+   126→   126→                    {['6C', '12C', '30C', '200C', '1M', '10M', 'LM1', 'LM2', 'LM3', 'Q (LM)', '0/1', '0/2', '0/3'].map(p => (
+   127→   127→                      <option key={p} value={p}>{p}</option>
+   128→   128→                    ))}
+   129→   129→                  </select>
+   130→   130→                </div>
+   131→   131→                <div>
+   132→   132→                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dosage</label>
+   133→   133→                  <input
+   134→   134→                    type="text"
+   135→   135→                    value={dosage}
+   136→   136→                    onChange={(e) => setDosage(e.target.value)}
+   137→   137→                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+   138→   138→                  />
+   139→   139→                </div>
+   140→   140→              </div>
+   141→   141→              <div>
+   142→   142→                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Instructions</label>
+   143→   143→                <textarea
+   144→   144→                  value={instructions}
+   145→   145→                  onChange={(e) => setInstructions(e.target.value)}
+   146→   146→                  rows={3}
+   147→   147→                  className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
+   148→   148→                  placeholder="Special instructions..."
+   149→   149→                />
+   150→   150→              </div>
+   151→   151→            </div>
+   152→   152→          </div>
+   153→   153→
+   154→   154→          {/* Repertorization Results - Click to select */}
+   155→   155→          {initialResults && initialResults.length > 0 && (
+   156→   156→            <div>
+   157→   157→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2">
+   158→   158→                <Zap size={14} className="text-emerald-500" />
+   159→   159→                Suggested Remedies (click to select)
+   160→   160→              </h4>
+   161→   161→              <div className="space-y-2">
+   162→   162→                {initialResults.slice(0, 5).map((res, i) => {
+   163→   163→                  const isSelected = remedy === res.name;
+   164→   164→                  const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
+   165→   165→                  return (
+   166→   166→                    <motion.button
+   167→   167→                      key={res.name}
+   168→   168→                      whileHover={{ scale: 1.01 }}
+   169→   169→                      whileTap={{ scale: 0.99 }}
+   170→   170→                      onClick={() => handleSelectRemedy(res.name)}
+   171→   171→                      className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${
+   172→   172→                        isSelected
+   173→   173→                          ? 'bg-emerald-50 border-emerald-300 shadow-sm shadow-emerald-500/10'
+   174→   174→                          : 'bg-slate-50 border-slate-100 hover:bg-slate-100'
+   175→   175→                      }`}
+   176→   176→                    >
+   177→   177→                      <span className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black text-white flex-shrink-0 ${
+   178→   178→                        i < 3 ? medalColors[i] : 'bg-slate-900'
+   179→   179→                      }`}>
+   180→   180→                        {i + 1}
+   181→   181→                      </span>
+   182→   182→                      <span className={`text-xs font-bold flex-1 ${isSelected ? 'text-emerald-800' : 'text-slate-900'}`}>{res.name}</span>
+   183→   183→                      <span className="text-xs font-black text-slate-500">{res.score}pts</span>
+   184→   184→                      {isSelected && <CheckCircle size={16} className="text-emerald-500 flex-shrink-0" />}
+   185→   185→                    </motion.button>
+   186→   186→                  );
+   187→   187→                })}
+   188→   188→              </div>
+   189→   189→            </div>
+   190→   190→          )}
+   191→   191→        </div>
+   192→   192→
+   193→   193→        {/* Footer */}
+   194→   194→        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row justify-between items-center gap-3 print:hidden">
+   195→   195→          <div className="flex gap-3">
+   196→   196→            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   197→   197→              onClick={() => window.print()}
+   198→   198→              className="btn-primary flex items-center gap-2"
+   199→   199→            >
+   200→   200→              <Printer size={14} /> Print
+   201→   201→            </motion.button>
+   202→   202→            <motion.button whileHover={{ scale: 1.02, backgroundColor: '#10b981' }} whileTap={{ scale: 0.98 }}
+   203→   203→              onClick={handleSave}
+   204→   204→              className="btn-emerald flex items-center gap-2"
+   205→   205→            >
+   206→   206→              <Save size={14} /> {saved ? 'Saved!' : 'Save'}
+   207→   207→            </motion.button>
+   208→   208→          </div>
+   209→   209→          <button onClick={onClose} className="btn-ghost">
+   210→   210→            Close
+   211→   211→          </button>
+   212→   212→        </div>
+   213→   213→      </motion.div>
+   214→   214→    </div>
+   215→   215→  );
+   216→   216→}
+   217→   217→
+   218→   218→interface PatientDetailsCanvasProps {
+   219→   219→  patient: Patient;
+   220→   220→  onClose: () => void;
+   221→   221→  onNext?: () => void;
+   222→   222→  onPrevious?: () => void;
+   223→   223→  onSave?: (updatedPatient: Patient) => void;
+   224→   224→}
+   225→   225→
+   226→   226→export function PatientDetailsCanvas({ patient, onClose, onNext, onPrevious, onSave }: PatientDetailsCanvasProps) {
+   227→   227→  const [activeSection, setActiveSection] = useState<'details' | 'symptoms' | 'generals' | 'prescriptions' | 'notes' | 'analysis'>('details');
+   228→   228→  const [expandedAnalysis, setExpandedAnalysis] = useState<string | null>(null);
+   229→   229→
+   230→   230→  const sections = [
+   231→   231→    { id: 'details' as const, label: 'Details' },
+   232→   232→    { id: 'symptoms' as const, label: 'Symptoms' },
+   233→   233→    { id: 'generals' as const, label: 'Generals' },
+   234→   234→    { id: 'analysis' as const, label: 'Analysis', badge: patient.savedAnalysis?.length || 0 },
+   235→   235→    { id: 'prescriptions' as const, label: 'Rx History' },
+   236→   236→    { id: 'notes' as const, label: 'Notes' },
+   237→   237→  ];
+   238→   238→
+   239→   239→  return (
+   240→   240→    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay print:bg-white print:p-0 print:backdrop-blur-none">
+   241→   241→      <motion.div
+   242→   242→        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+   243→   243→        animate={{ opacity: 1, scale: 1, y: 0 }}
+   244→   244→        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+   245→   245→        className="bg-white modal-container w-full max-w-4xl overflow-hidden flex flex-col max-h-[90vh]"
+   246→   246→      >
+   247→   247→        {/* Header */}
+   248→   248→        <div className="modal-header-dark flex justify-between items-center">
+   249→   249→          <div>
+   250→   250→            <h3 className="text-xl font-black uppercase tracking-widest">Patient Details</h3>
+   251→   251→            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
+   252→   252→              {patient.name} • {patient.id}
+   253→   253→            </p>
+   254→   254→          </div>
+   255→   255→          <div className="flex items-center gap-2">
+   256→   256→            {onPrevious && (
+   257→   257→              <button onClick={onPrevious} className="p-2 hover:bg-white/10 rounded-xl transition-all">
+   258→   258→                <ChevronLeft size={20} />
+   259→   259→              </button>
+   260→   260→            )}
+   261→   261→            {onNext && (
+   262→   262→              <button onClick={onNext} className="p-2 hover:bg-white/10 rounded-xl transition-all">
+   263→   263→                <ChevronRight size={20} />
+   264→   264→              </button>
+   265→   265→            )}
+   266→   266→            <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
+   267→   267→              <X size={24} />
+   268→   268→            </button>
+   269→   269→          </div>
+   270→   270→        </div>
+   271→   271→
+   272→   272→        {/* Tabs */}
+   273→   273→        <div className="flex border-b border-slate-100 px-4 overflow-x-auto">
+   274→   274→          {sections.map((s) => (
+   275→   275→            <button
+   276→   276→              key={s.id}
+   277→   277→              onClick={() => setActiveSection(s.id)}
+   278→   278→              className={`px-4 py-3 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition-all border-b-2 flex items-center gap-1.5 ${
+   279→   279→                activeSection === s.id
+   280→   280→                  ? 'border-slate-900 text-slate-900'
+   281→   281→                  : 'border-transparent text-slate-400 hover:text-slate-600'
+   282→   282→              }`}
+   283→   283→            >
+   284→   284→              {s.label}
+   285→   285→              {s.badge ? (
+   286→   286→                <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${
+   287→   287→                  activeSection === s.id ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'
+   288→   288→                }`}>{s.badge}</span>
+   289→   289→              ) : null}
+   290→   290→            </button>
+   291→   291→          ))}
+   292→   292→        </div>
+   293→   293→
+   294→   294→        {/* Content */}
+   295→   295→        <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
+   296→   296→          {activeSection === 'details' && (
+   297→   297→            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+   298→   298→              {[
+   299→   299→                { label: 'Name', value: patient.name },
+   300→   300→                { label: 'Age', value: String(patient.age) },
+   301→   301→                { label: 'Gender', value: patient.gender },
+   302→   302→                { label: 'Phone', value: patient.phone || 'N/A' },
+   303→   303→                { label: 'Date', value: patient.date },
+   304→   304→                { label: 'Status', value: patient.status || 'Active' },
+   305→   305→                { label: 'Last Visit', value: patient.lastVisit || 'N/A' },
+   306→   306→                { label: 'Address', value: patient.address || 'N/A' },
+   307→   307→              ].map((item) => (
+   308→   308→                <div key={item.label} className="bg-slate-50 rounded-xl p-4">
+   309→   309→                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">{item.label}</p>
+   310→   310→                  <p className="text-sm font-black text-slate-900 mt-1">{item.value}</p>
+   311→   311→                </div>
+   312→   312→              ))}
+   313→   313→            </div>
+   314→   314→          )}
+   315→   315→
+   316→   316→          {activeSection === 'symptoms' && (
+   317→   317→            <div className="space-y-3">
+   318→   318→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500">Chief Symptoms</h4>
+   319→   319→              {patient.chiefSymptoms.length === 0 ? (
+   320→   320→                <p className="text-sm text-slate-400 text-center py-8">No chief symptoms recorded</p>
+   321→   321→              ) : (
+   322→   322→                patient.chiefSymptoms.map((cs, i) => (
+   323→   323→                  <div key={cs.id || i} className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+   324→   324→                    <div className="flex items-center justify-between">
+   325→   325→                      <div>
+   326→   326→                        <p className="text-sm font-black text-slate-900">{cs.symptom}</p>
+   327→   327→                        <div className="flex gap-2 mt-2">
+   328→   328→                          {cs.duration && <span className="text-[9px] font-bold bg-blue-50 text-blue-600 px-2 py-0.5 rounded">{cs.duration}</span>}
+   329→   329→                          {cs.severity && <span className="text-[9px] font-bold bg-rose-50 text-rose-600 px-2 py-0.5 rounded">{cs.severity}</span>}
+   330→   330→                          {cs.modality && <span className="text-[9px] font-bold bg-amber-50 text-amber-600 px-2 py-0.5 rounded">{cs.modality}</span>}
+   331→   331→                        </div>
+   332→   332→                      </div>
+   333→   333→                    </div>
+   334→   334→                  </div>
+   335→   335→                ))
+   336→   336→              )}
+   337→   337→            </div>
+   338→   338→          )}
+   339→   339→
+   340→   340→          {activeSection === 'generals' && (
+   341→   341→            <div className="space-y-3">
+   342→   342→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500">Physical Generals</h4>
+   343→   343→              {patient.physicalGenerals.length === 0 ? (
+   344→   344→                <p className="text-sm text-slate-400 text-center py-8">No physical generals recorded</p>
+   345→   345→              ) : (
+   346→   346→                <div className="space-y-2">
+   347→   347→                  {patient.physicalGenerals.map((pg, i) => (
+   348→   348→                    <div key={pg.id || i} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+   349→   349→                      <span className="text-xs font-bold text-slate-600">{pg.attribute}</span>
+   350→   350→                      <span className="text-xs font-black text-slate-900">{pg.value}</span>
+   351→   351→                    </div>
+   352→   352→                  ))}
+   353→   353→                </div>
+   354→   354→              )}
+   355→   355→            </div>
+   356→   356→          )}
+   357→   357→
+   358→   358→          {activeSection === 'analysis' && (
+   359→   359→            <div className="space-y-4">
+   360→   360→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 flex items-center gap-2">
+   361→   361→                <Microscope size={14} className="text-emerald-500" />
+   362→   362→                Saved Case Analysis History
+   363→   363→              </h4>
+   364→   364→              {(!patient.savedAnalysis || patient.savedAnalysis.length === 0) ? (
+   365→   365→                <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-100">
+   366→   366→                  <Microscope size={40} className="mx-auto mb-3 text-slate-200" />
+   367→   367→                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">No analysis saved yet</p>
+   368→   368→                  <p className="text-[10px] text-slate-300 mt-1">Save analysis from the Case Analysis tab</p>
+   369→   369→                </div>
+   370→   370→              ) : (
+   371→   371→                patient.savedAnalysis.map((sa) => (
+   372→   372→                  <div key={sa.id} className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+   373→   373→                    {/* Analysis Header */}
+   374→   374→                    <div 
+   375→   375→                      className="p-4 flex items-center justify-between cursor-pointer hover:bg-slate-100 transition"
+   376→   376→                      onClick={() => setExpandedAnalysis(expandedAnalysis === sa.id ? null : sa.id)}
+   377→   377→                    >
+   378→   378→                      <div className="flex items-center gap-3">
+   379→   379→                        <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center">
+   380→   380→                          <Trophy size={16} className="text-emerald-600" />
+   381→   381→                        </div>
+   382→   382→                        <div>
+   383→   383→                          <p className="text-xs font-black text-slate-900">Case Analysis</p>
+   384→   384→                          <p className="text-[9px] font-bold text-slate-400">{sa.date} • {sa.rubrics.length} rubrics</p>
+   385→   385→                        </div>
+   386→   386→                      </div>
+   387→   387→                      <div className="flex items-center gap-2">
+   388→   388→                        {/* Top remedy badge */}
+   389→   389→                        {sa.topRemedies.length > 0 && (
+   390→   390→                          <span className="text-[9px] font-black bg-amber-100 text-amber-700 px-2 py-1 rounded-lg flex items-center gap-1">
+   391→   391→                            <Star size={8} className="text-amber-500" />
+   392→   392→                            {sa.topRemedies[0].name} ({sa.topRemedies[0].percentage}%)
+   393→   393→                          </span>
+   394→   394→                        )}
+   395→   395→                        <ChevronRight size={16} className={`text-slate-400 transition-transform ${expandedAnalysis === sa.id ? 'rotate-90' : ''}`} />
+   396→   396→                      </div>
+   397→   397→                    </div>
+   398→   398→
+   399→   399→                    {/* Expanded Content */}
+   400→   400→                    {expandedAnalysis === sa.id && (
+   401→   401→                      <motion.div
+   402→   402→                        initial={{ opacity: 0, height: 0 }}
+   403→   403→                        animate={{ opacity: 1, height: 'auto' }}
+   404→   404→                        className="px-4 pb-4 space-y-3"
+   405→   405→                      >
+   406→   406→                        {/* Top Remedies */}
+   407→   407→                        {sa.topRemedies.length > 0 && (
+   408→   408→                          <div>
+   409→   409→                            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Top Remedies</p>
+   410→   410→                            <div className="flex flex-wrap gap-1.5">
+   411→   411→                              {sa.topRemedies.slice(0, 5).map((r, i) => {
+   412→   412→                                const medalBg = i === 0 ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-300' : i === 1 ? 'bg-slate-200 text-slate-700 ring-1 ring-slate-300' : i === 2 ? 'bg-orange-100 text-orange-700 ring-1 ring-orange-300' : 'bg-emerald-50 text-emerald-600';
+   413→   413→                                return (
+   414→   414→                                  <span key={r.name} className={`text-[9px] font-bold px-2 py-1 rounded-lg flex items-center gap-1 ${medalBg}`}>
+   415→   415→                                    {i < 3 && <Star size={7} />}
+   416→   416→                                    {r.name}
+   417→   417→                                    <span className="opacity-60">({r.percentage}%)</span>
+   418→   418→                                  </span>
+   419→   419→                                );
+   420→   420→                              })}
+   421→   421→                            </div>
+   422→   422→                          </div>
+   423→   423→                        )}
+   424→   424→
+   425→   425→                        {/* Rubrics List */}
+   426→   426→                        <div>
+   427→   427→                          <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Selected Rubrics ({sa.rubrics.length})</p>
+   428→   428→                          <div className="space-y-1">
+   429→   429→                            {sa.rubrics.map((rubric, i) => (
+   430→   430→                              <div key={i} className="flex items-center gap-2 text-[10px] bg-white rounded-lg px-3 py-2 border border-slate-100">
+   431→   431→                                <span className="font-bold text-slate-400">{i + 1}.</span>
+   432→   432→                                <span className="font-bold text-slate-700 flex-1 truncate">{rubric.text}</span>
+   433→   433→                                <span className="text-[8px] font-bold text-slate-400">{rubric.chapter}</span>
+   434→   434→                              </div>
+   435→   435→                            ))}
+   436→   436→                          </div>
+   437→   437→                        </div>
+   438→   438→                      </motion.div>
+   439→   439→                    )}
+   440→   440→                  </div>
+   441→   441→                ))
+   442→   442→              )}
+   443→   443→            </div>
+   444→   444→          )}
+   445→   445→
+   446→   446→          {activeSection === 'prescriptions' && (
+   447→   447→            <div className="space-y-3">
+   448→   448→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500">Prescription History</h4>
+   449→   449→              {(!patient.prescriptions || patient.prescriptions.length === 0) ? (
+   450→   450→                <p className="text-sm text-slate-400 text-center py-8">No prescriptions recorded</p>
+   451→   451→              ) : (
+   452→   452→                patient.prescriptions.map((rx) => (
+   453→   453→                  <div key={rx.id} className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+   454→   454→                    <div className="flex items-center justify-between">
+   455→   455→                      <p className="text-sm font-black text-slate-900">{rx.remedy} {rx.potency}</p>
+   456→   456→                      <span className="text-[9px] font-bold text-slate-400">{rx.date}</span>
+   457→   457→                    </div>
+   458→   458→                    <p className="text-xs text-slate-600 mt-1">{rx.dosage} - {rx.instructions}</p>
+   459→   459→                  </div>
+   460→   460→                ))
+   461→   461→              )}
+   462→   462→            </div>
+   463→   463→          )}
+   464→   464→
+   465→   465→          {activeSection === 'notes' && (
+   466→   466→            <div>
+   467→   467→              <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">Clinical Notes</h4>
+   468→   468→              <div className="bg-slate-50 rounded-xl p-6 min-h-[200px]">
+   469→   469→                <p className="text-sm text-slate-700 whitespace-pre-wrap">{patient.notes || 'No notes recorded for this patient.'}</p>
+   470→   470→              </div>
+   471→   471→            </div>
+   472→   472→          )}
+   473→   473→        </div>
+   474→   474→
+   475→   475→        {/* Footer */}
+   476→   476→        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50/50 flex justify-end gap-3 print:hidden">
+   477→   477→          <button onClick={onClose} className="btn-ghost">
+   478→   478→            Close
+   479→   479→          </button>
+   480→   480→        </div>
+   481→   481→      </motion.div>
+   482→   482→    </div>
+   483→   483→  );
+   484→   484→}
+   485→   485→
+   486→   486→// ==================== SYMPTOM CANVAS ====================
+   487→   487→interface SymptomCanvasProps {
+   488→   488→  patient: Patient;
+   489→   489→  onClose: () => void;
+   490→   490→  onSave: (updatedPatient: Patient) => void;
+   491→   491→}
+   492→   492→
+   493→   493→// Predefined symptom data for dropdowns
+   494→   494→const CHIEF_SYMPTOM_OPTIONS = [
+   495→   495→  'Headache', 'Migraine', 'Fever', 'Body ache', 'Joint pain', 'Back pain',
+   496→   496→  'Neck pain', 'Stomach pain', 'Abdominal cramps', 'Nausea', 'Vomiting',
+   497→   497→  'Diarrhea', 'Constipation', 'Cough', 'Cold', 'Sore throat',
+   498→   498→  'Difficulty breathing', 'Chest pain', 'Skin rash', 'Itching',
+   499→   499→  'Burning sensation', 'Dizziness', 'Vertigo', 'Weakness', 'Fatigue',
+   500→   500→  'Loss of appetite', 'Weight loss', 'Weight gain', 'Swelling',
+   501→   501→  'Bleeding', 'Throat pain', 'Ear pain', 'Eye pain',
+   502→   502→  'Frequent urination', 'Excessive thirst', 'Excessive hunger',
+   503→   503→  'Insomnia', 'Hair fall', 'Palpitation', 'Trembling',
+   504→   504→  'Numbness', 'Tingling sensation', 'Menstrual problems',
+   505→   505→  'Discharge', 'Sinusitis', 'Allergy symptoms', 'Asthma',
+   506→   506→  'Hypertension', 'Diabetes symptoms', 'Acidity', 'Heartburn',
+   507→   507→  'Bloating', 'Gas trouble', 'Piles', 'Fissure',
+   508→   508→];
+   509→   509→
+   510→   510→const GENERAL_SYMPTOM_OPTIONS = [
+   511→   511→  { attribute: 'Thermal', value: 'Hot patient', category: 'Thermal' },
+   512→   512→  { attribute: 'Thermal', value: 'Chilly patient', category: 'Thermal' },
+   513→   513→  { attribute: 'Thermal', value: 'Amelioration from heat', category: 'Thermal' },
+   514→   514→  { attribute: 'Thermal', value: 'Amelioration from cold', category: 'Thermal' },
+   515→   515→  { attribute: 'Thermal', value: 'Worse from humidity', category: 'Thermal' },
+   516→   516→  { attribute: 'Thermal', value: 'Worse from dry weather', category: 'Thermal' },
+   517→   517→  { attribute: 'Thermal', value: 'Worse from damp weather', category: 'Thermal' },
+   518→   518→  { attribute: 'Thermal', value: 'Worse from change of weather', category: 'Thermal' },
+   519→   519→  { attribute: 'Thermal', value: 'Worse in summer', category: 'Thermal' },
+   520→   520→  { attribute: 'Thermal', value: 'Worse in winter', category: 'Thermal' },
+   521→   521→  { attribute: 'Thermal', value: 'Worse in monsoon', category: 'Thermal' },
+   522→   522→  { attribute: 'Thirst', value: 'Increased thirst', category: 'Thirst' },
+   523→   523→  { attribute: 'Thirst', value: 'Decreased thirst', category: 'Thirst' },
+   524→   524→  { attribute: 'Thirst', value: 'Thirst for small quantities', category: 'Thirst' },
+   525→   525→  { attribute: 'Thirst', value: 'Thirst for large quantities', category: 'Thirst' },
+   526→   526→  { attribute: 'Thirst', value: 'Thirstless', category: 'Thirst' },
+   527→   527→  { attribute: 'Desires', value: 'Sour things', category: 'Desires' },
+   528→   528→  { attribute: 'Desires', value: 'Sweets', category: 'Desires' },
+   529→   529→  { attribute: 'Desires', value: 'Spicy food', category: 'Desires' },
+   530→   530→  { attribute: 'Desires', value: 'Salt', category: 'Desires' },
+   531→   531→  { attribute: 'Desires', value: 'Cold drinks', category: 'Desires' },
+   532→   532→  { attribute: 'Desires', value: 'Hot drinks', category: 'Desires' },
+   533→   533→  { attribute: 'Desires', value: 'Milk', category: 'Desires' },
+   534→   534→  { attribute: 'Desires', value: 'Meat', category: 'Desires' },
+   535→   535→  { attribute: 'Desires', value: 'Fruits', category: 'Desires' },
+   536→   536→  { attribute: 'Desires', value: 'Chocolate', category: 'Desires' },
+   537→   537→  { attribute: 'Aversions', value: 'Fats/Greasy food', category: 'Aversions' },
+   538→   538→  { attribute: 'Aversions', value: 'Milk', category: 'Aversions' },
+   539→   539→  { attribute: 'Aversions', value: 'Eggs', category: 'Aversions' },
+   540→   540→  { attribute: 'Aversions', value: 'Onion/Garlic', category: 'Aversions' },
+   541→   541→  { attribute: 'Aversions', value: 'Sweet things', category: 'Aversions' },
+   542→   542→  { attribute: 'Aversions', value: 'Meat', category: 'Aversions' },
+   543→   543→  { attribute: 'Sleep', value: 'Sleepless', category: 'Sleep' },
+   544→   544→  { attribute: 'Sleep', value: 'Sleepy during day', category: 'Sleep' },
+   545→   545→  { attribute: 'Sleep', value: 'Disturbed sleep', category: 'Sleep' },
+   546→   546→  { attribute: 'Sleep', value: 'Sleeps on back', category: 'Sleep' },
+   547→   547→  { attribute: 'Sleep', value: 'Sleeps on abdomen', category: 'Sleep' },
+   548→   548→  { attribute: 'Sleep', value: 'Sleeps on left side', category: 'Sleep' },
+   549→   549→  { attribute: 'Sleep', value: 'Sleeps on right side', category: 'Sleep' },
+   550→   550→  { attribute: 'Sleep', value: 'Wakes at 3 AM', category: 'Sleep' },
+   551→   551→  { attribute: 'Perspiration', value: 'Profuse sweating', category: 'Perspiration' },
+   552→   552→  { attribute: 'Perspiration', value: 'Offensive sweat', category: 'Perspiration' },
+   553→   553→  { attribute: 'Perspiration', value: 'Sweat on palms', category: 'Perspiration' },
+   554→   554→  { attribute: 'Perspiration', value: 'Sweat on soles', category: 'Perspiration' },
+   555→   555→  { attribute: 'Perspiration', value: 'Cold sweat', category: 'Perspiration' },
+   556→   556→  { attribute: 'Urine', value: 'Frequent urination', category: 'Urine' },
+   557→   557→  { attribute: 'Urine', value: 'Scanty urination', category: 'Urine' },
+   558→   558→  { attribute: 'Stool', value: 'Constipation', category: 'Stool' },
+   559→   559→  { attribute: 'Stool', value: 'Loose stool', category: 'Stool' },
+   560→   560→  { attribute: 'Appetite', value: 'Increased appetite', category: 'Appetite' },
+   561→   561→  { attribute: 'Appetite', value: 'Loss of appetite', category: 'Appetite' },
+   562→   562→];
+   563→   563→
+   564→   564→const MENTAL_SYMPTOM_OPTIONS = [
+   565→   565→  'Anxiety', 'Fear of death', 'Fear of disease', 'Fear of dark', 'Fear of heights',
+   566→   566→  'Fear of being alone', 'Fear of crowds', 'Fear of water', 'Claustrophobia',
+   567→   567→  'Depression', 'Sadness', 'Weeping tendency', 'Hopelessness', 'Suicidal thoughts',
+   568→   568→  'Irritability', 'Anger easily', 'Violent anger', 'Quarrelsome',
+   569→   569→  'Restlessness', 'Hurry', 'Impatience', 'Nervousness',
+   570→   570→  'Despair of recovery', 'Indifference', 'Apathy', 'Lack of confidence',
+   571→   571→  'Memory weakness', 'Forgetfulness', 'Difficulty concentrating',
+   572→   572→  'Mood swings', 'Emotional sensitivity', 'Easily offended',
+   573→   573→  'Jealousy', 'Suspicious', 'Miserly', 'Fastidious',
+   574→   574→  'Grief from loss', 'Homesickness', 'Religious mania',
+   575→   575→  'Obsessive thoughts', 'Compulsive behavior', 'Phobias',
+   576→   576→  'Delusions', 'Hallucinations', 'Mental exhaustion',
+   577→   577→  'Talkative', 'Silent', 'Desires company', 'Desires solitude',
+   578→   578→  'Laughing without reason', 'Crying without reason',
+   579→   579→  'Timidity', 'Shyness', 'Low self-esteem',
+   580→   580→  'Dreams of death', 'Dreams of falling', 'Nightmares',
+   581→   581→  'Sleepwalking', 'Teeth grinding in sleep', 'Talking in sleep',
+   582→   582→];
+   583→   583→
+   584→   584→export function SymptomCanvas({ patient, onClose, onSave }: SymptomCanvasProps) {
+   585→   585→  const [activeSymTab, setActiveSymTab] = useState<'chief' | 'general' | 'mental'>('chief');
+   586→   586→  const [saved, setSaved] = useState(false);
+   587→   587→
+   588→   588→  // Chief Symptoms state
+   589→   589→  const [chiefSymptom, setChiefSymptom] = useState('');
+   590→   590→  const [severity, setSeverity] = useState<ChiefSymptom['severity']>('Moderate');
+   591→   591→  const [duration, setDuration] = useState('');
+   592→   592→  const [modality, setModality] = useState('');
+   593→   593→
+   594→   594→  // General Symptoms state
+   595→   595→  const [generalAttr, setGeneralAttr] = useState('');
+   596→   596→  const [generalValue, setGeneralValue] = useState('');
+   597→   597→
+   598→   598→  // Mental Symptoms state
+   599→   599→  const [mentalSymptom, setMentalSymptom] = useState('');
+   600→   600→
+   601→   601→  // Live preview of what will be saved
+   602→   602→  const addedChief: ChiefSymptom[] = patient.chiefSymptoms || [];
+   603→   603→  const addedGeneral: PhysicalGeneral[] = patient.physicalGenerals || [];
+   604→   604→  const addedMental: string[] = patient.mentalSymptoms || [];
+   605→   605→
+   606→   606→  // Add chief symptom
+   607→   607→  const handleAddChief = () => {
+   608→   608→    if (!chiefSymptom.trim()) return;
+   609→   609→    const cs: ChiefSymptom = {
+   610→   610→      id: `cs-${Date.now()}`,
+   611→   611→      symptom: chiefSymptom.trim(),
+   612→   612→      severity,
+   613→   613→      duration: duration.trim() || undefined,
+   614→   614→      modality: modality.trim() || undefined,
+   615→   615→    };
+   616→   616→    onSave({ ...patient, chiefSymptoms: [...addedChief, cs] });
+   617→   617→    setChiefSymptom('');
+   618→   618→    setSeverity('Moderate');
+   619→   619→    setDuration('');
+   620→   620→    setModality('');
+   621→   621→  };
+   622→   622→
+   623→   623→  // Add general symptom
+   624→   624→  const handleAddGeneral = () => {
+   625→   625→    if (!generalAttr || !generalValue) return;
+   626→   626→    const found = GENERAL_SYMPTOM_OPTIONS.find(o => `${o.attribute}: ${o.value}` === generalValue);
+   627→   627→    const pg: PhysicalGeneral = {
+   628→   628→      id: `pg-${Date.now()}`,
+   629→   629→      attribute: found?.attribute || generalAttr,
+   630→   630→      value: found?.value || generalValue,
+   631→   631→      category: found?.category || generalAttr,
+   632→   632→    };
+   633→   633→    onSave({ ...patient, physicalGenerals: [...addedGeneral, pg] });
+   634→   634→    setGeneralAttr('');
+   635→   635→    setGeneralValue('');
+   636→   636→  };
+   637→   637→
+   638→   638→  // Add mental symptom
+   639→   639→  const handleAddMental = () => {
+   640→   640→    if (!mentalSymptom.trim() || addedMental.includes(mentalSymptom.trim())) return;
+   641→   641→    onSave({ ...patient, mentalSymptoms: [...addedMental, mentalSymptom.trim()] });
+   642→   642→    setMentalSymptom('');
+   643→   643→  };
+   644→   644→
+   645→   645→  // Remove chief
+   646→   646→  const removeChief = (id: string) => {
+   647→   647→    onSave({ ...patient, chiefSymptoms: addedChief.filter(c => c.id !== id) });
+   648→   648→  };
+   649→   649→
+   650→   650→  // Remove general
+   651→   651→  const removeGeneral = (id: string) => {
+   652→   652→    onSave({ ...patient, physicalGenerals: addedGeneral.filter(g => g.id !== id) });
+   653→   653→  };
+   654→   654→
+   655→   655→  // Remove mental
+   656→   656→  const removeMental = (symptom: string) => {
+   657→   657→    onSave({ ...patient, mentalSymptoms: addedMental.filter(m => m !== symptom) });
+   658→   658→  };
+   659→   659→
+   660→   660→  // Final save and close
+   661→   661→  const handleFinalSave = () => {
+   662→   662→    setSaved(true);
+   663→   663→    setTimeout(() => { setSaved(false); onClose(); }, 1500);
+   664→   664→  };
+   665→   665→
+   666→   666→  const symTabs = [
+   667→   667→    { id: 'chief' as const, label: 'Chief Symptoms', icon: Stethoscope, count: addedChief.length, color: 'text-emerald-600 bg-emerald-50' },
+   668→   668→    { id: 'general' as const, label: 'General Symptoms', icon: Thermometer, count: addedGeneral.length, color: 'text-blue-600 bg-blue-50' },
+   669→   669→    { id: 'mental' as const, label: 'Mental Symptoms', icon: Brain, count: addedMental.length, color: 'text-purple-600 bg-purple-50' },
+   670→   670→  ];
+   671→   671→
+   672→   672→  return (
+   673→   673→    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay">
+   674→   674→      <motion.div
+   675→   675→        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+   676→   676→        animate={{ opacity: 1, scale: 1, y: 0 }}
+   677→   677→        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+   678→   678→        className="bg-white modal-container w-full max-w-4xl overflow-hidden flex flex-col max-h-[90vh]"
+   679→   679→      >
+   680→   680→        {/* Header */}
+   681→   681→        <div className="modal-header-dark flex justify-between items-center">
+   682→   682→          <div>
+   683→   683→            <h3 className="text-xl font-black uppercase tracking-widest">Add Symptoms</h3>
+   684→   684→            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">
+   685→   685→              {patient.name} ({patient.id})
+   686→   686→            </p>
+   687→   687→          </div>
+   688→   688→          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-xl transition-all">
+   689→   689→            <X size={24} />
+   690→   690→          </button>
+   691→   691→        </div>
+   692→   692→
+   693→   693→        {/* Symptom Tabs */}
+   694→   694→        <div className="flex border-b border-slate-100 px-4 bg-slate-50/50">
+   695→   695→          {symTabs.map((tab) => {
+   696→   696→            const Icon = tab.icon;
+   697→   697→            const isActive = activeSymTab === tab.id;
+   698→   698→            return (
+   699→   699→              <button
+   700→   700→                key={tab.id}
+   701→   701→                onClick={() => setActiveSymTab(tab.id)}
+   702→   702→                className={`flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-bold uppercase tracking-widest transition-all border-b-2 ${
+   703→   703→                  isActive ? 'border-slate-900 text-slate-900' : 'border-transparent text-slate-400 hover:text-slate-600'
+   704→   704→                }`}
+   705→   705→              >
+   706→   706→                <Icon size={14} className={isActive ? 'text-emerald-500' : ''} />
+   707→   707→                <span className="hidden sm:inline">{tab.label}</span>
+   708→   708→                <span className="hidden xs:inline text-[8px] sm:hidden">{tab.label.split(' ')[0]}</span>
+   709→   709→                {tab.count > 0 && (
+   710→   710→                  <span className={`text-[9px] font-black px-1.5 py-0.5 rounded-full ${tab.color}`}>{tab.count}</span>
+   711→   711→                )}
+   712→   712→              </button>
+   713→   713→            );
+   714→   714→          })}
+   715→   715→        </div>
+   716→   716→
+   717→   717→        {/* Content */}
+   718→   718→        <div className="flex-1 overflow-y-auto p-5 space-y-4 custom-scrollbar">
+   719→   719→
+   720→   720→          {/* ====== CHIEF SYMPTOMS ====== */}
+   721→   721→          {activeSymTab === 'chief' && (
+   722→   722→            <div className="space-y-4">
+   723→   723→              {/* Add Form */}
+   724→   724→              <div className="bg-emerald-50/50 rounded-2xl border border-emerald-200/60 p-4 space-y-3">
+   725→   725→                <h4 className="text-[10px] font-black text-emerald-700 uppercase tracking-widest flex items-center gap-2">
+   726→   726→                  <Plus size={12} /> Add Chief Symptom
+   727→   727→                </h4>
+   728→   728→                <div>
+   729→   729→                  <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Symptom</label>
+   730→   730→                  <select
+   731→   731→                    value={chiefSymptom}
+   732→   732→                    onChange={(e) => setChiefSymptom(e.target.value)}
+   733→   733→                    className="modern-input w-full mt-1"
+   734→   734→                  >
+   735→   735→                    <option value="">Select or type symptom...</option>
+   736→   736→                    {CHIEF_SYMPTOM_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+   737→   737→                  </select>
+   738→   738→                </div>
+   739→   739→                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+   740→   740→                  <div>
+   741→   741→                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Severity</label>
+   742→   742→                    <select value={severity} onChange={e => setSeverity(e.target.value as ChiefSymptom['severity'])} className="modern-input mt-1 w-full">
+   743→   743→                      <option>Mild</option><option>Moderate</option><option>Severe</option>
+   744→   744→                    </select>
+   745→   745→                  </div>
+   746→   746→                  <div>
+   747→   747→                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Duration</label>
+   748→   748→                    <input type="text" value={duration} onChange={e => setDuration(e.target.value)} className="modern-input mt-1 w-full" placeholder="e.g. 3 months" />
+   749→   749→                  </div>
+   750→   750→                  <div>
+   751→   751→                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Modality</label>
+   752→   752→                    <input type="text" value={modality} onChange={e => setModality(e.target.value)} className="modern-input mt-1 w-full" placeholder="e.g. > from rest" />
+   753→   753→                  </div>
+   754→   754→                </div>
+   755→   755→                <motion.button
+   756→   756→                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   757→   757→                  onClick={handleAddChief}
+   758→   758→                  disabled={!chiefSymptom.trim()}
+   759→   759→                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+   760→   760→                    chiefSymptom.trim() ? 'bg-emerald-500 text-white hover:bg-emerald-600 shadow-sm' : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+   761→   761→                  }`}
+   762→   762→                >
+   763→   763→                  <Plus size={13} /> Add Symptom
+   764→   764→                </motion.button>
+   765→   765→              </div>
+   766→   766→
+   767→   767→              {/* Added Symptoms List */}
+   768→   768→              <div>
+   769→   769→                <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">
+   770→   770→                  Added Chief Symptoms ({addedChief.length})
+   771→   771→                </h4>
+   772→   772→                {addedChief.length === 0 ? (
+   773→   773→                  <div className="text-center py-8 bg-slate-50 rounded-xl border border-slate-100">
+   774→   774→                    <Stethoscope size={28} className="mx-auto mb-2 text-slate-200" />
+   775→   775→                    <p className="text-[10px] font-bold text-slate-400">No chief symptoms added yet</p>
+   776→   776→                  </div>
+   777→   777→                ) : (
+   778→   778→                  <div className="space-y-2">
+   779→   779→                    {addedChief.map((cs) => (
+   780→   780→                      <div key={cs.id} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 group">
+   781→   781→                        <span className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-black flex-shrink-0">{addedChief.indexOf(cs) + 1}</span>
+   782→   782→                        <div className="flex-1 min-w-0">
+   783→   783→                          <p className="text-xs font-bold text-slate-900">{cs.symptom}</p>
+   784→   784→                          <div className="flex flex-wrap gap-1 mt-1">
+   785→   785→                            {cs.severity && <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded ${cs.severity === 'Severe' ? 'bg-rose-50 text-rose-600' : cs.severity === 'Moderate' ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'}`}>{cs.severity}</span>}
+   786→   786→                            {cs.duration && <span className="text-[8px] font-bold bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded">{cs.duration}</span>}
+   787→   787→                            {cs.modality && <span className="text-[8px] font-bold bg-amber-50 text-amber-600 px-1.5 py-0.5 rounded">{cs.modality}</span>}
+   788→   788→                          </div>
+   789→   789→                        </div>
+   790→   790→                        <button onClick={() => removeChief(cs.id)} className="text-slate-300 hover:text-rose-500 transition opacity-0 group-hover:opacity-100">
+   791→   791→                          <X size={14} />
+   792→   792→                        </button>
+   793→   793→                      </div>
+   794→   794→                    ))}
+   795→   795→                  </div>
+   796→   796→                )}
+   797→   797→              </div>
+   798→   798→            </div>
+   799→   799→          )}
+   800→   800→
+   801→   801→          {/* ====== GENERAL SYMPTOMS ====== */}
+   802→   802→          {activeSymTab === 'general' && (
+   803→   803→            <div className="space-y-4">
+   804→   804→              {/* Add Form */}
+   805→   805→              <div className="bg-blue-50/50 rounded-2xl border border-blue-200/60 p-4 space-y-3">
+   806→   806→                <h4 className="text-[10px] font-black text-blue-700 uppercase tracking-widest flex items-center gap-2">
+   807→   807→                  <Plus size={12} /> Add General Symptom
+   808→   808→                </h4>
+   809→   809→                <div>
+   810→   810→                  <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Symptom Category & Value</label>
+   811→   811→                  <select
+   812→   812→                    value={generalValue}
+   813→   813→                    onChange={(e) => {
+   814→   814→                      setGeneralValue(e.target.value);
+   815→   815→                      const found = GENERAL_SYMPTOM_OPTIONS.find(o => `${o.attribute}: ${o.value}` === e.target.value);
+   816→   816→                      if (found) setGeneralAttr(found.attribute);
+   817→   817→                    }}
+   818→   818→                    className="modern-input w-full mt-1"
+   819→   819→                  >
+   820→   820→                    <option value="">Select symptom...</option>
+   821→   821→                    {GENERAL_SYMPTOM_OPTIONS.map((opt, i) => (
+   822→   822→                      <option key={i} value={`${opt.attribute}: ${opt.value}`}>{opt.attribute}: {opt.value}</option>
+   823→   823→                    ))}
+   824→   824→                  </select>
+   825→   825→                </div>
+   826→   826→                <motion.button
+   827→   827→                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   828→   828→                  onClick={handleAddGeneral}
+   829→   829→                  disabled={!generalValue}
+   830→   830→                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+   831→   831→                    generalValue ? 'bg-blue-500 text-white hover:bg-blue-600 shadow-sm' : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+   832→   832→                  }`}
+   833→   833→                >
+   834→   834→                  <Plus size={13} /> Add Symptom
+   835→   835→                </motion.button>
+   836→   836→              </div>
+   837→   837→
+   838→   838→              {/* Added List */}
+   839→   839→              <div>
+   840→   840→                <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">
+   841→   841→                  Added General Symptoms ({addedGeneral.length})
+   842→   842→                </h4>
+   843→   843→                {addedGeneral.length === 0 ? (
+   844→   844→                  <div className="text-center py-8 bg-slate-50 rounded-xl border border-slate-100">
+   845→   845→                    <Thermometer size={28} className="mx-auto mb-2 text-slate-200" />
+   846→   846→                    <p className="text-[10px] font-bold text-slate-400">No general symptoms added yet</p>
+   847→   847→                  </div>
+   848→   848→                ) : (
+   849→   849→                  <div className="space-y-2">
+   850→   850→                    {addedGeneral.map((pg) => (
+   851→   851→                      <div key={pg.id} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100 group">
+   852→   852→                        <div className="flex items-center gap-2">
+   853→   853→                          <span className="text-[8px] font-bold bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded">{pg.category}</span>
+   854→   854→                          <span className="text-xs font-bold text-slate-700">{pg.attribute}: {pg.value}</span>
+   855→   855→                        </div>
+   856→   856→                        <button onClick={() => removeGeneral(pg.id)} className="text-slate-300 hover:text-rose-500 transition opacity-0 group-hover:opacity-100">
+   857→   857→                          <X size={14} />
+   858→   858→                        </button>
+   859→   859→                      </div>
+   860→   860→                    ))}
+   861→   861→                  </div>
+   862→   862→                )}
+   863→   863→              </div>
+   864→   864→            </div>
+   865→   865→          )}
+   866→   866→
+   867→   867→          {/* ====== MENTAL SYMPTOMS ====== */}
+   868→   868→          {activeSymTab === 'mental' && (
+   869→   869→            <div className="space-y-4">
+   870→   870→              {/* Add Form */}
+   871→   871→              <div className="bg-purple-50/50 rounded-2xl border border-purple-200/60 p-4 space-y-3">
+   872→   872→                <h4 className="text-[10px] font-black text-purple-700 uppercase tracking-widest flex items-center gap-2">
+   873→   873→                  <Plus size={12} /> Add Mental Symptom
+   874→   874→                </h4>
+   875→   875→                <div>
+   876→   876→                  <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Mental State / Emotion</label>
+   877→   877→                  <select
+   878→   878→                    value={mentalSymptom}
+   879→   879→                    onChange={(e) => setMentalSymptom(e.target.value)}
+   880→   880→                    className="modern-input w-full mt-1"
+   881→   881→                  >
+   882→   882→                    <option value="">Select mental symptom...</option>
+   883→   883→                    {MENTAL_SYMPTOM_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+   884→   884→                  </select>
+   885→   885→                </div>
+   886→   886→                <motion.button
+   887→   887→                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   888→   888→                  onClick={handleAddMental}
+   889→   889→                  disabled={!mentalSymptom.trim() || addedMental.includes(mentalSymptom.trim())}
+   890→   890→                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+   891→   891→                    mentalSymptom.trim() && !addedMental.includes(mentalSymptom.trim())
+   892→   892→                      ? 'bg-purple-500 text-white hover:bg-purple-600 shadow-sm'
+   893→   893→                      : 'bg-slate-100 text-slate-400 cursor-not-allowed'
+   894→   894→                  }`}
+   895→   895→                >
+   896→   896→                  <Plus size={13} /> Add Symptom
+   897→   897→                </motion.button>
+   898→   898→              </div>
+   899→   899→
+   900→   900→              {/* Added List */}
+   901→   901→              <div>
+   902→   902→                <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">
+   903→   903→                  Added Mental Symptoms ({addedMental.length})
+   904→   904→                </h4>
+   905→   905→                {addedMental.length === 0 ? (
+   906→   906→                  <div className="text-center py-8 bg-slate-50 rounded-xl border border-slate-100">
+   907→   907→                    <Brain size={28} className="mx-auto mb-2 text-slate-200" />
+   908→   908→                    <p className="text-[10px] font-bold text-slate-400">No mental symptoms added yet</p>
+   909→   909→                  </div>
+   910→   910→                ) : (
+   911→   911→                  <div className="flex flex-wrap gap-2">
+   912→   912→                    {addedMental.map((m) => (
+   913→   913→                      <span key={m} className="flex items-center gap-1.5 text-[10px] font-bold bg-purple-50 text-purple-700 px-2.5 py-1.5 rounded-lg border border-purple-200 group">
+   914→   914→                        <Brain size={10} />
+   915→   915→                        {m}
+   916→   916→                        <button onClick={() => removeMental(m)} className="text-purple-300 hover:text-rose-500 transition ml-0.5 opacity-0 group-hover:opacity-100">
+   917→   917→                          <X size={12} />
+   918→   918→                        </button>
+   919→   919→                      </span>
+   920→   920→                    ))}
+   921→   921→                  </div>
+   922→   922→                )}
+   923→   923→              </div>
+   924→   924→            </div>
+   925→   925→          )}
+   926→   926→        </div>
+   927→   927→
+   928→   928→        {/* Footer */}
+   929→   929→        <div className="p-4 md:p-5 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row justify-between items-center gap-3">
+   930→   930→          <div className="flex flex-wrap gap-3 text-[9px] font-bold text-slate-400">
+   931→   931→            <span className="flex items-center gap-1"><Stethoscope size={10} className="text-emerald-500" /> {addedChief.length} Chief</span>
+   932→   932→            <span className="flex items-center gap-1"><Thermometer size={10} className="text-blue-500" /> {addedGeneral.length} General</span>
+   933→   933→            <span className="flex items-center gap-1"><Brain size={10} className="text-purple-500" /> {addedMental.length} Mental</span>
+   934→   934→          </div>
+   935→   935→          <div className="flex gap-3">
+   936→   936→            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
+   937→   937→              onClick={handleFinalSave}
+   938→   938→              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
+   939→   939→                saved ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30' : 'bg-emerald-500 text-white hover:bg-emerald-600 shadow-sm'
+   940→   940→              }`}
+   941→   941→            >
+   942→   942→              {saved ? <><CheckCircle size={14} /> Saved!</> : <><Save size={14} /> Save All</>}
+   943→   943→            </motion.button>
+   944→   944→            <button onClick={onClose} className="btn-ghost">Close</button>
+   945→   945→          </div>
+   946→   946→        </div>
+   947→   947→      </motion.div>
+   948→   948→    </div>
+   949→   949→  );
+   950→   950→}
+   951→   951→
