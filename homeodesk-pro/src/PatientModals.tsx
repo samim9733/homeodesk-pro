@@ -12,18 +12,30 @@ interface PrescriptionCanvasProps {
 }
 
 export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialResults, quickRemedy }: PrescriptionCanvasProps) {
-  // Auto-fill top remedy from analysis results
-  const topRemedy = useMemo(() => {
-    if (quickRemedy) return quickRemedy;
-    if (initialResults && initialResults.length > 0) return initialResults[0].name;
-    return '';
-  }, [quickRemedy, initialResults]);
+  // Auto-populate top 5 remedies from analysis as prescription rows
+  interface RxRow {
+    name: string;
+    potency: string;
+    dosage: string;
+    frequency: string;
+    duration: string;
+    score: number;
+  }
 
-  const [remedy, setRemedy] = useState(topRemedy);
-  const [potency, setPotency] = useState('200C');
-  const [dosage, setDosage] = useState('4 Drops');
-  const [frequency, setFrequency] = useState('Twice daily (Empty stomach)');
-  const [duration, setDuration] = useState('7 Days');
+  const [rxRows, setRxRows] = useState<RxRow[]>(() => {
+    if (initialResults && initialResults.length > 0) {
+      return initialResults.slice(0, 5).map((res, i) => ({
+        name: res.name,
+        potency: '200C',
+        dosage: '4 Drops',
+        frequency: 'Twice daily (Empty stomach)',
+        duration: '7 Days',
+        score: res.score,
+      }));
+    }
+    return [];
+  });
+
   const [dietaryRestrictions, setDietaryRestrictions] = useState('');
   const [regimen, setRegimen] = useState('');
   const [followUp, setFollowUp] = useState('');
@@ -73,14 +85,22 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
     setTimeout(() => setSaved(false), 2000);
   };
 
-  // Quick-fill remedy from results
-  const handleSelectRemedy = (name: string) => {
-    setRemedy(name);
+  // Update a specific field in a remedy row
+  const updateRxRow = (index: number, field: keyof RxRow, value: string) => {
+    setRxRows(prev => prev.map((row, i) => i === index ? { ...row, [field]: value } : row));
   };
 
-  const formatDate = (dateStr: string) => {
-    if (!dateStr) return new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  // Remove a remedy row
+  const removeRxRow = (index: number) => {
+    setRxRows(prev => prev.filter((_, i) => i !== index));
+  };
+
+  // Add a manual remedy row
+  const addManualRow = () => {
+    setRxRows(prev => [...prev, {
+      name: '', potency: '200C', dosage: '4 Drops',
+      frequency: 'Twice daily (Empty stomach)', duration: '7 Days', score: 0,
+    }]);
   };
 
   const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -269,111 +289,111 @@ export function PrescriptionCanvas({ patient, onClose, initialAnalysis, initialR
 
             {/* ===== Rx PRESCRIPTION TABLE ===== */}
             <div className="border border-slate-200 rounded-xl overflow-hidden">
-              <div className="px-4 py-3 bg-emerald-50/80 border-b border-emerald-100">
+              <div className="px-4 py-3 bg-emerald-50/80 border-b border-emerald-100 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-black text-emerald-800" style={{ fontFamily: 'serif' }}>Rx</span>
                   <span className="text-xs font-black uppercase tracking-widest text-emerald-700">Prescription</span>
+                  {rxRows.length > 0 && (
+                    <span className="text-[9px] font-black bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">{rxRows.length} remedy</span>
+                  )}
                 </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                  onClick={addManualRow}
+                  className="flex items-center gap-1 px-2.5 py-1.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-700 rounded-lg text-[10px] font-bold transition print:hidden"
+                >
+                  <Plus size={12} /> Add
+                </motion.button>
               </div>
-              <div className="p-3 sm:p-4 space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Remedy</label>
-                    <input
-                      type="text"
-                      value={remedy}
-                      onChange={(e) => setRemedy(e.target.value)}
-                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                      placeholder="Enter remedy name..."
-                    />
-                  </div>
-                  <div>
-                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Potency</label>
-                    <select
-                      value={potency}
-                      onChange={(e) => setPotency(e.target.value)}
-                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                    >
-                      {['6C', '12C', '30C', '200C', '1M', '10M', 'LM1', 'LM2', 'LM3', 'Q (LM)', '0/1', '0/2', '0/3'].map(p => (
-                        <option key={p} value={p}>{p}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Dosage</label>
-                    <input
-                      type="text"
-                      value={dosage}
-                      onChange={(e) => setDosage(e.target.value)}
-                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Frequency</label>
-                    <input
-                      type="text"
-                      value={frequency}
-                      onChange={(e) => setFrequency(e.target.value)}
-                      className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Duration</label>
-                  <input
-                    type="text"
-                    value={duration}
-                    onChange={(e) => setDuration(e.target.value)}
-                    className="w-full mt-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
-                  />
-                </div>
-                {remedy && potency && (
-                  <div className="bg-slate-50 rounded-lg p-3 mt-2">
-                    <p className="text-[9px] font-bold text-slate-400 uppercase">Prescribed Medicine</p>
-                    <p className="text-sm font-black text-emerald-800 mt-0.5">{remedy} {potency}</p>
-                    <p className="text-[10px] text-slate-500 mt-0.5">Liquid dilution</p>
-                  </div>
-                )}
-              </div>
-            </div>
 
-            {/* ===== SUGGESTED REMEDIES ===== */}
-            {initialResults && initialResults.length > 0 && (
-              <div>
-                <h4 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2">
-                  <Zap size={14} className="text-emerald-500" />
-                  Suggested Remedies (click to select)
-                </h4>
-                <div className="space-y-1.5">
-                  {initialResults.slice(0, 5).map((res, i) => {
-                    const isSelected = remedy === res.name;
-                    const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
-                    return (
-                      <motion.button
-                        key={res.name}
-                        whileHover={{ scale: 1.01 }}
-                        whileTap={{ scale: 0.99 }}
-                        onClick={() => handleSelectRemedy(res.name)}
-                        className={`w-full flex items-center gap-3 p-2.5 rounded-lg border transition-all text-left ${
-                          isSelected
-                            ? 'bg-emerald-50 border-emerald-300 shadow-sm shadow-emerald-500/10'
-                            : 'bg-slate-50 border-slate-100 hover:bg-slate-100'
-                        }`}
-                      >
-                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black text-white flex-shrink-0 ${
-                          i < 3 ? medalColors[i] : 'bg-slate-900'
-                        }`}>
-                          {i + 1}
-                        </span>
-                        <span className={`text-xs font-bold flex-1 ${isSelected ? 'text-emerald-800' : 'text-slate-900'}`}>{res.name}</span>
-                        <span className="text-xs font-black text-slate-500">{res.score}pts</span>
-                        {isSelected && <CheckCircle size={16} className="text-emerald-500 flex-shrink-0" />}
-                      </motion.button>
-                    );
-                  })}
+              {rxRows.length === 0 ? (
+                <div className="p-8 text-center">
+                  <FileText size={32} className="mx-auto mb-2 text-slate-200" />
+                  <p className="text-xs font-bold text-slate-400">No analysis results. Run case analysis first to auto-populate remedies.</p>
                 </div>
-              </div>
-            )}
+              ) : (
+                <div className="overflow-x-auto">
+                  {/* Table Header */}
+                  <div className="grid grid-cols-[2fr_0.8fr_0.8fr_1.5fr_0.8fr_28px] gap-1 px-3 sm:px-4 py-2 bg-slate-50 border-b border-slate-100 text-[8px] sm:text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                    <span>Remedy &amp; Potency</span>
+                    <span>Dosage</span>
+                    <span>Frequency</span>
+                    <span className="hidden sm:block">Duration</span>
+                    <span>Score</span>
+                    <span />
+                  </div>
+                  {/* Table Rows */}
+                  <div className="divide-y divide-slate-50">
+                    {rxRows.map((row, idx) => {
+                      const medalColors = ['bg-amber-500', 'bg-slate-500', 'bg-orange-600'];
+                      return (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.05 }}
+                          className="grid grid-cols-[2fr_0.8fr_0.8fr_1.5fr_0.8fr_28px] gap-1 px-3 sm:px-4 py-2.5 items-center hover:bg-emerald-50/30 transition group"
+                        >
+                          {/* Remedy + Potency */}
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[8px] font-black text-white flex-shrink-0 ${
+                              idx < 3 ? medalColors[idx] : 'bg-slate-900'
+                            }`}>
+                              {idx + 1}
+                            </span>
+                            <input
+                              type="text"
+                              value={row.name}
+                              onChange={(e) => updateRxRow(idx, 'name', e.target.value)}
+                              className="flex-1 min-w-0 px-2 py-1 bg-slate-50 border border-slate-200 rounded text-[11px] sm:text-xs font-bold text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 focus:border-emerald-500"
+                            />
+                            <select
+                              value={row.potency}
+                              onChange={(e) => updateRxRow(idx, 'potency', e.target.value)}
+                              className="w-16 sm:w-20 px-1.5 py-1 bg-slate-50 border border-slate-200 rounded text-[10px] sm:text-xs font-bold text-emerald-700 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 focus:border-emerald-500"
+                            >
+                              {['6C', '12C', '30C', '200C', '1M', '10M', 'LM1', 'LM2', 'LM3', 'Q'].map(p => (
+                                <option key={p} value={p}>{p}</option>
+                              ))}
+                            </select>
+                          </div>
+                          {/* Dosage */}
+                          <input
+                            type="text"
+                            value={row.dosage}
+                            onChange={(e) => updateRxRow(idx, 'dosage', e.target.value)}
+                            className="px-2 py-1 bg-slate-50 border border-slate-200 rounded text-[10px] sm:text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 focus:border-emerald-500"
+                          />
+                          {/* Frequency */}
+                          <input
+                            type="text"
+                            value={row.frequency}
+                            onChange={(e) => updateRxRow(idx, 'frequency', e.target.value)}
+                            className="px-2 py-1 bg-slate-50 border border-slate-200 rounded text-[10px] sm:text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 focus:border-emerald-500"
+                          />
+                          {/* Duration */}
+                          <input
+                            type="text"
+                            value={row.duration}
+                            onChange={(e) => updateRxRow(idx, 'duration', e.target.value)}
+                            className="hidden sm:block px-2 py-1 bg-slate-50 border border-slate-200 rounded text-[10px] sm:text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 focus:border-emerald-500"
+                          />
+                          {/* Score */}
+                          <span className="text-[10px] sm:text-xs font-black text-slate-500 text-center">{row.score > 0 ? `${row.score}pts` : '-'}</span>
+                          {/* Remove */}
+                          <button
+                            onClick={() => removeRxRow(idx)}
+                            className="p-1 rounded hover:bg-rose-50 text-slate-300 hover:text-rose-500 transition opacity-0 group-hover:opacity-100 print:hidden"
+                          >
+                            <X size={14} />
+                          </button>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* ===== SPECIAL INSTRUCTIONS ===== */}
             <div className="bg-emerald-50/60 border border-emerald-200/60 rounded-xl p-4">
