@@ -303,14 +303,17 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
   const totalPages = Math.ceil(chapterRubrics.length / RUBRICS_PER_PAGE);
 
   // Group sub-rubrics under parent rubrics for tree view
-  const buildRubricTree = (rubrics: typeof chapterRubrics) => {
+  const buildRubricTree = (rubrics: typeof chapterRubrics, chapterId: string) => {
     const mainRubrics: typeof chapterRubrics = [];
     const subMap = new Map<string, typeof chapterRubrics>();
+    const prefix = chapterId + '-';
     for (const r of rubrics) {
-      // Check if this is a sub-rubric (id contains a dash-number suffix like "mind-1-1")
-      const parts = r.id.split('-');
-      if (parts.length >= 3) {
-        const parentId = parts.slice(0, -1).join('-');
+      // Strip chapter ID prefix first, then check numeric suffix
+      const afterPrefix = r.id.startsWith(prefix) ? r.id.slice(prefix.length) : r.id;
+      const numParts = afterPrefix.split('-');
+      if (numParts.length >= 2) {
+        // Has sub-number → sub-rubric (e.g. "1-1", "1-2", "2-1-1")
+        const parentId = prefix + numParts.slice(0, -1).join('-');
         if (!subMap.has(parentId)) subMap.set(parentId, []);
         subMap.get(parentId)!.push(r);
       } else {
@@ -320,7 +323,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
     return { mainRubrics, subMap };
   };
 
-  const { mainRubrics, subMap } = buildRubricTree(pagedRubrics);
+  const { mainRubrics, subMap } = buildRubricTree(pagedRubrics, selectedChapterId);
 
   const handleRepertorize = () => {
     if (analysis.length === 0) return;
