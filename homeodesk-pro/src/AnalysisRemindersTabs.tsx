@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
   Bell, Calendar, Clock, Plus, X, Trash2, Eye, UserPlus, Filter, Save, CheckCircle,
-  ArrowRightLeft, ChevronRight, AlertCircle, Star, Trophy, Award, Zap, Pill, Send
+  ArrowRightLeft, ChevronRight, AlertCircle, Star, Trophy, Award, Zap, Pill, Send, Stethoscope
 } from 'lucide-react';
 import { Patient, AnalysisItem, Reminder, SavedAnalysis } from './types';
 
@@ -144,9 +144,10 @@ interface AnalysisTabProps {
   onUpdatePatient: (updatedPatient: Patient) => void;
   onAddPatient: (p: Omit<Patient, 'id' | 'date'>) => void;
   setActiveTab: (tab: string) => void;
+  onOpenSymptomCanvas?: (patient: Patient) => void;
 }
 
-export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearAnalysis, onRemoveRubric, onTransferToRx, onCompare, onUpdatePatient, onAddPatient, setActiveTab }: AnalysisTabProps) {
+export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearAnalysis, onRemoveRubric, onTransferToRx, onCompare, onUpdatePatient, onAddPatient, setActiveTab, onOpenSymptomCanvas }: AnalysisTabProps) {
   const [selectedPatient, setSelectedPatient] = useState(preSelectedPatientId);
   const [saveSuccess, setSaveSuccess] = useState(false);
 
@@ -169,17 +170,20 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
   // Get top 3 remedy names for highlighting
   const top3Remedies = useMemo(() => remedyScores.slice(0, 3).map(r => r.name), [remedyScores]);
 
+  // Get top 5 remedies for focused save
+  const top5Remedies = useMemo(() => remedyScores.slice(0, 5).map(r => ({
+    name: r.name,
+    count: r.count,
+    percentage: Math.round((r.count / analysis.length) * 100),
+  })), [remedyScores, analysis.length]);
+
   // Save analysis to patient
   const handleSaveAnalysis = () => {
     if (!selectedPatient || analysis.length === 0) return;
     const patient = patients.find(p => p.id === selectedPatient);
     if (!patient) return;
 
-    const topRemediesData = remedyScores.slice(0, 10).map(r => ({
-      name: r.name,
-      count: r.count,
-      percentage: Math.round((r.count / analysis.length) * 100),
-    }));
+    const topRemediesData = top5Remedies;
 
     const newSavedAnalysis: SavedAnalysis = {
       id: `sa-${Date.now()}`,
@@ -284,6 +288,19 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
               }`}
             >
               <Pill size={14} /> Transfer to Rx
+            </motion.button>
+
+            {/* Symptom Button - Opens Symptom Canvas */}
+            <motion.button 
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                const patient = patients.find(p => p.id === selectedPatient);
+                if (patient && onOpenSymptomCanvas) onOpenSymptomCanvas(patient);
+              }}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100"
+            >
+              <Stethoscope size={14} /> Add Symptoms
             </motion.button>
           </div>
         )}

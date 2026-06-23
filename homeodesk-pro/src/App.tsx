@@ -1,5 +1,5 @@
 import { Sidebar, ActiveSelectionCard, AttributeItem } from './AppComponents';
-import { PrescriptionCanvas, PatientDetailsCanvas } from './PatientModals';
+import { PrescriptionCanvas, PatientDetailsCanvas, SymptomCanvas } from './PatientModals';
 import { QRScannerModal, AnalysisResultModal, ImageEditorModal } from './Modals';
 import { Dashboard, PatientsTab, RepertoryTab } from './MainTabs';
 import { RemindersTab, AnalysisTab } from './AnalysisRemindersTabs';
@@ -35,6 +35,7 @@ const [selectedPatientForRx, setSelectedPatientForRx] = useState<Patient | null>
 const [quickRemedyForRx, setQuickRemedyForRx] = useState<string | undefined>(undefined);
 const [selectedPatientForPD, setSelectedPatientForPD] = useState<Patient | null>(null);
 const [preSelectedPatientId, setPreSelectedPatientId] = useState<string | null>(null);
+const [selectedPatientForSymptoms, setSelectedPatientForSymptoms] = useState<Patient | null>(null);
 const [isQRScannerOpen, setIsQRScannerOpen] = useState(false);
 const [isAnalyzing, setIsAnalyzing] = useState(false);
 const [analysisResult, setAnalysisResult] = useState<string | null>(null);
@@ -342,6 +343,9 @@ setPatients(patients.map(p => p.id === updatedPatient.id ? updatedPatient : p));
 }}
 onAddPatient={addPatient}
 setActiveTab={setActiveTab}
+onOpenSymptomCanvas={(patient) => {
+setSelectedPatientForSymptoms(patient);
+}}
 />
 </motion.div>
 )}
@@ -641,6 +645,16 @@ setQuickRemedyForRx(undefined);
 initialAnalysis={analysis}
 initialResults={repertorizationResults || undefined}
 quickRemedy={quickRemedyForRx}
+/>
+)}
+{selectedPatientForSymptoms && (
+<SymptomCanvas
+patient={selectedPatientForSymptoms}
+onClose={() => setSelectedPatientForSymptoms(null)}
+onSave={(updatedPatient) => {
+setPatients(patients.map(p => p.id === updatedPatient.id ? updatedPatient : p));
+setSelectedPatientForSymptoms(updatedPatient);
+}}
 />
 )}
 {selectedPatientForPD && (
