@@ -306,13 +306,23 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
   const buildRubricTree = (rubrics: typeof chapterRubrics, chapterId: string) => {
     const mainRubrics: typeof chapterRubrics = [];
     const subMap = new Map<string, typeof chapterRubrics>();
-    const prefix = chapterId + '-';
+
+    // Auto-detect the actual prefix used in rubric IDs.
+    // Chapter ID may differ from rubric prefix (e.g. chapter 'extremities' uses 'ext-',
+    // chapter 'generalities' uses 'gen-', chapter 'prostate-gland' uses 'prostate-gland-').
+    let prefix = chapterId + '-';
+    if (rubrics.length > 0 && !rubrics[0].id.startsWith(prefix)) {
+      // Derive prefix from first rubric: everything before the trailing number
+      const parts = rubrics[0].id.split('-');
+      prefix = parts.slice(0, -1).join('-') + '-';
+    }
+
     for (const r of rubrics) {
-      // Strip chapter ID prefix first, then check numeric suffix
+      // Strip the detected prefix, then check numeric suffix
       const afterPrefix = r.id.startsWith(prefix) ? r.id.slice(prefix.length) : r.id;
       const numParts = afterPrefix.split('-');
       if (numParts.length >= 2) {
-        // Has sub-number → sub-rubric (e.g. "1-1", "1-2", "2-1-1")
+        // Has sub-number → sub-rubric (e.g. "1-1", "2-1", "2-1-1")
         const parentId = prefix + numParts.slice(0, -1).join('-');
         if (!subMap.has(parentId)) subMap.set(parentId, []);
         subMap.get(parentId)!.push(r);
