@@ -151,18 +151,19 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
   const [selectedPatient, setSelectedPatient] = useState(preSelectedPatientId);
   const [saveSuccess, setSaveSuccess] = useState(false);
 
-  // Compute top remedies across all selected rubrics
+  // Compute top remedies across all selected rubrics (grade-weighted scoring)
   const remedyScores = useMemo(() => {
-    const counts = new Map<string, number>();
+    const scores = new Map<string, number>();
     for (const item of analysis) {
       const seen = new Set<string>();
       for (const remedy of (item.remedies || [])) {
-        if (seen.has(remedy)) continue;
-        seen.add(remedy);
-        counts.set(remedy, (counts.get(remedy) || 0) + 1);
+        if (seen.has(remedy.name)) continue;
+        seen.add(remedy.name);
+        const points = remedy.grade === 1 ? 3 : remedy.grade === 2 ? 2 : 1;
+        scores.set(remedy.name, (scores.get(remedy.name) || 0) + points);
       }
     }
-    return Array.from(counts.entries())
+    return Array.from(scores.entries())
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
   }, [analysis]);
@@ -442,7 +443,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
                 {item.remedies && item.remedies.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-1">
                     {item.remedies.slice(0, 8).map((r, i) => {
-                      const rank = top3Remedies.indexOf(r);
+                      const rank = top3Remedies.indexOf(r.name);
                       const isTop3 = rank >= 0;
                       return (
                         <span
@@ -458,7 +459,7 @@ export function AnalysisTab({ patients, analysis, preSelectedPatientId, onClearA
                           }`}
                         >
                           {isTop3 && <Star size={7} className="" />}
-                          {r}
+                          {r.name}
                         </span>
                       );
                     })}

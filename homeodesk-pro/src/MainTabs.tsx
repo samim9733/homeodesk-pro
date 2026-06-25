@@ -263,7 +263,7 @@ interface RepertoryTabProps {
 export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clearAnalysis, runRepertorization, onTransferToRx, setActiveTab, patients }: RepertoryTabProps) {
   const [search, setSearch] = useState('');
   const [selectedChapterId, setSelectedChapterId] = useState('');
-  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string; remedies: string[]}[]>([]);
+  const [searchResults, setSearchResults] = useState<{id: string; text: string; chapter: string; remedies: {name: string, grade: number}[]}[]>([]);
   const [expandedRubrics, setExpandedRubrics] = useState<Set<string>>(new Set());
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [rubricPage, setRubricPage] = useState(0);
@@ -284,7 +284,7 @@ export function RepertoryTab({ analysis, addToAnalysis, removeFromAnalysis, clea
       return;
     }
     const q = search.toLowerCase();
-    const results: {id: string; text: string; chapter: string; remedies: string[]}[] = [];
+    const results: {id: string; text: string; chapter: string; remedies: {name: string, grade: number}[]}[] = [];
     for (const ch of KENT_REPERTORY_DATA) {
       for (const r of ch.rubrics) {
         if (r.text.toLowerCase().includes(q)) {

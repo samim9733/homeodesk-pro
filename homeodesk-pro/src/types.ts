@@ -66,8 +66,7 @@ export interface Prescription {
 export interface AnalysisItem {
   text: string;
   chapter: string;
-  remedies?: string[];
-  grade?: number;
+  remedies?: RemedyGrade[];
 }
 
 export interface Reminder {
@@ -81,12 +80,16 @@ export interface Reminder {
   completed?: boolean;
 }
 
+export interface RemedyGrade {
+  name: string;
+  grade: number; // 1=bold(100%), 2=italic(50%), 3=plain(25%)
+}
+
 export interface Rubric {
   id: string;
   text: string;
   chapter: string;
-  remedies: string[];
-  grade?: number;
+  remedies: RemedyGrade[];
 }
 
 export interface RubricData {
@@ -164,7 +167,7 @@ export interface AnatomyPart {
 export interface RubricSearchResult {
   rubric: string;
   chapter: string;
-  remedies: string[];
+  remedies: RemedyGrade[];
 }
 
 export interface RepertorizationResult {
