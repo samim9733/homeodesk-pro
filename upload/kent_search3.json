@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://community.bmc.com/s/question/0D53n00007aEZtyCAG/rest-api-create-change-problem",
+    "name": "REST API Create Change Problem. - Discussion - BMC Community",
+    "snippet": "Hi everyone,. I'm new to the remedy API (and remedy in general) but I have no problem getting or querying entries, just when creating.",
+    "host_name": "community.bmc.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mulesoft.com/api/rest/connect-to-remedy-action-request-rest-api",
+    "name": "How to connect to Remedy Action Request using REST API - Mulesoft",
+    "snippet": "In this article, we will explore how to use Remedy REST APIs to perform CRUD operations on Incident, Task, and WorkInfo forms.",
+    "host_name": "www.mulesoft.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PP8zDQ04Z9Q",
+    "name": "BMC Remedy: How to create entries in REST API - YouTube",
+    "snippet": "The sample scripts would help invoke rest api using the included tool HttpTestTool and create entries with or without attachments.",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.helixops.ai/bin/Service-Management/Innovation-Suite/AR-System/ars213/Developing-an-API-program/Integrating-AR-System-forms-with-a-third-party-application-by-using-the-REST-API/Learning-about-the-REST-API/Overview-of-the-REST-API",
+    "name": "Overview of the REST API - BMC Helix Documentation",
+    "snippet": "You can attempt a REST API call if you have a token. A single JWT token is valid for an hour. You can use a single token across multiple AR ...",
+    "host_name": "docs.helixops.ai",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.stitchflow.com/user-management/remedy/api",
+    "name": "BMC Remedy (Helix ITSM) User Management API Guide - Stitchflow",
+    "snippet": "API guide for BMC Remedy (Helix ITSM) user lifecycle automation, auth, endpoints, and caveats.",
+    "host_name": "www.stitchflow.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

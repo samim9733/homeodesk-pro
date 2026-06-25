@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "mind-1",
+    "text": "ABANDONED (See Forsaken.)",
+    "chapter": "MIND",
+    "norm": "mind, abandoned"
+  },
+  {
+    "id": "mind-8",
+    "text": "ACUTENESS (See Memory.)",
+    "chapter": "MIND",
+    "norm": "mind, acuteness"
+  },
+  {
+    "id": "mind-12",
+    "text": "AGITATION (See Excitement.)",
+    "chapter": "MIND",
+    "norm": "mind, agitation"
+  },
+  {
+    "id": "mind-21",
+    "text": "ANTHROPOPHOBIA (See Fear.)",
+    "chapter": "MIND",
+    "norm": "mind, anthropophobia"
+  },
+  {
+    "id": "mind-26",
+    "text": "APPREHENSIONS (See Fear, Anxiety, etc.)",
+    "chapter": "MIND",
+    "norm": "mind, apprehensions"
+  },
+  {
+    "id": "mind-28",
+    "text": "ARROGANCE (See Haughty.)",
+    "chapter": "MIND",
+    "norm": "mind, arrogance"
+  },
+  {
+    "id": "mind-45",
+    "text": "BENUMBED (See Stupefaction.)",
+    "chapter": "MIND",
+    "norm": "mind, benumbed"
+  },
+  {
+    "id": "mind-46",
+    "text": "BEWILDERED (See Confusion.)",
+    "chapter": "MIND",
+    "norm": "mind, bewildered"
+  },
+  {
+    "id": "mind-51",
+    "text": "BOLDNESS (See Courageous.)",
+    "chapter": "MIND",
+    "norm": "mind, boldness"
+  },
+  {
+    "id": "mind-54",
+    "text": "BUFFOONERY (See Foolish Behavior.)",
+    "chapter": "MIND",
+    "norm": "mind, buffoonery"
+  },
+  {
+    "id": "mind-61",
+    "text": "CARELESS (See Heedless.)",
+    "chapter": "MIND",
+    "norm": "mind, careless"
+  },
+  {
+    "id": "mind-63",
+    "text": "CARPHOLOGIA (See Gestures.)",
+    "chapter": "MIND",
+    "norm": "mind, carphologia"
+  },
+  {
+    "id": "mind-92",
+    "text": "CONTENTIONS (See Quarrelsome.)",
+    "chapter": "MIND",
+    "norm": "mind, contentions"
+  },
+  {
+    "id": "mind-97",
+    "text": "COSMOPOLITAN (See Travel.)",
+    "chapter": "MIND",
+    "norm": "mind, cosmopolitan"
+  },
+  {
+    "id": "mind-100",
+    "text": "COVETOUS (See Avarice.)",
+    "chapter": "MIND",
+    "norm": "mind, covetous"
+  },
+  {
+    "id": "mind-116",
+    "text": "DEJECTION (See Sadness.)",
+    "chapter": "MIND",
+    "norm": "mind, dejection"
+  },
+  {
+    "id": "mind-117-27",
+    "text": "DELIRIUM - catches at flocks in air (See Gestures.)",
+    "chapter": "MIND",
+    "norm": "mind, delirium, catches at flocks in air"
+  },
+  {
+    "id": "mind-122",
+    "text": "DESPISES (See Contemptuous.)",
+    "chapter": "MIND",
+    "norm": "mind, despises"
+  },
+  {
+    "id": "mind-123",
+    "text": "DESPONDENCY (See Sadness.)",
+    "chapter": "MIND",
+    "norm": "mind, despondency"
+  },
+  {
+    "id": "mind-137",
+    "text": "DISTRUSTFUL (See Suspicious.)",
+    "chapter": "MIND",
+    "norm": "mind, distrustful"
+  },
+  {
+    "id": "mind-141",
+    "text": "DOMINEERING (See Dictatorial.)",
+    "chapter": "MIND",
+    "norm": "mind, domineering"
+  },
+  {
+    "id": "mind-148",
+    "text": "DUPLICITY (See Deceitful.)",
+    "chapter": "MIND",
+    "norm": "mind, duplicity"
+  },
+  {
+    "id": "mind-150",
+    "text": "EARNESTNESS (See Serious.)",
+    "chapter": "MIND",
+    "norm": "mind, earnestness"
+  },
+  {
+    "id": "mind-153",
+    "text": "ECSTACY (See Exhilaration)",
+    "chapter": "MIND",
+    "norm": "mind, ecstacy"
+  },
+  {
+    "id": "mind-165",
+    "text": "EXCLAMATION (See Shrieking.)",
+    "chapter": "MIND",
+    "norm": "mind, exclamation"
+  },
+  {
+    "id": "mind-170",
+    "text": "FACETIOUSNESS (See Jesting.)",
+    "chapter": "MIND",
+    "norm": "mind, facetiousness"
+  },
+  {
+    "id": "mind-175",
+    "text": "FAULTFINDING (See Censorious.)",
+    "chapter": "MIND",
+    "norm": "mind, faultfinding"
+  },
+  {
+    "id": "mind-179",
+    "text": "FICKLE (See Inconstant, Irresolute, Capricious, etc.)",
+    "chapter": "MIND",
+    "norm": "mind, fickle"
+  },
+  {
+    "id": "mind-180",
+    "text": "FIDGETY (See Restlessness.)",
+    "chapter": "MIND",
+    "norm": "mind, fidgety"
+  },
+  {
+    "id": "mind-187",
+    "text": "FOREBODINGS (See Fear, Anxiety, and Sadness.)",
+    "chapter": "MIND",
+    "norm": "mind, forebodings"
+  },
+  {
+    "id": "mind-199",
+    "text": "GAYETY (See Cheerfulness, Vivacious.)",
+    "chapter": "MIND",
+    "norm": "mind, gayety"
+  },
+  {
+    "id": "mind-200",
+    "text": "GENTLENESS (See Mildness.)",
+    "chapter": "MIND",
+    "norm": "mind, gentleness"
+  },
+  {
+    "id": "mind-214",
+    "text": "GRUMBLING (See Complaining.)",
+    "chapter": "MIND",
+    "norm": "mind, grumbling"
+  },
+  {
+    "id": "mind-218",
+    "text": "HASTINESS (See Hurry.)",
+    "chapter": "MIND",
+    "norm": "mind, hastiness"
+  },
+  {
+    "id": "mind-221",
+    "text": "HEADSTRONG (See Obstinate.)",
+    "chapter": "MIND",
+    "norm": "mind, headstrong"
+  },
+  {
+    "id": "mind-233",
+    "text": "HOPELESS (See Sadness, Despair.)",
+    "chapter": "MIND",
+    "norm": "mind, hopeless"
+  },
+  {
+    "id": "mind-249",
+    "text": "IMPERIOUS (See Haughty.)",
+    "chapter": "MIND",
+    "norm": "mind, imperious"
+  },
+  {
+    "id": "mind-252",
+    "text": "IMPRUDENCE (See Indiscretion.)",
+    "chapter": "MIND",
+    "norm": "mind, imprudence"
+  },
+  {
+    "id": "mind-263",
+    "text": "INHUMANITY (See Cruelty.)",
+    "chapter": "MIND",
+    "norm": "mind, inhumanity"
+  },
+  {
+    "id": "mind-275-74",
+    "text": "IRRITABILITY (See Anger) - tight shoes, from",
+    "chapter": "MIND",
+    "norm": "mind, irritability, tight shoes, from"
+  },
+  {
+    "id": "mind-280",
+    "text": "JOYLESS (See Indifference.)",
+    "chapter": "MIND",
+    "norm": "mind, joyless"
+  },
+  {
+    "id": "mind-281",
+    "text": "JOYOUS (See Cheerfulness.)",
+    "chapter": "MIND",
+    "norm": "mind, joyous"
+  },
+  {
+    "id": "mind-296",
+    "text": "LISTLESS (See Indifference.)",
+    "chapter": "MIND",
+    "norm": "mind, listless"
+  },
+  {
+    "id": "mind-300",
+    "text": "LONELINESS (See Forsaken.)",
+    "chapter": "MIND",
+    "norm": "mind, loneliness"
+  },
+  {
+    "id": "mind-315",
+    "text": "MELANCHOLY (See Despair, Grief and Sadness.)",
+    "chapter": "MIND",
+    "norm": "mind, melancholy"
+  },
+  {
+    "id": "mind-324",
+    "text": "MISERLY (See Avarice.)",
+    "chapter": "MIND",
+    "norm": "mind, miserly"
+  },
+  {
+    "id": "mind-350",
+    "text": "PETULANT (See Irritability.)",
+    "chapter": "MIND",
+    "norm": "mind, petulant"
+  },
+  {
+    "id": "mind-362",
+    "text": "PRE-OCCUPIED (See Absence of Mind.)",
+    "chapter": "MIND",
+    "norm": "mind, pre-occupied"
+  },
+  {
+    "id": "mind-388",
+    "text": "REVERIES (See Absorbed.)",
+    "chapter": "MIND",
+    "norm": "mind, reveries"
+  },
+  {
+    "id": "mind-402",
+    "text": "SCRUPULOUS (See Conscientious.)",
+    "chapter": "MIND",
+    "norm": "mind, scrupulous"
+  },
+  {
+    "id": "mind-410",
+    "text": "SERENE (See Tranquillity.)",
+    "chapter": "MIND",
+    "norm": "mind, serene"
+  },
+  {
+    "id": "mind-430",
+    "text": "SOBBING (See Sighing, Weeping.)",
+    "chapter": "MIND",
+    "norm": "mind, sobbing"
+  },
+  {
+    "id": "mind-432",
+    "text": "SOLEMN (See Serious.)",
+    "chapter": "MIND",
+    "norm": "mind, solemn"
+  },
+  {
+    "id": "mind-437",
+    "text": "SPITEFUL (See Vindictive.)",
+    "chapter": "MIND",
+    "norm": "mind, spiteful"
+  },
+  {
+    "id": "mind-442",
+    "text": "STORIES, exciting, agg.",
+    "chapter": "MIND",
+    "norm": "mind, stories, exciting, agg."
+  },
+  {
+    "id": "mind-446",
+    "text": "STUBBORN (See Obstinate.)",
+    "chapter": "MIND",
+    "norm": "mind, stubborn"
+  },
+  {
+    "id": "mind-448",
+    "text": "STUNNED (See Stupefaction.)",
+    "chapter": "MIND",
+    "norm": "mind, stunned"
+  },
+  {
+    "id": "mind-450",
+    "text": "STUPIDITY (See Dulness.)",
+    "chapter": "MIND",
+    "norm": "mind, stupidity"
+  },
+  {
+    "id": "mind-456",
+    "text": "SULLEN (See Morose.)",
+    "chapter": "MIND",
+    "norm": "mind, sullen"
+  },
+  {
+    "id": "mind-460",
+    "text": "SWEARING (See Cursing.)",
+    "chapter": "MIND",
+    "norm": "mind, swearing"
+  },
+  {
+    "id": "mind-463",
+    "text": "TALKATIVE (See Loquacity.)",
+    "chapter": "MIND",
+    "norm": "mind, talkative"
+  },
+  {
+    "id": "mind-491",
+    "text": "VACILLATION (See Mood.)",
+    "chapter": "MIND",
+    "norm": "mind, vacillation"
+  },
+  {
+    "id": "mind-495",
+    "text": "VINDICTIVE (See Malicious.)",
+    "chapter": "MIND",
+    "norm": "mind, vindictive"
+  },
+  {
+    "id": "mind-509",
+    "text": "WHIMSICAL (See Mood.)",
+    "chapter": "MIND",
+    "norm": "mind, whimsical"
+  },
+  {
+    "id": "vertigo-134",
+    "text": "SWIMMING (See Floating.)",
+    "chapter": "VERTIGO",
+    "norm": "vertigo, swimming"
+  },
+  {
+    "id": "head-15",
+    "text": "CEPHALEMATOMA",
+    "chapter": "HEAD",
+    "norm": "head, cephalematoma"
+  },
+  {
+    "id": "head-21",
+    "text": "COMPRESSION (See \\\\\"Constriction,\\\\\" \\\\\"Pressing.\\\\\")",
+    "chapter": "HEAD",
+    "norm": "head, compression"
+  },
+  {
+    "id": "head-30",
+    "text": "DILATED (See \"Expanded.\")",
+    "chapter": "HEAD",
+    "norm": "head, dilated"
+  },
+  {
+    "id": "head-31",
+    "text": "DISTENTION (See \\\\\"Enlarged,\\\\\" \\\\\"Swollen,\\\\\" \\\\\"Fullness,\\\\\" etc.)",
+    "chapter": "HEAD",
+    "norm": "head, distention"
+  },
+  {
+    "id": "head-44",
+    "text": "FLUCTUATION (See \\\\\"Waving.\\\\\")",
+    "chapter": "HEAD",
+    "norm": "head, fluctuation"
+  },
+  {
+    "id": "head-45",
+    "text": "FONTANELLES (See \\\\\"Open.\\\\\")",
+    "chapter": "HEAD",
+    "norm": "head, fontanelles"
+  },
+  {
+    "id": "head-48-18",
+    "text": "FULLNESS (comp. \\\\\"Enlarged\\\\\") - thick speech, double vision, with",
+    "chapter": "HEAD",
+    "norm": "head, fullness (comp. \\\\enlarged\\\\), thick speech, double vision, with"
+  },
+  {
+    "id": "head-56-127",
+    "text": "HEAVINESS (comp. \\\\\"Pressure\\\\\") - work, from fatiguing",
+    "chapter": "HEAD",
+    "norm": "head, heaviness (comp. \\\\pressure\\\\), work, from fatiguing"
+  },
+  {
+    "id": "head-60",
+    "text": "HORRIPILATION (See \\\\\"Hair.\\\\\")",
+    "chapter": "HEAD",
+    "norm": "head, horripilation"
+  },
+  {
+    "id": "eye-3",
+    "text": "ANÆMIA of Conjunctiva / retina",
+    "chapter": "EYE",
+    "norm": "eye, anæmia of conjunctiva / retina"
+  },
+  {
+    "id": "eye-10",
+    "text": "BLOODSHOT",
+    "chapter": "EYE",
+    "norm": "eye, bloodshot"
+  },
+  {
+    "id": "eye-15",
+    "text": "CHEMOSIS",
+    "chapter": "EYE",
+    "norm": "eye, chemosis"
+  },
+  {
+    "id": "eye-34",
+    "text": "DULNESS",
+    "chapter": "EYE",
+    "norm": "eye, dulness"
+  },
+  {
+    "id": "eye-58",
+    "text": "HYPERÆSTHESIA of retina",
+    "chapter": "EYE",
+    "norm": "eye, hyperæsthesia of retina"
+  },
+  {
+    "id": "eye-85",
+    "text": "PHOTOMANIA",
+    "chapter": "EYE",
+    "norm": "eye, photomania"
+  },
+  {
+    "id": "eye-123",
+    "text": "WARTS (see Condylomata)",
+    "chapter": "EYE",
+    "norm": "eye, warts (see condylomata)"
+  },
+  {
+    "id": "ear-19",
+    "text": "CRAWLING (see Formication)",
+    "chapter": "EAR",
+    "norm": "ear, crawling (see formication)"
+  },
+  {
+    "id": "ear-26",
+    "text": "ERYSIPELAS (see Inflammation)",
+    "chapter": "EAR",
+    "norm": "ear, erysipelas (see inflammation)"
+  },
+  {
+    "id": "ear-28",
+    "text": "FLAPPING",
+    "chapter": "EAR",
+    "norm": "ear, flapping"
+  },
+  {
+    "id": "ear-45",
+    "text": "OBSTRUCTION (see Stopped)",
+    "chapter": "EAR",
+    "norm": "ear, obstruction (see stopped)"
+  },
+  {
+    "id": "ear-57",
+    "text": "REVERBERATIONS (see Noises)",
+    "chapter": "EAR",
+    "norm": "ear, reverberations (see noises)"
+  },
+  {
+    "id": "ear-65",
+    "text": "STENOSIS (see Contraction)",
+    "chapter": "EAR",
+    "norm": "ear, stenosis (see contraction)"
+  },
+  {
+    "id": "ear-72",
+    "text": "THROBBING (see Pulsation)",
+    "chapter": "EAR",
+    "norm": "ear, throbbing (see pulsation)"
+  },
+  {
+    "id": "nose-5",
+    "text": "ANOSMIA (see Smell)",
+    "chapter": "NOSE",
+    "norm": "nose, anosmia (see smell)"
+  },
+  {
+    "id": "nose-16",
+    "text": "CONDYLOMATA (see Warts)",
+    "chapter": "NOSE",
+    "norm": "nose, condylomata (see warts)"
+  },
+  {
+    "id": "nose-22",
+    "text": "CRAWLING (see Itching)",
+    "chapter": "NOSE",
+    "norm": "nose, crawling (see itching)"
+  },
+  {
+    "id": "nose-25",
+    "text": "DENTED in (see Sunken)",
+    "chapter": "NOSE",
+    "norm": "nose, dented in (see sunken)"
+  },
+  {
+    "id": "nose-35",
+    "text": "ERUPTIONS (see Face)",
+    "chapter": "NOSE",
+    "norm": "nose, eruptions (see face)"
+  },
+  {
+    "id": "nose-36",
+    "text": "ERYSIPELAS (see Face)",
+    "chapter": "NOSE",
+    "norm": "nose, erysipelas (see face)"
+  },
+  {
+    "id": "nose-37",
+    "text": "EXCORIATION (see Rawness)",
+    "chapter": "NOSE",
+    "norm": "nose, excoriation (see rawness)"
+  },
+  {
+    "id": "nose-48",
+    "text": "FURUNCLES (see Face)",
+    "chapter": "NOSE",
+    "norm": "nose, furuncles (see face)"
+  },
+  {
+    "id": "nose-72",
+    "text": "OZÆNA",
+    "chapter": "NOSE",
+    "norm": "nose, ozæna"
+  },
+  {
+    "id": "nose-75",
+    "text": "PEELING off (see Desquamation)",
+    "chapter": "NOSE",
+    "norm": "nose, peeling off (see desquamation)"
+  },
+  {
+    "id": "nose-81",
+    "text": "PRICKLING (see Tingling)",
+    "chapter": "NOSE",
+    "norm": "nose, prickling (see tingling)"
+  },
+  {
+    "id": "nose-84",
+    "text": "PULSATION",
+    "chapter": "NOSE",
+    "norm": "nose, pulsation"
+  },
+  {
+    "id": "nose-106",
+    "text": "TENDERNESS (see Pain)",
+    "chapter": "NOSE",
+    "norm": "nose, tenderness (see pain)"
+  },
+  {
+    "id": "face-4",
+    "text": "ANEMIC (see Discoloration)",
+    "chapter": "FACE",
+    "norm": "face, anemic (see discoloration)"
+  },
+  {
+    "id": "face-7",
+    "text": "BIRTHMARKS (see Nævus)",
+    "chapter": "FACE",
+    "norm": "face, birthmarks (see nævus)"
+  },
+  {
+    "id": "face-10",
+    "text": "BLOOD vessels distended (see Veins)",
+    "chapter": "FACE",
+    "norm": "face, blood vessels distended (see veins)"
+  },
+  {
+    "id": "face-12",
+    "text": "CACHECTIC (see Expression)",
+    "chapter": "FACE",
+    "norm": "face, cachectic (see expression)"
+  },
+  {
+    "id": "face-20",
+    "text": "CHOREA (see Twitching and Distorting)",
+    "chapter": "FACE",
+    "norm": "face, chorea (see twitching and distorting)"
+  },
+  {
+    "id": "face-30",
+    "text": "CRAWLING (see Formication)",
+    "chapter": "FACE",
+    "norm": "face, crawling (see formication)"
+  },
+  {
+    "id": "face-31",
+    "text": "CREEPING (see Formication)",
+    "chapter": "FACE",
+    "norm": "face, creeping (see formication)"
+  },
+  {
+    "id": "face-33",
+    "text": "DOUBLE, feels as if she had two noses",
+    "chapter": "FACE",
+    "norm": "face, double, feels as if she had two noses"
+  },
+  {
+    "id": "face-36",
+    "text": "EPISTAXIS (see Nose)",
+    "chapter": "FACE",
+    "norm": "face, epistaxis (see nose)"
+  },
+  {
+    "id": "face-39",
+    "text": "EXCORIATION (see Rawness)",
+    "chapter": "FACE",
+    "norm": "face, excoriation (see rawness)"
+  },
+  {
+    "id": "face-41",
+    "text": "EXOSTOSES (see Nose)",
+    "chapter": "FACE",
+    "norm": "face, exostoses (see nose)"
+  },
+  {
+    "id": "face-44",
+    "text": "FOOD, sensation of, in posterior nares",
+    "chapter": "FACE",
+    "norm": "face, food, sensation of, in posterior nares"
+  },
+  {
+    "id": "face-45",
+    "text": "FOREIGN body, sensation",
+    "chapter": "FACE",
+    "norm": "face, foreign body, sensation"
+  },
+  {
+    "id": "face-50",
+    "text": "FURUNCLES (see Face)",
+    "chapter": "FACE",
+    "norm": "face, furuncles (see face)"
+  },
+  {
+    "id": "face-52",
+    "text": "HAIR of nostrils falls out",
+    "chapter": "FACE",
+    "norm": "face, hair of nostrils falls out"
+  },
+  {
+    "id": "face-53",
+    "text": "HARDNESS",
+    "chapter": "FACE",
+    "norm": "face, hardness"
+  },
+  {
+    "id": "face-56",
+    "text": "HEAVINESS",
+    "chapter": "FACE",
+    "norm": "face, heaviness"
+  },
+  {
+    "id": "face-60",
+    "text": "LACERATION",
+    "chapter": "FACE",
+    "norm": "face, laceration"
+  },
+  {
+    "id": "face-61",
+    "text": "LIPOMA",
+    "chapter": "FACE",
+    "norm": "face, lipoma"
+  },
+  {
+    "id": "face-64",
+    "text": "MEMBRANE, mucous, destroyed / detached / gangrenous",
+    "chapter": "FACE",
+    "norm": "face, membrane, mucous, destroyed / detached / gangrenous"
+  },
+  {
+    "id": "face-69",
+    "text": "OBSTRUCTION",
+    "chapter": "FACE",
+    "norm": "face, obstruction"
+  },
+  {
+    "id": "face-71",
+    "text": "EDEMA",
+    "chapter": "FACE",
+    "norm": "face, edema"
+  },
+  {
+    "id": "face-74",
+    "text": "OZÆNA",
+    "chapter": "FACE",
+    "norm": "face, ozæna"
+  },
+  {
+    "id": "face-82",
+    "text": "POLYPUS",
+    "chapter": "FACE",
+    "norm": "face, polypus"
+  },
+  {
+    "id": "face-84",
+    "text": "PROTUBERANCES",
+    "chapter": "FACE",
+    "norm": "face, protuberances"
+  },
+  {
+    "id": "face-85",
+    "text": "PUFFINESS (see Swelling)",
+    "chapter": "FACE",
+    "norm": "face, puffiness (see swelling)"
+  },
+  {
+    "id": "face-89",
+    "text": "ROUGHNESS inside / posterior nares",
+    "chapter": "FACE",
+    "norm": "face, roughness inside / posterior nares"
+  },
+  {
+    "id": "face-92",
+    "text": "SCRAPING posterior nares",
+    "chapter": "FACE",
+    "norm": "face, scraping posterior nares"
+  },
+  {
+    "id": "face-96",
+    "text": "SMELL (acute, diminished, lost, illusions)",
+    "chapter": "FACE",
+    "norm": "face, smell (acute, diminished, lost, illusions)"
+  },
+  {
+    "id": "face-98",
+    "text": "SNUFFLES (see Obstruction)",
+    "chapter": "FACE",
+    "norm": "face, snuffles (see obstruction)"
+  },
+  {
+    "id": "face-99",
+    "text": "SNUFFLING",
+    "chapter": "FACE",
+    "norm": "face, snuffling"
+  },
+  {
+    "id": "face-101",
+    "text": "SORENESS (see Pain)",
+    "chapter": "FACE",
+    "norm": "face, soreness (see pain)"
+  },
+  {
+    "id": "face-102",
+    "text": "SPARKS, sensation of electric",
+    "chapter": "FACE",
+    "norm": "face, sparks, sensation of electric"
+  },
+  {
+    "id": "face-103",
+    "text": "SPASM in wings / muscles",
+    "chapter": "FACE",
+    "norm": "face, spasm in wings / muscles"
+  },
+  {
+    "id": "face-108",
+    "text": "TENDERNESS (see Pain)",
+    "chapter": "FACE",
+    "norm": "face, tenderness (see pain)"
+  },
+  {
+    "id": "face-111",
+    "text": "THROBBING (see Pulsation)",
+    "chapter": "FACE",
+    "norm": "face, throbbing (see pulsation)"
+  },
+  {
+    "id": "face-112",
+    "text": "TICKLING (see Itching)",
+    "chapter": "FACE",
+    "norm": "face, tickling (see itching)"
+  },
+  {
+    "id": "face-115",
+    "text": "TREMULOUS sensation at tip",
+    "chapter": "FACE",
+    "norm": "face, tremulous sensation at tip"
+  },
+  {
+    "id": "face-116",
+    "text": "TUMOR inside / root / tip",
+    "chapter": "FACE",
+    "norm": "face, tumor inside / root / tip"
+  },
+  {
+    "id": "face-121",
+    "text": "WEIGHT (see Heaviness)",
+    "chapter": "FACE",
+    "norm": "face, weight (see heaviness)"
+  },
+  {
+    "id": "rectum-2",
+    "text": "APHTHOUS condition of anus",
+    "chapter": "Rectum",
+    "norm": "rectum, aphthous condition of anus"
+  },
+  {
+    "id": "rectum-17-204",
+    "text": "DIARRHEA - sauer kraut, after",
+    "chapter": "Rectum",
+    "norm": "rectum, diarrhea, sauer kraut, after"
+  },
+  {
+    "id": "rectum-31",
+    "text": "FULNESS",
+    "chapter": "Rectum",
+    "norm": "rectum, fulness"
+  },
+  {
+    "id": "rectum-34-8",
+    "text": "HÆMORRHAGE from anus - exertion, after",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhage from anus, exertion, after"
+  },
+  {
+    "id": "rectum-34-12",
+    "text": "HÆMORRHAGE from anus - scanty, during",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhage from anus, scanty, during"
+  },
+  {
+    "id": "rectum-34-13",
+    "text": "HÆMORRHAGE from anus - suppressed",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhage from anus, suppressed"
+  },
+  {
+    "id": "rectum-34-14",
+    "text": "HÆMORRHAGE from anus - periodic",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhage from anus, periodic"
+  },
+  {
+    "id": "rectum-34-15",
+    "text": "HÆMORRHAGE from anus - rubbing, on",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhage from anus, rubbing, on"
+  },
+  {
+    "id": "rectum-35",
+    "text": "HÆMORRHOIDS",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhoids"
+  },
+  {
+    "id": "rectum-35-14",
+    "text": "HÆMORRHOIDS - drunkards, in",
+    "chapter": "Rectum",
+    "norm": "rectum, hæmorrhoids, drunkards, in"
+  },
+  {
+    "id": "rectum-54",
+    "text": "PROLAPSUS",
+    "chapter": "Rectum",
+    "norm": "rectum, prolapsus"
+  },
+  {
+    "id": "rectum-54-7",
+    "text": "PROLAPSUS - diarrhæa, during",
+    "chapter": "Rectum",
+    "norm": "rectum, prolapsus, diarrhæa, during"
+  },
+  {
+    "id": "rectum-54-18",
+    "text": "PROLAPSUS - during",
+    "chapter": "Rectum",
+    "norm": "rectum, prolapsus, during"
+  },
+  {
+    "id": "rectum-54-19",
+    "text": "PROLAPSUS - after",
+    "chapter": "Rectum",
+    "norm": "rectum, prolapsus, after"
+  },
+  {
+    "id": "urinary-organs",
+    "text": "URINARY ORGANS - BLADDER",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder"
+  },
+  {
+    "id": "urinary-organs-1",
+    "text": "URINARY ORGANS - BLADDER",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder"
+  },
+  {
+    "id": "urinary-organs-1-1",
+    "text": "URINARY ORGANS - BLADDER - atony",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, atony"
+  },
+  {
+    "id": "urinary-organs-1-2",
+    "text": "URINARY ORGANS - BLADDER - Ball, sensation of",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, ball, sensation of"
+  },
+  {
+    "id": "urinary-organs-1-3",
+    "text": "URINARY ORGANS - BLADDER - CATARRH of",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, catarrh of"
+  },
+  {
+    "id": "urinary-organs-1-4",
+    "text": "URINARY ORGANS - BLADDER - COLD sensation in",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, cold sensation in"
+  },
+  {
+    "id": "urinary-organs-1-5",
+    "text": "URINARY ORGANS - BLADDER - CONSTRICTION",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, constriction"
+  },
+  {
+    "id": "urinary-organs-1-6",
+    "text": "URINARY ORGANS - BLADDER - DISTENSION",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, distension"
+  },
+  {
+    "id": "urinary-organs-1-7",
+    "text": "URINARY ORGANS - BLADDER - ENLARGED",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, enlarged"
+  },
+  {
+    "id": "urinary-organs-1-8",
+    "text": "URINARY ORGANS - BLADDER - FULLNESS, sensation of",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, fullness, sensation of"
+  },
+  {
+    "id": "urinary-organs-1-9",
+    "text": "URINARY ORGANS - BLADDER - HEAT in",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, heat in"
+  },
+  {
+    "id": "urinary-organs-1-10",
+    "text": "URINARY ORGANS - BLADDER - INFLAMMATION of",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, inflammation of"
+  },
+  {
+    "id": "urinary-organs-1-11",
+    "text": "URINARY ORGANS - BLADDER - IRRITABILITY of",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, irritability of"
+  },
+  {
+    "id": "urinary-organs-1-12",
+    "text": "URINARY ORGANS - BLADDER - NUMBNESS",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, numbness"
+  },
+  {
+    "id": "urinary-organs-1-18",
+    "text": "URINARY ORGANS - BLADDER - PARALYSIS",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, paralysis"
+  },
+  {
+    "id": "urinary-organs-1-19",
+    "text": "URINARY ORGANS - BLADDER - PRESSURE",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, pressure"
+  },
+  {
+    "id": "urinary-organs-1-21",
+    "text": "URINARY ORGANS - BLADDER - RETENTION - after operation",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, retention, after operation"
+  },
+  {
+    "id": "urinary-organs-1-22",
+    "text": "URINARY ORGANS - BLADDER - RETENTION - with fever",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, retention, with fever"
+  },
+  {
+    "id": "urinary-organs-1-23",
+    "text": "URINARY ORGANS - BLADDER - STONE in",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, stone in"
+  },
+  {
+    "id": "urinary-organs-1-24",
+    "text": "URINARY ORGANS - BLADDER - TENESMUS",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, tenesmus"
+  },
+  {
+    "id": "urinary-organs-1-25",
+    "text": "URINARY ORGANS - BLADDER - TUMOR",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, tumor"
+  },
+  {
+    "id": "urinary-organs-1-26",
+    "text": "URINARY ORGANS - BLADDER - WEAKNESS",
+    "chapter": "Urinary Organs",
+    "norm": "urine, bladder, weakness"
+  },
+  {
+    "id": "urinary-organs-2",
+    "text": "URINARY ORGANS - URINATION - FREQUENT",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, frequent"
+  },
+  {
+    "id": "urinary-organs-2-1",
+    "text": "URINARY ORGANS - URINATION - frequent - day",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, frequent, day"
+  },
+  {
+    "id": "urinary-organs-2-2",
+    "text": "URINARY ORGANS - URINATION - frequent - night",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, frequent, night"
+  },
+  {
+    "id": "urinary-organs-2-3",
+    "text": "URINARY ORGANS - URINATION - frequent - in children",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, frequent, in children"
+  },
+  {
+    "id": "urinary-organs-3",
+    "text": "URINARY ORGANS - URINATION - DIFFICULT",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, difficult"
+  },
+  {
+    "id": "urinary-organs-3-1",
+    "text": "URINARY ORGANS - URINATION - difficult - slow stream",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, difficult, slow stream"
+  },
+  {
+    "id": "urinary-organs-3-2",
+    "text": "URINARY ORGANS - URINATION - difficult - must strain",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, difficult, must strain"
+  },
+  {
+    "id": "urinary-organs-3-3",
+    "text": "URINARY ORGANS - URINATION - difficult - intermittent",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, difficult, intermittent"
+  },
+  {
+    "id": "urinary-organs-4",
+    "text": "URINARY ORGANS - URINATION - INFREQUENT",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, infrequent"
+  },
+  {
+    "id": "urinary-organs-5",
+    "text": "URINARY ORGANS - URINATION - INCONTINENCE",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence"
+  },
+  {
+    "id": "urinary-organs-5-1",
+    "text": "URINARY ORGANS - URINATION - incontinence - when coughing",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, when coughing"
+  },
+  {
+    "id": "urinary-organs-5-2",
+    "text": "URINARY ORGANS - URINATION - incontinence - when sneezing",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, when sneezing"
+  },
+  {
+    "id": "urinary-organs-5-3",
+    "text": "URINARY ORGANS - URINATION - incontinence - when walking",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, when walking"
+  },
+  {
+    "id": "urinary-organs-5-4",
+    "text": "URINARY ORGANS - URINATION - incontinence - during sleep",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, during sleep"
+  },
+  {
+    "id": "urinary-organs-5-5",
+    "text": "URINARY ORGANS - URINATION - incontinence - first sleep",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, first sleep"
+  },
+  {
+    "id": "urinary-organs-5-6",
+    "text": "URINARY ORGANS - URINATION - incontinence - old age",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, incontinence, old age"
+  },
+  {
+    "id": "urinary-organs-6",
+    "text": "URINARY ORGANS - URINATION - URGENCY",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, urgency"
+  },
+  {
+    "id": "urinary-organs-6-1",
+    "text": "URINARY ORGANS - URINATION - urgency - sudden",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, urgency, sudden"
+  },
+  {
+    "id": "urinary-organs-7",
+    "text": "URINARY ORGANS - URINATION - SUPPRESSED",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, suppressed"
+  },
+  {
+    "id": "urinary-organs-7-1",
+    "text": "URINARY ORGANS - URINATION - suppressed - after surgery",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, suppressed, after surgery"
+  },
+  {
+    "id": "urinary-organs-7-2",
+    "text": "URINARY ORGANS - URINATION - suppressed - from cold",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, suppressed, from cold"
+  },
+  {
+    "id": "urinary-organs-10",
+    "text": "URINARY ORGANS - URINATION - DARK",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, dark"
+  },
+  {
+    "id": "urinary-organs-11",
+    "text": "URINARY ORGANS - URINATION - OFFENSIVE",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, offensive"
+  },
+  {
+    "id": "urinary-organs-12",
+    "text": "URINARY ORGANS - URINATION - PALE",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, pale"
+  },
+  {
+    "id": "urinary-organs-13",
+    "text": "URINARY ORGANS - URINATION - SCANTY",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, scanty"
+  },
+  {
+    "id": "urinary-organs-15",
+    "text": "URINARY ORGANS - URINATION - DROPSICAL",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, dropsical"
+  },
+  {
+    "id": "urinary-organs-16",
+    "text": "URINARY ORGANS - URINATION - NIGHT",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, night"
+  },
+  {
+    "id": "urinary-organs-17",
+    "text": "URINARY ORGANS - URINATION - GRAVEL passes",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, gravel passes"
+  },
+  {
+    "id": "urinary-organs-18",
+    "text": "URINARY ORGANS - URINATION - SPASMODIC",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, spasmodic"
+  },
+  {
+    "id": "urinary-organs-19",
+    "text": "URINARY ORGANS - URINATION - UNCONSCIOUS",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, unconscious"
+  },
+  {
+    "id": "urinary-organs-20",
+    "text": "URINARY ORGANS - URINATION - dribbling",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, dribbling"
+  },
+  {
+    "id": "urinary-organs-21",
+    "text": "URINARY ORGANS - URINATION - must wait",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, must wait"
+  },
+  {
+    "id": "urinary-organs-22",
+    "text": "URINARY ORGANS - URINATION - straining",
+    "chapter": "Urinary Organs",
+    "norm": "urine, urination, straining"
+  },
+  {
+    "id": "kidneys-4",
+    "text": "CALCULI",
+    "chapter": "Kidneys",
+    "norm": "kidneys, calculi"
+  },
+  {
+    "id": "kidneys-11-5",
+    "text": "INFLAMMATION - toxæmic",
+    "chapter": "Kidneys",
+    "norm": "kidneys, inflammation, toxæmic"
+  },
+  {
+    "id": "kidneys-18",
+    "text": "SUPPURATION",
+    "chapter": "Kidneys",
+    "norm": "kidneys, suppuration"
+  },
+  {
+    "id": "prostate-gland",
+    "text": "PROSTATE GLAND - Sep., sil",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sep., sil"
+  },
+  {
+    "id": "prostate-gland-1",
+    "text": "PROSTATE GLAND - Sep., sil",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sep., sil"
+  },
+  {
+    "id": "prostate-gland-2",
+    "text": "PROSTATE GLAND - Nit-ac., phos., ph-ac. , pic-ac",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, nit-ac., phos., ph-ac. , pic-ac"
+  },
+  {
+    "id": "prostate-gland-3",
+    "text": "PROSTATE GLAND - EMISSION,urination",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, emission,urination"
+  },
+  {
+    "id": "prostate-gland-4",
+    "text": "PROSTATE GLAND - FESTERING sensation : Cycl",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, festering sensation : cycl"
+  },
+  {
+    "id": "prostate-gland-5",
+    "text": "PROSTATE GLAND - GURGLING sensation : Phyt",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, gurgling sensation : phyt"
+  },
+  {
+    "id": "prostate-gland-6",
+    "text": "PROSTATE GLAND - HEAT:Ptel.,puls",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, heat:ptel.,puls"
+  },
+  {
+    "id": "prostate-gland-7",
+    "text": "PROSTATE GLAND - JERKINGin region of:Form",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, jerkingin region of:form"
+  },
+  {
+    "id": "prostate-gland-8",
+    "text": "PROSTATE GLAND - ONANISM, complaints after : Tarent",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, onanism, complaints after : tarent"
+  },
+  {
+    "id": "prostate-gland-9",
+    "text": "PROSTATE GLAND - SUPPURATION:Hep. ,Sil",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, suppuration:hep. ,sil"
+  },
+  {
+    "id": "prostate-gland-10",
+    "text": "PROSTATE GLAND - UNEASINESS : Ptel",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, uneasiness : ptel"
+  },
+  {
+    "id": "prostate-gland-11",
+    "text": "PROSTATE GLAND - BUBBLING while sitting : Berb",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, bubbling while sitting : berb"
+  },
+  {
+    "id": "prostate-gland-12",
+    "text": "PROSTATE GLAND - COLDNESS:Clem",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, coldness:clem"
+  },
+  {
+    "id": "prostate-gland-13",
+    "text": "PROSTATE GLAND - CONSTRICTION : Cann-s. , clem . , lyc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, constriction : cann-s. , clem . , lyc"
+  },
+  {
+    "id": "prostate-gland-14",
+    "text": "PROSTATE GLAND - CRAMP:Chel.,nit-ac.,phos",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, cramp:chel.,nit-ac.,phos"
+  },
+  {
+    "id": "prostate-gland-15",
+    "text": "PROSTATE GLAND - DISCHARGE,gleety",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, discharge,gleety"
+  },
+  {
+    "id": "prostate-gland-16",
+    "text": "PROSTATE GLAND - DISCHARCE,greenish",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, discharce,greenish"
+  },
+  {
+    "id": "prostate-gland-17",
+    "text": "PROSTATE GLAND - DISCHARGE, purulent",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, discharge, purulent"
+  },
+  {
+    "id": "prostate-gland-18",
+    "text": "PROSTATE GLAND - HARDnode:Alum.,bov",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, hardnode:alum.,bov"
+  },
+  {
+    "id": "prostate-gland-19",
+    "text": "PROSTATE GLAND - Sulph.,sul-i.,tab.,thuj.,zinc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sulph.,sul-i.,tab.,thuj.,zinc"
+  },
+  {
+    "id": "prostate-gland-20",
+    "text": "PROSTATE GLAND - Petros",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, petros"
+  },
+  {
+    "id": "prostate-gland-21",
+    "text": "PROSTATE GLAND - ITCHING. meatus",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, itching. meatus"
+  },
+  {
+    "id": "prostate-gland-22",
+    "text": "PROSTATE GLAND - MOISTURE, meatus : Nat-m . , phos",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, moisture, meatus : nat-m . , phos"
+  },
+  {
+    "id": "prostate-gland-23",
+    "text": "PROSTATE GLAND - MOISTURE, meatus : Nat-m . , phos - NARROWNESS , sensation of (See Swelling)",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, moisture, meatus : nat-m . , phos, narrowness , sensation of"
+  },
+  {
+    "id": "prostate-gland-24",
+    "text": "PROSTATE GLAND - Arg-n., bry. , dig. , graph . , stram",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, arg-n., bry. , dig. , graph . , stram"
+  },
+  {
+    "id": "prostate-gland-25",
+    "text": "PROSTATE GLAND - Sel",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sel"
+  },
+  {
+    "id": "prostate-gland-26",
+    "text": "PROSTATE GLAND - Ox -ac",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, ox -ac"
+  },
+  {
+    "id": "prostate-gland-27",
+    "text": "PROSTATE GLAND - PAIN,burning",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,burning"
+  },
+  {
+    "id": "prostate-gland-28",
+    "text": "PROSTATE GLAND - Sulph., sul-ac. , thuj",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sulph., sul-ac. , thuj"
+  },
+  {
+    "id": "prostate-gland-29",
+    "text": "PROSTATE GLAND - PAIN,burning,urination,before",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,burning,urination,before"
+  },
+  {
+    "id": "prostate-gland-30",
+    "text": "PROSTATE GLAND - Uva-u., verat. , viol-t. , zinc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, uva-u., verat. , viol-t. , zinc"
+  },
+  {
+    "id": "prostate-gland-31",
+    "text": "PROSTATE GLAND - PAIN,burning,urination",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,burning,urination"
+  },
+  {
+    "id": "prostate-gland-32",
+    "text": "PROSTATE GLAND - Sulph., thuj., verat. , zing",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sulph., thuj., verat. , zing"
+  },
+  {
+    "id": "prostate-gland-33",
+    "text": "PROSTATE GLAND - PAIN,burning,meatus,urination",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,burning,meatus,urination"
+  },
+  {
+    "id": "prostate-gland-34",
+    "text": "PROSTATE GLAND - PAIN,cutting,urination",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,cutting,urination"
+  },
+  {
+    "id": "prostate-gland-35",
+    "text": "PROSTATE GLAND - Lyc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, lyc"
+  },
+  {
+    "id": "prostate-gland-36",
+    "text": "PROSTATE GLAND - PAIN, stitching",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain, stitching"
+  },
+  {
+    "id": "prostate-gland-37",
+    "text": "PROSTATE GLAND - Mang",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, mang"
+  },
+  {
+    "id": "prostate-gland-38",
+    "text": "PROSTATE GLAND - PAIN,stitching,urination,after",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, pain,stitching,urination,after"
+  },
+  {
+    "id": "prostate-gland-39",
+    "text": "PROSTATE GLAND - Thuj",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, thuj"
+  },
+  {
+    "id": "prostate-gland-40",
+    "text": "PROSTATE GLAND - Nux-v., ruta, sulph",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, nux-v., ruta, sulph"
+  },
+  {
+    "id": "prostate-gland-41",
+    "text": "PROSTATE GLAND - Arg-n., lac-c. , nit-ac. , rhod",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, arg-n., lac-c. , nit-ac. , rhod"
+  },
+  {
+    "id": "prostate-gland-42",
+    "text": "PROSTATE GLAND - SPASM:Nit-ac. ,prun",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, spasm:nit-ac. ,prun"
+  },
+  {
+    "id": "prostate-gland-43",
+    "text": "PROSTATE GLAND - Thuj",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, thuj"
+  },
+  {
+    "id": "prostate-gland-44",
+    "text": "PROSTATE GLAND - TENSION:Junc.,lyc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, tension:junc.,lyc"
+  },
+  {
+    "id": "prostate-gland-45",
+    "text": "PROSTATE GLAND - ULCERATION:Canth.,Nit-ac",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, ulceration:canth.,nit-ac"
+  },
+  {
+    "id": "prostate-gland-46",
+    "text": "PROSTATE GLAND - VESICLESmeatus:Stann",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, vesiclesmeatus:stann"
+  },
+  {
+    "id": "prostate-gland-47",
+    "text": "PROSTATE GLAND - VESICLESmeatus:Stann - ALTERNATION of copious and scanty urine",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, vesiclesmeatus:stann, alternation of copious and scanty urine"
+  },
+  {
+    "id": "prostate-gland-48",
+    "text": "PROSTATE GLAND - Berb., dig., gels. , sang",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, berb., dig., gels. , sang"
+  },
+  {
+    "id": "prostate-gland-49",
+    "text": "PROSTATE GLAND - Uva.,verat. ,vesp.,viol-t.,zinc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, uva.,verat. ,vesp.,viol-t.,zinc"
+  },
+  {
+    "id": "prostate-gland-50",
+    "text": "PROSTATE GLAND - COLD:Agar.,nil-ac",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, cold:agar.,nil-ac"
+  },
+  {
+    "id": "prostate-gland-51",
+    "text": "PROSTATE GLAND - Sep., Verat",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sep., verat"
+  },
+  {
+    "id": "prostate-gland-52",
+    "text": "PROSTATE GLAND - COLOR,pale",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, color,pale"
+  },
+  {
+    "id": "prostate-gland-53",
+    "text": "PROSTATE GLAND - COLOR, red, brownish-red",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, color, red, brownish-red"
+  },
+  {
+    "id": "prostate-gland-54",
+    "text": "PROSTATE GLAND - Sep.,verat.,zinc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sep.,verat.,zinc"
+  },
+  {
+    "id": "prostate-gland-55",
+    "text": "PROSTATE GLAND - COLOR , yellow. COPIOUS",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, color , yellow. copious"
+  },
+  {
+    "id": "prostate-gland-56",
+    "text": "PROSTATE GLAND - Ph-ac., phyt., sulph. , vib",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, ph-ac., phyt., sulph. , vib"
+  },
+  {
+    "id": "prostate-gland-57",
+    "text": "PROSTATE GLAND - INDICAN, containing: Nit-ac. , pic-ac",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, indican, containing: nit-ac. , pic-ac"
+  },
+  {
+    "id": "prostate-gland-58",
+    "text": "PROSTATE GLAND - JELLY -LIKE : Coloc. , crot-h",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, jelly -like : coloc. , crot-h"
+  },
+  {
+    "id": "prostate-gland-59",
+    "text": "PROSTATE GLAND - Viol-t",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, viol-t"
+  },
+  {
+    "id": "prostate-gland-60",
+    "text": "PROSTATE GLAND - ODOR,offensive",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, odor,offensive"
+  },
+  {
+    "id": "prostate-gland-61",
+    "text": "PROSTATE GLAND - Nit-ac.,phos",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, nit-ac.,phos"
+  },
+  {
+    "id": "prostate-gland-62",
+    "text": "PROSTATE GLAND - ODOR,strong",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, odor,strong"
+  },
+  {
+    "id": "prostate-gland-63",
+    "text": "PROSTATE GLAND - POLYPOUSformationin:Calc",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, polypousformationin:calc"
+  },
+  {
+    "id": "prostate-gland-64",
+    "text": "PROSTATE GLAND - SEDIMENT,bloody",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sediment,bloody"
+  },
+  {
+    "id": "prostate-gland-65",
+    "text": "PROSTATE GLAND - SEDIMENT, mucous",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sediment, mucous"
+  },
+  {
+    "id": "prostate-gland-66",
+    "text": "PROSTATE GLAND - SEDIMENT,red",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sediment,red"
+  },
+  {
+    "id": "prostate-gland-67",
+    "text": "PROSTATE GLAND - SEDIMENT,sand",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sediment,sand"
+  },
+  {
+    "id": "prostate-gland-68",
+    "text": "PROSTATE GLAND - SEDIMENT, yellow",
+    "chapter": "Prostate Gland",
+    "norm": "prostate, sediment, yellow"
+  },
+  {
+    "id": "urethra-24",
+    "text": "HÆMORRHAGE",
+    "chapter": "Urethra",
+    "norm": "urethra, hæmorrhage"
+  },
+  {
+    "id": "urethra-24-17",
+    "text": "HÆMORRHAGE - suppressed gonorrhoea, after",
+    "chapter": "Urethra",
+    "norm": "urethra, hæmorrhage, suppressed gonorrhoea, after"
+  },
+  {
+    "id": "urethra-46-3",
+    "text": "TINGLING - frænum, culminating at",
+    "chapter": "Urethra",
+    "norm": "urethra, tingling, frænum, culminating at"
+  },
+  {
+    "id": "urethra-54",
+    "text": "ABORTION",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion"
+  },
+  {
+    "id": "urethra-54-1",
+    "text": "ABORTION - exertion, from",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, exertion, from"
+  },
+  {
+    "id": "urethra-54-2",
+    "text": "ABORTION - exposure to cold damp weather and places",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, exposure to cold damp weather and places"
+  },
+  {
+    "id": "urethra-54-3",
+    "text": "ABORTION - fright, from",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, fright, from"
+  },
+  {
+    "id": "urethra-54-4",
+    "text": "ABORTION - inertia of uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, inertia of uterus"
+  },
+  {
+    "id": "urethra-54-5",
+    "text": "ABORTION - injuries, after",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, injuries, after"
+  },
+  {
+    "id": "urethra-54-6",
+    "text": "ABORTION - month, second",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, month, second"
+  },
+  {
+    "id": "urethra-54-7",
+    "text": "ABORTION - third",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, third"
+  },
+  {
+    "id": "urethra-54-8",
+    "text": "ABORTION - fifth to seventh",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, fifth to seventh"
+  },
+  {
+    "id": "urethra-54-9",
+    "text": "ABORTION - last months",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, last months"
+  },
+  {
+    "id": "urethra-54-10",
+    "text": "ABORTION - early months",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, early months"
+  },
+  {
+    "id": "urethra-54-11",
+    "text": "ABORTION - suppressed grief",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, suppressed grief"
+  },
+  {
+    "id": "urethra-54-12",
+    "text": "ABORTION - tendency to",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, tendency to"
+  },
+  {
+    "id": "urethra-54-13",
+    "text": "ABORTION - thunderstorm",
+    "chapter": "Urethra",
+    "norm": "urethra, abortion, thunderstorm"
+  },
+  {
+    "id": "urethra-55",
+    "text": "ABSCESS",
+    "chapter": "Urethra",
+    "norm": "urethra, abscess"
+  },
+  {
+    "id": "urethra-55-1",
+    "text": "ABSCESS - ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, abscess, ovaries"
+  },
+  {
+    "id": "urethra-56",
+    "text": "APHTHÆ",
+    "chapter": "Urethra",
+    "norm": "urethra, aphthæ"
+  },
+  {
+    "id": "urethra-56-1",
+    "text": "APHTHÆ - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, aphthæ, vagina"
+  },
+  {
+    "id": "urethra-57",
+    "text": "ASCARIDES",
+    "chapter": "Urethra",
+    "norm": "urethra, ascarides"
+  },
+  {
+    "id": "urethra-58",
+    "text": "ATONY of uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, atony of uterus"
+  },
+  {
+    "id": "urethra-59",
+    "text": "ATROPHY, ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, atrophy, ovaries"
+  },
+  {
+    "id": "urethra-60",
+    "text": "AURA extending from uterus to stomach",
+    "chapter": "Urethra",
+    "norm": "urethra, aura extending from uterus to stomach"
+  },
+  {
+    "id": "urethra-60-1",
+    "text": "AURA extending from uterus to stomach - throat",
+    "chapter": "Urethra",
+    "norm": "urethra, aura extending from uterus to stomach, throat"
+  },
+  {
+    "id": "urethra-61",
+    "text": "BALL, ovary feels like a heavy, right",
+    "chapter": "Urethra",
+    "norm": "urethra, ball, ovary feels like a heavy, right"
+  },
+  {
+    "id": "urethra-62",
+    "text": "BLOTCHES",
+    "chapter": "Urethra",
+    "norm": "urethra, blotches"
+  },
+  {
+    "id": "urethra-63",
+    "text": "CANCER of ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, cancer of ovaries"
+  },
+  {
+    "id": "urethra-63-1",
+    "text": "CANCER of ovaries - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, cancer of ovaries, uterus"
+  },
+  {
+    "id": "urethra-63-2",
+    "text": "CANCER of ovaries - scirrhus",
+    "chapter": "Urethra",
+    "norm": "urethra, cancer of ovaries, scirrhus"
+  },
+  {
+    "id": "urethra-63-3",
+    "text": "CANCER of ovaries - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, cancer of ovaries, vagina"
+  },
+  {
+    "id": "urethra-64",
+    "text": "CAULIFLOWER",
+    "chapter": "Urethra",
+    "norm": "urethra, cauliflower"
+  },
+  {
+    "id": "urethra-66",
+    "text": "CLUTCHING and relaxing sensation of uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, clutching and relaxing sensation of uterus"
+  },
+  {
+    "id": "urethra-67-3",
+    "text": "COITION - enjoyment absent",
+    "chapter": "Urethra",
+    "norm": "urethra, coition, enjoyment absent"
+  },
+  {
+    "id": "urethra-67-4",
+    "text": "COITION - orgasm delayed",
+    "chapter": "Urethra",
+    "norm": "urethra, coition, orgasm delayed"
+  },
+  {
+    "id": "urethra-68-2",
+    "text": "COLDNESS - ovaries, sensation of, left",
+    "chapter": "Urethra",
+    "norm": "urethra, coldness, ovaries, sensation of, left"
+  },
+  {
+    "id": "urethra-69",
+    "text": "CONDYLOMATA",
+    "chapter": "Urethra",
+    "norm": "urethra, condylomata"
+  },
+  {
+    "id": "urethra-69-2",
+    "text": "CONDYLOMATA - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, condylomata, uterus"
+  },
+  {
+    "id": "urethra-69-3",
+    "text": "CONDYLOMATA - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, condylomata, vagina"
+  },
+  {
+    "id": "urethra-69-4",
+    "text": "CONDYLOMATA - bleed easily",
+    "chapter": "Urethra",
+    "norm": "urethra, condylomata, bleed easily"
+  },
+  {
+    "id": "urethra-70",
+    "text": "CONGESTION",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion"
+  },
+  {
+    "id": "urethra-70-1",
+    "text": "CONGESTION - ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion, ovaries"
+  },
+  {
+    "id": "urethra-70-2",
+    "text": "CONGESTION - continence, from",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion, continence, from"
+  },
+  {
+    "id": "urethra-70-5",
+    "text": "CONGESTION - motion agg.",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion, motion agg."
+  },
+  {
+    "id": "urethra-70-6",
+    "text": "CONGESTION - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion, uterus"
+  },
+  {
+    "id": "urethra-70-9",
+    "text": "CONGESTION - during",
+    "chapter": "Urethra",
+    "norm": "urethra, congestion, during"
+  },
+  {
+    "id": "urethra-71",
+    "text": "CONSCIOUS of the uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, conscious of the uterus"
+  },
+  {
+    "id": "urethra-72-3",
+    "text": "CONSTRICTION - like a band",
+    "chapter": "Urethra",
+    "norm": "urethra, constriction, like a band"
+  },
+  {
+    "id": "urethra-73",
+    "text": "CONTRACTIONS",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions"
+  },
+  {
+    "id": "urethra-73-1",
+    "text": "CONTRACTIONS - os, spasmodic, during labor",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, os, spasmodic, during labor"
+  },
+  {
+    "id": "urethra-73-2",
+    "text": "CONTRACTIONS - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, uterus"
+  },
+  {
+    "id": "urethra-73-3",
+    "text": "CONTRACTIONS - hour-glass",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, hour-glass"
+  },
+  {
+    "id": "urethra-73-5",
+    "text": "CONTRACTIONS - during",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, during"
+  },
+  {
+    "id": "urethra-73-6",
+    "text": "CONTRACTIONS - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, vagina"
+  },
+  {
+    "id": "urethra-73-7",
+    "text": "CONTRACTIONS - rising from sitting",
+    "chapter": "Urethra",
+    "norm": "urethra, contractions, rising from sitting"
+  },
+  {
+    "id": "urethra-76",
+    "text": "CYSTS",
+    "chapter": "Urethra",
+    "norm": "urethra, cysts"
+  },
+  {
+    "id": "urethra-76-1",
+    "text": "CYSTS - ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, cysts, ovaries"
+  },
+  {
+    "id": "urethra-76-2",
+    "text": "CYSTS - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, cysts, vagina"
+  },
+  {
+    "id": "urethra-77-1",
+    "text": "DESIRE diminished - morning",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, morning"
+  },
+  {
+    "id": "urethra-77-2",
+    "text": "DESIRE diminished - sexual excitement, with",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, sexual excitement, with"
+  },
+  {
+    "id": "urethra-77-3",
+    "text": "DESIRE diminished - increased",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, increased"
+  },
+  {
+    "id": "urethra-77-4",
+    "text": "DESIRE diminished - morning in bed",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, morning in bed"
+  },
+  {
+    "id": "urethra-77-5",
+    "text": "DESIRE diminished - afternoon",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, afternoon"
+  },
+  {
+    "id": "urethra-77-6",
+    "text": "DESIRE diminished - night",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, night"
+  },
+  {
+    "id": "urethra-77-7",
+    "text": "DESIRE diminished - insatiable",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, insatiable"
+  },
+  {
+    "id": "urethra-77-8",
+    "text": "DESIRE diminished - lying-in-women",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, lying-in-women"
+  },
+  {
+    "id": "urethra-77-9",
+    "text": "DESIRE diminished - menses, before",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, menses, before"
+  },
+  {
+    "id": "urethra-77-12",
+    "text": "DESIRE diminished - metrorrhagia, during",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, metrorrhagia, during"
+  },
+  {
+    "id": "urethra-77-13",
+    "text": "DESIRE diminished - old women",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, old women"
+  },
+  {
+    "id": "urethra-77-14",
+    "text": "DESIRE diminished - scratching distant parts, from",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, scratching distant parts, from"
+  },
+  {
+    "id": "urethra-77-15",
+    "text": "DESIRE diminished - violent",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, violent"
+  },
+  {
+    "id": "urethra-77-16",
+    "text": "DESIRE diminished - involuntary orgasms, with",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, involuntary orgasms, with"
+  },
+  {
+    "id": "urethra-77-17",
+    "text": "DESIRE diminished - masturbation, driving her to",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, masturbation, driving her to"
+  },
+  {
+    "id": "urethra-77-18",
+    "text": "DESIRE diminished - scratching the arm, from",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, scratching the arm, from"
+  },
+  {
+    "id": "urethra-77-19",
+    "text": "DESIRE diminished - virgins, in",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, virgins, in"
+  },
+  {
+    "id": "urethra-77-20",
+    "text": "DESIRE diminished - widows, in",
+    "chapter": "Urethra",
+    "norm": "urethra, desire diminished, widows, in"
+  },
+  {
+    "id": "urethra-78",
+    "text": "DIPHTHERITIC exudations",
+    "chapter": "Urethra",
+    "norm": "urethra, diphtheritic exudations"
+  },
+  {
+    "id": "urethra-79",
+    "text": "DISPLACEMENT of uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, displacement of uterus"
+  },
+  {
+    "id": "urethra-80",
+    "text": "DISTENDED, as if filled with wind, uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, distended, as if filled with wind, uterus"
+  },
+  {
+    "id": "urethra-81",
+    "text": "DROPSY",
+    "chapter": "Urethra",
+    "norm": "urethra, dropsy"
+  },
+  {
+    "id": "urethra-81-1",
+    "text": "DROPSY - ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, dropsy, ovaries"
+  },
+  {
+    "id": "urethra-81-2",
+    "text": "DROPSY - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, dropsy, uterus"
+  },
+  {
+    "id": "urethra-83",
+    "text": "ENLARGED ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries"
+  },
+  {
+    "id": "urethra-83-1",
+    "text": "ENLARGED ovaries - right",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, right"
+  },
+  {
+    "id": "urethra-83-2",
+    "text": "ENLARGED ovaries - left",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, left"
+  },
+  {
+    "id": "urethra-83-3",
+    "text": "ENLARGED ovaries - every cold agg.",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, every cold agg."
+  },
+  {
+    "id": "urethra-83-4",
+    "text": "ENLARGED ovaries - sensation as if",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, sensation as if"
+  },
+  {
+    "id": "urethra-83-5",
+    "text": "ENLARGED ovaries - right",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, right"
+  },
+  {
+    "id": "urethra-83-6",
+    "text": "ENLARGED ovaries - left",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, left"
+  },
+  {
+    "id": "urethra-83-7",
+    "text": "ENLARGED ovaries - menses, before",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, menses, before"
+  },
+  {
+    "id": "urethra-83-8",
+    "text": "ENLARGED ovaries - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, enlarged ovaries, uterus"
+  },
+  {
+    "id": "urethra-84",
+    "text": "EPILEPTIC aura",
+    "chapter": "Urethra",
+    "norm": "urethra, epileptic aura"
+  },
+  {
+    "id": "urethra-85",
+    "text": "ERUPTIONS",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions"
+  },
+  {
+    "id": "urethra-85-2",
+    "text": "ERUPTIONS - erysipelatous",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, erysipelatous"
+  },
+  {
+    "id": "urethra-85-3",
+    "text": "ERUPTIONS - hard black pustules",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, hard black pustules"
+  },
+  {
+    "id": "urethra-85-4",
+    "text": "ERUPTIONS - herpetic",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, herpetic"
+  },
+  {
+    "id": "urethra-85-5",
+    "text": "ERUPTIONS - from every cold",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, from every cold"
+  },
+  {
+    "id": "urethra-85-7",
+    "text": "ERUPTIONS - warm, when",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, warm, when"
+  },
+  {
+    "id": "urethra-85-9",
+    "text": "ERUPTIONS - during",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, during"
+  },
+  {
+    "id": "urethra-85-10",
+    "text": "ERUPTIONS - moist",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, moist"
+  },
+  {
+    "id": "urethra-85-11",
+    "text": "ERUPTIONS - nodosities",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, nodosities"
+  },
+  {
+    "id": "urethra-85-13",
+    "text": "ERUPTIONS - pimples",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, pimples"
+  },
+  {
+    "id": "urethra-85-15",
+    "text": "ERUPTIONS - during",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, during"
+  },
+  {
+    "id": "urethra-85-17",
+    "text": "ERUPTIONS - pustules",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, pustules"
+  },
+  {
+    "id": "urethra-85-18",
+    "text": "ERUPTIONS - black",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, black"
+  },
+  {
+    "id": "urethra-85-19",
+    "text": "ERUPTIONS - rash",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, rash"
+  },
+  {
+    "id": "urethra-85-20",
+    "text": "ERUPTIONS - scabby",
+    "chapter": "Urethra",
+    "norm": "urethra, eruptions, scabby"
+  },
+  {
+    "id": "urethra-86",
+    "text": "EXCORIATION",
+    "chapter": "Urethra",
+    "norm": "urethra, excoriation"
+  },
+  {
+    "id": "urethra-86-1",
+    "text": "EXCORIATION - aged women",
+    "chapter": "Urethra",
+    "norm": "urethra, excoriation, aged women"
+  },
+  {
+    "id": "urethra-86-2",
+    "text": "EXCORIATION - leucorrhoea, from",
+    "chapter": "Urethra",
+    "norm": "urethra, excoriation, leucorrhoea, from"
+  },
+  {
+    "id": "urethra-86-5",
+    "text": "EXCORIATION - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, excoriation, vagina"
+  },
+  {
+    "id": "urethra-87-4",
+    "text": "EXCRESCENCES - wart-shaped",
+    "chapter": "Urethra",
+    "norm": "urethra, excrescences, wart-shaped"
+  },
+  {
+    "id": "urethra-88",
+    "text": "FISTULA, vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, fistula, vagina"
+  },
+  {
+    "id": "urethra-89-1",
+    "text": "FLATUS from vagina - menses, during",
+    "chapter": "Urethra",
+    "norm": "urethra, flatus from vagina, menses, during"
+  },
+  {
+    "id": "urethra-91",
+    "text": "FULNESS, uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, fulness, uterus"
+  },
+  {
+    "id": "urethra-91-1",
+    "text": "FULNESS, uterus - standing agg.",
+    "chapter": "Urethra",
+    "norm": "urethra, fulness, uterus, standing agg."
+  },
+  {
+    "id": "urethra-91-3",
+    "text": "FULNESS, uterus - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, fulness, uterus, vagina"
+  },
+  {
+    "id": "urethra-91-4",
+    "text": "FULNESS, uterus - sensation of during menses",
+    "chapter": "Urethra",
+    "norm": "urethra, fulness, uterus, sensation of during menses"
+  },
+  {
+    "id": "urethra-92",
+    "text": "GANGRENE",
+    "chapter": "Urethra",
+    "norm": "urethra, gangrene"
+  },
+  {
+    "id": "urethra-92-1",
+    "text": "GANGRENE - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, gangrene, uterus"
+  },
+  {
+    "id": "urethra-92-2",
+    "text": "GANGRENE - vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, gangrene, vagina"
+  },
+  {
+    "id": "urethra-93",
+    "text": "GRANULATION, vagina:",
+    "chapter": "Urethra",
+    "norm": "urethra, granulation, vagina:"
+  },
+  {
+    "id": "urethra-94",
+    "text": "HAIR falling out",
+    "chapter": "Urethra",
+    "norm": "urethra, hair falling out"
+  },
+  {
+    "id": "urethra-96-5",
+    "text": "HEAT - flushes from uterus to head",
+    "chapter": "Urethra",
+    "norm": "urethra, heat, flushes from uterus to head"
+  },
+  {
+    "id": "urethra-97",
+    "text": "HEAVINESS",
+    "chapter": "Urethra",
+    "norm": "urethra, heaviness"
+  },
+  {
+    "id": "urethra-97-2",
+    "text": "HEAVINESS - ovaries",
+    "chapter": "Urethra",
+    "norm": "urethra, heaviness, ovaries"
+  },
+  {
+    "id": "urethra-97-3",
+    "text": "HEAVINESS - right",
+    "chapter": "Urethra",
+    "norm": "urethra, heaviness, right"
+  },
+  {
+    "id": "urethra-97-4",
+    "text": "HEAVINESS - left",
+    "chapter": "Urethra",
+    "norm": "urethra, heaviness, left"
+  },
+  {
+    "id": "urethra-97-5",
+    "text": "HEAVINESS - uterus",
+    "chapter": "Urethra",
+    "norm": "urethra, heaviness, uterus"
+  },
+  {
+    "id": "urethra-98",
+    "text": "HÆMORRHAGE",
+    "chapter": "Urethra",
+    "norm": "urethra, hæmorrhage"
+  },
+  {
+    "id": "urethra-99-7",
+    "text": "INDURATION - after use of pessary",
+    "chapter": "Urethra",
+    "norm": "urethra, induration, after use of pessary"
+  },
+  {
+    "id": "urethra-100-6",
+    "text": "INFLAMMATION - feet wet, from",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, feet wet, from"
+  },
+  {
+    "id": "urethra-100-8",
+    "text": "INFLAMMATION - menstrual flow suddenly checked",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, menstrual flow suddenly checked"
+  },
+  {
+    "id": "urethra-100-9",
+    "text": "INFLAMMATION - sexual excesses, from",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, sexual excesses, from"
+  },
+  {
+    "id": "urethra-100-10",
+    "text": "INFLAMMATION - suppressed gonorrhoea, after",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, suppressed gonorrhoea, after"
+  },
+  {
+    "id": "urethra-100-13",
+    "text": "INFLAMMATION - emotional excitement, from",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, emotional excitement, from"
+  },
+  {
+    "id": "urethra-100-16",
+    "text": "INFLAMMATION - joy, excessive",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, joy, excessive"
+  },
+  {
+    "id": "urethra-100-18",
+    "text": "INFLAMMATION - sexual excesses, after",
+    "chapter": "Urethra",
+    "norm": "urethra, inflammation, sexual excesses, after"
+  },
+  {
+    "id": "urethra-101",
+    "text": "INSENSIBILITY vagina",
+    "chapter": "Urethra",
+    "norm": "urethra, insensibility vagina"
+  },
+  {
+    "id": "urethra-103-7",
+    "text": "ITCHING - cold, from becoming",
+    "chapter": "Urethra",
+    "norm": "urethra, itching, cold, from becoming"
+  },
+  {
+    "id": "urethra-103-8",
+    "text": "ITCHING - cold weather",
+    "chapter": "Urethra",
+    "norm": "urethra, itching, cold weather"
+  },
+  {
+    "id": "urethra-103-11",
+    "text": "ITCHING - lying amel.",
+    "chapter": "Urethra",
+    "norm": "urethra, itching, lying amel."
+  },
+  {
+    "id": "urethra-103-16",
+    "text": "ITCHING - scratching agg.",
+    "chapter": "Urethra",
+    "norm": "urethra, itching, scratching agg."
+  },
+  {
+    "id": "urethra-103-18",
+    "text": "ITCHING - urine, contact of, agg.",
+    "chapter": "Urethra",
+    "norm": "urethra, itching, urine, contact of, agg."
+  },
+  {
+    "id": "urethra-104",
+    "text": "LEUCORRHEA",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea"
+  },
+  {
+    "id": "urethra-104-1",
+    "text": "LEUCORRHEA - daytime only",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, daytime only"
+  },
+  {
+    "id": "urethra-104-6",
+    "text": "LEUCORRHEA - acrid, excoriating",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, acrid, excoriating"
+  },
+  {
+    "id": "urethra-104-7",
+    "text": "LEUCORRHEA - eats holes in linen",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, eats holes in linen"
+  },
+  {
+    "id": "urethra-104-9",
+    "text": "LEUCORRHEA - black",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, black"
+  },
+  {
+    "id": "urethra-104-10",
+    "text": "LEUCORRHEA - bland",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, bland"
+  },
+  {
+    "id": "urethra-104-13",
+    "text": "LEUCORRHEA - bluish",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, bluish"
+  },
+  {
+    "id": "urethra-104-14",
+    "text": "LEUCORRHEA - brown",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, brown"
+  },
+  {
+    "id": "urethra-104-15",
+    "text": "LEUCORRHEA - stains linen",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, stains linen"
+  },
+  {
+    "id": "urethra-104-20",
+    "text": "LEUCORRHEA - menses, like the",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, menses, like the"
+  },
+  {
+    "id": "urethra-104-23",
+    "text": "LEUCORRHEA - dark",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, dark"
+  },
+  {
+    "id": "urethra-104-24",
+    "text": "LEUCORRHEA - excoriating",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, excoriating"
+  },
+  {
+    "id": "urethra-104-25",
+    "text": "LEUCORRHEA - exercising, while",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, exercising, while"
+  },
+  {
+    "id": "urethra-104-26",
+    "text": "LEUCORRHEA - flesh-colored",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, flesh-colored"
+  },
+  {
+    "id": "urethra-104-27",
+    "text": "LEUCORRHEA - girls, little",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, girls, little"
+  },
+  {
+    "id": "urethra-104-28",
+    "text": "LEUCORRHEA - gonorrhoeal",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, gonorrhoeal"
+  },
+  {
+    "id": "urethra-104-31",
+    "text": "LEUCORRHEA - stains linen",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, stains linen"
+  },
+  {
+    "id": "urethra-104-32",
+    "text": "LEUCORRHEA - water",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, water"
+  },
+  {
+    "id": "urethra-104-33",
+    "text": "LEUCORRHEA - gushing",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, gushing"
+  },
+  {
+    "id": "urethra-104-35",
+    "text": "LEUCORRHEA - lumpy",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, lumpy"
+  },
+  {
+    "id": "urethra-104-37",
+    "text": "LEUCORRHEA - masturbation, from",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, masturbation, from"
+  },
+  {
+    "id": "urethra-104-39",
+    "text": "LEUCORRHEA - during",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, during"
+  },
+  {
+    "id": "urethra-104-40",
+    "text": "LEUCORRHEA - after",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, after"
+  },
+  {
+    "id": "urethra-104-41",
+    "text": "LEUCORRHEA - two weeks",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, two weeks"
+  },
+  {
+    "id": "urethra-104-43",
+    "text": "LEUCORRHEA - instead of",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, instead of"
+  },
+  {
+    "id": "urethra-104-45",
+    "text": "LEUCORRHEA - smelling like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, smelling like"
+  },
+  {
+    "id": "urethra-104-48",
+    "text": "LEUCORRHEA - offensive",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, offensive"
+  },
+  {
+    "id": "urethra-104-50",
+    "text": "LEUCORRHEA - ammonia, like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, ammonia, like"
+  },
+  {
+    "id": "urethra-104-51",
+    "text": "LEUCORRHEA - blackish water",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, blackish water"
+  },
+  {
+    "id": "urethra-104-52",
+    "text": "LEUCORRHEA - cheese, like old",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, cheese, like old"
+  },
+  {
+    "id": "urethra-104-53",
+    "text": "LEUCORRHEA - fish-brine, like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, fish-brine, like"
+  },
+  {
+    "id": "urethra-104-54",
+    "text": "LEUCORRHEA - green corn, like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, green corn, like"
+  },
+  {
+    "id": "urethra-104-55",
+    "text": "LEUCORRHEA - menses, like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, menses, like"
+  },
+  {
+    "id": "urethra-104-56",
+    "text": "LEUCORRHEA - after",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, after"
+  },
+  {
+    "id": "urethra-104-57",
+    "text": "LEUCORRHEA - pungent",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, pungent"
+  },
+  {
+    "id": "urethra-104-58",
+    "text": "LEUCORRHEA - putrid",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, putrid"
+  },
+  {
+    "id": "urethra-104-59",
+    "text": "LEUCORRHEA - sour",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, sour"
+  },
+  {
+    "id": "urethra-104-60",
+    "text": "LEUCORRHEA - sweetish",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, sweetish"
+  },
+  {
+    "id": "urethra-104-61",
+    "text": "LEUCORRHEA - pregnancy",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, pregnancy"
+  },
+  {
+    "id": "urethra-104-63",
+    "text": "LEUCORRHEA - ropy, stringy, tenacious",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, ropy, stringy, tenacious"
+  },
+  {
+    "id": "urethra-104-64",
+    "text": "LEUCORRHEA - starch, boiled, like",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, starch, boiled, like"
+  },
+  {
+    "id": "urethra-104-66",
+    "text": "LEUCORRHEA - as paste, white",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, as paste, white"
+  },
+  {
+    "id": "urethra-104-73",
+    "text": "LEUCORRHEA - stains linen",
+    "chapter": "Urethra",
+    "norm": "urethra, leucorrhea, stains linen"
+  },
+  {
+    "id": "urethra-105",
+    "text": "LOCHIA",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia"
+  },
+  {
+    "id": "urethra-105-3",
+    "text": "LOCHIA - after growing light, it again becomes",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, after growing light, it again becomes"
+  },
+  {
+    "id": "urethra-105-4",
+    "text": "LOCHIA - child nurses, when",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, child nurses, when"
+  },
+  {
+    "id": "urethra-105-5",
+    "text": "LOCHIA - motion, after least",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, motion, after least"
+  },
+  {
+    "id": "urethra-105-6",
+    "text": "LOCHIA - brown",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, brown"
+  },
+  {
+    "id": "urethra-105-8",
+    "text": "LOCHIA - dark",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, dark"
+  },
+  {
+    "id": "urethra-105-9",
+    "text": "LOCHIA - gushing",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, gushing"
+  },
+  {
+    "id": "urethra-105-10",
+    "text": "LOCHIA - hot",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, hot"
+  },
+  {
+    "id": "urethra-105-11",
+    "text": "LOCHIA - ichorous",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, ichorous"
+  },
+  {
+    "id": "urethra-105-12",
+    "text": "LOCHIA - intermittent",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, intermittent"
+  },
+  {
+    "id": "urethra-105-13",
+    "text": "LOCHIA - lumpy",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, lumpy"
+  },
+  {
+    "id": "urethra-105-15",
+    "text": "LOCHIA - offensive, fetid",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, offensive, fetid"
+  },
+  {
+    "id": "urethra-105-16",
+    "text": "LOCHIA - cadaveric",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, cadaveric"
+  },
+  {
+    "id": "urethra-105-18",
+    "text": "LOCHIA - red",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, red"
+  },
+  {
+    "id": "urethra-105-19",
+    "text": "LOCHIA - returning",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, returning"
+  },
+  {
+    "id": "urethra-105-20",
+    "text": "LOCHIA - scanty",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, scanty"
+  },
+  {
+    "id": "urethra-105-22",
+    "text": "LOCHIA - anger, from",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, anger, from"
+  },
+  {
+    "id": "urethra-105-24",
+    "text": "LOCHIA - excitement, by",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, excitement, by"
+  },
+  {
+    "id": "urethra-105-25",
+    "text": "LOCHIA - fright",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, fright"
+  },
+  {
+    "id": "urethra-105-26",
+    "text": "LOCHIA - grief",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, grief"
+  },
+  {
+    "id": "urethra-105-27",
+    "text": "LOCHIA - vexation, after",
+    "chapter": "Urethra",
+    "norm": "urethra, lochia, vexation, after"
+  },
+  {
+    "id": "urethra-106",
+    "text": "LYING agg. uterine symptoms",
+    "chapter": "Urethra",
+    "norm": "urethra, lying agg. uterine symptoms"
+  },
+  {
+    "id": "urethra-107",
+    "text": "MASTURBATION, disposition",
+    "chapter": "Urethra",
+    "norm": "urethra, masturbation, disposition"
+  },
+  {
+    "id": "urethra-108",
+    "text": "MENOPAUSE",
+    "chapter": "Urethra",
+    "norm": "urethra, menopause"
+  },
+  {
+    "id": "urethra-109-1",
+    "text": "MENSES - daytime only",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, daytime only"
+  },
+  {
+    "id": "urethra-109-3",
+    "text": "MENSES - and evening only",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, and evening only"
+  },
+  {
+    "id": "urethra-109-4",
+    "text": "MENSES - less during day",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, less during day"
+  },
+  {
+    "id": "urethra-109-6",
+    "text": "MENSES - forenoon only",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, forenoon only"
+  },
+  {
+    "id": "urethra-109-9",
+    "text": "MENSES - while walking only",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, while walking only"
+  },
+  {
+    "id": "urethra-109-10",
+    "text": "MENSES - evening only",
+    "chapter": "Urethra",
+    "norm": "urethra, menses, evening only"
+  }
+]

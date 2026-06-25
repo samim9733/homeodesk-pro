@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Absin.(2), acet-ac.(3), Acon.(1), Æsc.(1), Æth.(1), agar.(3), alet.(3), all-c.(3), alumn.(3), ambr.(3), am-c.(3), am-m.(3), anac.(3), anthr.(3), Ant-c.(1), Ant-t.(1), Apis(1), apoc.(3), Apom.(1), aran.(3), arg-cy.(3), Arg-n.(1), arn.(3), Ars.(1), ars-h.(3), arum-m.(3), asar.(3), asc-t.(3), aur.(3), aur-m.(3), bapt.(3), bar-c.(3), bar-m.(3), bell(3), brsm.(3), bor.(3), both.(3), Bry.(1), bufo(3), cact.(3), Cadm.(1), cain.(3), calc.(3), calc-s.(3), camph.(3), cann-i.(3), cann-s.(3), canth.(3), carb-ac.(3), carb-s.(3), caust.(3), Cham.(1), chel.(3), Chin.(1), chiu-a.(3), chin-s.(3), chlol.(3), cic.(3), cimic.(3), cina(3), cocc.(3), coc-c.(3), coff.(3), Colch.(1), coloc.(3), con.(3), cop.(3), crot-b.(3), crot-t.(3), cub.(3), Cupr.(1), cupr-ar.(3), cupr-s.(3), cycl.(3), dig.(3), dor.(3), dros.(3), dulc.(3), elaps(3), cup-per.(3), euph.(3), Ferr.(1), ferr-ar.(3), ferr-p.(3), Gamb.(1), gels.(3), glon.(3), gran.(3), graph.(3), grat.(3), hell.(3), hep.(3), hydr.(3), hyos.(3), ign.(3), indg.(3), iod.(3), Ip.(1), Iris(1), kali-ar.(3), kali-bi.(3), kali-c.(3), kali-i.(3), kali-p.(3), kali-s.(3), kalm.(3), Kreos.(1), lach.(3), laur.(3), Lob.(1), lyc.(3), merc.(3), merc-c.(3), mez.(3), mosch.(3), naja(3), nat-m.(3), nat-p.(3), nil-ac.(3), nux-m.(3), Nux-v.(1), olnd.(3), op.(3), ox-ac.(3), pæon.(3), petr.(3), Phos.(1), ph-ac.(3), phyt.(3), Plb.(3), podo.(3), psor.(3), ptel.(3), Puls.(1), rhod.(3), rhus-t.(3), ruta(3), sabin.(3), sal-ac.(3), samb.(3), sang.(3), sec.(3), seneg.(3), sel.(3), sep.(3), Sil.(1), squil.(3), sol-n.(3), Sulph.(1), sul-ac.(3), Tab.(1), tarent.(3), tep.(3), ter.(3), ther.(3), thuj.(3), tub.(3), valer.(3), Verat.(1), Verat-v.(1), wyeth.(3), zinc(3)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1782377128,
+  "id": "202606251645053d627e902f434f0a",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202606251645053d627e902f434f0a",
+  "usage": {
+    "completion_tokens": 781,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6241,
+    "prompt_tokens_details": {
+      "cached_tokens": 6
+    },
+    "total_tokens": 7022
+  }
+}

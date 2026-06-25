@@ -1,0 +1,25 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "external": {},
+    "html": "<html lang=\"en\"><head>\n        <title>Not Found</title>\n        \n<style type=\"text/css\">\n            html, body, pre {\n                margin: 0;\n                padding: 0;\n                font-family: Monaco, 'Lucida Console', monospace;\n                background: #ECECEC;\n            }\n            h1 {\n                margin: 0;\n                background: #AD632A;\n                padding: 20px 45px;\n                color: #fff;\n                text-shadow: 1px 1px 1px rgba(0,0,0,.3);\n                border-bottom: 1px solid #9F5805;\n                font-size: 28px;\n            }\n            p#detail {\n                margin: 0;\n                padding: 15px 45px;\n                background: #F6A960;\n                border-top: 4px solid #D29052;\n                color: #733512;\n                text-shadow: 1px 1px 1px rgba(255,255,255,.3);\n                font-size: 14px;\n                border-bottom: 1px solid #BA7F5B;\n            }\n        </style>\n    </head>\n    <body>\n        <h1>Not Found</h1>\n\n        <p id=\"detail\">\n            For request 'GET /rest/chapters'\n        </p>\n\n    \n\n</body></html>",
+    "httpStatus": 404,
+    "httpStatusText": "",
+    "metadata": {
+      "lang": "en"
+    },
+    "title": "Not Found",
+    "url": "https://www.oorep.com/rest/chapters",
+    "usage": {
+      "tokens": 296
+    },
+    "warning": "Target URL returned error 404: Not Found"
+  },
+  "meta": {
+    "usage": {
+      "tokens": 296
+    }
+  },
+  "status": 20000
+}

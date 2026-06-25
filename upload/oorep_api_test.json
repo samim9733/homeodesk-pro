@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "external": {
+      "icon": {
+        "https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/img/favicon.ico?tag=95628": {}
+      }
+    },
+    "html": "<html lang=\"en\" dir=\"ltr\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><title>Enter your username and password</title><!-- link rel=\"preload\" href=\"/simplesamlphp/assets/base/fonts/fa-solid-900.woff2?tag=95628\" as=\"font\" crossorigin --><!-- link rel=\"stylesheet\" href=\"/simplesamlphp/assets/base/css/stylesheet.css?tag=95628\" --><link rel=\"icon\" href=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/img/favicon.ico?tag=95628\"><link rel=\"stylesheet\" type=\"text/css\" href=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/third-party/bootstrap-4.1.3/css/bootstrap.min.css?tag=95628\"><script src=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/third-party/jquery-3.3.1.min.js?tag=95628\"></script><script src=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/third-party/popper.min.js?tag=95628\"></script><script src=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/third-party/bootstrap-4.1.3/js/bootstrap.min.js?tag=95628\"></script><link rel=\"stylesheet\" href=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/default.css?tag=95628\"><meta name=\"robots\" content=\"noindex, nofollow\"></head><body id=\"core:loginuserpass\"><div id=\"layout\"><header id=\"header\" class=\"header-oorep\"><div class=\"container\" id=\"wrap\"><div class=\"text-center\" style=\"padding-top:200px; padding-bottom:30px;\" id=\"header\"><h1><a href=\"https://www.oorep.com/\"><img src=\"https://idp.oorep.com/simplesamlphp/module.php/oorepmodule/assets/img/logo_small.png?tag=95628\"></a></h1></div></div></header><main><div id=\"content\"><div class=\"wrap\"><div id=\"portalmenu\" class=\"ui-tabs ui-widget ui-widget-content ui-corner-all\"><div id=\"portalcontent\" class=\"ui-tabs-panel ui-widget-content ui-corner-bottom\"><div class=\"container\"><div class=\"row justify-content-center panel panel-default\"><div class=\"col-md-6 panel-body text-center\"><div class=\"card\"><h5 class=\"card-header\">\n          Login\n        </h5><div class=\"card-body\"><p class=\"logintext\">\n            You have requested the OOREP identity provider. Please enter your username and password \n            in the form below.\n          </p><form id=\"f\" class=\"pure-form pure-form-aligned\" action=\"https://idp.oorep.com/simplesamlphp/module.php/core/loginuserpass?AuthState=_e98a7e13b7abb97fe22ba07928bc9842df24584e7e%3Ahttps%3A%2F%2Fidp.oorep.com%2Fsimplesamlphp%2Fmodule.php%2Fsaml%2Fidp%2FsingleSignOnService%3Fspentityid%3Dhttps%253A%252F%252Fwww.oorep.com%252F%26RelayState%3Dhttps%253A%252F%252Fwww.oorep.com%252Fapi%252Fsec%252F1%26cookieTime%3D1782376986\" method=\"post\" name=\"f\" spellcheck=\"false\"><div class=\"form-group\"><input id=\"username\" placeholder=\"Username\" type=\"text\" name=\"username\" class=\"edge form-control\" tabindex=\"1\"></div><div class=\"form-group\"><input id=\"password\" type=\"password\" tabindex=\"2\" name=\"password\" class=\"form-control edge\" autocomplete=\"current-password\" placeholder=\"Password\"></div><div class=\"pure-control-group center login-form-submit\"><button class=\"pure-button pure-button-red pure-input-1-2 pure-input-sm-1-1 right btn-lg btn-primary btn btn-block btn-default\" id=\"submit_button\" type=\"submit\" tabindex=\"6\" data-default=\"Submit\" data-processing=\"Processing...\">\n                Submit\n              </button></div></form></div></div></div></div></div></div></div></div></div><div id=\"push\"></div></main></div><div id=\"foot\"><footer id=\"footer\"><div class=\"row justify-content-center\"><div class=\"col-md-6 text-center footer-oorep\" style=\"padding-top: 30px;\" id=\"footer_oorep\"><a href=\"https://www.oorep.com/\">Back to main page</a>\n      &nbsp; | &nbsp;\n      <a href=\"https://www.oorep.com/forgot_password\">Help, I forgot my password!</a><br style=\"clear: right;\"></div></div></footer></div><script src=\"/simplesamlphp/assets/base/js/bundle.js?tag=95628\"></script><script src=\"https://idp.oorep.com/simplesamlphp/module.php/core/assets/js/loginuserpass.js?tag=95628\"></script></body></html>",
+    "httpStatus": 200,
+    "httpStatusText": "OK",
+    "metadata": {
+      "lang": "en",
+      "robots": "noindex, nofollow",
+      "viewport": "initial-scale=1.0"
+    },
+    "title": "Enter your username and password",
+    "url": "https://www.oorep.com/api/sec/1",
+    "usage": {
+      "tokens": 1193
+    }
+  },
+  "meta": {
+    "usage": {
+      "tokens": 1193
+    }
+  },
+  "status": 20000
+}
